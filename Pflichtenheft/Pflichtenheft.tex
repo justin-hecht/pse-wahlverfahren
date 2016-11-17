@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
+\usepackage{graphicx}
  
 \begin{document}
  
@@ -16,38 +17,131 @@
 
 \tableofcontents
  
+\chapter{Produktübersicht}
+Das Entwicklerprogramm "`Concrete Rigging of Voting Procedures"' ermöglicht es, Wahlverfahren auf formale Eigenschaften zu prüfen. So kann ein in C definiertes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Der Benutzer kann verschiedene Parameter der Wahl zusätzlich vorgeben.
+
+
+Da eine vollständige Prüfung auf Wahleigenschaften sehr lange dauern würde, kommt ein Bounded Model Check zum Einsatz. Das verwendete Werkzeug CBMC wird dabei automatisch vom Programm angesteuert.
+
+Der Benutzer bekommt schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Sollte die Prüfung jedoch erfolgreich sein, bekommt der Nutzer ein Positivbeispiel präsentiert.
+
+
 \chapter{Zielbestimmung}
+Das vorliegende Programm überprüft in C geschriebene Wahlverfahren mit Hilfe von CBMC auf formale Eigenschaften. Das Programm akzeptiert optionale Wahlparameter und gibt das Ergebnis der Prüfung zurück.
+
+Die GUI ist in vier Teilen angeordnet:
+\begin{enumerate}
+\item "`Rigtime"': Code-Editor für Wahlverfahren in Programmiersprache C.
+\item "`Properties"': Editor für Spezifikation formaler Eigenschaften in abgespeckter C-Syntax mit speziellen Macros.
+\item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen.
+\item "`Rigplete"': Ausgabe der Prüfung.
+\end{enumerate}
+
+\section{Musskriterien}
+\begin{itemize}
+\item Das Programm kann auf aktuellen Versionen von Windows und Linux-Betriebssystemen betrieben werden.
+\item Alle Abhängigkeiten (u.a. zu CBMC) werden mit dem Programm ausgeliefert.
+\end{itemize}
+Die Elemente der GUI sollen folgenden Kriterien genügen:
+\begin{itemize}
+\item "`Rigtime"': Code-Editor mit der Möglichkeit zum Speichern, Speichern als und Laden.
+\item "`Properties"': Editor mit der Möglichkeit zum Speichern, Speichern als und Laden. Die Eingabe soll überprüft werden, d.h. ob die Eingabe Macros in C-Syntax darstellt. Im selben Fenster soll es eine Eingabemaske für zusätzliche symbolische Variablen geben.
+\item "`Params"': Option für eine graphische Eingabe der Anzahl von Wählern, Kandidaten und Sizen.
+\item "`Rigplete"': Das Ergebnis der Wahlanalyse wird angezeigt. Falls CBMC ein Gegenbeispiel zu einer formalen Eigenschaft gefunden hat, soll das Beispiel XXX graphisch XXX angezeigt werden.
+\end{itemize}
 
 \section{Wunschkriterien}
+\begin{itemize}
+\item Das Programm kann auf aktuellen Macs betrieben werden.
+\end{itemize}
+Die Elemente der GUI sollen folgenden Kriterien genügen:
+\begin{itemize}
+\item "`Rigtime"': Der Code-Editor soll Syntax-Highlighting und eine Fehler-Anzeige für die Programmiersprache C bieten.
+\item "`Properties"': Der Editor soll Syntax-Highlighting und eine Fehler-Anzeige für C bieten. Codeeingaben sollen komplettiert werden können.
+\item "`Params"': Die Analyse der Wahl soll mit Hilfe eines Buttons abgebrochen werden können.
+\item Wahlergebnisausgabe: Im Fenster XXX "`Params"' XXX kann ein Array mit Wahlstimmen eingegeben werden. Das Ergebnis dieser Wahl wird im Fenster "`Rigplete"' angezeigt.
+\item Zusätzlicher SAT-Solver: Das Programm bietet eine Schnittstelle, sodass auch andere SAT-Solver als CBMC angesteuert werden können.
+\item XXX Weitere? XXX
+\end{itemize}
+
 \section{Abgrenzungskriterien}
-\section{Musskriterien}
+XXX
+
 
 \chapter{Produkteinsatz}
+Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richtet sich an Kunden, die ein Interesse an der Erforschung oder Entwicklung solcher Verfahren haben. Sie benötigen ein Grundverständnis der Programmiersprache C und Logik.
 
 \section{Anwendungsbereiche}
+\begin{itemize}
+\item Universitärer Bereich
+\item Forschung
+\end{itemize}
+
 \section{Zielgruppen}
+\begin{itemize}
+\item Wahlforscher
+\item Softwareentwickler
+\end{itemize}
+
 \section{Betriebsbedingungen}
+XXX welche gibt es? XXX
+
 
 \chapter{Produktumgebung}
 
 \section{Software}
+\begin{itemize}
+\item OS: Windows/Linux
+\item Softwareentwickler
+\end{itemize}
+
 \section{Hardware}
+\begin{itemize}
+\item PC
+\end{itemize}
+
 \section{Orgware}
-\section{Produk-Schnittstellen}
+XXX
+
+\section{Produkt-Schnittstellen}
+XXX bei Implementierung von Einsatz anderer SAT-Solver? XXX
+XXX allgemein: Ausgabe von Produktdaten? XXX
+
 
 \chapter{Funktionale Anforderungen}
 
+
 \chapter{Produktdaten}
+\section{Code-Editor "`Rigtime"'}
+/D10/ Das Wahlverfahren ist als Methode "`unsigned int voting(params)"' einer C-Headerdatei definiert und wird mit der Endung .h gespeichert.
+
+\section{Editor "`Properties"'}
+/D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen muss ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
+
 
 \chapter{Nichtfunktionale Anforderungen}
 
+
 \chapter{Globale Testfälle}
+
 
 \chapter{Systemmodelle}
 \section{Szenarien}
 \section{Anwendungsfälle}
 \section{Objektmodelle}
 \section{Dynamische Modelle}
+
+
+\chapter{GUI}
+
+
+\chapter{Phasenverantwortliche}
+\section{Pflichtenheft} Justin Hecht
+\section{Entwurf} 
+\section{Implementierung}
+\section{Qualitätssicherung} 
+\section{Abschlusspräsentation} 
+
 
 \chapter{Glossar}
  
