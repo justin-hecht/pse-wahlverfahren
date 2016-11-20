@@ -113,7 +113,92 @@ XXX allgemein: Ausgabe von Produktdaten? XXX
 
 
 \chapter{Funktionale Anforderungen}
+\section{C-Code Editor für Wahlverfahren}
+/F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
+/F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
+/F30/ Speichern von erstellten Code in Dateiformat datei.c \\
+/F40/ Laden und Darstellen von .c Dateien  \\
+/F50/ Automatisches Einrücken des codes in Schleifen und if-statements \\
+/F60/ Code-Completion
+\begin{itemize}
+\item Automatisches Schließen von Klammern und Anführungszeichen
+\item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
+\item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben.
+\end{itemize}
+/F70/ Syntax-Highlighting: Darstellung diverser Schlüsselwörter in anderen Farben als den Rest des Codes. Dies beinhaltet, ist jedoch nicht beschränkt auf: 
+\begin{itemize}
+\item Typendeklaration (int, float, structs...)
+\item Kontrollflow-Konstrukte (if, else, while...)
+\item Kommentare
+\end{itemize}
+/F80/ Durch den User konfigurierbares Verhalten:
+\begin{itemize}
+\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
+\item Festlegen des verwendeten Fonts
+\end{itemize}
+/F90/ Anzeigen von Syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
+\begin{itemize}
+\item Verwendung von Schlüsselwörtern als Variablennamen 
+\item Vergessene Semikolons am Ende von Anweisungen
+\end{itemize}
+/F100/ Reaktion auf typische Tastenkürzel (siehe \ref{table:Hotkeys_and_operations})\\s
+\begin{table}
+\caption{Hotkeys und verbundene Operationen}
+\begin{tabular}{lcr} 
+Kürzel & Operation \\
+\hline 
+Strg + c & Kopieren \\
+Strg + x & Auschneiden \\
+Strg + v & Einfügen \\
+Strg + z & Zuletzt ausgeführte Aktion Rückgängig machen \\
+Strg + r & Zuletzt rückgängig gemachte Aktion erneut ausführen \\
+Strg + s & Speichern \\
+Strg + o & Öffnen \\
+Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
+\end{tabular}
+\label{table:Hotkeys_and_operations}
+\end{table}
 
+ 
+\section{Editor für formale Eigenschaften}
+/F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
+/F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
+/F21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung in abgespeckter C-Syntax\\
+/F30/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
+
+\begin{table}
+\caption{Makros zur Beschreibung formaler Eigenschaften}
+\begin{tabular}{lcr} 
+Makro & Effekt \\
+\hline 
+\verb!FOR_ALL_VOTERS(E)! & checkt ob E für alle Wähler gilt \\
+\verb!FOR_ALL_CANDIDATES(E)! & checkt ob E für alle Kandidaten gilt \\
+\verb!FOR_ALL_SEATS(E)! & checkt ob E für alle Sitze gilt \\
+\verb!EXISTS_ONE_VOTER(E)! & checkt ob E für zumindest einen Wähler gilt \\
+\verb!EXISTS_ONE_CANDIDATE(E)! & checkt ob E für zumindest einen Kandidaten gilt \\
+\verb!EXISTS_ONE_SEAT(E)! & checkt ob E für zumindest einen Sitz gilt \\
+\verb!VOTE_SUM_FOR_CANDIDATE(c)! & gibt die Anzahl Stimmen für Kandidaten c zurück\\
+\end{tabular}
+\label{table:Macros_for_formal_Attributes}
+\end{table}
+/F40/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
+/F50/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
+/F60/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
+/F70/ Syntax-Highlighting \\
+/F80/ Anzeigen von Syntaktischen Fehlern im Code \\
+/F90/ Code-Completion
+\begin{itemize}
+\item Auto-Vervollständigung der Makros
+\item Analyse des Codes und Anzeigen relevanter, bereits definierter Eigenschaften und symbolischer Variablen
+\end{itemize}
+
+\section{Editor für Eingabeparameter}
+/F10/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
+/F20/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
+
+\section{Ausgabe der Analyseergebnisse}
+/F10/ Ausgabe einer Erfolgsmeldung bei Erfolg \\
+/F20/ Graphische Darstellung eines Gegenbeispiels \\
 
 \chapter{Produktdaten}
 \section{Code-Editor "`Rigtime"'}
