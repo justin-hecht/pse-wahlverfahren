@@ -239,11 +239,121 @@ Makro & Effekt \\
 
 
 \chapter{Nichtfunktionale Anforderungen}
-/F10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Comletion
+/F10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Completion
 
 
 \chapter{Globale Testfälle}
+\section{Laden von Wahlverfahren}
+1. Stand: Das Programm warten auf eine Aktion. Der Nutzer will ein Wahlverfahren laden.\\
+Aktion: Der Nutzer betätigt mit der Maus einen Button mit einem Ladeicon innerhalb des GUIs für Wahlverfahren.\\
+Reaktion: Das Programm öffnet einen Dateibrowser.\\
 
+2. Stand: Der Dateibrowser ist geöffnet.\\
+Aktion: Der Nutzer wählt eine zu ladende C-Datei aus und bestätigt diese durch den Tastendruck\\
+Enter oder durch einen Klick auf den Ladebutton mit der Maus
+Reaktion: Falls die Änderungen im vorherigen Wahlverfahren nicht gespeichert wurden öffnet ein neues Pop-up-Fenster. (2.1) Sonst folgt (2.2)\\
+2.1 Je nachdem wie sich der Nutzer entscheidet werden entweder Punkt 2.1.1 Punkt 2.1.2, oder Punkt 2.1.2 ausgeführt.
+
+2.1.1 Stand: Der Nutzer will die Änderungen verwerfen.
+Aktion: Der Nutzer betätigt den Button Verwerfen des Pop-Ups
+Reaktion: Das neue C-Programm wird in den Wahlverfahreneditor geladen. Das zuvor
+geladene C-Programm wird verworfen. Das Pop-up sowie der Dateibrowser
+schließen sich
+
+2.1.2 Stand: Der Nutzer will das Laden abbrechen
+Aktion: Der Nutzer betätigt den Button abbrechen des Pop-Ups
+Reaktion: Pop-up sowie Dateibrowser schließen sich
+
+2.1.3 Stand: Der Nutzer will die Änderungen an seinem alten C-Programm speichern und das
+neue Dokument laden
+Aktion: Der Nutzer betätigt den Button Änderungen speichern
+Reaktion: Die Änderungen am vorherigen C-Programm werden gespeichert. Das neue CProgramm
+wird in den Wahlverfahreneditor geladen.
+
+2.2
+Nur falls keine Aktion 2.1 ausgeführt wurde:
+Stand: Der Nutzer hat bereits das Laden bestätigt
+Aktion: -
+Reaktion: Das neue C-Programm wird in den Wahlverfahreneditor geladen.
+Laden von zu testenden Eigenschaften:
+
+1. Stand: Das Programm warten auf eine Aktion. Der Nutzer will eine Eigenschaft von
+Wahlverfahren (EvW) laden
+Aktion: Der Nutzer betätigt mit der Maus einen Button mit einem Ladeicon innerhalb des GUIs
+für die Eigenschaften von Wahlverfahren
+Reaktion: Das Programm öffnet einen Dateibrowser
+2. Stand: Der Dateibrowser ist geöffnet:
+Aktion: Der Nutzer wählt eine zu EvW aus und bestätigt diese durch den Tastendruck Enter oder
+durch einen Klick auf den Ladebutton mit der Maus
+Reaktion: Falls die Änderungen im vorherigen Wahlverfahren nicht gespeichert wurden öffnet ein
+neues Pop-up-Fenster. (2.1) Sonst folgt 2.2
+2.1 Je nachdem wie sich der Nutzer entscheidet werden entweder Punkt 2.1.1 Punkt 2.1.2, oder
+Punkt 2.1.2 ausgeführt.
+
+2.1.1 Stand: Der Nutzer will die Änderungen verwerfen.
+Aktion: Der Nutzer betätigt den Button Verwerfen des Pop-Ups
+Reaktion: Die neue EvW wird in den Editor für Eigenschaften von Wahlverfahren geladen.
+Die zuvor geladene EvW werden verworfen. Das Pop-up sowie der
+Dateibrowser schließen sich
+2.1.2 Stand: Der Nutzer will das Laden abbrechen
+Aktion: Der Nutzer betätigt den Button abbrechen des Pop-Ups
+Reaktion: Pop-up sowie Dateibrowser schließen sich
+
+2.1.3 Stand: Der Nutzer will die Änderungen seiner vorherigen EvW speichern und die neuen
+EvW laden.
+Aktion: Der Nutzer betätigt den Button Änderungen speichern
+Reaktion: Die Änderungen an den vorherigen EvW werden gespeichert. Die neuen EvW
+werden in werden in den Editor für EvW geladen. Pop-up sowie
+Dateibrowser schließen sich
+
+2.2
+Nur falls keine Aktion 2.1 ausgeführt wurde:
+Stand: Der Nutzer hat bereits das Laden bestätigt
+Aktion: -
+Reaktion: Die neue EvW wird in den Wahlverfahreneditor geladen.
+"Speichern" von Wahlverfahren (WV) oder von EvW
+1. Stand: Das Programm wartet auf eine Eingabe
+Aktion: Der Nutzer betätigt das Saveicon im entsprechenden Fenster
+Reaktion: Das Programm speichert das WV oder die EvW. Falls für dieses Dokument noch kein
+Speicherort definiert wurde öffnet sich die Reaktion von "Speichern unter"
+Speichern unter von WV oder EvW
+1. Stand: Das Programm wartet auf eine Eingabe
+Aktion: Der Nutzer betätigt das Save-as-icon im entsprechenden Fenster
+Reaktion: Ein Dateibrowser wird geöffnet
+2. Stand: Der Dateibrowser ist geöffnet
+Aktion: Der Nutzer gibt einen Speicherort und einen Namen für das zu speichernde Dokument an
+und bestätigt seine Eingabe
+Reaktion: Das Dokument wird mit dem genannten Namen an den gewählten Ort gespeichert.
+Eingabe der Anzahl der Wähler
+1. Stand: Das Programm wartet auf eine Eingabe:
+Aktion: In einem Eingagbe-Fenster verändert der Nutzer die Anzahl der Wähler und bestätigt
+diese.
+Reaktion: Die neue Anzahl der Wähler wird gespeichert
+Eingabe der Anzahl der Kandidaten
+1. Stand: Das Programm wartet auf eine Eingabe:
+Aktion: In einem Eingagbe-Fenster verändert der Nutzer die Anzahl der Kandidaten und bestätigt
+diese
+Reaktion: Die neue Anzahl der Kandidaten wird gespeichert
+Eingabe der Timeoutzeit
+1. Stand: Das Programm wartet auf eine Eingabe:
+Aktion: In einem Eingabe-Fenster gibt der Nutzer eine Anzahl an Minuten für den Timeout an
+und bestätigt diese.
+Reaktion: Das Programm speichert die neue Timeoutzeit
+Übeprüfung des WV auf EvW:
+1. Stand: In beiden Editoren sind gültige Dokumenten. Es sind Werte für die Anzahl der Stimmen,
+der Sitze, der Kandidaten und der Timeoutzeitgestzt
+Aktion: Der Nutzer betätigt die "Auf Eigenschaften prüfen"-Taste
+Reaktion: Das Programm bestätigt die Eigenschaft mit anschaulichen Werten oder gibt ein
+konkretes Gegenbeispiel im Ausgabefenster.
+Bearbeiten des WV:.
+1. Stand: Das Programm wartet auf eine Eingabe
+Aktion: Der Nutzer ändert das C-Programm
+Reaktion: Im Interface sieht man, dass sich das Programm geändert hat. Das Programm
+hightlighted korrekte C-Syntax
+Bearbeiten der EvW:
+1. Stand: Das Programm wartet auf eine Eingabe
+Aktion: Der Nutzer ändert die EvW
+Reaktion: Macros werden als Vorschläge ergänzt.
 
 \chapter{Systemmodelle}
 \section{Szenarien}
