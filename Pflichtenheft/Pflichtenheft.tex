@@ -7,42 +7,57 @@
 \usepackage{ae}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
 \usepackage{graphicx}
+\usepackage[printonlyused]{acronym}
  
 \begin{document}
- 
+
 \title{Pflichtenheft}
 \author{Beste Gruppe}
 \maketitle
  
+\begin{acronym} %put all your abbreviations here 
+\acro{CBMC}{C Bounded Model Checker}
+\acro{GUI}{Graphical User Interface}
+\end{acronym}
 
-\tableofcontents
+\tableofcontents	
  
 \chapter{Produktübersicht}
 Das Entwicklerprogramm "`Concrete Rigging of Voting Procedures"' ermöglicht es, Wahlverfahren auf formale Eigenschaften zu prüfen. So kann ein in C definiertes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Der Benutzer kann verschiedene Parameter der Wahl zusätzlich vorgeben.
 
-
-Da eine vollständige Prüfung auf Wahleigenschaften sehr lange dauern würde, kommt ein Bounded Model Check zum Einsatz. Das verwendete Werkzeug CBMC wird dabei automatisch vom Programm angesteuert.
+Da eine vollständige Prüfung auf Wahleigenschaften sehr lange dauern würde, kommt ein Bounded Model Check zum Einsatz. Das verwendete Werkzeug \ac{CBMC} wird dabei automatisch vom Programm angesteuert.
 
 Der Benutzer bekommt schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Sollte die Prüfung jedoch erfolgreich sein, bekommt der Nutzer ein Positivbeispiel präsentiert.
 
-
-\chapter{Zielbestimmung}
-Das vorliegende Programm überprüft in C geschriebene Wahlverfahren mit Hilfe von CBMC auf formale Eigenschaften. Das Programm akzeptiert optionale Wahlparameter und gibt das Ergebnis der Prüfung zurück.
-
-Die GUI ist in vier Teilen angeordnet:
+Die \ac{GUI} ist in vier Teilen angeordnet:
 \begin{enumerate}
 \item "`Rigtime"': Code-Editor für Wahlverfahren in Programmiersprache C.
 \item "`Properties"': Editor für Spezifikation formaler Eigenschaften in abgespeckter C-Syntax mit speziellen Macros.
-\item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen.
+\item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen. s
 \item "`Rigplete"': Ausgabe der Prüfung.
 \end{enumerate}
+
+
+\chapter{Zielbestimmung}
+Ziel des Programmes ist es, eine komfortable, graphische Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
+Es soll Folgendes bereitstellen:
+\begin{itemize}
+\item Eine Möglichkeit zur Beschreibung diverser Wahlverfahren in C-Code  
+\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen sollen, in abgespeckter C Syntax 
+\item Eine Möglichkeit zum Angeben der Eingabewerte (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze) 
+\item Eine Ausgabe des Ergebnisses der Überprüfung: eine Erfolgsmeldung bei Erfolg und Präsentation eines Gegenbeispiels bei Nichterfolg
+\end{itemize}
+
+Die letztendliche Überprüfung wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten sowie dessen Ausgabe zu interpretieren und präsentieren. 
+
+All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und reguläre Aufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Daher ist enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine leicht zu navigierende und intuitive \ac{GUI}. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \begin{itemize}
 \item Das Programm kann auf aktuellen Versionen von Windows und Linux-Betriebssystemen betrieben werden.
 \item Alle Abhängigkeiten (u.a. zu CBMC) werden mit dem Programm ausgeliefert.
 \end{itemize}
-Die Elemente der GUI sollen folgenden Kriterien genügen:
+Die Elemente der \ac{GUI} sollen folgenden Kriterien genügen:
 \begin{itemize}
 \item "`Rigtime"': Code-Editor mit der Möglichkeit zum Speichern, Speichern als und Laden.
 \item "`Properties"': Editor mit der Möglichkeit zum Speichern, Speichern als und Laden. Die Eingabe soll überprüft werden, d.h. ob die Eingabe Macros in C-Syntax darstellt. Im selben Fenster soll es eine Eingabemaske für zusätzliche symbolische Variablen geben.
@@ -54,7 +69,7 @@ Die Elemente der GUI sollen folgenden Kriterien genügen:
 \begin{itemize}
 \item Das Programm kann auf aktuellen Macs betrieben werden.
 \end{itemize}
-Die Elemente der GUI sollen folgenden Kriterien genügen:
+Die Elemente der \ac{GUI} sollen folgenden Kriterien genügen:
 \begin{itemize}
 \item "`Rigtime"': Der Code-Editor soll für die Programmiersprache C bieten:
 \begin{itemize} 
@@ -231,6 +246,17 @@ Makro & Effekt \\
 \chapter{Systemmodelle}
 \section{Szenarien}
 \section{Anwendungsfälle}
+Eine Prüfstelle oder ein Entwickler gibt dem Tool ein Wahlverfahren in C und eine formale 
+Eigenschaft über beziehungsweise entwickelt diese selbst in den jeweiligen Editoren des Tools. 
+Werden diese als plausibel erkannt kann er das Wahlverfahren, auch mit Angabe eigener 
+Testparameter (Wähler, Sitze, Timeout...), auf die Eigenschaft prüfen und erhält das Ergebnis 
+als graphische Ausgabe. 
+Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert werden.
+
+
+{\vspace{0.5cm}\hspace*{-3cm}\includegraphics[scale=0.49]{Use-Case-Diagram}}
+	
+ 
 \section{Objektmodelle}
 \section{Dynamische Modelle}
 
