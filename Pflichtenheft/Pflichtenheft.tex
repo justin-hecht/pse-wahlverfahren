@@ -17,17 +17,20 @@
  
 \begin{acronym} %put all your abbreviations here 
 \acro{CBMC}{C Bounded Model Checker}
+\acro{BMC}{Bounded Model Checking}
 \acro{GUI}{Graphical User Interface}
 \end{acronym}
 
 \tableofcontents	
  
 \chapter{Produktübersicht}
-Das Entwicklerprogramm "`Concrete Rigging of Voting Procedures"' ermöglicht es, Wahlverfahren auf formale Eigenschaften zu prüfen. So kann ein in C definiertes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Der Benutzer kann verschiedene Parameter der Wahl zusätzlich vorgeben.
+Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Anwesenheit erwünschter Eigenschaften zu untersuchen.
 
-Da eine vollständige Prüfung auf Wahleigenschaften sehr lange dauern würde, kommt ein Bounded Model Check zum Einsatz. Das verwendete Werkzeug \ac{CBMC} wird dabei automatisch vom Programm angesteuert.
+\ac{BMC} bietet im allgemeinstem Fall eine Möglichkeit zu verifizieren, ob ein gegebenes System diverse Eigenschaften erfüllt. Es ist vollautomatisch und gibt bei Nichterfüllung ein Gegenbeispiel zurück. Dazu baut es eine boolsche Formel, welche genau dann erfüllbar ist, wenn die zu Untersuchende Eigenschaft vom System nicht erfüllt wird.
 
-Der Benutzer bekommt schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Sollte die Prüfung jedoch erfolgreich sein, bekommt der Nutzer ein Positivbeispiel präsentiert.
+In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung zu lösen: so kann ein in C definiertes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Der Benutzer kann verschiedene Parameter der Wahl zusätzlich vorgeben. \ac{CBMC} wird dabei automatisch vom Programm angesteuert.
+
+Der Benutzer bekommt schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Sollte die Prüfung jedoch erfolgreich sein, bekommt der Nutzer ein Positivbeispiel präsentiert. All dies wird graphisch über eine \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist in vier Teilen angeordnet:
 \begin{enumerate}
@@ -36,7 +39,6 @@ Die \ac{GUI} ist in vier Teilen angeordnet:
 \item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen. s
 \item "`Rigplete"': Ausgabe der Prüfung.
 \end{enumerate}
-
 
 \chapter{Zielbestimmung}
 Ziel des Programmes ist es, eine komfortable, graphische Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
