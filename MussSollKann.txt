@@ -1,0 +1,57 @@
+Musskriterien
+
+\begin{itemize}
+\item Das Programm kann auf aktuellen 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden
+\item Alle Abhängigkeiten werden mit dem Programm ausgeliefert
+\item Das Programm bietet einen Code-Editor für das zu prüfende Wahlverfahren
+	\begin{itemize}
+	\item Der Code kann abgespeichert und geladen werden
+	\item Der Code-Editor zeigt Fehler im eingegebenen Code an
+	\item Aktionen können widerrufen und wiederhergestellt werden
+	\end{itemize}
+\item Es können formale Eigenschaften zur Prüfung des Wahlverfahrens eingegeben werden
+	\begin{itemize}
+	\item Eine formale Eigenschaft kann abgespreichert und geladen werden
+	\item Fehler in der Eingabe werden angezeigt
+	\end{itemize}
+\item Die Parameter der Wahl (Anzahl von Wählern, Kandidaten und Sitzen) können festgelegt werden
+\item Das Ergebnis der Überprüfung wird vom Programm angezeigt. Im Fall der Verletzung einer formalen Eigenschaft wird ein Gegenbeispiel vom Programm angezeigt
+\end{itemize}
+
+
+
+Sollkriterien
+
+\begin{itemize}
+\item Die Parameter der Wahl können in Intervallen angegeben werden.
+\item Der Code-Editor bietet folgendes:
+	\begin{itemize}
+	\item Syntax-Highlighting
+	\item Automatisches Einrücken
+	\item Tastatur-Shortcuts
+	\item Codevorlagen
+	\end{itemize}
+\item Es gibt Code completion bei der Eingabe der formalen Eigenschaften
+\item Die Analyse des Wahlverfahrens kann abgebrochen werden.
+\end{itemize}
+
+
+
+Kannkriterien
+
+\begin{itemize}
+\item Das Programm kann auf einem Mac betrieben werden
+\item Der Code-Editor bietet folgendes:
+	\begin{itemize}
+	\item Code completion
+	\item Warnung vor nicht unterstützten Elementen der Programmiersprache
+	\end{itemize}
+\item Es kann festgelegt werden, wie lange die Analyse des Wahlverfahrens maximal dauern soll
+\item Eine Wahl kann eingegeben werden. Das Ergebnis wird angezeigt.
+\end{itemize}
+
+
+
+Abgrenzungskriterien
+
+Vorschläge?
