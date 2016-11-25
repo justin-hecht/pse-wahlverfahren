@@ -1,0 +1,66 @@
+Anmerkungen
+Erstmal: Übel gut. Du formulierst sehr eloquent. Und die überarbeitete Produktübersicht ist ziemlich gut. Ich denke mal, du hast sie überarbeitet, deshalb schick ich dir meine Kommentare auch dazu.
+
+
+\chapter{Produktübersicht}
+
+- Soll ich die GUI nicht einfach rausstreichen? Im Grunde geht es nur um die Funktionalität und die GUI wird ja extra nachher noch in nem Abschnitt abgehandelt.
+
+
+\chapter{Zielbestimmung}
+
+- Sind Zielgruppe nun doch Nicht-Informatiker? Dann muss ich die anderen Punkte anpassen.
+
+
+\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in abgespeckter C Syntax 
+- Statt "abgespeckt": "Die Eingabe erfolgt in einer modifizierten C Syntax, die lediglich Macros und Variablendeklarationen zulässt. Sie wird mit logischen Verknüpfungen kombiniert". Oder ist das wieder zu präzise?
+
+
+chapter Kriterien
+- Check mal die Sprache. Ist das jetzt allgemein genug?
+
+
+
+\item Warnung vor nicht unterstützten Elementen der Programmiersprache
+- Wie war das bei der Besprechung? Bleibt das als Kriterium? Wie formulieren?
+
+
+\section{Abgrenzungskriterien}
+- Ideen?
+
+
+\chapter{Produkteinsatz}
+- Muss, je nach Zielgruppe, noch verändert werden. 
+
+
+\section{Orgware}
+- Würd ich rausstreichen, weil mir nix einfällt, was reinkann. OK?
+
+
+chapter Funktionale Anforderungen:
+- Fortlaufende Nummerierung ist noch nicht wirklich. F10/ taucht öfters auf. Ich dachte aber, wenn man von F10/ redet, muss man im Pflichtenheft identifizieren könne, welche Anforderung gemeint ist.
+- Die Aufteilung in Musskriterien usw. fehlt noch. Wir müssten noch genau festlegen, was was ist, damit das hinten auch benannt werden kann.
+- Kommentare erstmal so. Im Latex-Dok wollt ich nicht reinkommentieren.
+
+\section{Allgemein}
+f10: Kleiner EDIT
+f20: Was heißt "Kommunikation"?
+
+\section{C-Code Editor für Wahlverfahren}
+f10+20: Besser "Zeichen" als "Charakter"
+f60: Code completion. Wird dafür eigentlich ANTLR gebraucht? Wäre vielleicht wichtig, um es in Soll- oder Kannkriterium einzuordnen.
+f80: Geht zu weit :)
+f90: Ergänze noch ein "zum Beispiel" oder so
+f100: Tastenkürzel. Begriff "Code completion". Haben wir uns jetzt darauf geeinigt? Dann ohne Bindestrich schreiben ;)
+f100: Tastenkürzel. "Anzeigen der Code completion Vorschläge" bitte als Soll- oder Kannkriterium markieren
+f110: Wahltemplates. Haben wir diskutiert, wo die Templates hinkommen? Oder wird das ne Option im Menü? Nur als allgemeine Frage.
+
+
+\section{Editor für formale Eigenschaften}
+f10-20: auch wieder Zeichen statt Charakter
+f30: Die Variablen E werden nicht näher erklärt. Der Effekt E?
+f90: Code completion!
+
+
+section Ausgabe
+f20: Graphisch ist vielleicht zu unspezifisch. Kann aber auch erst geändert werden, wenn wir wissen, wies angezeigt werden soll. 

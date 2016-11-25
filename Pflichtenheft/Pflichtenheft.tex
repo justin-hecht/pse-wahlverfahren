@@ -45,48 +45,70 @@ Ziel des Programmes ist es, eine komfortable, graphische Lösung zur Untersuchun
 Es soll Folgendes bereitstellen:
 \begin{itemize}
 \item Eine Möglichkeit zur Beschreibung diverser Wahlverfahren in C-Code  
-\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen sollen, in abgespeckter C Syntax 
-\item Eine Möglichkeit zum Angeben der Eingabewerte (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze) 
+\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in abgespeckter C Syntax 
+\item Eine Möglichkeit zum Angeben der Parameter (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze) 
 \item Eine Ausgabe des Ergebnisses der Überprüfung: eine Erfolgsmeldung bei Erfolg und Präsentation eines Gegenbeispiels bei Nichterfolg
 \end{itemize}
 
 Die letztendliche Überprüfung wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten sowie dessen Ausgabe zu interpretieren und präsentieren. 
 
-All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und reguläre Aufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Daher ist enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine leicht zu navigierende und intuitive \ac{GUI}. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Daher ist ein enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine leicht zu navigierende und intuitive \ac{GUI}. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+
+\begin{itemize}
+\item
+\end{itemize}
+
 
 \section{Musskriterien}
 \begin{itemize}
-\item Das Programm kann auf aktuellen Versionen von Windows und Linux-Betriebssystemen betrieben werden.
-\item Alle Abhängigkeiten (u.a. zu CBMC) werden mit dem Programm ausgeliefert.
+\item Das Programm kann auf aktuellen 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden
+\item Alle Abhängigkeiten werden mit dem Programm ausgeliefert
+\item Das Programm bietet einen Code-Editor für das zu prüfende Wahlverfahren
+	\begin{itemize}
+	\item Der Code kann abgespeichert und geladen werden
+	\item Der Code-Editor zeigt Fehler im eingegebenen Code an
+	\item Aktionen können widerrufen und wiederhergestellt werden
+	\end{itemize}
+\item Es können formale Eigenschaften zur Prüfung des Wahlverfahrens eingegeben werden
+	\begin{itemize}
+	\item Eine formale Eigenschaft kann abgespreichert und geladen werden
+	\item Fehler in der Eingabe werden angezeigt
+	\end{itemize}
+\item Die Parameter der Wahl (Anzahl von Wählern, Kandidaten und Sitzen) können festgelegt werden
+\item Das Ergebnis der Überprüfung wird vom Programm angezeigt. Im Fall der Verletzung einer formalen Eigenschaft wird ein Gegenbeispiel vom Programm angezeigt
 \end{itemize}
-Die Elemente der \ac{GUI} sollen folgenden Kriterien genügen:
+
+
+\section{Sollkriterien}
 \begin{itemize}
-\item "`Rigtime"': Code-Editor mit der Möglichkeit zum Speichern, Speichern unter und Laden.
-\item "`Properties"': Editor mit der Möglichkeit zum Speichern, Speichern unter und Laden. Die Eingabe soll überprüft werden, d.h. ob die Eingabe Macros in C-Syntax darstellt. Im selben Fenster soll es eine Eingabemaske für zusätzliche symbolische Variablen geben.
-\item "`Params"': Option für eine graphische Eingabe der Anzahl von Wählern, Kandidaten und Sizen.
-\item "`Rigplete"': Das Ergebnis der Wahlanalyse wird angezeigt. Falls CBMC ein Gegenbeispiel zu einer formalen Eigenschaft gefunden hat, soll das Beispiel XXX graphisch XXX angezeigt werden.
+\item Die Parameter der Wahl können in Intervallen angegeben werden.
+\item Der Code-Editor bietet folgendes:
+	\begin{itemize}
+	\item Syntax-Highlighting
+	\item Automatisches Einrücken
+	\item Tastatur-Shortcuts
+	\item Codevorlagen
+	\end{itemize}
+\item Es gibt Code completion bei der Eingabe der formalen Eigenschaften
+\item Die Analyse des Wahlverfahrens kann abgebrochen werden.
 \end{itemize}
+
 
 \section{Wunschkriterien}
 \begin{itemize}
-\item Das Programm kann auf aktuellen Macs betrieben werden.
-\end{itemize}
-Die Elemente der \ac{GUI} können folgenden Kriterien genügen:
-\begin{itemize}
-\item "`Rigtime"': Der Code-Editor soll für die Programmiersprache C bieten:
-\begin{itemize} 
-\item Syntax-Highlighting \item Fehler-Anzeige \item Automatisches Einrücken \item Auto completion \item Widerrufen, Wiederherstellen \item Tastatur-Shortcuts
-\item Warnung vor nicht unterstützten Elementen der Programmiersprache \item Codevorlagen
-\end{itemize}
-\item "`Properties"': Der Editor soll Syntax-Highlighting und eine Fehler-Anzeige für C bieten. Codeeingaben sollen komplettiert werden können.
-\item "`Params"': Die Analyse der Wahl soll mit Hilfe eines Buttons abgebrochen werden können.
-\item Wahlergebnisausgabe: Im Fenster XXX "`Params"' XXX kann ein Array mit Wahlstimmen eingegeben werden. Das Ergebnis dieser Wahl wird im Fenster "`Rigplete"' angezeigt.
-\item Zusätzlicher SAT-Solver: Das Programm bietet eine Schnittstelle, sodass auch andere SAT-Solver als CBMC angesteuert werden können.
-\item XXX Weitere? XXX
-\end{itemize}
+\item Das Programm kann auf einem Mac betrieben werden
+\item Der Code-Editor bietet folgendes:
+	\begin{itemize}
+	\item Code completion
+	\item Warnung vor nicht unterstützten Elementen der Programmiersprache
+	\end{itemize}
+\item Es kann festgelegt werden, wie lange die Analyse des Wahlverfahrens maximal dauern soll
+\item Eine Wahl kann eingegeben werden. Das Ergebnis wird angezeigt.
+
 
 \section{Abgrenzungskriterien}
-XXX
+\item XXX open
+
 
 
 \chapter{Produkteinsatz}
@@ -105,41 +127,40 @@ Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richt
 \end{itemize}
 
 \section{Betriebsbedingungen}
-XXX welche gibt es? XXX
+Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuellen Computer mit aktuellen Werten für Arbeitsspeicher und Rechnergeschwindigkeit betrieben.
 
 
 \chapter{Produktumgebung}
 
 \section{Software}
 \begin{itemize}
-\item OS: Windows/Linux
-\item Softwareentwickler
+\item Das Betriebssystem ist entweder Microsoft Windows oder eine Linux-Distribution
 \end{itemize}
 
 \section{Hardware}
 \begin{itemize}
-\item PC
+\item PC mit Tastatur und Maus
 \end{itemize}
 
 \section{Orgware}
-XXX
+Es kommt keine Orgware zum Einsatz.
 
 \section{Produkt-Schnittstellen}
-XXX bei Implementierung von Einsatz anderer SAT-Solver? XXX
-XXX allgemein: Ausgabe von Produktdaten? XXX
+Über das Produkt wird der SAT-Solver CBMC angesteuert. Es sorgt für die Konfiguration von CBMC und interpretiert die Ergebnisse.
+
 
 
 \chapter{Funktionale Anforderungen}
 \section{Allgemein}
-/F10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zu erfüllender formaler Eigenschaften \\
+/F10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
 /F20/ Kommunikation und Überprüfung dieser Eigenschaften via CBMC \\
 /F30/ Bereitstellen von Kommunikationsschnittstellen mit CBMC sowohl für Eingabe von Parametern als auch Ausgabe der Ergebnisse, welche auch für Nicht-Informatiker verständlich ist \\
 /F40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
 
 \section{C-Code Editor für Wahlverfahren}
 /F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
-/F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
-/F30/ Speichern von erstellten Code in Dateiformat datei.c \\
+/F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die Tastatur wie in Notepad \\
+/F30/ Speichern von erstelltem Code in Dateiformat datei.c \\
 /F40/ Laden und Darstellen von .c Dateien  \\
 /F50/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
 /F60/ Code-Completion
@@ -231,11 +252,13 @@ Makro & Effekt \\
 /F20/ Graphische Darstellung eines Gegenbeispiels \\
 
 \chapter{Produktdaten}
-\section{Code-Editor "`Rigtime"'}
+\section{Code-Editor Wahlverfahren}
 /D10/ Das Wahlverfahren ist als Methode "`unsigned int voting(params)"' einer C-Headerdatei definiert und wird mit der Endung .h gespeichert.
 
-\section{Editor "`Properties"'}
+\section{Editor von formalen Eigenschaften}
 /D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen muss ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
+
+/D30/ Ein Projekt wird als Dateiliste gespeichert
 
 
 \chapter{Nichtfunktionale Anforderungen}
