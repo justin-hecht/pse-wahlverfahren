@@ -6,14 +6,29 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
+%graphics
 \usepackage{graphicx}
+\graphicspath{ {images/GUI/c-editor/}
+ {images/GUI/Eigenschaften-Liste/}
+  {images/GUI/Eigenschaften/}
+  {images/GUI/Parameter-editor/}} 
+
 \usepackage[printonlyused]{acronym}
-\usepackage{glossaries}
+\usepackage{hyperref}
 \usepackage{float}
 
-\graphicspath{ {images/GUI/c-editor/} {images/GUI/Eigenschaften-Liste/} {images/GUI/Eigenschaften/}}
-
+%glossary stuff, must be defined after hyperref
+\usepackage[toc,xindy]{glossaries}
 \makeglossaries
+
+\newglossaryentry{Grundstein}{name=Grundstein,description={Der Demokratie, is klar.}}
+\newglossaryentry{CBMC}
+{
+name={C bounded model checker},
+description={Ein Programm, welches C-Programme mit bounded model checking auf Fehler und vom user definierte assertions untersucht}
+}
+
+
 
 \begin{document}
 
@@ -21,24 +36,26 @@
 \author{Beste Gruppe}
 \maketitle
  
-\newglossaryentry{Grundstein}{name=Grundstein,description={Der Demokratie, is klar.}}
 
+\tableofcontents	
+
+\listoffigures
+
+\chapter*{Abkürzungsverzeichnis}
 \begin{acronym} %put all your abbreviations here 
 \acro{CBMC}{C Bounded Model Checker}
 \acro{BMC}{Bounded Model Checking}
 \acro{GUI}{Graphical User Interface}
 \end{acronym}
-
-\tableofcontents	
  
 \chapter{Produktübersicht}
 Wahlverfahren bilden den \gls{Grundstein} unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Anwesenheit erwünschter Eigenschaften zu untersuchen.
 
-\ac{BMC} bietet im allgemeinstem Fall eine Möglichkeit zu verifizieren, ob ein gegebenes System diverse Eigenschaften erfüllt. Es ist vollautomatisch und gibt bei Nichterfüllung ein Gegenbeispiel zurück. Dazu baut es eine boolsche Formel, welche genau dann erfüllbar ist, wenn die zu Untersuchende Eigenschaft vom System nicht erfüllt wird. 
+\ac{BMC} Wird normalerweise dazu verwendet zu überprüfen ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird das Problem entscheidbar. Um dies zu bewerkstelligen, werden Potentiell unendliche Codepfade - also Schleifen - bis zu einer gewissen Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist genau dann wenn das Programm einen Zustand einnehmen kann welcher die Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
 
-In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung zu lösen: so kann ein in C definiertes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es sehr kompliziert, dies ohne Weiteres zu tun. 
+In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung zu lösen: so kann ein in C beschriebenes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es kompliziert, dies direkt zu tun. 
 
-Unser Programm ist im Wesentlichen eine eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem Benutzer über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc geprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der Benutzer schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Sollte die Prüfung jedoch erfolgreich sein, bekommt der Nutzer ein Positivbeispiel präsentiert. All dies wird graphisch über die \ac{GUI} aufbereitet.
+Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem Benutzer über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der Benutzer schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
@@ -49,7 +66,7 @@ Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \end{enumerate}
 
 \chapter{Zielbestimmung}
-Ziel des Programmes ist es, eine komfortable, graphische Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
+Ziel des Programmes ist es eine  Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
 Es soll Folgendes bereitstellen:
 \begin{itemize}
 \item Eine Möglichkeit zur Beschreibung diverser Wahlverfahren in C-Code  
@@ -58,14 +75,9 @@ Es soll Folgendes bereitstellen:
 \item Eine Ausgabe des Ergebnisses der Überprüfung: eine Erfolgsmeldung bei Erfolg und Präsentation eines Gegenbeispiels bei Nichterfolg
 \end{itemize}
 
-Die letztendliche Überprüfung wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten sowie dessen Ausgabe zu interpretieren und präsentieren. 
+Die Überprüfung der gegebenen Eigenschaften wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten sowie dessen Ausgabe zu interpretieren und präsentieren. 
 
-All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Daher ist ein enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine leicht zu navigierende und intuitive \ac{GUI}. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
-
-\begin{itemize}
-\item
-\end{itemize}
-
+All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Daher ist ein enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI} welche oft benötigte Funktionalität bereitstellt. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \begin{itemize}
@@ -115,7 +127,9 @@ All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung un
 \end{itemize}
 
 \section{Abgrenzungskriterien}
- XXX open
+\begin{itemize}
+\item Das Programm kann keine Angabe darüber machen, wie Lange die Überprüfung einer Eigenschaft dauern wird
+\end{itemize}
 
 
 
@@ -611,6 +625,31 @@ Wie man zusätzlich sehen kann, sind auch Implikationen (\verb!==>!) möglich. A
 
 \section{Parameter Editor}
 
+Der Parameter Editor stellt das Hauptfenster der Anwendung dar. Es erlaubt das Einstellen und Starten der Tests. Hier lassen sich auch komplette Projekte Speichern - Code, Eigenschaften und Parameter gebündelt.
+
+\begin{figure}[H]
+\includegraphics[scale=1]{Parameter-editor.png}
+\caption{Der Parameter Editor. PERS steht für Professional Election Rigging System}
+\label{Parameter-editor}
+\end{figure}
+
+Das Datei Menü ist analog zu dem des C Editors. Das Projekt Menü wird im Folgenden erläutert. 
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Teste Eigenschaften & Startet Tests mit den angegebenen Parametern \\
+Stop Test & Unterbricht momentan laufenden Test
+\end{tabular}
+\label{Parameter-Projekt-Menü}
+\caption{Parameter Editor Projekt Menüpunkte}
+\end{table}
+
+Der Pfeil und das Stopp-Zeichen des Tool-Streifens haben ebenfalls die Wirkungen Teste Eigenschaften und Stop Test. 
+
+Als Mögliche Zeitangaben stehen Sekunden, Minuten, Stunden und Tage zur Verfügung.
+
 \chapter{Phasenverantwortliche}
 \section{Pflichtenheft} Justin Hecht
 \section{Entwurf} Holger Klein 
@@ -624,6 +663,5 @@ Wie man zusätzlich sehen kann, sind auch Implikationen (\verb!==>!) möglich. A
 \printglossaries
  
 
-\listoffigures
  
 \end{document}
