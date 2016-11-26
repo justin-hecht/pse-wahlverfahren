@@ -9,8 +9,9 @@
 \usepackage{graphicx}
 \usepackage[printonlyused]{acronym}
 \usepackage{glossaries}
+\usepackage{float}
 
-\graphicspath{ {/images} }
+\graphicspath{ {images/GUI/c-editor/} }
 
 \makeglossaries
 
@@ -409,6 +410,7 @@ Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert
 
 
 \chapter{GUI}
+Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweisen. Im Folgenden wird jedes mal darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
 Die \ac{GUI} besteht aus 4 verschiedenen Fenstern: 
 \begin{itemize}
 \item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können.
@@ -419,6 +421,123 @@ Die \ac{GUI} besteht aus 4 verschiedenen Fenstern:
 Jedes dieser Elemente verfügt auch über weitere Eigenschaften, die im Folgenden beschrieben werden.
 
 \section{C-Editor}
+Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es das eingeben von Funktionen welche ein Wahlverfahren implementieren zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, außerhalb dieser Funktion zu editieren. Dies untersagt aufgrund der Natur von C zum Beispiel selbst definierte Funktionen. Während des Eingeben des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
+Der C-Editor teilt sich in vier Untereinheiten auf: Der Menüstreifen, die Tool-Leiste, das Textfeld und das Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller Untermenüs geöffnet befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Neu & öffnet ein neues Dokument, wobei die Art der Wahl vom User angegeben wird \\
+Speichern & speichert das Dokument unter bereits gegebenem Namen \\
+Speichern unter & Speichert das Dokument unter neuem Namen an neuem Ort, beide durch User gegeben \\
+Öffnen & Öffnet neues Dokument des richtigen Formats
+\end{tabular}
+\label{Datei-Menüpunkte}
+\caption{Unterpunkte des Datei-Menüs}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion Rückgängig \\
+Wiederholen & Wiederholt die zuletzt Rückgängig gemachte Aktion \\
+Kopieren & Fügt markierten Text in die Zwischenablage ein \\
+Ausschneiden & Fügt markierten Text in die Zwischenablage ein und entfernt ihn aus dem Textfeld \\
+Einfügen & Fügt Text aus der Zwischenablage an der Stelle des Cursors ein \\
+Wahlart ändern & Ändert den Funktionskörper zu dem der vom User ausgewählten Art
+\end{tabular}
+\label{Bearbeiten-Menüpunkte}
+\caption{Unterpunkte des Bearbeiten-Menüs}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Einstellungen & Öffnet den Einstellungen Dialog. Dies ist Teil der Kann-Kriterien. Falls implementiert wird es Möglichkeiten zur Einstellung des Fonts und Syntax-Highlighting geben 
+\end{tabular}
+\label{Editor-Menüpunkte}
+\caption{Unterpunkte des Editor-Menüs}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von Lexer oder Parser erkennbare Fehler untersucht. Gefundene Fehler werden in dem Fehlerfeld angezeigt. Zusätzliches Kann-Kriterium Die Zeile, in welcher der Fehler ist, wird zusätzlich durch einen roten Punkt markiert (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}
+\end{tabular}
+\label{Editor-Menüpunkte}
+\caption{Unterpunkte des Code-Menüs}
+\end{table}
+
+Über den Tool-Streifen lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen.
+
+In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an dass man nur den Bereich in dem vorgegebenen Funktionskörper editieren kann.
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Editor-ohne-text.png}
+\caption{Der C Editor ohne Code}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Editor-mit-text.png}
+\caption{Der C Editor mit Code und Anzeige der Wahlart}
+\label{Editor-mit-text}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Editor-mit-Fehler-ohne-hover.png}
+\caption{Fehleranzeige bei syntaktischem Fehler ohne Maus Hover (Kann-Kriterium)}
+\label{Editor-mit-Fehler-ohne-hover}
+\end{figure}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Editor-mit-Fehler-mit-hover.png}
+\caption{Fehleranzeige bei syntaktischem Fehler mit Maus Hover (Kann-Kriterium)}
+\label{Editor-mit-Fehler-mit-hover}
+\end{figure}
+
+In \ref{Editor-mit-Fehler-ohne-hover} sieht man wie der gefundene syntaktische Fehler während des Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Editor-mit-Fehler-nach-statischer-analyse.png}
+\caption{Fehleranzeige nach statischer Analyse}
+\label{Editor-mit-Fehler-nach-statischer-analyse}
+\end{figure}
+
+\ref{Editor-mit-Fehler-nach-statischer-analyse} Zeigt die Anzeige der Fehler nach ausführend einer statischen Code Analyse. Markierung der Zeile ist Kann-Kriterium.
+
+\section{Eigenschaften-Liste}
+Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe XXX) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel Wiederverwertet und Kombiniert werden. Das Zuordnen zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe ). Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Neu & Startet eine neue Liste \\
+Speichern & Speichert die Liste \\
+Speichern unter & Speichert die Liste unter neuem Namen an neuem Ort \\
+Öffnen & öffnet Liste (Ort von User angegeben)
+\end{tabular}
+\label{Eigenschaftenliste-Datei-Menüpunkte}
+\caption{Unterpunkte des Datei-Menüs}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Menüpunkt & Bedeutung \\
+\hline
+Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion Rückgängig \\
+Wiederholen & Wiederholt die zuletzt Rückgängig gemachte Aktion 
+\end{tabular}
+\label{Eigenschaftenliste-Bearbeiten-Menüpunkte}
+\caption{Unterpunkte des Bearbeiten-Menüs}
+\end{table}
+
+Der Tool-Streifen hat exakt den selben Zweck wie der des Code-Editors, ohne die Funktionen Kopieren, Ausschneiden und Einfügen.
+
 
 
 \chapter{Phasenverantwortliche}

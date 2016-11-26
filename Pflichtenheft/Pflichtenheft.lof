@@ -9,5 +9,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Der C Editor ohne Code}}{22}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Der C Editor mit Code und Anzeige der Wahlart}}{22}{figure.10.2}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Fehleranzeige bei syntaktischem Fehler ohne Maus Hover (Kann-Kriterium)}}{23}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Fehleranzeige bei syntaktischem Fehler mit Maus Hover (Kann-Kriterium)}}{23}{figure.10.4}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Fehleranzeige nach statischer Analyse}}{24}{figure.10.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

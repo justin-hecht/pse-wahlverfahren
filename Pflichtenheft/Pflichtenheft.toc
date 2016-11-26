@@ -31,10 +31,12 @@
 \contentsline {section}{\numberline {9.1}Szenarien}{19}{section.9.1}
 \contentsline {section}{\numberline {9.2}Anwendungsf\IeC {\"a}lle}{19}{section.9.2}
 \contentsline {chapter}{\numberline {10}GUI}{20}{chapter.10}
-\contentsline {chapter}{\numberline {11}Phasenverantwortliche}{21}{chapter.11}
-\contentsline {section}{\numberline {11.1}Pflichtenheft}{21}{section.11.1}
-\contentsline {section}{\numberline {11.2}Entwurf}{21}{section.11.2}
-\contentsline {section}{\numberline {11.3}Implementierung}{21}{section.11.3}
-\contentsline {section}{\numberline {11.4}Qualit\IeC {\"a}tssicherung}{21}{section.11.4}
-\contentsline {section}{\numberline {11.5}Abschlusspr\IeC {\"a}sentation}{21}{section.11.5}
-\contentsline {chapter}{\numberline {12}Glossar}{22}{chapter.12}
+\contentsline {section}{\numberline {10.1}C-Editor}{20}{section.10.1}
+\contentsline {section}{\numberline {10.2}Eigenschaften-Liste}{24}{section.10.2}
+\contentsline {chapter}{\numberline {11}Phasenverantwortliche}{26}{chapter.11}
+\contentsline {section}{\numberline {11.1}Pflichtenheft}{26}{section.11.1}
+\contentsline {section}{\numberline {11.2}Entwurf}{26}{section.11.2}
+\contentsline {section}{\numberline {11.3}Implementierung}{26}{section.11.3}
+\contentsline {section}{\numberline {11.4}Qualit\IeC {\"a}tssicherung}{26}{section.11.4}
+\contentsline {section}{\numberline {11.5}Abschlusspr\IeC {\"a}sentation}{26}{section.11.5}
+\contentsline {chapter}{\numberline {12}Glossar}{27}{chapter.12}
