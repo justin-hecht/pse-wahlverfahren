@@ -11,7 +11,7 @@
 \usepackage{glossaries}
 \usepackage{float}
 
-\graphicspath{ {images/GUI/c-editor/} }
+\graphicspath{ {images/GUI/c-editor/} {images/GUI/Eigenschaften-Liste/} {images/GUI/Eigenschaften/}}
 
 \makeglossaries
 
@@ -538,7 +538,78 @@ Wiederholen & Wiederholt die zuletzt Rückgängig gemachte Aktion
 
 Der Tool-Streifen hat exakt den selben Zweck wie der des Code-Editors, ohne die Funktionen Kopieren, Ausschneiden und Einfügen.
 
+\begin{figure}[H]
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{nach-testen.png}
+  \captionof{figure}{Liste nach Überprüfung}
+  \label{fig:sub1}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{gegenbeispiel.png}
+  \captionof{figure}{Anzeige des Gegenbeispiels}
+  \label{fig:sub2}
+\end{minipage}
+\end{figure}
 
+Es folgt eine Beschreibung der Icons, welche zu sehen sind.
+
+\begin{table}[H]
+\begin{tabular}{lcr} 
+Icon & Bedeutung \\
+\hline
+Pfeil nach rechts & Falls Gegenbeispiel gefunden: Durch klicken öffnet sich unter dem Listenelement ein Textfeld in welchen das Gegenbeispiel dargestellt wird \\
+Checkbox & Nur falls aktiviert, wird das Wahlverfahren auf die Eigenschaft getestet \\
+Maulschlüssel & Öffnet den Eigenschaften-Editor für die Eigenschaft\\
+Rotes Kreuz & Entfernt die Eigenschaft aus der Liste \\
+Gründes Plus & Fügt neue, leere Eigenschaft oder bereits gespeicherte Eigenschaft der Liste hinzu
+\end{tabular}
+\label{Eigenschaftenliste-Bearbeiten-Menüpunkte}
+\caption{Icons der Eigenschaften-Liste}
+\end{table}
+
+\section{Eigenschaften Editor}
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{raw-ohne-code.png}
+\caption{Eigenschaften-Editor ohne Code mit symbolischen Variablen}
+\label{Eigenschaften-Editor-ohne-code}
+\end{figure}
+
+Der Eigenschaften-Editor hat den Zweck, das Bearbeiten der zu überprüfenden Eigenschaften zu ermöglichen. Eigenschaften werden aufgeteilt in Vor- und Nachbedingungen. Möglich ist die Verwendung sowohl von Quantoren in der Form von Makros als auch symbolischer Variablen. 
+
+Die Untermenüs Datei, Bearbeiten und Code sowie der Tool-Streifen sind analog zu denen des C-Editors. Hinzu kommen jedoch Konstanten und Makros. Bereitgestellte Konstanten sind: 
+
+\begin{itemize}
+\item Die Anzahl der Wähler (V)
+\item Die Anzahl der Kandidaten (C)
+\item Die Anzahl vorhandener Sitze (S)
+\end{itemize}
+
+Bereitgestellte Makros sind:
+
+\begin{itemize}
+\item \verb!FOR_ALL_VOTERS()!
+\item \verb!FOR_ALL_CANDIDATES()!
+\item \verb!FOR_ALL_SEATS()!
+\item \verb!EXISTS_ONE_VOTER()!
+\item \verb!EXISTS_ONE_CANDIDATES()!
+\item \verb!EXISTS_ONE_SEAT()!
+\item \verb!SUM_VOTES_FOR_CANDIDATE()!
+\end{itemize}
+
+Jedes dieser Makros bis auf das Letzte nimmt eine bisher ungenutzte Variable als Argument. Diese kann im darauf Folgenden boolschen Ausdruck verwendet werden (siehe \ref{Eigenschaften-Editor-Anonymität}). Das Letzte Makro nimmt eine bereits definierte symbolische Variable vom Typ Kandidaten und gibt berechnet die Anzahl Stimmen für diesen Kandidaten.
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Editor-vor-und-nachbedingungen-syntax-highlighting.png}
+\caption{Eigenschaften-Editor mit Beispielhafter Eigenschaft Anonymität und beispielhaft dargestelltem Syntax-Highlighting (Kann-Kriterium)}
+\label{Eigenschaften-Editor-Anonymität}
+\end{figure}
+
+Wie man zusätzlich sehen kann, sind auch Implikationen (\verb!==>!) möglich. Auch das logische und (\verb!&&!), oder (\verb!||!) und die Äquivalenz (\verb!<==>!) werden zur Verfügung stehen. Die Anzeige erkannter Fehler wird analog zum C-Editor geschehen.
+
+\section{Parameter Editor}
 
 \chapter{Phasenverantwortliche}
 \section{Pflichtenheft} Justin Hecht
