@@ -1,17 +1,17 @@
 \BOOKMARK [0][-]{chapter.1}{1 Produkt\374bersicht}{}% 1
 \BOOKMARK [0][-]{chapter.2}{2 Zielbestimmung}{}% 2
 \BOOKMARK [1][-]{section.2.1}{2.1 Musskriterien}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{2.2 Wunschkriterien}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{2.3 Abgrenzungskriterien}{chapter.2}% 5
-\BOOKMARK [0][-]{chapter.3}{3 Produkteinsatz}{}% 6
-\BOOKMARK [1][-]{section.3.1}{3.1 Anwendungsbereiche}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.2}{3.2 Zielgruppen}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.3}{3.3 Betriebsbedingungen}{chapter.3}% 9
-\BOOKMARK [0][-]{chapter.4}{4 Produktumgebung}{}% 10
-\BOOKMARK [1][-]{section.4.1}{4.1 Software}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.2}{4.2 Hardware}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.3}{4.3 Orgware}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.4}{4.4 Produkt-Schnittstellen}{chapter.4}% 14
+\BOOKMARK [1][-]{section.2.2}{2.2 Sollkriterien}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{2.3 Wunschkriterien}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{2.4 Abgrenzungskriterien}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{3 Produkteinsatz}{}% 7
+\BOOKMARK [1][-]{section.3.1}{3.1 Anwendungsbereiche}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{3.2 Zielgruppen}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.3}{3.3 Betriebsbedingungen}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{4 Produktumgebung}{}% 11
+\BOOKMARK [1][-]{section.4.1}{4.1 Software}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{4.2 Hardware}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{4.3 Produkt-Schnittstellen}{chapter.4}% 14
 \BOOKMARK [0][-]{chapter.5}{5 Funktionale Anforderungen}{}% 15
 \BOOKMARK [1][-]{section.5.1}{5.1 Allgemein}{chapter.5}% 16
 \BOOKMARK [1][-]{section.5.2}{5.2 C-Code Editor f\374r Wahlverfahren}{chapter.5}% 17
@@ -19,16 +19,16 @@
 \BOOKMARK [1][-]{section.5.4}{5.4 Editor f\374r Eingabeparameter}{chapter.5}% 19
 \BOOKMARK [1][-]{section.5.5}{5.5 Ausgabe der Analyseergebnisse}{chapter.5}% 20
 \BOOKMARK [0][-]{chapter.6}{6 Produktdaten}{}% 21
-\BOOKMARK [1][-]{section.6.1}{6.1 Code-Editor \214Rigtime\215}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.2}{6.2 Editor \214Properties\215}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter.7}{7 Nichtfunktionale Anforderungen}{}% 24
-\BOOKMARK [0][-]{chapter.8}{8 Globale Testf\344lle}{}% 25
-\BOOKMARK [1][-]{section.8.1}{8.1 Laden von Wahlverfahren}{chapter.8}% 26
-\BOOKMARK [0][-]{chapter.9}{9 Systemmodelle}{}% 27
-\BOOKMARK [1][-]{section.9.1}{9.1 Szenarien}{chapter.9}% 28
-\BOOKMARK [1][-]{section.9.2}{9.2 Anwendungsf\344lle}{chapter.9}% 29
-\BOOKMARK [1][-]{section.9.3}{9.3 Objektmodelle}{chapter.9}% 30
-\BOOKMARK [1][-]{section.9.4}{9.4 Dynamische Modelle}{chapter.9}% 31
+\BOOKMARK [1][-]{section.6.1}{6.1 Code-Editor Wahlverfahren}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.2}{6.2 Editor von formalen Eigenschaften}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.3}{6.3 Parameter}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.4}{6.4 Projektdaten}{chapter.6}% 25
+\BOOKMARK [0][-]{chapter.7}{7 Nichtfunktionale Anforderungen}{}% 26
+\BOOKMARK [0][-]{chapter.8}{8 Globale Testf\344lle}{}% 27
+\BOOKMARK [1][-]{section.8.1}{8.1 Laden von Wahlverfahren}{chapter.8}% 28
+\BOOKMARK [0][-]{chapter.9}{9 Systemmodelle}{}% 29
+\BOOKMARK [1][-]{section.9.1}{9.1 Szenarien}{chapter.9}% 30
+\BOOKMARK [1][-]{section.9.2}{9.2 Anwendungsf\344lle}{chapter.9}% 31
 \BOOKMARK [0][-]{chapter.10}{10 GUI}{}% 32
 \BOOKMARK [0][-]{chapter.11}{11 Phasenverantwortliche}{}% 33
 \BOOKMARK [1][-]{section.11.1}{11.1 Pflichtenheft}{chapter.11}% 34

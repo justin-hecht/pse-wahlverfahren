@@ -10,6 +10,8 @@
 \usepackage[printonlyused]{acronym}
 \usepackage{glossaries}
 
+\graphicspath{ {/images} }
+
 \makeglossaries
 
 \begin{document}
@@ -407,6 +409,16 @@ Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert
 
 
 \chapter{GUI}
+Die \ac{GUI} besteht aus 4 verschiedenen Fenstern: 
+\begin{itemize}
+\item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können.
+\item Eine Liste, in welcher alle für dieses Wahlverfahren zu überprüfenden Eigenschaften angezeigt werden.
+\item Ein Editor in welchem Eigenschaften editiert werden können.
+\item Das Hauptfenster, dessen schließen ein Beenden des kompletten tools nach sich zieht. Darin können Parameter für Überprüfungen eingestellt und Überprüfungen gestartet bzw. beendet werden.
+\end{itemize}
+Jedes dieser Elemente verfügt auch über weitere Eigenschaften, die im Folgenden beschrieben werden.
+
+\section{C-Editor}
 
 
 \chapter{Phasenverantwortliche}
