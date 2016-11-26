@@ -148,9 +148,6 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 \item PC mit Tastatur und Maus
 \end{itemize}
 
-\section{Orgware}
-Es kommt keine Orgware zum Einsatz.
-
 \section{Produkt-Schnittstellen}
 Über das Produkt wird der SAT-Solver CBMC angesteuert. Es sorgt für die Konfiguration von CBMC und interpretiert die Ergebnisse.
 
@@ -262,9 +259,13 @@ Makro & Effekt \\
 /D10/ Das Wahlverfahren ist als Methode "`unsigned int voting(params)"' einer C-Headerdatei definiert und wird mit der Endung .h gespeichert.
 
 \section{Editor von formalen Eigenschaften}
-/D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen muss ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
+/D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen muss, ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
 
-/D30/ Ein Projekt wird als Dateiliste gespeichert
+\section{Parameter}
+/D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert.
+
+\section{Projektdaten}
+/D40/ Ein Projekt wird als Liste von Dateien in einer Textdatei gespeichert.
 
 
 \chapter{Nichtfunktionale Anforderungen}
@@ -403,9 +404,6 @@ Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert
 
 {\vspace{0.5cm}\hspace*{-3cm}\includegraphics[scale=0.49]{Use-Case-Diagram}}
 	
- 
-\section{Objektmodelle}
-\section{Dynamische Modelle}
 
 
 \chapter{GUI}
