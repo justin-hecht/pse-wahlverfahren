@@ -8,13 +8,18 @@
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
 \usepackage{graphicx}
 \usepackage[printonlyused]{acronym}
- 
+\usepackage{glossaries}
+
+\makeglossaries
+
 \begin{document}
 
 \title{Pflichtenheft}
 \author{Beste Gruppe}
 \maketitle
  
+\newglossaryentry{Grundstein}{name=Grundstein,description={Der Demokratie, is klar.}}
+
 \begin{acronym} %put all your abbreviations here 
 \acro{CBMC}{C Bounded Model Checker}
 \acro{BMC}{Bounded Model Checking}
@@ -24,7 +29,7 @@
 \tableofcontents	
  
 \chapter{Produktübersicht}
-Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Anwesenheit erwünschter Eigenschaften zu untersuchen.
+Wahlverfahren bilden den \gls{Grundstein} unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Anwesenheit erwünschter Eigenschaften zu untersuchen.
 
 \ac{BMC} bietet im allgemeinstem Fall eine Möglichkeit zu verifizieren, ob ein gegebenes System diverse Eigenschaften erfüllt. Es ist vollautomatisch und gibt bei Nichterfüllung ein Gegenbeispiel zurück. Dazu baut es eine boolsche Formel, welche genau dann erfüllbar ist, wenn die zu Untersuchende Eigenschaft vom System nicht erfüllt wird. 
 
@@ -112,7 +117,7 @@ All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung un
 
 
 \chapter{Produkteinsatz}
-Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richtet sich an Kunden, die ein Interesse an der Erforschung oder Entwicklung solcher Verfahren haben. Sie benötigen ein Grundverständnis der Programmiersprache C und Logik.
+Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richtet sich an Kunden, die ein Interesse an der Erforschung oder Entwicklung solcher Verfahren haben. Grundsätzlich sollte das Programm aber auch für Nicht-Informatikern verständlich sein. Für die Bedienung des Programms ist jedoch Kenntnis der Programmiersprache C und der Aussagen- und Prädikatenlogik.
 
 \section{Anwendungsbereiche}
 \begin{itemize}
@@ -124,6 +129,7 @@ Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richt
 \begin{itemize}
 \item Wahlforscher
 \item Softwareentwickler
+\item Hobbyisten
 \end{itemize}
 
 \section{Betriebsbedingungen}
@@ -267,37 +273,43 @@ Makro & Effekt \\
 
 \chapter{Globale Testfälle}
 \section{Laden von Wahlverfahren}
-1. Stand: Das Programm warten auf eine Aktion. Der Nutzer will ein Wahlverfahren laden.\\
-Aktion: Der Nutzer betätigt mit der Maus einen Button mit einem Ladeicon innerhalb des GUIs für Wahlverfahren.\\
+\begin{itemize}
+
+\item 1. Stand: Das Programm wartet auf eine Aktion. Der Nutzer will ein Wahlverfahren laden.\\
+Aktion: Der Nutzer betätigt mit der Maus einen Button mit einem Ladeicon innerhalb der GUI für Wahlverfahren.\\
 Reaktion: Das Programm öffnet einen Dateibrowser.\\
 
-2. Stand: Der Dateibrowser ist geöffnet.\\
+\item 2. Stand: Der Dateibrowser ist geöffnet.\\
 Aktion: Der Nutzer wählt eine zu ladende C-Datei aus und bestätigt diese durch den Tastendruck\\
 Enter oder durch einen Klick auf den Ladebutton mit der Maus
 Reaktion: Falls die Änderungen im vorherigen Wahlverfahren nicht gespeichert wurden öffnet ein neues Pop-up-Fenster. (2.1) Sonst folgt (2.2)\\
+
 2.1 Je nachdem wie sich der Nutzer entscheidet werden entweder Punkt 2.1.1 Punkt 2.1.2, oder Punkt 2.1.2 ausgeführt.
 
-2.1.1 Stand: Der Nutzer will die Änderungen verwerfen.
-Aktion: Der Nutzer betätigt den Button Verwerfen des Pop-Ups
+\item 2.1.1 Stand: Der Nutzer will die Änderungen verwerfen.\\
+Aktion: Der Nutzer betätigt den Button Verwerfen des Pop-Ups\\
 Reaktion: Das neue C-Programm wird in den Wahlverfahreneditor geladen. Das zuvor
 geladene C-Programm wird verworfen. Das Pop-up sowie der Dateibrowser
-schließen sich
+schließen sich\\
 
-2.1.2 Stand: Der Nutzer will das Laden abbrechen
-Aktion: Der Nutzer betätigt den Button abbrechen des Pop-Ups
-Reaktion: Pop-up sowie Dateibrowser schließen sich
+\item 2.1.2 Stand: Der Nutzer will das Laden abbrechen\\
+Aktion: Der Nutzer betätigt den Button abbrechen des Pop-Ups\\
+Reaktion: Pop-up sowie Dateibrowser schließen sich\\
 
-2.1.3 Stand: Der Nutzer will die Änderungen an seinem alten C-Programm speichern und das
+\item 2.1.3 Stand: Der Nutzer will die Änderungen an seinem alten C-Programm speichern und das
 neue Dokument laden
 Aktion: Der Nutzer betätigt den Button Änderungen speichern
 Reaktion: Die Änderungen am vorherigen C-Programm werden gespeichert. Das neue CProgramm
 wird in den Wahlverfahreneditor geladen.
 
-2.2
+\item 2.2
 Nur falls keine Aktion 2.1 ausgeführt wurde:
 Stand: Der Nutzer hat bereits das Laden bestätigt
 Aktion: -
 Reaktion: Das neue C-Programm wird in den Wahlverfahreneditor geladen.
+
+\end{itemize}
+
 Laden von zu testenden Eigenschaften:
 
 1. Stand: Das Programm warten auf eine Aktion. Der Nutzer will eine Eigenschaft von
@@ -410,6 +422,7 @@ Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert
 \chapter{Glossar}
  
 
+\printglossaries
  
 
 \listoffigures
