@@ -273,10 +273,10 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
  
 \section{Editor für formale Eigenschaften}
 \subsection{Muss-Kriterien}
-/F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
-/F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
-/F21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung als boolsche Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
-/F30/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
+/FM10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
+/FM20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
+/FM21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung als boolsche Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
+/FM30/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
 
 \begin{table}[H]
 \caption{Makros zur Beschreibung formaler Eigenschaften}
@@ -301,18 +301,19 @@ Makro & Effekt \\
 \end{tabular}
 \label{table:Macros_for_formal_Attributes}
 \end{table}
-/F40/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
-/F50/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
-/F60/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
+
+/FM40/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
+/FM50/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
+/FM51/ Bereitstellen von Operatoren für logisches UND, ODER, GLEICH und NICHT GLEICH \\
+/FM52/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich \\
+/FM60/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
 
 \subsection{Soll-Kriterien}
+/FS10/ Syntax-Highlighting \\
+/FS20/ Anzeigen von Syntaktischen Fehlern im Code \\
 
 \subsection{Kann-Kriterien}
-
-
-/F70/ Syntax-Highlighting \\
-/F80/ Anzeigen von Syntaktischen Fehlern im Code \\
-/F90/ Code-Completion
+/FK10/ Code-Completion
 \begin{itemize}
 \item Auto-Vervollständigung der Makros
 \item Analyse des Codes und Anzeigen relevanter, bereits definierter Eigenschaften und symbolischer Variablen
@@ -324,7 +325,7 @@ Makro & Effekt \\
 
 \section{Ausgabe der Analyseergebnisse}
 /F10/ Ausgabe einer Erfolgsmeldung bei Erfolg \\
-/F20/ Graphische Darstellung eines Gegenbeispiels \\
+/F20/ Darstellung eines Gegenbeispiels bei Misserfolg\\ 
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
