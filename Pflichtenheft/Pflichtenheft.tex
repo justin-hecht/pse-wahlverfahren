@@ -184,7 +184,7 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 
 \section{Software}
 \begin{itemize}
-\item Das Betriebssystem ist entweder Microsoft Windows oder eine Linux-Distribution
+\item Das Betriebssystem ist entweder Microsoft Windows (7 oder moderner) oder eine der Linux-Distributionen Arch oder Ubuntu
 \end{itemize}
 
 \section{Hardware}
@@ -193,48 +193,44 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 \end{itemize}
 
 \section{Produkt-Schnittstellen}
-Über das Produkt wird der SAT-Solver CBMC angesteuert. Es sorgt für die Konfiguration von CBMC und interpretiert die Ergebnisse.
-
-
+Über das Produkt wird \ac{CBMC} angesteuert.
 
 \chapter{Funktionale Anforderungen}
 \section{Allgemein}
 /F10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
-/F20/ Kommunikation und Überprüfung dieser Eigenschaften via CBMC \\
-/F30/ Bereitstellen von Kommunikationsschnittstellen mit CBMC sowohl für Eingabe von Parametern als auch Ausgabe der Ergebnisse, welche auch für Nicht-Informatiker verständlich ist \\
+/F20/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
+/F30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch Ausgabe der Ergebnisse, welche auch für Nicht-Informatiker verständlich ist \\
 /F40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
+/F50/ Möglichkeit des Öffnens der Projekte aus /F40/
 
 \section{C-Code Editor für Wahlverfahren}
-/F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
-/F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die Tastatur wie in Notepad \\
-/F30/ Speichern von erstelltem Code in Dateiformat datei.c \\
-/F40/ Laden und Darstellen von .c Dateien  \\
-/F50/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
-/F60/ Code-Completion
+\subsection{Muss-Kriterien}
+/FM10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
+/FM20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die Tastatur wie in Notepad \\
+/FM30/ Speichern von erstelltem Code als Datei auf der Festplatte an vom User angegebenen Ort \\
+/FM40/ Laden und Darstellen von Dateien korrekten Formats \\
+/FM50/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse})
+
+\subsection{Soll-Kriterien}
+/FS10/ Überprüfen des Formats beim Ladevorgang. Falls falsches Format: Ausgabe einer Fehlermeldung \\
+/FS20/ Syntax-Highlighting: Darstellung diverser Schlüsselwörter in anderen Farben als den Rest des Codes. Dies beinhaltet, ist jedoch nicht beschränkt auf: 
 \begin{itemize}
-\item Automatisches Schließen von Klammern und Anführungszeichen
-\item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
-\item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben.
-\end{itemize}
-/F70/ Syntax-Highlighting: Darstellung diverser Schlüsselwörter in anderen Farben als den Rest des Codes. Dies beinhaltet, ist jedoch nicht beschränkt auf: 
-\begin{itemize}
-\item Typendeklaration (int, float, structs...)
+\item Typendeklaration (int, float, ...)
 \item Kontrollflow-Konstrukte (if, else, while...)
+\item Variablennamen
 \item Kommentare
 \end{itemize}
-/F80/ Durch den User konfigurierbares Verhalten:
-\begin{itemize}
-\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
-\item Festlegen des verwendeten Fonts
-\end{itemize}
-/F90/ Anzeigen von Syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
+/FS30/ Anzeigen der Zeilennummern am linken Zeilenrand \\
+/FS40/ Anzeigen von Syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
 \begin{itemize}
 \item Verwendung von Schlüsselwörtern als Variablennamen 
 \item Vergessene Semikolons am Ende von Anweisungen
+\item Nicht geschlossene Klammern und Anführungszeichen
+\item Andere Konstrukte, welche der Grammatik der C-Sprache widersprechen
 \end{itemize}
-/F100/ Reaktion auf typische Tastenkürzel (siehe \ref{table:Hotkeys_and_operations})\\
 
-\begin{table}
+/FS50/ Reaktion auf typische Tastenkürzel\\
+\begin{table}[H]
 \caption{Hotkeys und verbundene Operationen}
 \begin{tabular}{lcr} 
 Kürzel & Operation \\
@@ -251,14 +247,37 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 \label{table:Hotkeys_and_operations}
 \end{table}
 
-/F110/ Bereitstellen von Wahl-Templates
+/FS60/ Bereitstellen von Wahl-Templates
 \begin{itemize}
 \item Jeder Wähler wählt genau einen Kandidaten
 \item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge 
-\item Jeder Wähler ordnet Kandidaten eine Nummer zwischen 100 (maximale Zustimmung) und 0 (maximale Abneigung) zu 
+\item Jeder Wähler ordnet Kandidaten eine Nummer zwischen MAX (maximale Zustimmung) und MIN (maximale Abneigung) zu. MAX und MIN sind dabei vom User konfigurierbar. 
+\end{itemize}
+
+\subsection{Kann-Kriterien}
+/FK10/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
+/FK20/ Code-Completion
+\begin{itemize}
+\item Automatisches Schließen von Klammern und Anführungszeichen
+\item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
+\item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben.
+\end{itemize}
+
+/FK30/ Durch den User konfigurierbares Verhalten:
+\begin{itemize}
+\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
+\item Festlegen des verwendeten Fonts
+\item An- und Ausschalten der angezeigten Zeilennummern
+\item Festlegen wie vielen Leerzeichen ein Tab entspricht
 \end{itemize}
  
 \section{Editor für formale Eigenschaften}
+\subsection{Muss-Kriterien}
+
+\subsection{Soll-Kriterien}
+
+\subsection{Kann-Kriterien}
+
 /F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
 /F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
 /F21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung in abgespeckter C-Syntax\\

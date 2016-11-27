@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.20)  27 NOV 2016 13:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.20)  27 NOV 2016 13:47
 entering extended mode
 **./Pflichtenheft.tex
 (Pflichtenheft.tex
@@ -991,17 +991,17 @@ Package babel Info: Redefining german shorthand "~
 {C:/Users/Holger/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Pflichten
 heft.toc
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
  [2
 
 ])
@@ -1265,38 +1265,39 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 195.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 [11
 
 ]
 chapter 5.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 199.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 201.
+(babel)             in language  on input line 199.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 201.
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--206
-
- []
-
+(babel)             in language  on input line 199.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 206.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 206.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 207.
 Package babel Info: Redefining german shorthand "|
@@ -1304,779 +1305,822 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 207.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 214.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 214.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 214.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 225.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 225.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 229.
+(babel)             in language  on input line 225.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 225.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 225.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 225.
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 232--248
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 261.
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--266
-
- []
-
-
-Overfull \hbox (1.18066pt too wide) in paragraph at lines 278--278
-[]|[]\T1/aett/m/n/10.95 VOTE_SUM_FOR_CANDIDATE(c)| 
- []
-
-
-Overfull \hbox (33.73576pt too wide) in paragraph at lines 269--281
-[][]
- []
-
+(babel)             in language  on input line 257.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 270.
 [13pdfTeX warning (ext4): destination with the same identifier (name{table.5.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.289 \item A
-             uto-Vervollständigung der Makros]
+l.270 \item A
+             n- und Ausschalten der angezeigten Zeilennummern]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 274.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 274.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 274.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 275.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 275.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 289.
- [14pdfTeX warning (ext4): destination with the same identifier (name{table.5.2
+(babel)             in language  on input line 275.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 277.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 277.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 277.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 279.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 279.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 279.
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--285
+
+ []
+
+
+Overfull \hbox (1.18066pt too wide) in paragraph at lines 297--297
+[]|[]\T1/aett/m/n/10.95 VOTE_SUM_FOR_CANDIDATE(c)| 
+ []
+
+
+Overfull \hbox (33.73576pt too wide) in paragraph at lines 288--300
+[][]
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 312.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 312.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 312.
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 316.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 316.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 316.
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
+
+ []
+
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 319.
+[14]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 319.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 319.
+ [15pdfTeX warning (ext4): destination with the same identifier (name{table.5.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.289 \item A
-             uto-Vervollständigung der Makros]
+l.319 
+      ]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 293.
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--296
-
- []
-
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 297.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 297.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 297.
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
-
- []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 301.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 301.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 301.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 301.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 301.
-[15]
+(babel)             in language  on input line 320.
+ [16]
 chapter 6.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 301.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 321.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 302.
+(babel)             in language  on input line 321.
 
-Overfull \hbox (19.42072pt too wide) in paragraph at lines 303--304
+Overfull \hbox (19.42072pt too wide) in paragraph at lines 322--323
 \T1/aer/m/n/10.95 /D10/ Das Wahl-ver-fah-ren ist als Me-tho-de un-si-gned int 
 vo-ting(params) ei-ner C-Headerdatei
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 327.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 327.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 327.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 311.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 315.
-[16
+(babel)             in language  on input line 334.
+[17
 
 ]
 chapter 7.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 315.
+(babel)             in language  on input line 334.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 319.
-[17
+(babel)             in language  on input line 338.
+[18
 
 ]
 chapter 8.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 319.
+(babel)             in language  on input line 338.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 320.
+(babel)             in language  on input line 339.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 320.
+(babel)             in language  on input line 339.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 320.
+(babel)             in language  on input line 339.
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--331
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--339
+Underfull \hbox (badness 10000) in paragraph at lines 346--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--343
+Underfull \hbox (badness 10000) in paragraph at lines 353--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--362
 
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 360.
+(babel)             in language  on input line 379.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 360.
+(babel)             in language  on input line 379.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 360.
+(babel)             in language  on input line 379.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 360.
+(babel)             in language  on input line 379.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 360.
+(babel)             in language  on input line 379.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 360.
-[18
+(babel)             in language  on input line 379.
+[19
 
 ]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 437.
+(babel)             in language  on input line 456.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 437.
+(babel)             in language  on input line 456.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 437.
+(babel)             in language  on input line 456.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 437.
+(babel)             in language  on input line 456.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 437.
+(babel)             in language  on input line 456.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 437.
- [19]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 438.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 438.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 438.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 438.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 438.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 456.
  [20]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 457.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 457.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 457.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 457.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 457.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 457.
+ [21]
 chapter 9.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 457.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 457.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 457.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 439.
+(babel)             in language  on input line 458.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 439.
+(babel)             in language  on input line 458.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 439.
+(babel)             in language  on input line 458.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 459.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 440.
+(babel)             in language  on input line 459.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 440.
-<Use-Case-Diagram.png, id=364, 1002.74625pt x 685.56125pt>
+(babel)             in language  on input line 459.
+<Use-Case-Diagram.png, id=401, 1002.74625pt x 685.56125pt>
 File: Use-Case-Diagram.png Graphic file (type png)
 
 <use Use-Case-Diagram.png>
-Package pdftex.def Info: Use-Case-Diagram.png used on input line 449.
+Package pdftex.def Info: Use-Case-Diagram.png used on input line 468.
 (pdftex.def)             Requested size: 491.34996pt x 335.92795pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 453.
- [21
+(babel)             in language  on input line 472.
+ [22
 
  <./Use-Case-Diagram.png>]
 chapter 10.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 464.
+(babel)             in language  on input line 483.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 464.
+(babel)             in language  on input line 483.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 464.
+(babel)             in language  on input line 483.
 
-Overfull \hbox (99.10056pt too wide) in paragraph at lines 469--478
+Overfull \hbox (99.10056pt too wide) in paragraph at lines 488--497
 [][]
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 480.
+(babel)             in language  on input line 499.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 480.
-[22
+(babel)             in language  on input line 499.
+[23
 
 ]
-Overfull \hbox (78.66795pt too wide) in paragraph at lines 482--493
+Overfull \hbox (78.66795pt too wide) in paragraph at lines 501--512
 [][]
  []
 
 
-Overfull \hbox (467.35307pt too wide) in paragraph at lines 497--503
+Overfull \hbox (467.35307pt too wide) in paragraph at lines 516--522
 [][]
  []
 
 
-Overfull \hbox (1084.62857pt too wide) in paragraph at lines 507--513
+Overfull \hbox (1084.62857pt too wide) in paragraph at lines 526--532
 [][]
  []
 
-<images/GUI/c-editor/Editor-ohne-text.png, id=380, 686.565pt x 495.35063pt>
+<images/GUI/c-editor/Editor-ohne-text.png, id=417, 686.565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-ohne-text.png Graphic file (type png)
 
 <use images/GUI/c-editor/Editor-ohne-text.png>
 Package pdftex.def Info: images/GUI/c-editor/Editor-ohne-text.png used on input
- line 521.
+ line 540.
 (pdftex.def)             Requested size: 343.28166pt x 247.67471pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 543.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 543.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 543.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 543.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 524.
+(babel)             in language  on input line 543.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 524.
- [23pdfTeX warning (ext4): destination with the same identifier (name{table.10.
+(babel)             in language  on input line 543.
+ [24pdfTeX warning (ext4): destination with the same identifier (name{table.10.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.524 
+l.543 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 0.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.524 
+l.543 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 0.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.524 
+l.543 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 0.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.524 
+l.543 
       ]
-<images/GUI/c-editor/Editor-mit-text.png, id=389, 686.565pt x 495.35063pt>
+<images/GUI/c-editor/Editor-mit-text.png, id=426, 686.565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-mit-text.png Graphic file (type png)
 
 <use images/GUI/c-editor/Editor-mit-text.png>
 Package pdftex.def Info: images/GUI/c-editor/Editor-mit-text.png used on input 
-line 526.
+line 545.
 (pdftex.def)             Requested size: 343.28166pt x 247.67471pt.
 
-<images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png, id=390, 686.565pt x 495.
+<images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png, id=427, 686.565pt x 495.
 35063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png Graphic file (type p
 ng)
  <use images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png>
 Package pdftex.def Info: images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png u
-sed on input line 532.
+sed on input line 551.
 (pdftex.def)             Requested size: 343.28166pt x 247.67471pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 555.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 536.
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+(babel)             in language  on input line 555.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.10
 .1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.536 
+l.555 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.536 
+l.555 
        <./images/GUI/c-editor/Editor-ohne-text.png> <./images/GUI/c-editor/Edit
 or-mit-text.png>]
-<images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png, id=397, 686.565pt x 495.3
+<images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png, id=435, 686.565pt x 495.3
 5063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png Graphic file (type pn
 g)
  <use images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png>
 Package pdftex.def Info: images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png us
-ed on input line 538.
+ed on input line 557.
 (pdftex.def)             Requested size: 343.28166pt x 247.67471pt.
 
-Underfull \hbox (badness 1783) in paragraph at lines 539--539
+Underfull \hbox (badness 1783) in paragraph at lines 558--558
 [][]\T1/aer/m/n/10.95 Fehleranzeige bei syn-tak-ti-schem Feh-ler mit Maus Ho-ve
 r (Kann-
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 563.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 563.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 563.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 563.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 563.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 544.
-[25pdfTeX warning (ext4): destination with the same identifier (name{figure.10.
+(babel)             in language  on input line 563.
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.10.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.544 
+l.563 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.544 
+l.563 
        <./images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png> <./images/GUI/c
 -editor/Editor-mit-Fehler-mit-hover.png>]
-<images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png, id=407, 686
+<images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png, id=444, 686
 .565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png Graphic
  file (type png)
 
 <use images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png>
 Package pdftex.def Info: images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-
-analyse.png used on input line 546.
+analyse.png used on input line 565.
 (pdftex.def)             Requested size: 343.28166pt x 247.67471pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 572.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 572.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 553.
+(babel)             in language  on input line 572.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 568.
+(babel)             in language  on input line 587.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 568.
+(babel)             in language  on input line 587.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 568.
+(babel)             in language  on input line 587.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 568.
+(babel)             in language  on input line 587.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 568.
+(babel)             in language  on input line 587.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 568.
+(babel)             in language  on input line 587.
 
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.10.
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.10.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.568 
+l.587 
        <./images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png>]
-<images/GUI/Eigenschaften-Liste/nach-testen.png, id=415, 328.22626pt x 481.0471
+<images/GUI/Eigenschaften-Liste/nach-testen.png, id=452, 328.22626pt x 481.0471
 8pt>
 File: images/GUI/Eigenschaften-Liste/nach-testen.png Graphic file (type png)
  <use images/GUI/Eigenschaften-Liste/nach-testen.png>
 Package pdftex.def Info: images/GUI/Eigenschaften-Liste/nach-testen.png used on
- input line 585.
+ input line 604.
 (pdftex.def)             Requested size: 164.11272pt x 240.523pt.
 
-<images/GUI/Eigenschaften-Liste/gegenbeispiel.png, id=416, 327.47343pt x 480.29
+<images/GUI/Eigenschaften-Liste/gegenbeispiel.png, id=453, 327.47343pt x 480.29
 437pt>
 File: images/GUI/Eigenschaften-Liste/gegenbeispiel.png Graphic file (type png)
  <use images/GUI/Eigenschaften-Liste/gegenbeispiel.png>
 Package pdftex.def Info: images/GUI/Eigenschaften-Liste/gegenbeispiel.png used 
-on input line 591.
+on input line 610.
 (pdftex.def)             Requested size: 163.73631pt x 240.14659pt.
 
-Overfull \hbox (2.43086pt too wide) in paragraph at lines 583--595
+Overfull \hbox (2.43086pt too wide) in paragraph at lines 602--614
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (350.35506pt too wide) in paragraph at lines 600--610
+Overfull \hbox (350.35506pt too wide) in paragraph at lines 619--629
 [][]
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 612.
+(babel)             in language  on input line 631.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 612.
+(babel)             in language  on input line 631.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 612.
+(babel)             in language  on input line 631.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 612.
+(babel)             in language  on input line 631.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 612.
+(babel)             in language  on input line 631.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 612.
-[27pdfTeX warning (ext4): destination with the same identifier (name{table.10.5
+(babel)             in language  on input line 631.
+[28pdfTeX warning (ext4): destination with the same identifier (name{table.10.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.612 
+l.631 
       pdfTeX warning (ext4): destination with the same identifier (name{table.1
 0.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.612 
+l.631 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.612 
+l.631 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.612 
+l.631 
        <./images/GUI/Eigenschaften-Liste/nach-testen.png> <./images/GUI/Eigensc
 haften-Liste/gegenbeispiel.png>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 613.
+(babel)             in language  on input line 632.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 613.
+(babel)             in language  on input line 632.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 613.
+(babel)             in language  on input line 632.
 
-<images/GUI/Eigenschaften/raw-ohne-code.png, id=425, 591.71063pt x 443.40656pt>
+<images/GUI/Eigenschaften/raw-ohne-code.png, id=462, 591.71063pt x 443.40656pt>
 File: images/GUI/Eigenschaften/raw-ohne-code.png Graphic file (type png)
 <use images/GUI/Eigenschaften/raw-ohne-code.png>
 Package pdftex.def Info: images/GUI/Eigenschaften/raw-ohne-code.png used on inp
-ut line 616.
+ut line 635.
 (pdftex.def)             Requested size: 295.85458pt x 221.70273pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 634.
+(babel)             in language  on input line 653.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 634.
+(babel)             in language  on input line 653.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 634.
+(babel)             in language  on input line 653.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 634.
+(babel)             in language  on input line 653.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 634.
+(babel)             in language  on input line 653.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 634.
- [28pdfTeX warning (ext4): destination with the same identifier (name{table.10.
+(babel)             in language  on input line 653.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{table.10.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.634 \item \verb
+l.653 \item \verb
                  !FOR_ALL_VOTERS()!pdfTeX warning (ext4): destination with the 
 same identifier (name{figure.10.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.634 \item \verb
+l.653 \item \verb
                  !FOR_ALL_VOTERS()! <./images/GUI/Eigenschaften/raw-ohne-code.p
 ng>]
 <images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlighting.pn
-g, id=432, 591.71063pt x 443.40656pt>
+g, id=469, 591.71063pt x 443.40656pt>
 File: images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlighti
 ng.png Graphic file (type png)
 
 <use images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlightin
 g.png>
 Package pdftex.def Info: images/GUI/Eigenschaften/Editor-vor-und-nachbedingunge
-n-syntax-highlighting.png used on input line 646.
+n-syntax-highlighting.png used on input line 665.
 (pdftex.def)             Requested size: 295.85458pt x 221.70273pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 653.
+(babel)             in language  on input line 672.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 653.
+(babel)             in language  on input line 672.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 653.
+(babel)             in language  on input line 672.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 656.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 656.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 656.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 656.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 656.
+(babel)             in language  on input line 675.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 656.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+(babel)             in language  on input line 675.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.10
 .9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.656 
+l.675 
        <./images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highli
 ghting.png>]
-<images/GUI/Parameter-editor/Parameter-editor.png, id=438, 327.47343pt x 231.86
+<images/GUI/Parameter-editor/Parameter-editor.png, id=475, 327.47343pt x 231.86
 626pt>
 File: images/GUI/Parameter-editor/Parameter-editor.png Graphic file (type png)
  <use images/GUI/Parameter-editor/Parameter-editor.png>
 Package pdftex.def Info: images/GUI/Parameter-editor/Parameter-editor.png used 
-on input line 658.
+on input line 677.
 (pdftex.def)             Requested size: 327.47264pt x 231.86568pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 680.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+(babel)             in language  on input line 699.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.10
 .10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.680 \chapter
+l.699 \chapter
               {Phasenverantwortliche}pdfTeX warning (ext4): destination with th
 e same identifier (name{table.10.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.680 \chapter
+l.699 \chapter
               {Phasenverantwortliche} <./images/GUI/Parameter-editor/Parameter-
 editor.png>]
 chapter 11.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 680.
+(babel)             in language  on input line 699.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 681.
+(babel)             in language  on input line 700.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 681.
+(babel)             in language  on input line 700.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 681.
+(babel)             in language  on input line 700.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 682.
+(babel)             in language  on input line 701.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 682.
+(babel)             in language  on input line 701.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 682.
+(babel)             in language  on input line 701.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 683.
+(babel)             in language  on input line 702.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 683.
+(babel)             in language  on input line 702.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 683.
+(babel)             in language  on input line 702.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 684.
+(babel)             in language  on input line 703.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 684.
+(babel)             in language  on input line 703.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 684.
+(babel)             in language  on input line 703.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 685.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 685.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 685.
+(babel)             in language  on input line 704.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 687.
-[31
+(babel)             in language  on input line 706.
+[32
 
 ]
 chapter 12.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 687.
+(babel)             in language  on input line 706.
 No file Pflichtenheft.gls.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 694.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 713.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 694.
+(babel)             in language  on input line 713.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 694.
+(babel)             in language  on input line 713.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 694.
+(babel)             in language  on input line 713.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 694.
+(babel)             in language  on input line 713.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 694.
+(babel)             in language  on input line 713.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 694.
-[32
+(babel)             in language  on input line 713.
+[33
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 694.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 713.
  (Pflichtenheft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 694.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 694.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 713.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 713.
 Package rerunfilecheck Info: File `Pflichtenheft.out' has not changed.
-(rerunfilecheck)             Checksum: 372B0AC238BD88EB74F760A611512474;2954.
+(rerunfilecheck)             Checksum: ED66B3CB1F095D9751D0C3E309C80D0A;3404.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 694.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 713.
  ) 
 Here is how much of TeX's memory you used:
- 15822 strings out of 493333
- 263991 string characters out of 3140940
- 486938 words of memory out of 3000000
- 18942 multiletter control sequences out of 15000+200000
- 25378 words of font info for 59 fonts, out of 3000000 for 9000
+ 15842 strings out of 493333
+ 264301 string characters out of 3140940
+ 486956 words of memory out of 3000000
+ 18951 multiletter control sequences out of 15000+200000
+ 28002 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,66p,8826b,579s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:Grundstein} has been referenced but does not 
@@ -2088,9 +2132,9 @@ fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Installationen/Latex/fonts/type1/p
 ublic/amsfonts/cm/cmssbx10.pfb><D:/Installationen/Latex/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><D:/Installationen/Latex/fonts/type1/public/amsfonts/cm/cmtt
 10.pfb>
-Output written on Pflichtenheft.pdf (32 pages, 466124 bytes).
+Output written on Pflichtenheft.pdf (33 pages, 471573 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 500000)
- 408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 456 words of extra memory for PDF output out of 10000 (max. 10000000)
 
