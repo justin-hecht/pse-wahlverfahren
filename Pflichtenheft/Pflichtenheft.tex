@@ -67,7 +67,7 @@ Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen. s
 \end{enumerate}
 
-\section{Die Sprache zur Angabe der formalen Eigenschaften}
+\section{Die Sprache zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
 In diesem Abschnitt wird ein grober Überblick über die Sprache welche der Eigenschaften-Editor verwendet gegeben. Es handelt sich um ein Subset der C-Sprache mit einigen Additionen. Diese werden im Folgenden erläutert. 
 
 Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
@@ -273,34 +273,43 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
  
 \section{Editor für formale Eigenschaften}
 \subsection{Muss-Kriterien}
-
-\subsection{Soll-Kriterien}
-
-\subsection{Kann-Kriterien}
-
 /F10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
 /F20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
-/F21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung in abgespeckter C-Syntax\\
+/F21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung als boolsche Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
 /F30/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
 
-\begin{table}
+\begin{table}[H]
 \caption{Makros zur Beschreibung formaler Eigenschaften}
 \begin{tabular}{|p{5cm}|p{10cm}|}
+\hline 
 Makro & Effekt \\
 \hline 
 \verb!FOR_ALL_VOTERS(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Wähler gilt \\
+\hline 
 \verb!FOR_ALL_CANDIDATES(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Kandidaten gilt \\
+\hline 
 \verb!FOR_ALL_SEATS(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Sitze gilt \\
+\hline 
 \verb!EXISTS_ONE_VOTER(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für mindesten einen Wähler gilt \\
+\hline 
 \verb!EXISTS_ONE_CANDIDATE(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für mindesten einen Kandidaten gilt \\
+\hline 
 \verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden.Gesamtausdruck ist wahr falls sie für mindesten einen Sitz gilt \\
+\hline 
 \verb!VOTE_SUM_FOR_CANDIDATE(c)! & Gibt die Anzahl Stimmen für Kandidaten c zurück\\
+\hline 
 \end{tabular}
 \label{table:Macros_for_formal_Attributes}
 \end{table}
 /F40/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
 /F50/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
 /F60/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
+
+\subsection{Soll-Kriterien}
+
+\subsection{Kann-Kriterien}
+
+
 /F70/ Syntax-Highlighting \\
 /F80/ Anzeigen von Syntaktischen Fehlern im Code \\
 /F90/ Code-Completion
@@ -485,7 +494,7 @@ Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren
 Der C-Editor teilt sich in vier Untereinheiten auf: Der Menüstreifen, die Tool-Leiste, das Textfeld und das Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller Untermenüs geöffnet befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
 Neu & öffnet ein neues Dokument, wobei die Art der Wahl vom User angegeben wird \\
@@ -498,7 +507,7 @@ Speichern unter & Speichert das Dokument unter neuem Namen an neuem Ort, beide d
 \end{table}
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
 Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion Rückgängig \\
@@ -513,7 +522,7 @@ Wahlart ändern & Ändert den Funktionskörper zu dem der vom User ausgewählten
 \end{table}
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
 Einstellungen & Öffnet den Einstellungen Dialog. Dies ist Teil der Kann-Kriterien. Falls implementiert wird es Möglichkeiten zur Einstellung des Fonts und Syntax-Highlighting geben 
@@ -523,7 +532,7 @@ Einstellungen & Öffnet den Einstellungen Dialog. Dies ist Teil der Kann-Kriteri
 \end{table}
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
 Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von Lexer oder Parser erkennbare Fehler untersucht. Gefundene Fehler werden in dem Fehlerfeld angezeigt. Zusätzliches Kann-Kriterium Die Zeile, in welcher der Fehler ist, wird zusätzlich durch einen roten Punkt markiert (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}
@@ -573,7 +582,7 @@ In \ref{Editor-mit-Fehler-ohne-hover} sieht man wie der gefundene syntaktische F
 Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe XXX) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel Wiederverwertet und Kombiniert werden. Das Zuordnen zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe ). Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
 Neu & Startet eine neue Liste \\
@@ -616,7 +625,7 @@ Der Tool-Streifen hat exakt den selben Zweck wie der des Code-Editors, ohne die 
 Es folgt eine Beschreibung der Icons, welche zu sehen sind.
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Icon & Bedeutung \\
 \hline
 Pfeil nach rechts & Falls Gegenbeispiel gefunden: Durch klicken öffnet sich unter dem Listenelement ein Textfeld in welchen das Gegenbeispiel dargestellt wird \\
@@ -682,7 +691,7 @@ Der Parameter Editor stellt das Hauptfenster der Anwendung dar. Es erlaubt das E
 Das Datei Menü ist analog zu dem des C Editors. Das Projekt Menü wird im Folgenden erläutert. 
 
 \begin{table}[H]
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
 Teste Eigenschaften & Startet Tests mit den angegebenen Parametern \\
