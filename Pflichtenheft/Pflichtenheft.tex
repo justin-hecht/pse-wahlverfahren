@@ -1,6 +1,8 @@
 
 \documentclass[a4paper]{scrreprt}
- 
+
+
+\usepackage{tabulary } 
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -51,7 +53,7 @@ description={Ein Programm, welches C-Programme mit bounded model checking auf Fe
 \chapter{Produktübersicht}
 Wahlverfahren bilden den \gls{Grundstein} unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Anwesenheit erwünschter Eigenschaften zu untersuchen.
 
-\ac{BMC} Wird normalerweise dazu verwendet zu überprüfen ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird das Problem entscheidbar. Um dies zu bewerkstelligen, werden Potentiell unendliche Codepfade - also Schleifen - bis zu einer gewissen Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist genau dann wenn das Programm einen Zustand einnehmen kann welcher die Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
+\ac{BMC} Wird normalerweise dazu verwendet zu überprüfen ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade - also Schleifen - bis zu einer vom Benutzer bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist genau dann wenn das Programm einen Zustand einnehmen kann welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
 
 In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung zu lösen: so kann ein in C beschriebenes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es kompliziert, dies direkt zu tun. 
 
@@ -60,9 +62,9 @@ Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
 \item "`Rigtime"': Code-Editor für Wahlverfahren in Programmiersprache C.
-\item "`Properties"': Editor für Spezifikation formaler Eigenschaften in abgespeckter C-Syntax mit speziellen Macros.
+\item "Eigenschaften-Liste" Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen
+\item "`Eigenschaften-Editor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in eigens dafür vorgesehener Grammatik
 \item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen. s
-\item "`Rigplete"': Ausgabe der Prüfung.
 \end{enumerate}
 
 \chapter{Zielbestimmung}
@@ -77,7 +79,7 @@ Es soll Folgendes bereitstellen:
 
 Die Überprüfung der gegebenen Eigenschaften wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten sowie dessen Ausgabe zu interpretieren und präsentieren. 
 
-All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Daher ist ein enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI} welche oft benötigte Funktionalität bereitstellt. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand verbunden welcher sich gut automatisieren lässt. Daher ist ein enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI} welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \begin{itemize}
@@ -91,7 +93,7 @@ All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung un
 	\end{itemize}
 \item Es können formale Eigenschaften zur Prüfung des Wahlverfahrens eingegeben werden
 	\begin{itemize}
-	\item Eine formale Eigenschaft kann abgespreichert und geladen werden
+	\item Eine formale Eigenschaft kann abgespeichert und geladen werden	
 	\item Fehler in der Eingabe werden angezeigt
 	\end{itemize}
 \item Die Parameter der Wahl (Anzahl von Wählern, Kandidaten und Sitzen) können festgelegt werden
@@ -239,16 +241,16 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 
 \begin{table}
 \caption{Makros zur Beschreibung formaler Eigenschaften}
-\begin{tabular}{lcr} 
+\begin{tabular}{|p{5cm}|p{10cm}|}
 Makro & Effekt \\
 \hline 
-\verb!FOR_ALL_VOTERS(E)! & checkt ob E für alle Wähler gilt \\
-\verb!FOR_ALL_CANDIDATES(E)! & checkt ob E für alle Kandidaten gilt \\
-\verb!FOR_ALL_SEATS(E)! & checkt ob E für alle Sitze gilt \\
-\verb!EXISTS_ONE_VOTER(E)! & checkt ob E für zumindest einen Wähler gilt \\
-\verb!EXISTS_ONE_CANDIDATE(E)! & checkt ob E für zumindest einen Kandidaten gilt \\
-\verb!EXISTS_ONE_SEAT(E)! & checkt ob E für zumindest einen Sitz gilt \\
-\verb!VOTE_SUM_FOR_CANDIDATE(c)! & gibt die Anzahl Stimmen für Kandidaten c zurück\\
+\verb!FOR_ALL_VOTERS(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Wähler gilt \\
+\verb!FOR_ALL_CANDIDATES(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Kandidaten gilt \\
+\verb!FOR_ALL_SEATS(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Sitze gilt \\
+\verb!EXISTS_ONE_VOTER(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für mindesten einen Wähler gilt \\
+\verb!EXISTS_ONE_CANDIDATE(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für mindesten einen Kandidaten gilt \\
+\verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden.Gesamtausdruck ist wahr falls sie für mindesten einen Sitz gilt \\
+\verb!VOTE_SUM_FOR_CANDIDATE(c)! & Gibt die Anzahl Stimmen für Kandidaten c zurück\\
 \end{tabular}
 \label{table:Macros_for_formal_Attributes}
 \end{table}
