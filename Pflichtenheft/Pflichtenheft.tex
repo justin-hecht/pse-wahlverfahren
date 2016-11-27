@@ -67,6 +67,31 @@ Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen. s
 \end{enumerate}
 
+\section{Die Sprache zur Angabe der formalen Eigenschaften}
+In diesem Abschnitt wird ein grober Überblick über die Sprache welche der Eigenschaften-Editor verwendet gegeben. Es handelt sich um ein Subset der C-Sprache mit einigen Additionen. Diese werden im Folgenden erläutert. 
+
+Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
+
+\begin{itemize}
+\item Das logische Und (\verb!&&!), Oder (\verb!&&!), Implikation (\verb!==>!), Äquivalenz (\verb!<==>!), Gleichheit (\verb!==!), Ungleichheit (\texttt{!=}), kleiner als (\texttt{<}), kleiner gleich (\texttt{<=}), größer als (\texttt{>}) und größer gleich (\texttt{>=})
+\item Symbolische Variablen vom Typ Wähler, Kandidat oder Sitz. Für deren Benennung gelten dieselben Regeln wie für die Benennung von Variablen in C
+\item Quantoren für Wähler, Kandidaten und Sitze in der Form von Makros. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden
+\item Ausgabe der Anzahl Stimmen für einen Kandidaten in der Form eines Makros
+\item Sei v symbolische Variable vom Typ Wähler:  Ausgabe der Stimmen bzw. des Ergebnisses verschiedener Wahlen (Votes1(v), Votes2(v) bzw Elect1, Elect2). Ersteres lässt sich nur in Vorbedingungen, letzteres nur in Nachbedingungen verwenden 
+\item Folgende Konstanten: Anzahl Wähler (\verb!V!), Anzahl Kandidaten (\verb!C!) und Anzahl Sitze (\verb!S!)
+\end{itemize}
+Beendet wird ein boolscher Ausdruck mit einem Semikolon. Es folgen Beispiele für boolsche Ausdrücke, welche die Sprache erlauben würde.
+
+\begin{itemize}
+\item Wir wollen dass zumindest ein Wähler für den Gewinner gewählt hat \\
+\verb!EXISTS_ONE_VOTER(v) : VOTES1(v) == ELECT1;!
+\item Alle Wähler welche zuerst Kandidat c wählen, wählen ihn erneut\\
+\verb!FOR_ALL_VOTERS(v) : (VOTES1(v) == c) ==> (VOTES2(v) == c);!
+\item Hat ein Kandidat mehr als die Hälfte aller Stimmen, so gewinnt er \\
+\verb!FOR_ALL_CANDIDATES(c) : VOTE_SUM_FOR_CANDIDATE(c) > V/2 ==> ELECT1 == c;!
+\end{itemize}
+
+
 \chapter{Zielbestimmung}
 Ziel des Programmes ist es eine  Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
 Es soll Folgendes bereitstellen:
