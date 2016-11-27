@@ -23,11 +23,15 @@
 \usepackage[toc]{glossaries}
 \makeglossaries
 
-\newglossaryentry{Grundstein}{name=Grundstein,description={Der Demokratie, is klar.}}
 \newglossaryentry{CBMC}
 {
 name={C bounded model checker},
 description={Ein Programm, welches C-Programme mit bounded model checking auf Fehler und vom user definierte assertions untersucht}
+}
+\newglossaryentry{Makros}
+{
+name={Makro},
+description={Ein Codeabschnitt, der durch einen Präprozessor ersetzt wird.}
 }
 
 
@@ -51,31 +55,31 @@ description={Ein Programm, welches C-Programme mit bounded model checking auf Fe
 \end{acronym}
  
 \chapter{Produktübersicht}
-Wahlverfahren bilden den \gls{Grundstein} unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Anwesenheit erwünschter Eigenschaften zu untersuchen.
+Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem die Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Präsenz erwünschter Eigenschaften zu untersuchen.
 
-\ac{BMC} Wird normalerweise dazu verwendet zu überprüfen ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade - also Schleifen - bis zu einer vom Benutzer bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist genau dann wenn das Programm einen Zustand einnehmen kann welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
+\ac{BMC} wird normalerweise dazu verwendet zu überprüfen, ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade - also Schleifen - bis zu einer vom Benutzer bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist, genau dann wenn das Programm einen Zustand einnehmen kann, welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
 
-In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung zu lösen: so kann ein in C beschriebenes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es kompliziert, dies direkt zu tun. 
+In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es kompliziert, dies direkt zu tun. 
 
-Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem Benutzer über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der Benutzer schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
+Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem Benutzer über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der Benutzer schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
-\item "`Rigtime"': Code-Editor für Wahlverfahren in Programmiersprache C.
-\item "Eigenschaften-Liste" Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen
+\item "`C-Editor"': Code-Editor für Wahlverfahren in der Programmiersprache C
+\item "Eigenschaften-Liste": Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen
 \item "`Eigenschaften-Editor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in eigens dafür vorgesehener Grammatik
-\item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl mit Anzahl der Wähler, Kandidaten und Sitzen. s
+\item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl
 \end{enumerate}
 
 \section{Die Sprache zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
-In diesem Abschnitt wird ein grober Überblick über die Sprache welche der Eigenschaften-Editor verwendet gegeben. Es handelt sich um ein Subset der C-Sprache mit einigen Additionen. Diese werden im Folgenden erläutert. 
+In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eigenschaften-Editor verwendet, gegeben. Es handelt sich um ein Subset der C-Sprache mit einigen Ergänzungen. Diese werden im Folgenden erläutert. 
 
 Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
 
 \begin{itemize}
 \item Das logische Und (\verb!&&!), Oder (\verb!&&!), Implikation (\verb!==>!), Äquivalenz (\verb!<==>!), Gleichheit (\verb!==!), Ungleichheit (\texttt{!=}), kleiner als (\texttt{<}), kleiner gleich (\texttt{<=}), größer als (\texttt{>}) und größer gleich (\texttt{>=})
 \item Symbolische Variablen vom Typ Wähler, Kandidat oder Sitz. Für deren Benennung gelten dieselben Regeln wie für die Benennung von Variablen in C
-\item Quantoren für Wähler, Kandidaten und Sitze in der Form von Makros. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden
+\item Quantoren für Wähler, Kandidaten und Sitze in der Form von \gls{Makros}. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden.
 \item Ausgabe der Anzahl Stimmen für einen Kandidaten in der Form eines Makros
 \item Sei v symbolische Variable vom Typ Wähler:  Ausgabe der Stimmen bzw. des Ergebnisses verschiedener Wahlen (Votes1(v), Votes2(v) bzw Elect1, Elect2). Ersteres lässt sich nur in Vorbedingungen, letzteres nur in Nachbedingungen verwenden 
 \item Folgende Konstanten: Anzahl Wähler (\verb!V!), Anzahl Kandidaten (\verb!C!) und Anzahl Sitze (\verb!S!)
@@ -97,18 +101,18 @@ Ziel des Programmes ist es eine  Lösung zur Untersuchung formaler Eigenschaften
 Es soll Folgendes bereitstellen:
 \begin{itemize}
 \item Eine Möglichkeit zur Beschreibung diverser Wahlverfahren in C-Code  
-\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in abgespeckter C Syntax 
+\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der beschriebenen Sprache zur Angabe der formalen Eigenschaften
 \item Eine Möglichkeit zum Angeben der Parameter (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze) 
 \item Eine Ausgabe des Ergebnisses der Überprüfung: eine Erfolgsmeldung bei Erfolg und Präsentation eines Gegenbeispiels bei Nichterfolg
 \end{itemize}
 
-Die Überprüfung der gegebenen Eigenschaften wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten sowie dessen Ausgabe zu interpretieren und präsentieren. 
+Die Überprüfung der gegebenen Eigenschaften wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten, sowie dessen Ausgabe zu interpretieren und zu präsentieren. 
 
-All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand verbunden welcher sich gut automatisieren lässt. Daher ist ein enorm wichtiger Schwerpunkt unseres Programmes einfache Benutzung, auch und besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI} welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll das Untersuchen von Wahlverfahren deutlich leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand, verbunden, welcher sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programmes einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll das Untersuchen von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \begin{itemize}
-\item Das Programm kann auf aktuellen 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden
+\item Das Programm kann auf 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden
 \item Alle Abhängigkeiten werden mit dem Programm ausgeliefert
 \item Das Programm bietet einen Code-Editor für das zu prüfende Wahlverfahren
 	\begin{itemize}
@@ -129,39 +133,40 @@ All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung un
 \section{Sollkriterien}
 \begin{itemize}
 \item Die Parameter der Wahl können in Intervallen angegeben werden.
-\item Der Code-Editor bietet folgendes:
+\item Der Code-Editor bietet folgende Funktionalitäten:
 	\begin{itemize}
 	\item Syntax-Highlighting
 	\item Automatisches Einrücken
 	\item Tastatur-Shortcuts
 	\item Codevorlagen
 	\end{itemize}
-\item Es gibt Code completion bei der Eingabe der formalen Eigenschaften
-\item Die Analyse des Wahlverfahrens kann abgebrochen werden.
+\item Code completion bei der Eingabe der formalen Eigenschaften ist möglich
+\item Die Analyse des Wahlverfahrens kann abgebrochen werden
 \end{itemize}
 
 
 \section{Wunschkriterien}
 \begin{itemize}
 \item Das Programm kann auf einem Mac betrieben werden
-\item Der Code-Editor bietet folgendes:
+\item Der Code-Editor bietet folgende Funktionalitäten:
 	\begin{itemize}
 	\item Code completion
-	\item Warnung vor nicht unterstützten Elementen der Programmiersprache
+	\item Warnung vor nicht unterstützten Elementen der Programmiersprache wie z.B. Threads
 	\end{itemize}
 \item Es kann festgelegt werden, wie lange die Analyse des Wahlverfahrens maximal dauern soll
-\item Eine Wahl kann eingegeben werden. Das Ergebnis wird angezeigt.
+\item Eine Wahl kann eingegeben werden. Das Ergebnis wird angezeigt
 \end{itemize}
 
 \section{Abgrenzungskriterien}
 \begin{itemize}
 \item Das Programm kann keine Angabe darüber machen, wie Lange die Überprüfung einer Eigenschaft dauern wird
+\item Es wird nicht bestätigt, ob ein gegebenes Wahlverfahren eine formale Eigenschaft erfüllt
 \end{itemize}
 
 
 
 \chapter{Produkteinsatz}
-Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richtet sich an Kunden, die ein Interesse an der Erforschung oder Entwicklung solcher Verfahren haben. Grundsätzlich sollte das Programm aber auch für Nicht-Informatikern verständlich sein. Für die Bedienung des Programms ist jedoch Kenntnis der Programmiersprache C und der Aussagen- und Prädikatenlogik.
+Das Programm überprüft Wahlverfahren auf ihre formalen Eigenschaften. Es richtet sich an Kunden, die ein Interesse an der Erforschung oder Entwicklung solcher Verfahren haben. Grundsätzlich sollte das Programm aber auch für Nicht-Informatikern verständlich sein. Für die Bedienung des Programms ist jedoch Kenntnis der Programmiersprache C und der Aussagen- und Prädikatenlogik nötig.
 
 \section{Anwendungsbereiche}
 \begin{itemize}
@@ -184,7 +189,7 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 
 \section{Software}
 \begin{itemize}
-\item Das Betriebssystem ist entweder Microsoft Windows (7 oder moderner) oder eine der Linux-Distributionen Arch oder Ubuntu
+\item Das Betriebssystem ist entweder Microsoft Windows (7 oder moderner) oder eine der Linux-Distributionen Arch oder Ubuntu lauffähig.
 \end{itemize}
 
 \section{Hardware}
@@ -332,7 +337,7 @@ Makro & Effekt \\
 /D10/ Das Wahlverfahren ist als Methode "`unsigned int voting(params)"' einer C-Headerdatei definiert und wird mit der Endung .h gespeichert.
 
 \section{Editor von formalen Eigenschaften}
-/D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen muss, ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
+/D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen soll, ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
 
 \section{Parameter}
 /D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert.
@@ -480,19 +485,19 @@ Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert
 
 
 \chapter{GUI}
-Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweisen. Im Folgenden wird jedes mal darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
+Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweichen. Im Folgenden wird jedes mal darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
 Die \ac{GUI} besteht aus 4 verschiedenen Fenstern: 
 \begin{itemize}
-\item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können.
-\item Eine Liste, in welcher alle für dieses Wahlverfahren zu überprüfenden Eigenschaften angezeigt werden.
-\item Ein Editor in welchem Eigenschaften editiert werden können.
-\item Das Hauptfenster, dessen schließen ein Beenden des kompletten tools nach sich zieht. Darin können Parameter für Überprüfungen eingestellt und Überprüfungen gestartet bzw. beendet werden.
+\item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können
+\item Eine Liste, in welcher alle für dieses Wahlverfahren zu überprüfenden Eigenschaften angezeigt werden
+\item Ein Editor in welchem Eigenschaften editiert werden können
+\item Das Hauptfenster, dessen Schließen ein Beenden des kompletten Tools nach sich zieht. Darin können Parameter für Überprüfungen eingestellt und Überprüfungen gestartet bzw. beendet werden
 \end{itemize}
 Jedes dieser Elemente verfügt auch über weitere Eigenschaften, die im Folgenden beschrieben werden.
 
 \section{C-Editor}
-Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es das eingeben von Funktionen welche ein Wahlverfahren implementieren zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, außerhalb dieser Funktion zu editieren. Dies untersagt aufgrund der Natur von C zum Beispiel selbst definierte Funktionen. Während des Eingeben des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
-Der C-Editor teilt sich in vier Untereinheiten auf: Der Menüstreifen, die Tool-Leiste, das Textfeld und das Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller Untermenüs geöffnet befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
+Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es, das Eingeben von Funktionen, welche ein Wahlverfahren implementiert, zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl, repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, außerhalb dieser Funktion zu editieren. Dies untersagt, aufgrund der Gegebenheiten von C, zum Beispiel selbst definierte Funktionen. Während des Eingebens des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
+Der C-Editor teilt sich in vier Untereinheiten auf: Der Menüstreifen, die Tool-Leiste, das Textfeld und das Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller geöffneten Untermenüs befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
@@ -500,7 +505,7 @@ Menüpunkt & Bedeutung \\
 \hline
 Neu & öffnet ein neues Dokument, wobei die Art der Wahl vom User angegeben wird \\
 Speichern & speichert das Dokument unter bereits gegebenem Namen \\
-Speichern unter & Speichert das Dokument unter neuem Namen an neuem Ort, beide durch User gegeben \\
+Speichern unter & Speichert das Dokument unter neuem Namen an neuem Ort, beide durch User angegeben \\
 Öffnen & Öffnet neues Dokument des richtigen Formats
 \end{tabular}
 \label{Datei-Menüpunkte}
@@ -526,7 +531,7 @@ Wahlart ändern & Ändert den Funktionskörper zu dem der vom User ausgewählten
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Einstellungen & Öffnet den Einstellungen Dialog. Dies ist Teil der Kann-Kriterien. Falls implementiert wird es Möglichkeiten zur Einstellung des Fonts und Syntax-Highlighting geben 
+Einstellungen & Öffnet den Einstellungen-Dialog. Dies ist Teil der Kann-Kriterien. Falls implementiert, wird es Möglichkeiten zur Einstellung des Fonts und Syntax-Highlighting geben.
 \end{tabular}
 \label{Editor-Menüpunkte}
 \caption{Unterpunkte des Editor-Menüs}
@@ -536,7 +541,7 @@ Einstellungen & Öffnet den Einstellungen Dialog. Dies ist Teil der Kann-Kriteri
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von Lexer oder Parser erkennbare Fehler untersucht. Gefundene Fehler werden in dem Fehlerfeld angezeigt. Zusätzliches Kann-Kriterium Die Zeile, in welcher der Fehler ist, wird zusätzlich durch einen roten Punkt markiert (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}
+Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von Lexer oder Parser erkennbare Fehler untersucht. Gefundene Fehler werden in dem Fehlerfeld angezeigt. Zusätzliches Kann-Kriterium: Die Zeile, in welcher der Fehler ist, wird zusätzlich durch einen roten Punkt markiert (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}
 \end{tabular}
 \label{Editor-Menüpunkte}
 \caption{Unterpunkte des Code-Menüs}
@@ -544,7 +549,7 @@ Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von
 
 Über den Tool-Streifen lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen.
 
-In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an dass man nur den Bereich in dem vorgegebenen Funktionskörper editieren kann.
+In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an, dass man nur den Bereich in dem vorgegebenen Funktionskörper editieren kann.
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-ohne-text.png}
@@ -559,17 +564,17 @@ In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-mit-Fehler-ohne-hover.png}
-\caption{Fehleranzeige bei syntaktischem Fehler ohne Maus Hover (Kann-Kriterium)}
+\caption{Fehleranzeige bei syntaktischem Fehler ohne Maus-Hover (Kann-Kriterium)}
 \label{Editor-mit-Fehler-ohne-hover}
 \end{figure}
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-mit-Fehler-mit-hover.png}
-\caption{Fehleranzeige bei syntaktischem Fehler mit Maus Hover (Kann-Kriterium)}
+\caption{Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium)}
 \label{Editor-mit-Fehler-mit-hover}
 \end{figure}
 
-In \ref{Editor-mit-Fehler-ohne-hover} sieht man wie der gefundene syntaktische Fehler während des Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
+In \ref{Editor-mit-Fehler-ohne-hover} sieht man, wie der gefundene syntaktische Fehler während des Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-mit-Fehler-nach-statischer-analyse.png}
@@ -580,7 +585,7 @@ In \ref{Editor-mit-Fehler-ohne-hover} sieht man wie der gefundene syntaktische F
 \ref{Editor-mit-Fehler-nach-statischer-analyse} Zeigt die Anzeige der Fehler nach ausführend einer statischen Code Analyse. Markierung der Zeile ist Kann-Kriterium.
 
 \section{Eigenschaften-Liste}
-Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe XXX) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel Wiederverwertet und Kombiniert werden. Das Zuordnen zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe ). Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
+Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe XXX) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel wiederverwertet und kombiniert werden. Das Zuordnen zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe ). Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
@@ -629,7 +634,7 @@ Es folgt eine Beschreibung der Icons, welche zu sehen sind.
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Icon & Bedeutung \\
 \hline
-Pfeil nach rechts & Falls Gegenbeispiel gefunden: Durch klicken öffnet sich unter dem Listenelement ein Textfeld in welchen das Gegenbeispiel dargestellt wird \\
+Pfeil nach rechts & Falls Gegenbeispiel gefunden: Durch Klicken öffnet sich unter dem Listenelement ein Textfeld in welchen das Gegenbeispiel dargestellt wird \\
 Checkbox & Nur falls aktiviert, wird das Wahlverfahren auf die Eigenschaft getestet \\
 Maulschlüssel & Öffnet den Eigenschaften-Editor für die Eigenschaft\\
 Rotes Kreuz & Entfernt die Eigenschaft aus der Liste \\
