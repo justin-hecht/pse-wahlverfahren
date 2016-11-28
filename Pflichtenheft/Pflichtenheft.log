@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  28 NOV 2016 01:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  28 NOV 2016 01:34
 entering extended mode
 **./Pflichtenheft.tex
 (Pflichtenheft.tex
@@ -1637,7 +1637,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 412.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 412.
-<Use-Case-Diagram.png, id=401, 1002.74625pt x 685.56125pt>
+<Use-Case-Diagram.png, id=413, 1002.74625pt x 685.56125pt>
 File: Use-Case-Diagram.png Graphic file (type png)
 
 <use Use-Case-Diagram.png>
@@ -1742,7 +1742,7 @@ l.491
                                                   \fi \fi 
 l.491 
       ]
-<images/GUI/c-editor/Editor-ohne-text.png, id=425, 686.565pt x 495.35063pt>
+<images/GUI/c-editor/Editor-ohne-text.png, id=437, 686.565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-ohne-text.png Graphic file (type png)
 
 <use images/GUI/c-editor/Editor-ohne-text.png>
@@ -1750,7 +1750,7 @@ Package pdftex.def Info: images/GUI/c-editor/Editor-ohne-text.png used on input
  line 493.
 (pdftex.def)             Requested size: 343.28166pt x 247.67471pt.
 
-<images/GUI/c-editor/Editor-mit-text.png, id=426, 686.565pt x 495.35063pt>
+<images/GUI/c-editor/Editor-mit-text.png, id=438, 686.565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-mit-text.png Graphic file (type png)
 
 <use images/GUI/c-editor/Editor-mit-text.png>
@@ -1776,7 +1776,7 @@ Package babel Info: Redefining german shorthand "~
                                                   \fi \fi 
 l.502 
        <./images/GUI/c-editor/Editor-ohne-text.png>]
-<images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png, id=432, 686.565pt x 495.
+<images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png, id=444, 686.565pt x 495.
 35063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png Graphic file (type p
 ng)
@@ -1791,7 +1791,7 @@ er (Kann-
  []
 
 
-<images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png, id=433, 686.565pt x 495.3
+<images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png, id=445, 686.565pt x 495.3
 5063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png Graphic file (type pn
 g)
@@ -1831,7 +1831,7 @@ l.514
 l.514 
        <./images/GUI/c-editor/Editor-mit-text.png> <./images/GUI/c-editor/Edito
 r-mit-Fehler-ohne-hover.png>]
-<images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png, id=443, 686
+<images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png, id=455, 686
 .565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png Graphic
  file (type png)
@@ -1896,7 +1896,7 @@ l.551
                                                   \fi \fi 
 l.551 
        <./images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png>]
-<images/GUI/Eigenschaften-Liste/nach-testen.png, id=457, 328.22626pt x 481.0471
+<images/GUI/Eigenschaften-Liste/nach-testen.png, id=469, 328.22626pt x 481.0471
 8pt>
 File: images/GUI/Eigenschaften-Liste/nach-testen.png Graphic file (type png)
  <use images/GUI/Eigenschaften-Liste/nach-testen.png>
@@ -1904,7 +1904,7 @@ Package pdftex.def Info: images/GUI/Eigenschaften-Liste/nach-testen.png used on
  input line 557.
 (pdftex.def)             Requested size: 164.11272pt x 240.523pt.
 
-<images/GUI/Eigenschaften-Liste/gegenbeispiel.png, id=458, 327.47343pt x 480.29
+<images/GUI/Eigenschaften-Liste/gegenbeispiel.png, id=470, 327.47343pt x 480.29
 437pt>
 File: images/GUI/Eigenschaften-Liste/gegenbeispiel.png Graphic file (type png)
  <use images/GUI/Eigenschaften-Liste/gegenbeispiel.png>
@@ -1928,7 +1928,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 585.
 
-<images/GUI/Eigenschaften/raw-ohne-code.png, id=459, 591.71063pt x 443.40656pt>
+<images/GUI/Eigenschaften/raw-ohne-code.png, id=471, 591.71063pt x 443.40656pt>
 File: images/GUI/Eigenschaften/raw-ohne-code.png Graphic file (type png)
 <use images/GUI/Eigenschaften/raw-ohne-code.png>
 Package pdftex.def Info: images/GUI/Eigenschaften/raw-ohne-code.png used on inp
@@ -1992,7 +1992,7 @@ Package babel Info: Redefining german shorthand "~
 l.613 \end{itemize}
                     <./images/GUI/Eigenschaften/raw-ohne-code.png>]
 <images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlighting.pn
-g, id=473, 591.71063pt x 443.40656pt>
+g, id=485, 591.71063pt x 443.40656pt>
 File: images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlighti
 ng.png Graphic file (type png)
 
@@ -2008,7 +2008,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 625.
 
-<images/GUI/Parameter-editor/Parameter-editor.png, id=474, 327.47343pt x 231.86
+<images/GUI/Parameter-editor/Parameter-editor.png, id=486, 327.47343pt x 231.86
 626pt>
 File: images/GUI/Parameter-editor/Parameter-editor.png Graphic file (type png)
  <use images/GUI/Parameter-editor/Parameter-editor.png>
@@ -2145,25 +2145,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 666.
  (Pflichtenheft.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 666.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 666.
+Package rerunfilecheck Info: File `Pflichtenheft.out' has not changed.
+(rerunfilecheck)             Checksum: 577D27C243FDAE78B9BC56EA5908AF20;3751.
 
-
-Package rerunfilecheck Warning: File `Pflichtenheft.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Pflichtenheft.out':
-(rerunfilecheck)             Before: ED66B3CB1F095D9751D0C3E309C80D0A;3404
-(rerunfilecheck)             After:  577D27C243FDAE78B9BC56EA5908AF20;3751.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 666.
  ) 
 Here is how much of TeX's memory you used:
- 15843 strings out of 493333
- 265179 string characters out of 3139193
+ 15847 strings out of 493333
+ 265228 string characters out of 3139193
  486009 words of memory out of 3000000
- 18951 multiletter control sequences out of 15000+200000
+ 18955 multiletter control sequences out of 15000+200000
  28002 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,66p,8826b,579s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2176,9 +2170,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 .9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb>
-Output written on Pflichtenheft.pdf (33 pages, 478548 bytes).
+Output written on Pflichtenheft.pdf (33 pages, 480224 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
+ 554 PDF objects out of 1000 (max. 8388607)
  121 named destinations out of 1000 (max. 500000)
- 456 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 words of extra memory for PDF output out of 10000 (max. 10000000)
 
