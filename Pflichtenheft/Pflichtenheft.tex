@@ -409,16 +409,31 @@ Makro & Effekt \\
 
 \chapter{Systemmodelle}
 \section{Szenarien}
+
+\textbf{Szenario 1}\\
+Ein Wahlforscher wird von der Regierung eines Landes beauftragt ein neues Wahlverfahren zu entwerfen. Dieses soll bestimmte, vorgegebene formale Eigenschaften erfüllen.\\
+Er installiert das Tool und entwickelt mit diesem eine erste Version des Wahlverfahrens. Zusätzlich gibt er die vorgegebenen Eigenschaften als formale Eigenschaften in das Tool ein.\\
+Nun gibt er Parameter zum Prüfen an (Wähler, Stimmen, Sitze) und lässt das Wahlverfahren auf die formalen Eigenschaften prüfen.\\
+Das Tool gibt aus, dass nicht alle Eigenschaften vom Wahlverfahren erfüllt werden.\\
+Mithilfe der Informationen aus der Ergebnisausgabe analysiert und modifiziert der Entwickler das Wahlverfahren so, dass es alle Eigenschaften erfüllt.\\
+Er prüft es nochmals auf alle Eigenschaften und nun werden alle erfüllt.\\
+Zuletzt speichert er Wahlverfahren und formale Eigenschaften ab und sendet ersteres an eine Prüfstelle für Wahlverfahren.\\
+\\
+\textbf{Szenario 2}\\
+Eine Prüfstelle bekommt ein Wahlverfahren übergeben welches sie auf bestimmte formale Eigenschaften testen soll.\\
+Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
+Um das Wahlverfahren auf die Eigenschaften zu prüfen werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
+Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.
+\pagebreak
 \section{Anwendungsfälle}
-Eine Prüfstelle oder ein Entwickler gibt dem Tool ein Wahlverfahren in C und eine formale 
-Eigenschaft über beziehungsweise entwickelt diese selbst in den jeweiligen Editoren des Tools. 
-Werden diese als plausibel erkannt kann er das Wahlverfahren, auch mit Angabe eigener 
-Testparameter (Wähler, Sitze, Timeout...), auf die Eigenschaft prüfen und erhält das Ergebnis 
-als graphische Ausgabe. 
-Diese kann dann, sowie auch Wahlverfahren und formale Eigenschaft, abgespeichert werden.
+Der Nutzer (Entwickler, Wahlforscher, Prüfstelle..) kann Wahlverfahren und formale Eigenschaften in den jeweiligen Editoren des Tools entwickeln bzw. editieren.
+Beide Editoren verfügen über Optionen zum Laden und Speichern, sowie dem Anzeigen von Fehlern und Syntax-Highlighting.\\
+Es kann geprüft werden ob das Wahlverfahren die formalen Eigenschaften erfüllt. Voraussetzung dafür sind ein fehlerfreies Wahlverfahren und fehlerfreie formale Eigenschaften. Vor dem Prüfen kann man Testparameter angeben (Anzahl von Kandidaten, Wählern, Sitzen und einem Timeout, dass dem Prüfen eine zeitliche Obergrenze gibt).\\
+Nach dem Prüfen wird für jede Eigenschaft angezeigt ob sie vom Wahlverfahren erfüllt wird oder nicht. Werden formale Eigenschaften als nicht erfüllt erkannt, werden Gegenbeispiele angezeigt die die Nichterfüllbarkeit beweisen. Anhand dieser Informationen kann der Nutzer dann das Wahlverfahren und die Eigenschaften analysieren und falls nötig modifizieren.
 
 
-{\vspace{0.5cm}\hspace*{-3cm}\includegraphics[scale=0.49]{Use-Case-Diagram}}
+{\vspace{0.5cm}\hspace*{-3.5cm}\includegraphics[scale=0.13]{UseCaseDiagram}}
+
 	
 
 
