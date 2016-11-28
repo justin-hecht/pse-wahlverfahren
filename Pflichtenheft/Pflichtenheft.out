@@ -32,19 +32,22 @@
 \BOOKMARK [1][-]{section.6.4}{6.4 Projektdaten}{chapter.6}% 32
 \BOOKMARK [0][-]{chapter.7}{7 Nichtfunktionale Anforderungen}{}% 33
 \BOOKMARK [0][-]{chapter.8}{8 Globale Testf\344lle}{}% 34
-\BOOKMARK [1][-]{section.8.1}{8.1 Laden von Wahlverfahren}{chapter.8}% 35
-\BOOKMARK [0][-]{chapter.9}{9 Systemmodelle}{}% 36
-\BOOKMARK [1][-]{section.9.1}{9.1 Szenarien}{chapter.9}% 37
-\BOOKMARK [1][-]{section.9.2}{9.2 Anwendungsf\344lle}{chapter.9}% 38
-\BOOKMARK [0][-]{chapter.10}{10 GUI}{}% 39
-\BOOKMARK [1][-]{section.10.1}{10.1 C-Editor}{chapter.10}% 40
-\BOOKMARK [1][-]{section.10.2}{10.2 Eigenschaften-Liste}{chapter.10}% 41
-\BOOKMARK [1][-]{section.10.3}{10.3 Eigenschaften Editor}{chapter.10}% 42
-\BOOKMARK [1][-]{section.10.4}{10.4 Parameter Editor}{chapter.10}% 43
-\BOOKMARK [0][-]{chapter.11}{11 Phasenverantwortliche}{}% 44
-\BOOKMARK [1][-]{section.11.1}{11.1 Pflichtenheft}{chapter.11}% 45
-\BOOKMARK [1][-]{section.11.2}{11.2 Entwurf}{chapter.11}% 46
-\BOOKMARK [1][-]{section.11.3}{11.3 Implementierung}{chapter.11}% 47
-\BOOKMARK [1][-]{section.11.4}{11.4 Qualit\344tssicherung}{chapter.11}% 48
-\BOOKMARK [1][-]{section.11.5}{11.5 Abschlusspr\344sentation}{chapter.11}% 49
-\BOOKMARK [0][-]{chapter.12}{12 Glossar}{}% 50
+\BOOKMARK [1][-]{section.8.1}{8.1 Testf\344lle f\374r den C-Code Editor f\374r Wahlverfahren}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.2}{8.2 Testf\344lle f\374r die Eigenschaften-Liste}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.3}{8.3 Testf\344lle f\374r den Editor f\374r formale Eigenschaften}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.4}{8.4 Testf\344lle f\374r den Editor f\374r Eingabeparameter}{chapter.8}% 38
+\BOOKMARK [0][-]{chapter.9}{9 Systemmodelle}{}% 39
+\BOOKMARK [1][-]{section.9.1}{9.1 Szenarien}{chapter.9}% 40
+\BOOKMARK [1][-]{section.9.2}{9.2 Anwendungsf\344lle}{chapter.9}% 41
+\BOOKMARK [0][-]{chapter.10}{10 GUI}{}% 42
+\BOOKMARK [1][-]{section.10.1}{10.1 C-Editor}{chapter.10}% 43
+\BOOKMARK [1][-]{section.10.2}{10.2 Eigenschaften-Liste}{chapter.10}% 44
+\BOOKMARK [1][-]{section.10.3}{10.3 Eigenschaften Editor}{chapter.10}% 45
+\BOOKMARK [1][-]{section.10.4}{10.4 Parameter Editor}{chapter.10}% 46
+\BOOKMARK [0][-]{chapter.11}{11 Phasenverantwortliche}{}% 47
+\BOOKMARK [1][-]{section.11.1}{11.1 Pflichtenheft}{chapter.11}% 48
+\BOOKMARK [1][-]{section.11.2}{11.2 Entwurf}{chapter.11}% 49
+\BOOKMARK [1][-]{section.11.3}{11.3 Implementierung}{chapter.11}% 50
+\BOOKMARK [1][-]{section.11.4}{11.4 Qualit\344tssicherung}{chapter.11}% 51
+\BOOKMARK [1][-]{section.11.5}{11.5 Abschlusspr\344sentation}{chapter.11}% 52
+\BOOKMARK [0][-]{chapter.12}{12 Glossar}{}% 53
