@@ -51,5 +51,4 @@
 \contentsline {section}{\numberline {11.3}Implementierung}{33}{section.11.3}
 \contentsline {section}{\numberline {11.4}Qualit\IeC {\"a}tssicherung}{33}{section.11.4}
 \contentsline {section}{\numberline {11.5}Abschlusspr\IeC {\"a}sentation}{33}{section.11.5}
-\contentsline {chapter}{\numberline {12}Glossar}{34}{chapter.12}
-\contentsline {chapter}{Glossar}{35}{section*.7}
+\contentsline {chapter}{Glossar}{34}{section*.7}
