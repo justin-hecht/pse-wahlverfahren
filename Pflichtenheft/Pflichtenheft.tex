@@ -1,4 +1,4 @@
-\documentclass[a4paper]{report}
+\documentclass[a4paper]{scrreprt}
 \usepackage{scrextend}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
@@ -202,7 +202,7 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 /F20/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
 /F30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch Ausgabe der Ergebnisse, welche auch für Nicht-Informatiker verständlich ist \\
 /F40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
-/F50/ Möglichkeit des Öffnens der Projekte aus /F40/
+/F50/ Möglichkeit des Öffnens und Editierens der Projekte aus /F40/
 
 \section{C-Code Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
@@ -447,7 +447,7 @@ Die \ac{GUI} besteht aus 4 verschiedenen Fenstern:
 Jedes dieser Elemente verfügt auch über weitere Eigenschaften, die im Folgenden beschrieben werden.
 
 \section{C-Editor}
-Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es, das Eingeben von Funktionen, welche ein Wahlverfahren implementiert, zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl, repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, außerhalb dieser Funktion zu editieren. Dies untersagt, aufgrund der Gegebenheiten von C, zum Beispiel selbst definierte Funktionen. Während des Eingebens des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
+Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es, das Eingeben von Funktionen, welche ein Wahlverfahren implementiert, zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl, repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, diese Funktion zu editieren. Während des Eingebens des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
 Der C-Editor teilt sich in vier Untereinheiten auf: Der Menüstreifen, die Tool-Leiste, das Textfeld und das Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller geöffneten Untermenüs befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
 
 \begin{table}[H]
@@ -500,8 +500,6 @@ Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von
 
 Über den Tool-Streifen lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen.
 
-In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an, dass man nur den Bereich in dem vorgegebenen Funktionskörper editieren kann.
-
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-ohne-text.png}
 \caption{Der C Editor ohne Code}
@@ -512,6 +510,8 @@ In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der
 \caption{Der C Editor mit Code und Anzeige der Wahlart}
 \label{Editor-mit-text}
 \end{figure}
+
+In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an, dass man den vorgegebenen Funktionskörper nicht editieren kann.
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-mit-Fehler-ohne-hover.png}
