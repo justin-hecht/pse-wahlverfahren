@@ -242,10 +242,11 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 
 \chapter{Funktionale Anforderungen}
 \section{Allgemein}
-/F10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
-/F20/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
-/F30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
-/F31/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
+\subsection{Muss-Kriterien}
+/FM10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
+/FM20/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
+/FM30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
+/FM31/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
 \begin{itemize}
 \item Zahlen in Dezimaldarstellung
 \item Ausgabe der Eingabeparameter des Wahldurchlaufs bzw. der Wahldurchläufe:
@@ -256,8 +257,12 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 \end{itemize}
 \item Ausgabe des Ergebnisses des Wahldurchlaufs bzw. der Wahldurchläufe
 \end{itemize} 
-/F40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
-/F50/ Möglichkeit des Öffnens und Editierens der Projekte aus /F40/
+/FM40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
+/FM50/ Möglichkeit des Öffnens und Editierens der Projekte aus /F40/
+
+\subsection{Kann-Kriterien}
+/FK10/ Durch den Benutzer veränderbare Einstellungen wie verwendeter Font oder Font-Größe \\
+/FK20/ Laden und Speichern der in /FK10/ genannten Einstellungen \\
 
 \section{C-Code Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
@@ -402,7 +407,7 @@ Makro & Effekt \\
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
 /D10/ Das Wahlverfahren wird vom gls{Benutzer} als C-Code definiert und in einer Datei mit vom gls{Benutzer} gegebenen Namen und der Endung .c gespeichert.
-/D11/ Die Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.
+/D11/ Die verfügbaren Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.
 
 \section{Editor von formalen Eigenschaften}
 /D20/ Eine vom gls{Benutzer} dafinierte formale Eigenschaft wird in einer Datei mit vom gls{Benutzer} gegebenen Namen und der Endung .eig gespeichert.
@@ -508,7 +513,7 @@ Nach dem Prüfen wird für jede Eigenschaft angezeigt ob sie vom Wahlverfahren e
 
 \hspace{-2cm}\includegraphics[scale=0.09]{UseCaseDiagram.png}
 
-\section{High-Level Architektur}	
+\section{High-Level-Beschreibung der Architektur}	
 Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwaresystems. 
 
 \begin{figure}[H]
@@ -517,17 +522,23 @@ Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwares
 \label{Packet-scetch}
 \end{figure}
 
-\ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor wie aufwendig die verschiedenen Komponenten sein werden. Daher ist es möglich, dass manche Packete im Verlauf des Entwurfs als Klassen realisiert werden. Andernseits ist es auch möglich, dass weitere Packete hinzu kommen. Abhängigkeiten zu Java-Bibliotheken wie zum Beispiel Swing sind nicht dargestellt.
+\ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Diese einzelnen Packete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor wie aufwendig die implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Packete im Verlauf des Entwurfs als Klassen realisiert werden. Andernseits ist es auch möglich, dass weitere Packete hinzu kommen. Abhängigkeiten zu Java-Bibliotheken wie zum Beispiel Swing sind nicht dargestellt.
 
-Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweiße haben C- und Eigenschaften-Editor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es geben in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI}. Daher wird diese Funktionalität gekapselt in einem eigenen Packet. Dies setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Kommunikator Packet. Dieses übernimmt auch die Kommunikation zwischen den Packeten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und dessen Ergebnisse an die Eigenschaften-Liste weiterleiten.
+Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweiße haben C- und Eigenschaften-Editor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es geben in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI}. Daher wird diese Funktionalität gekapselt in einem eigenen Packet. 
+
+Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle da über welche man Instanzen der benötigten Komponenten beziehen kann. In dem Diagram werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency Manager geregelt. 
+
+Das Kommunikator-Packet übernimmt die Kommunikation zwischen dem Haupt- und den restlichen Fenstern. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaften-Liste weiterleiten.
 
 Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Packet wird Funktionalität zu diesem Zweck bereitstellen. 
 
-Die CBMC-Schnittstelle nimmt den C-Code sowie die zu überprüfenden Eigenschaften (jeweils in Wrapper-Klassen). Sie erzeugt den Input für CBMC, ruft CBMC mit diesem Input auf und gibt das Ergebnis (in einer Wrapper-Klasse) zurück.
+Die CBMC-Schnittstelle erwartet die Beschreibung des Wahlverfahrens sowie die zu überprüfenden Eigenschaften (jeweils in Wrapper-Klassen). Sie erzeugt den Input für CBMC, ruft CBMC mit diesem Input auf und gibt das Ergebnis (in einer Wrapper-Klasse) zurück.
 
-Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für CBMC-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für CBMC notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der CBMC-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist.
+Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für CBMC-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für CBMC notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der CBMC-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist. Allgemein sorgt diese zusätliche  Abstraktion für eine flexible Architektur. Sollte das Program in Zukunft um weitere Programmiersprachen oder einen graphischen Editor zur Beschreibung von Wahlverfahren erweitert werden, so muss lediglich die entsprechende Wrapper-Klasse korrekt erzeugt werden.
 
 Alle Editoren benötigen Funktionalität zum Wiederholen sowie Rückgängig machen von Aktionen. Dazu müssen Eingaben des Benutzers entsprechend gekapselt werden. Funktionaliät hierzu befindet sich im Input-Packet.
+
+Sämtliche Resourcen wie Strings und durch den Benutzer konfigurierbare Eigenschaften wie der verwendete Font werden über den Resource Manager bereitgestellt. Dieser kann die vom Benutzer gegebenen Einstellungen auch speichern und laden.
 
 \chapter{GUI}
 Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweichen. Im Folgenden wird jedes mal darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.

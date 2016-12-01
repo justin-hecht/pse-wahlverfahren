@@ -16,6 +16,8 @@
 \contentsline {section}{\numberline {4.3}Produkt-Schnittstellen}{13}{section.4.3}
 \contentsline {chapter}{\numberline {5}Funktionale Anforderungen}{14}{chapter.5}
 \contentsline {section}{\numberline {5.1}Allgemein}{14}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Muss-Kriterien}{14}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Kann-Kriterien}{14}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2}C-Code Editor f\IeC {\"u}r Wahlverfahren}{14}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Muss-Kriterien}{14}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Soll-Kriterien}{15}{subsection.5.2.2}
@@ -41,7 +43,7 @@
 \contentsline {chapter}{\numberline {9}Systemmodelle}{23}{chapter.9}
 \contentsline {section}{\numberline {9.1}Szenarien}{23}{section.9.1}
 \contentsline {section}{\numberline {9.2}Anwendungsf\IeC {\"a}lle}{24}{section.9.2}
-\contentsline {section}{\numberline {9.3}High-Level Architektur}{24}{section.9.3}
+\contentsline {section}{\numberline {9.3}High-Level-Beschreibung der Architektur}{24}{section.9.3}
 \contentsline {chapter}{\numberline {10}GUI}{27}{chapter.10}
 \contentsline {section}{\numberline {10.1}C-Editor}{27}{section.10.1}
 \contentsline {section}{\numberline {10.2}Eigenschaften-Liste}{32}{section.10.2}
