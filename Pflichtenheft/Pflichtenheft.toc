@@ -41,15 +41,16 @@
 \contentsline {chapter}{\numberline {9}Systemmodelle}{23}{chapter.9}
 \contentsline {section}{\numberline {9.1}Szenarien}{23}{section.9.1}
 \contentsline {section}{\numberline {9.2}Anwendungsf\IeC {\"a}lle}{24}{section.9.2}
-\contentsline {chapter}{\numberline {10}GUI}{25}{chapter.10}
-\contentsline {section}{\numberline {10.1}C-Editor}{25}{section.10.1}
-\contentsline {section}{\numberline {10.2}Eigenschaften-Liste}{28}{section.10.2}
-\contentsline {section}{\numberline {10.3}Eigenschaften-Editor}{29}{section.10.3}
-\contentsline {section}{\numberline {10.4}Parameter Editor}{30}{section.10.4}
-\contentsline {chapter}{\numberline {11}Phasenverantwortliche}{32}{chapter.11}
-\contentsline {section}{\numberline {11.1}Pflichtenheft}{32}{section.11.1}
-\contentsline {section}{\numberline {11.2}Entwurf}{32}{section.11.2}
-\contentsline {section}{\numberline {11.3}Implementierung}{32}{section.11.3}
-\contentsline {section}{\numberline {11.4}Qualit\IeC {\"a}tssicherung}{32}{section.11.4}
-\contentsline {section}{\numberline {11.5}Abschlusspr\IeC {\"a}sentation}{32}{section.11.5}
-\contentsline {chapter}{Glossar}{33}{section*.7}
+\contentsline {section}{\numberline {9.3}High-Level Architektur}{24}{section.9.3}
+\contentsline {chapter}{\numberline {10}GUI}{27}{chapter.10}
+\contentsline {section}{\numberline {10.1}C-Editor}{27}{section.10.1}
+\contentsline {section}{\numberline {10.2}Eigenschaften-Liste}{32}{section.10.2}
+\contentsline {section}{\numberline {10.3}Eigenschaften-Editor}{34}{section.10.3}
+\contentsline {section}{\numberline {10.4}Parameter Editor}{35}{section.10.4}
+\contentsline {chapter}{\numberline {11}Phasenverantwortliche}{37}{chapter.11}
+\contentsline {section}{\numberline {11.1}Pflichtenheft}{37}{section.11.1}
+\contentsline {section}{\numberline {11.2}Entwurf}{37}{section.11.2}
+\contentsline {section}{\numberline {11.3}Implementierung}{37}{section.11.3}
+\contentsline {section}{\numberline {11.4}Qualit\IeC {\"a}tssicherung}{37}{section.11.4}
+\contentsline {section}{\numberline {11.5}Abschlusspr\IeC {\"a}sentation}{37}{section.11.5}
+\contentsline {chapter}{Glossar}{38}{section*.7}

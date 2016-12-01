@@ -10,7 +10,8 @@
 \graphicspath{ {images/GUI/c-editor/}
  {images/GUI/Eigenschaften-Liste/}
   {images/GUI/Eigenschaften/}
-  {images/GUI/Parameter-editor/}} 
+  {images/GUI/Parameter-editor/}
+  {images/}} 
 
 \usepackage[printonlyused]{acronym}
 \usepackage{hyperref}
@@ -479,6 +480,8 @@ Makro & Effekt \\
 /T460/ Eine neues Projekt anlegen \\
 
 
+
+
 \chapter{Systemmodelle}
 \section{Szenarien}
 
@@ -503,11 +506,28 @@ Beide Editoren verfügen über Optionen zum Laden und Speichern, sowie dem Anzei
 Es kann geprüft werden ob das Wahlverfahren die formalen Eigenschaften erfüllt. Voraussetzung dafür sind ein fehlerfreies Wahlverfahren und fehlerfreie formale Eigenschaften. Vor dem Prüfen kann man Testparameter angeben (Anzahl von Kandidaten, Wählern, Sitzen und einem Timeout, dass dem Prüfen eine zeitliche Obergrenze gibt).\\
 Nach dem Prüfen wird für jede Eigenschaft angezeigt ob sie vom Wahlverfahren erfüllt wird oder nicht. Werden formale Eigenschaften als nicht erfüllt erkannt, werden Gegenbeispiele angezeigt die die Nichterfüllbarkeit beweisen. Anhand dieser Informationen kann der Nutzer dann das Wahlverfahren und die Eigenschaften analysieren und falls nötig modifizieren.
 
-
 \hspace{-2cm}\includegraphics[scale=0.09]{UseCaseDiagram.png}
 
-	
+\section{High-Level Architektur}	
+Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwaresystems. 
 
+\begin{figure}[H]
+\includegraphics[scale=0.4]{architecture_first_scetch.jpg}
+\caption{Skizzenhfte Beschreibung der Packete und ihrer Abhängigkeiten}
+\label{Packet-scetch}
+\end{figure}
+
+\ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor wie aufwendig die verschiedenen Komponenten sein werden. Daher ist es möglich, dass manche Packete im Verlauf des Entwurfs als Klassen realisiert werden. Andernseits ist es auch möglich, dass weitere Packete hinzu kommen. Abhängigkeiten zu Java-Bibliotheken wie zum Beispiel Swing sind nicht dargestellt.
+
+Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweiße haben C- und Eigenschaften-Editor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es geben in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI}. Daher wird diese Funktionalität gekapselt in einem eigenen Packet. Dies setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Kommunikator Packet. Dieses übernimmt auch die Kommunikation zwischen den Packeten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und dessen Ergebnisse an die Eigenschaften-Liste weiterleiten.
+
+Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Packet wird Funktionalität zu diesem Zweck bereitstellen. 
+
+Die CBMC-Schnittstelle nimmt den C-Code sowie die zu überprüfenden Eigenschaften (jeweils in Wrapper-Klassen). Sie erzeugt den Input für CBMC, ruft CBMC mit diesem Input auf und gibt das Ergebnis (in einer Wrapper-Klasse) zurück.
+
+Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für CBMC-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für CBMC notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der CBMC-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist.
+
+Alle Editoren benötigen Funktionalität zum Wiederholen sowie Rückgängig machen von Aktionen. Dazu müssen Eingaben des Benutzers entsprechend gekapselt werden. Funktionaliät hierzu befindet sich im Input-Packet.
 
 \chapter{GUI}
 Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweichen. Im Folgenden wird jedes mal darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
