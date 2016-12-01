@@ -528,7 +528,7 @@ Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuver
 
 Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle da über welche man Instanzen der benötigten Komponenten beziehen kann. In dem Diagram werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency Manager geregelt. 
 
-Das Kommunikator-Packet übernimmt die Kommunikation zwischen dem Haupt- und den restlichen Fenstern. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaften-Liste weiterleiten.
+Das Kommunikator-Packet übernimmt die Kommunikation zwischen dem Parameter-Editor und den Komponenten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaften-Liste weiterleiten.
 
 Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Packet wird Funktionalität zu diesem Zweck bereitstellen. 
 
