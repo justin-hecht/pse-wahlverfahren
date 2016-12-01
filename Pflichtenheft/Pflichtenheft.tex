@@ -242,11 +242,10 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 
 \chapter{Funktionale Anforderungen}
 \section{Allgemein}
-\subsection{Muss-Kriterien}
-/FM10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
-/FM20/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
-/FM30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
-/FM31/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
+/F0010/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
+/F0020/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
+/F0030/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
+/F0031/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
 \begin{itemize}
 \item Zahlen in Dezimaldarstellung
 \item Ausgabe der Eingabeparameter des Wahldurchlaufs bzw. der Wahldurchläufe:
@@ -257,32 +256,28 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 \end{itemize}
 \item Ausgabe des Ergebnisses des Wahldurchlaufs bzw. der Wahldurchläufe
 \end{itemize} 
-/FM40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
-/FM50/ Möglichkeit des Öffnens und Editierens der Projekte aus /F40/
-
-\subsection{Kann-Kriterien}
-/FK10/ Durch den Benutzer veränderbare Einstellungen wie verwendeter Font oder Font-Größe \\
-/FK20/ Laden und Speichern der in /FK10/ genannten Einstellungen \\
+/F0040/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
+/F0050/ Möglichkeit des Öffnens und Editierens der Projekte aus /F0040/
 
 \section{C-Code Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
-/FM10/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
-/FM20/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
-/FM30/ Speichern von erstelltem Code als Datei auf der Festplatte an vom User angegebenen Ort \\
-/FM40/ Laden und Darstellen von Dateien korrekten Formats \\
-/FM50/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse})
+/FM1010/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
+/FM1020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
+/FM1030/ Speichern von erstelltem Code als Datei auf der Festplatte an vom User angegebenen Ort \\
+/FM1040/ Laden und Darstellen von Dateien korrekten Formats \\
+/FM1050/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse})
 
 \subsection{Soll-Kriterien}
-/FS10/ Überprüfen des Formats beim Ladevorgang. Falls falsches Format: Ausgabe einer Fehlermeldung \\
-/FS20/ Syntax-Highlighting: Darstellung diverser Schlüsselwörter in anderen Farben als den Rest des Codes. Dies beinhaltet, ist jedoch nicht beschränkt auf: 
+/FS1060/ Überprüfen des Formats beim Ladevorgang. Falls falsches Format: Ausgabe einer Fehlermeldung \\
+/FS1070/ Syntax-Highlighting: Darstellung diverser Schlüsselwörter in anderen Farben als den Rest des Codes. Dies beinhaltet, ist jedoch nicht beschränkt auf: 
 \begin{itemize}
 \item Typendeklaration (int, float, ...)
 \item Kontrollflow-Konstrukte (if, else, while...)
 \item Variablennamen
 \item Kommentare
 \end{itemize}
-/FS30/ Anzeigen der Zeilennummern am linken Zeilenrand \\
-/FS40/ Anzeigen von Syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
+/FS1080/ Anzeigen der Zeilennummern am linken Zeilenrand \\
+/FS1090/ Anzeigen von Syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
 \begin{itemize}
 \item Verwendung von Schlüsselwörtern als Variablennamen 
 \item Vergessene Semikolons am Ende von Anweisungen
@@ -290,7 +285,7 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 \item Andere Konstrukte, welche der Grammatik der C-Sprache widersprechen
 \end{itemize}
 
-/FS50/ Reaktion auf typische Tastenkürzel\\
+/FS1100/ Reaktion auf typische Tastenkürzel\\
 \begin{table}[H]
 \caption{Hotkeys und verbundene Operationen}
 \begin{tabular}{lcr} 
@@ -308,7 +303,7 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 \label{table:Hotkeys_and_operations}
 \end{table}
 
-/FS60/ Bereitstellen von Wahl-Templates
+/FS1110/ Bereitstellen von Wahl-Templates
 \begin{itemize}
 \item Jeder Wähler wählt genau einen Kandidaten
 \item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge 
@@ -316,15 +311,15 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 \end{itemize}
 
 \subsection{Kann-Kriterien}
-/FK10/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
-/FK20/ Code-Completion
+/FK1120/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
+/FK1130/ Code-Completion
 \begin{itemize}
 \item Automatisches Schließen von Klammern und Anführungszeichen
 \item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
 \item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben.
 \end{itemize}
 
-/FK30/ Durch den User konfigurierbares Verhalten:
+/FK1140/ Durch den User konfigurierbares Verhalten:
 \begin{itemize}
 \item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
 \item Festlegen des verwendeten Fonts
@@ -334,11 +329,11 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
  
 \section{Editor für formale Eigenschaften}
 \subsection{Muss-Kriterien}
-/FM10/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
-/FM20/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
-/FM21/ Beschreibung von formalen Eigenschaften als Vor- und Nachbedingung
-/FM22/ Beschreibung der Vor- und Nachbedingungen als Auflistung boolscher Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
-/FM30/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
+/FM2010/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
+/FM2020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
+/FM2030/ Beschreibung von formalen Eigenschaften als Vor- und Nachbedingung  \\
+/FM2040/ Beschreibung der Vor- und Nachbedingungen als Auflistung boolscher Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
+/FM2050/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
 
 \begin{table}[H]
 \caption{Makros zur Beschreibung formaler Eigenschaften}
@@ -364,45 +359,45 @@ Makro & Effekt \\
 \label{table:Macros_for_formal_Attributes}
 \end{table}
 
-/FM40/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
-/FM50/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
-/FM51/ Bereitstellen von Operatoren für logisches UND, ODER, GLEICH und NICHT GLEICH \\
-/FM52/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich, Gleicheit und Ungleicheit zwischen Typen die diese Vergleiche auch in C zulassen \\
-/FM53/ Möglichkeit zur Abfrage der Stimme eines Wählers v in Wahldurchlauf Nummer x durch VOTESx(v)
-/FM54/ Möglichkeit zur Abfrage des Ergebnisses von Wahldurchlauf Nummer x durch ELECTx
-/FM60/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
-/FM70/ Möglichkeit zum Speichern von Eigenschaften
-/FM70/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format
+/FM2060/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
+/FM2070/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
+/FM2071/ Bereitstellen von Operatoren für logisches UND, ODER, GLEICH und NICHT GLEICH \\
+/FM2072/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich,  Gleicheit und Ungleicheit zwischen Typen die diese Vergleiche auch in C zulassen \\
+/FM2073/ Möglichkeit zur Abfrage der Stimme eines Wählers v in Wahldurchlauf Nummer x durch VOTESx(v)\\
+/FM2080/ Möglichkeit zur Abfrage des Ergebnisses von Wahldurchlauf Nummer x durch ELECTx \\
+/FM2090/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
+/FM2100/ Möglichkeit zum Speichern von Eigenschaften \\
+/FM2110/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format
 
 
 \subsection{Soll-Kriterien}
-/FS10/ Syntax-Highlighting \\
-/FS20/ Anzeigen von Syntaktischen Fehlern im Code \\
+/FS2120/ Syntax-Highlighting \\
+/FS2130/ Anzeigen von Syntaktischen Fehlern im Code \\
 
 \subsection{Kann-Kriterien}
-/FK10/ Code-Completion
+/FK2140/ Code-Completion
 \begin{itemize}
 \item Auto-Vervollständigung der Makros
 \item Analyse des Codes und Anzeigen relevanter, bereits definierter Eigenschaften und symbolischer Variablen
 \end{itemize}
 
 \section{Eigenschaften-Liste}
-/F10/ Darstellung der zu analysierenden Eigenschaften in Listenform
-/F20/ Möglichkeit zum Erstellen neuer Eigenschaften
-/F30/ Möglichkeit zum Hinzufügen bereits vorhandener Eigenschaften
-/F40/ Möglichkeit zum Entfernen von Eigenschaften
-/F50/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszustellen
-/F60/ Möglichkeit Listen zu Speichern 
-/F70/ Möglichkeit Listen in korrektem Format zu Laden
+/F3010/ Darstellung der zu analysierenden Eigenschaften in Listenform \\
+/F3020/ Möglichkeit zum Erstellen neuer Eigenschaften \\
+/F3030/ Möglichkeit zum Hinzufügen bereits vorhandener Eigenschaften \\
+/F3040/ Möglichkeit zum Entfernen von Eigenschaften \\
+/F3050/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszustellen \\
+/F3060/ Möglichkeit Listen zu Speichern \\
+/F3070/ Möglichkeit Listen in korrektem Format zu Laden \\
 
 \section{Editor für Eingabeparameter}
-/F10/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
-/F21/ Möglichkeit die Parameter in /F10/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden
-/F21/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum 
-/F20/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
-/F30/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden 
-/F40/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern
-/F50/ Möglichkeit die Projekte aus /F40/ zu öffnen und zu bearbeiten
+/F4010/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
+/F4011/ Möglichkeit die Parameter in /F4010/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden \\
+/F4020/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
+/F4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
+/F4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
+/F4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern \\
+/F4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
@@ -426,22 +421,82 @@ Makro & Effekt \\
 /F10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Completion
 
 
-\chapter{Globale Testfälle}
-\section{Testfälle für den C-Code Editor für Wahlverfahren}
-/T110/ Erstellen eines neuen Dokuments \\
-/T120/ Speichern des C-Codes 
-\begin{addmargin}[25pt]{0pt} 
-/T121/ Speichern \\
-/T122/ Speichern unter
+\chapter{Globale Testfälle und Testszenarien}
+
+\section{Testfälle für den C-Editor}
+\textbf{/T110/}\\
+\textbf{Prozess: }Erstellen eines neuen C-Code-Dokument  \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /F0010/\\
+\textbf{Ziel:} Es kann ein neues Dokument angelegt werden\\
+\textbf{Kategorie:} muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
+\textbf{Nachbedingung (Erfolg):} -keine-\\
+\textbf{Nachbedingung (Fehlschlag):} -keine-\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Benutzer will ein neues Wahlverfahren als C-Code eingeben\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer drückt Strg + N oder betätigt im GUI-Fenster C-Editor den Button Neu \\
+2. Der C-Editor ist leer und zeigt somit ein neues Dokument an \\
+\textbf {Erweiterung:} Falls es im zuvor geöffneten C-Code ungespeicherte Änderungen gibt, wird der Benutzer gefragt ob er den Vorgang nach 1. abbrechen will oder ob er fortfahren will und die Änderungen verworfen werden. \\
+\textbf {Alternativen:} -keine- \\ \\
+\textbf{/T120/} \\ 
+\textbf{Prozess: }Speichern des C-Codes  \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM1030/ \\
+\begin{addmargin}[15pt]{0pt}
+\textbf{/T121/} \\ 
+\textbf{Prozess: }Speichern unter\\
+\textbf{Ziel:} Der C-Code des Benutzers wird im Dateisystem des Computers gespeichert. Ort und Name bestimmt der Benutzer\\
+\textbf{Kategorie:} muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe.\\
+\textbf{Nachbedingung (Erfolg):} Der Name und der gewählte Speicherort sind gültig\\
+\textbf{Nachbedingung (Fehlschlag):} Der Name oder der gewählte Speicherort sind ugültig\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Benutzer will den C-Code speichern\\
+\textbf{Beschreibung:} \\
+1. Der Benutzer betätigt die Taste Speichern unter innerhalb der C-Editor GUI oder drückt Strg + S (nur falls die Datei noch nicht zuvor gespeichert wurde\\
+2. Das Programm öffnet einen Dateibrowser\\
+3. Der Benutzer gibt Name und Speicherort der Datei im Dateibrowser ein.
+4. Das Programm speichert den C-Code an der genannten stelle mit dem eingegebenen Namen.
+\textbf {Erweiterung:} -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
+\textbf{/T122/} \\ 
+\textbf{Prozess: }Speichern\\
+\textbf{Ziel:} Der C-Code des Benutzers wird im Dateisystem des Computers mit zuvor gewählten Ort und Name gespeichert\\
+\textbf{Kategorie:} muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe.\\
+\textbf{Nachbedingung (Erfolg):} -keine-
+\textbf{Nachbedingung (Fehlschlag):} -keine-
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Benutzer will den C-Code speichern\\
+\textbf{Beschreibung:} \\
+1. Der Benutzer betätigt die Taste Speichern innerhalb der C-Editor GUI oder drückt Strg + S
+2. Das Programm speichert den C-Code an der zuvor genannten Stelle mit dem zuvor eingegebenen Namen
+\textbf {Erweiterung:} -keine-
+\textbf {Alternativen:} Mit Speichern unter die vorherige Datei überschreiben. \\
 \end{addmargin}
-/T130/ Laden von C-Code aus einer Datei \\
+\textbf{/T130/} \\
+\textbf{Prozess: }Laden von C-Code aus einer Datei  \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /F1040/\\
+\textbf{Ziel:} Eine zuvor gespeicherter C-Code wird in den C-Editor geladen\\
+\textbf{Kategorie:} muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
+\textbf{Nachbedingung (Erfolg):} Es existiert eine zu ladende Datei, die korrekt gespeichert wurde\\
+\textbf{Nachbedingung (Fehlschlag):}\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Benutzer will einen zuvor gespeicherten C-Code laden \\
+\textbf{Beschreibung:} \\
+1. Der Benutzer betätigt den Button Öffnen in der C-Editor GUI oder betätigt Strg + O\\
+2. \\
+\textbf {Erweiterung:}
+\textbf {Alternativen:}
+/T130/ \\
 /T140/ Auswahl des zu verwendenden Wahl-Templates \\
 /T150/ Verwendung der Funktionen Ausschneiden, Einfügen, Kopieren, Rückgängig und Wiederholen \\
 /T160/ Änderung der Eigenschaften des Editors \\
 /T170/ Editieren des C-Codes \\
 /T180/ Statische Analyse des Codes \\
 
-\section{Testfälle für die Eigenschaften-Liste}
+\section{Testfälle für die Eigenschaftenliste}
 /T210/ Eine neue Liste erstellen \\
 /T220/ Eine Liste speichern 
 \begin{addmargin}[25pt]{0pt} 
@@ -453,7 +508,7 @@ Makro & Effekt \\
 /T250/ Einstellen ob eine formale Eigenschaft, die in der Liste geladen ist, in der \\ nächsten Überprüfung verwendet werden soll. \\
 /T260/ Die Funktionen Rückgängig und Wiederholen verwenden \\
 /T270/ Eine neue formale Eigenschaft in die Liste aufnehmen \\
-\section{Testfälle für den Editor für formale Eigenschaften}
+\section{Testfälle für den Eigenschafteneditor}
 
 /T310/ Eingabe und Editieren einer formalen Eigenschaft 
 \begin{addmargin}[25pt]{0pt}
@@ -468,7 +523,7 @@ Makro & Effekt \\
 \end{addmargin}	
 /T330/ Laden einer formalen Eigenschaft aus einer Datei \\
 /T340/ Verwendung der Funktionen Ausschneiden, Einfügen, Kopieren, Rückgängig und \\ Wiederholen
-\section{Testfälle für den Editor für Eingabeparameter}
+\section{Testfälle für den Parametereditor}
 
 /T410/ Eingabe der Anzahl von Wählern, Kandidaten und Sitzen
 \begin{addmargin}[25pt]{0pt}
