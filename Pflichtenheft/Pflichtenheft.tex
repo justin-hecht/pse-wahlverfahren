@@ -275,6 +275,35 @@ Das Erstellen von neuen Wahlverfahren gestaltet sich ohne Hilfsmittel als schwie
 aktuellen Computer mit entsprechenden Werten für Arbeitsspeicher und Rechnergeschwindigkeit betrieben.
 \end{itemize}
 
+\section{Szenarien}
+\textbf{Szenario 1}\\
+Ein Wahlforscher wird von der Regierung eines Landes beauftragt ein neues Wahlverfahren zu entwerfen. Dieses soll bestimmte, vorgegebene formale Eigenschaften erfüllen.\\
+Er installiert das Tool und entwickelt mit diesem eine erste Version des Wahlverfahrens. Zusätzlich gibt er die vorgegebenen Eigenschaften als formale Eigenschaften in das Tool ein.\\
+Nun gibt er Parameter zum Prüfen an (Wähler, Stimmen, Sitze) und lässt das Wahlverfahren auf die formalen Eigenschaften prüfen.\\
+Das Tool gibt aus, dass nicht alle Eigenschaften vom Wahlverfahren erfüllt werden.\\
+Mithilfe der Informationen aus der Ergebnisausgabe analysiert und modifiziert der Entwickler das Wahlverfahren so, dass es alle Eigenschaften erfüllt.\\
+Er prüft es nochmals auf alle Eigenschaften und nun werden alle erfüllt.\\
+Zuletzt speichert er Wahlverfahren und formale Eigenschaften ab und sendet ersteres an eine Prüfstelle für Wahlverfahren.
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.12]{ActivityDiagramScenario1.png}
+\caption{Aktivitätsdiagramm zu Szenario 1}
+\label{Packet-scetch}
+\end{figure}
+
+\textbf{Szenario 2}\\
+Eine Prüfstelle bekommt ein Wahlverfahren übergeben welches sie auf bestimmte formale Eigenschaften testen soll.\\
+Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
+Um das Wahlverfahren auf die Eigenschaften zu prüfen werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
+Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.\\
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.12]{ActivityDiagramScenario2.png}
+\caption{Aktivitätsdiagramm zu Szenario 2}
+\label{Packet-scetch}
+\end{figure}
 
 \chapter{Produktumgebung}
 
@@ -596,30 +625,20 @@ Makro & Effekt \\
 
 
 \chapter{Systemmodelle}
-\section{Szenarien}
 
-\textbf{Szenario 1}\\
-Ein Wahlforscher wird von der Regierung eines Landes beauftragt ein neues Wahlverfahren zu entwerfen. Dieses soll bestimmte, vorgegebene formale Eigenschaften erfüllen.\\
-Er installiert das Tool und entwickelt mit diesem eine erste Version des Wahlverfahrens. Zusätzlich gibt er die vorgegebenen Eigenschaften als formale Eigenschaften in das Tool ein.\\
-Nun gibt er Parameter zum Prüfen an (Wähler, Stimmen, Sitze) und lässt das Wahlverfahren auf die formalen Eigenschaften prüfen.\\
-Das Tool gibt aus, dass nicht alle Eigenschaften vom Wahlverfahren erfüllt werden.\\
-Mithilfe der Informationen aus der Ergebnisausgabe analysiert und modifiziert der Entwickler das Wahlverfahren so, dass es alle Eigenschaften erfüllt.\\
-Er prüft es nochmals auf alle Eigenschaften und nun werden alle erfüllt.\\
-Zuletzt speichert er Wahlverfahren und formale Eigenschaften ab und sendet ersteres an eine Prüfstelle für Wahlverfahren.\\
-\\
-\textbf{Szenario 2}\\
-Eine Prüfstelle bekommt ein Wahlverfahren übergeben welches sie auf bestimmte formale Eigenschaften testen soll.\\
-Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
-Um das Wahlverfahren auf die Eigenschaften zu prüfen werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
-Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.
-\pagebreak
 \section{Anwendungsfälle}
+
+\begin{figure}[H]
+\hspace{-3cm}
+\includegraphics[scale=0.12]{UseCaseDiagram.png}
+\caption{Anwendungsfalldiagramm von B.E.A.S.T.}
+\label{Packet-scetch}
+\end{figure}
+
 Der Nutzer (Entwickler, Wahlforscher, Prüfstelle..) kann Wahlverfahren und formale Eigenschaften in den jeweiligen Editoren des Tools entwickeln bzw. editieren.
 Beide Editoren verfügen über Optionen zum Laden und Speichern, sowie dem Anzeigen von Fehlern und Syntax-Highlighting.\\
 Es kann geprüft werden ob das Wahlverfahren die formalen Eigenschaften erfüllt. Voraussetzung dafür sind ein fehlerfreies Wahlverfahren und fehlerfreie formale Eigenschaften. Vor dem Prüfen kann man Testparameter angeben (Anzahl von Kandidaten, Wählern, Sitzen und einem Timeout, dass dem Prüfen eine zeitliche Obergrenze gibt).\\
-Nach dem Prüfen wird für jede Eigenschaft angezeigt ob sie vom Wahlverfahren erfüllt wird oder nicht. Werden formale Eigenschaften als nicht erfüllt erkannt, werden Gegenbeispiele angezeigt die die Nichterfüllbarkeit beweisen. Anhand dieser Informationen kann der Nutzer dann das Wahlverfahren und die Eigenschaften analysieren und falls nötig modifizieren.
-
-\hspace{-2cm}\includegraphics[scale=0.09]{UseCaseDiagram.png}
+Nach dem Prüfen wird für jede Eigenschaft angezeigt ob sie vom Wahlverfahren erfüllt wird oder nicht. Bei Abbruch des Prüfens wegen erreichtem Timeout-Parameter werden natürlich nur die angezeigt die auch geprüft wurden. Werden formale Eigenschaften als nicht erfüllt erkannt, werden Gegenbeispiele angezeigt die die Nichterfüllbarkeit beweisen. Anhand dieser Informationen kann der Nutzer dann das Wahlverfahren und die Eigenschaften analysieren und falls nötig modifizieren.
 
 \section{High-Level-Beschreibung der Architektur}	
 Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwaresystems. 
