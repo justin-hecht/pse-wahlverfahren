@@ -137,70 +137,114 @@ Beendet wird ein boolscher Ausdruck durch ein Semikolon.
 
 
 \chapter{Zielbestimmung}
-Ziel des Programmes ist es eine  Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
-Es soll Folgendes bereitstellen:
+Ziel des Programmes ist es eine  Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Die Analyse solcher Eigenschaften ist ein nicht entscheidbares Problem und wird deshalb innerhalb von Grenzen mit Hilfe eine \ac{BMC} ausgeführt. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
+Das Programm soll Folgendes bereitstellen:
 \begin{itemize}
-\item Eine Möglichkeit zur Beschreibung von Wahlverfahren in C-Code  
-\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax 
-\item Eine Möglichkeit zum Angeben der Parameter (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze) 
-\item Eine Ausgabe des Ergebnisses der Überprüfung: eine Erfolgsmeldung bei Erfolg und Präsentation eines Gegenbeispiels bei Nichterfolg
+\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist
+\item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax 
+\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze)
+\item Eine Möglichkeit, die Analyse auszuführen
+\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst
 \end{itemize}
 
-Die Überprüfung der gegebenen Eigenschaften wird durch den \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die gegebenen Eingaben für den \ac{CBMC} aufzubereiten, sowie dessen Ausgabe zu interpretieren und zu präsentieren. 
+Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
 
-All diese Aufgaben ließen sich theoretisch auch schon jetzt, ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsufwand sehr hoch, vor allem bei der Angabe der formalen Eigenschaften. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand, verbunden, welcher sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programmes einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll das Untersuchen von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch, vor allem bei der Eingabe formaler Eigenschaften. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand, verbunden, der sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll das Untersuchen von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
+\subsection{Allgemein}
 \begin{itemize}
 \item Das Programm kann auf 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden
 \item Alle Abhängigkeiten werden mit dem Programm ausgeliefert
-\item Das Programm bietet einen Code-Editor für das zu prüfende Wahlverfahren
-	\begin{itemize}
-	\item Der Code kann abgespeichert und geladen werden
+\end{itemize}
+
+\subsection{C-Editor}
+Das Programm bietet einen Editor für das zu prüfende Wahlverfahren. Der Editor erwartet eine Eingabe in der Programmiersprache C.\\
+Folgende Funktionalität bietet der C-Editor:
+\begin{itemize}
+	\item Eingegebener Code kann abgespeichert werden
+	\item Gespeicherter Code kann in den C-Editor geladen werden
 	\item Der Code-Editor zeigt Fehler im eingegebenen Code an
 	\item Aktionen können widerrufen und wiederhergestellt werden
-	\end{itemize}
-\item Es können formale Eigenschaften zur Prüfung des Wahlverfahrens eingegeben werden
-	\begin{itemize}
-	\item Eine formale Eigenschaft kann abgespeichert und geladen werden	
+\end{itemize}
+	
+\subsection{Eigenschafteneditor}
+Es können formale Eigenschaften eingegeben werden. Die Eingabe erfolgt in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax. Die eingegebenen Eigenschaften sind Parameter bei der Ansteuerung von \ac{CBMC}.\\
+Folgende Funktionalität bietet der Eigenschafteneditor:
+\begin{itemize}
+	\item Eine formale Eigenschaft kann abgespeichert werden
+	\item Gespeicherte Eigenschaften können in den Eigenschafteneditor geladen werden	
 	\item Fehler in der Eingabe werden angezeigt
-	\end{itemize}
-\item Die Parameter der Wahl (Anzahl von Wählern, Kandidaten und Sitzen) können festgelegt werden
-\item Das Ergebnis der Überprüfung wird vom Programm angezeigt. Im Fall der Verletzung einer formalen Eigenschaft wird ein Gegenbeispiel vom Programm angezeigt
+\end{itemize}
+
+\subsection{Parametereditor}
+Parameter für eine Wahl (Anzahl der Wähler, Kandidaten und Sitzen) können festgelegt werden. Bei der Analyse wird das Wahlverfahren nur innerhalb dieser Wahlparameter geprüft. Werden keine Parameter angegeben, wird \ac{CBMC} ohne sie aufgerufen.\\
+Folgende Funktionalität bietet der Parametereditor:
+\begin{itemize}
+	\item Die Anzahl der Wähler kann festgelegt werden
+	\item Die Anzahl der Kandidaten kann festgelegt werden
+	\item Die Anzahl der Sitze kann festgelegt werden
+	\item Die Analyse des Wahlverfahrens kann gestartet werden
+	\item Es kann ein Timeout festgelegt werden, nach dem die Analyse automatisch abgebrochen wird
+\end{itemize}
+
+\subsection{Eigenschaftenliste}
+Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. 
+\begin{itemize}
+	\item Falls alle Eigenschaften erfüllt sind, wird eine Erfolgsmeldung ausgegeben
+	\item Ansonsten wird ein Gegenbeispiel ausgegeben
 \end{itemize}
 
 
 \section{Sollkriterien}
+\subsection{C-Editor}
+Folgende Funktionalität bietet der C-Editor zusätzlich:
 \begin{itemize}
-\item Die Parameter der Wahl können in Intervallen angegeben werden.
-\item Der Code-Editor bietet folgende Funktionalitäten:
-	\begin{itemize}
 	\item Syntax-Highlighting
 	\item Automatisches Einrücken
 	\item Tastatur-Shortcuts
-	\item Codevorlagen
-	\end{itemize}
-\item Code completion bei der Eingabe der formalen Eigenschaften ist möglich
-\item Die Analyse des Wahlverfahrens kann abgebrochen werden
+	\item Codevorlagen können in den Editor geladen werden
 \end{itemize}
+
+\subsection{Eigenschafteneditor}
+Folgende Funktionalität bietet der Eigenschafteneditor zusätzlich:
+\begin{itemize}
+	\item Code completion
+\end{itemize}
+
+\subsection{Parametereditor}
+Folgende Funktionalität bietet der Parametereditor zusätzlich:
+\begin{itemize}
+	\item Die Anzahl der Wähler kann als Intervall festgelegt werden (von x bis y Wähler, x < y)
+	\item Die Anzahl der Kandidaten kann als Intervall festgelegt werden (von w bis z Kandidaten, w < z)
+	\item Die Anzahl der Sitze kann als Intervall festgelegt werden (von m bis n Sitzen, m < n)
+	\item Die Analyse von \ac{CMBC} kann jederzeit abgebrochen werden
+\end{itemize}
+
+\subsection{Eigenschaftenliste}
+Vordefinierte Standardeigenschaften (z.B. Anonymität) können einzeln in die Analyse mitaufgenommen werden. \\
+Das Ergebnis der Analyse für diese Standardeigenschaften wird für jede Eigenschaft einzeln ausgegeben.
 
 
 \section{Wunschkriterien}
+\subsection{Allgemein}
 \begin{itemize}
 \item Das Programm kann auf einem Mac betrieben werden
-\item Der Code-Editor bietet folgende Funktionalitäten:
-	\begin{itemize}
-	\item Code completion
-	\item Warnung vor nicht unterstützten Elementen der Programmiersprache wie z.B. Threads
-	\end{itemize}
-\item Es kann festgelegt werden, wie lange die Analyse des Wahlverfahrens maximal dauern soll
-\item Eine Wahl kann eingegeben werden. Das Ergebnis wird angezeigt
 \end{itemize}
+
+\subsection{C-Editor}
+Folgende Funktionalität bietet der C-Editor zusätzlich:
+\begin{itemize}
+	\item Warnung vor nicht unterstützten Elementen der Programmiersprache wie z.B. Threads
+\end{itemize}
+
+\subsection{Parametereditor}
+Es kann eine Wahl als Stimmenarray eingegeben werden. Das Ergebnis der Wahl wird in der Eigenschaftenliste angezeigt.
+
 
 \section{Abgrenzungskriterien}
 \begin{itemize}
-\item Das Programm kann keine Angabe darüber machen, wie Lange die Überprüfung einer Eigenschaft dauern wird
-\item Es wird nicht bestätigt, ob ein gegebenes Wahlverfahren eine formale Eigenschaft erfüllt
+\item Das Programm kann keine Angabe darüber machen, wie lange die Überprüfung einer Eigenschaft dauern wird
 \end{itemize}
 
 
