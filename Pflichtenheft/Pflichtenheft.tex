@@ -16,7 +16,7 @@
 \usepackage{hyperref}
 \usepackage{float}
 
-%glossary stuff, must be defined after hyperref
+%glossary stuff, must be defined after hyperrefs
 \usepackage[toc]{glossaries}
 \makeglossaries
 \newglossaryentry{CBMC}
@@ -29,15 +29,17 @@ description={Ein Programm, welches C-Programme mittels bounded model checking au
 name={Makro},
 description={Ein Codeabschnitt, der durch den Präprozessor ersetzt wird.}
 }
-
-
+\newglossaryentry{Benutzer}
+{
+name={Benutzer},
+description={Die Person, welche das Program bedient, Eingaben tätigt, etc.}
+}
 
 \begin{document}
 
 \title{Pflichtenheft}
 \author{Beste Gruppe}
-\maketitle
- 
+\maketitle 
 
 \tableofcontents	
 
@@ -53,11 +55,11 @@ description={Ein Codeabschnitt, der durch den Präprozessor ersetzt wird.}
 \chapter{Produktübersicht}
 Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem die Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Präsenz erwünschter Eigenschaften zu untersuchen.
 
-\ac{BMC} wird normalerweise dazu verwendet zu überprüfen, ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade - also Schleifen - bis zu einer vom Benutzer bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist, genau dann wenn das Programm einen Zustand einnehmen kann, welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
+\ac{BMC} wird normalerweise dazu verwendet zu überprüfen, ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade - also Schleifen - bis zu einer vom gls{Benutzer} bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist, genau dann wenn das Programm einen Zustand einnehmen kann, welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
 
 In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es kompliziert, dies direkt zu tun. 
 
-Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem Benutzer über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der Benutzer schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
+Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem gls{Benutzer} über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
@@ -67,7 +69,7 @@ Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl
 \end{enumerate}
 
-\section{Die Sprache zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
+\section{Die Syntax zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
 In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eigenschaften-Editor verwendet, gegeben. Es handelt sich um ein Subset der C-Sprache mit einigen Ergänzungen. Diese werden im Folgenden erläutert. 
 
 Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
@@ -137,8 +139,8 @@ Beendet wird ein boolscher Ausdruck durch ein Semikolon.
 Ziel des Programmes ist es eine  Lösung zur Untersuchung formaler Eigenschaften von Wahlverfahren zu präsentieren, welche auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden kann. 
 Es soll Folgendes bereitstellen:
 \begin{itemize}
-\item Eine Möglichkeit zur Beschreibung diverser Wahlverfahren in C-Code  
-\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der beschriebenen Sprache zur Angabe der formalen Eigenschaften
+\item Eine Möglichkeit zur Beschreibung von Wahlverfahren in C-Code  
+\item Eine Möglichkeit zur Beschreibung der formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax 
 \item Eine Möglichkeit zum Angeben der Parameter (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze) 
 \item Eine Ausgabe des Ergebnisses der Überprüfung: eine Erfolgsmeldung bei Erfolg und Präsentation eines Gegenbeispiels bei Nichterfolg
 \end{itemize}
@@ -398,11 +400,11 @@ Makro & Effekt \\
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
-/D10/ Das Wahlverfahren wird vom Benutzer als C-Code definiert und in einer Datei mit vom Benutzer gegebenen Namen und der Endung .c gespeichert.
+/D10/ Das Wahlverfahren wird vom gls{Benutzer} als C-Code definiert und in einer Datei mit vom gls{Benutzer} gegebenen Namen und der Endung .c gespeichert.
 /D11/ Die Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.
 
 \section{Editor von formalen Eigenschaften}
-/D20/ Eine vom Benutzer dafinierte formale Eigenschaft wird in einer Datei mit vom Benutzer gegebenen Namen und der Endung .eig gespeichert.
+/D20/ Eine vom gls{Benutzer} dafinierte formale Eigenschaft wird in einer Datei mit vom gls{Benutzer} gegebenen Namen und der Endung .eig gespeichert.
 
 \section{Parameter}
 /D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert.
@@ -760,11 +762,11 @@ Der Pfeil und das Stopp-Zeichen des Tool-Streifens haben ebenfalls die Wirkungen
 
 \begin{figure}[H]
 \includegraphics[scale=0.6]{CBMC-Args-Editor.png}
-\caption{Das Fenster, welches dem Benutzer erlaubt die an CBMC gereichten Argumente zu editieren}
+\caption{Das Fenster, welches dem gls{Benutzer} erlaubt die an CBMC gereichten Argumente zu editieren}
 \label{Argumente-editor}
 \end{figure}
 
-Klickt der Benutzer auf Erweitert, so öffnet sich Dialog \ref{Argumente-editor}. Darin kann der Benutzer direkt die an \ac{CBMC} gereichten Argumente editieren. Vom Benutzer gegebene Argumente unterliegen keiner Überprüfung durch das Program und führen daher zu undefiniertem Verhalten. 
+Klickt der gls{Benutzer} auf Erweitert, so öffnet sich Dialog \ref{Argumente-editor}. Darin kann der gls{Benutzer} direkt die an \ac{CBMC} gereichten Argumente editieren. Vom gls{Benutzer} gegebene Argumente unterliegen keiner Überprüfung durch das Program und führen daher zu undefiniertem Verhalten. 
 
 \chapter{Phasenverantwortliche}
 \section{Pflichtenheft} Justin Hecht
