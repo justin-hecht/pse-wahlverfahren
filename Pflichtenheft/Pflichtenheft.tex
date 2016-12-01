@@ -241,14 +241,25 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz. Es wird auf einem aktuelle
 \section{Allgemein}
 /F10/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
 /F20/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
-/F30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch Ausgabe der Ergebnisse, welche auch für Nicht-Informatiker verständlich ist \\
+/F30/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
+/F31/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
+\begin{itemize}
+\item Zahlen in Dezimaldarstellung
+\item Ausgabe der Eingabeparameter des Wahldurchlaufs bzw. der Wahldurchläufe:
+\begin{itemize}
+\item Ausgabe des Stimmen Arrays (Anzahl Stimmen und Stimmen) 
+\item Ausgabe der Kandidaten (Anzahl)
+\item Ausgabe der Sitze (Anzahl)
+\end{itemize}
+\item Ausgabe des Ergebnisses des Wahldurchlaufs bzw. der Wahldurchläufe
+\end{itemize} 
 /F40/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
 /F50/ Möglichkeit des Öffnens und Editierens der Projekte aus /F40/
 
 \section{C-Code Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
-/FM10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
-/FM20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die Tastatur wie in Notepad \\
+/FM10/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
+/FM20/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
 /FM30/ Speichern von erstelltem Code als Datei auf der Festplatte an vom User angegebenen Ort \\
 /FM40/ Laden und Darstellen von Dateien korrekten Formats \\
 /FM50/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse})
@@ -315,9 +326,10 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
  
 \section{Editor für formale Eigenschaften}
 \subsection{Muss-Kriterien}
-/FM10/ Darstellung aller für das Programmieren in C benötigten Charaktere \\
-/FM20/ Veränderung des dargestellten Textes durch Eingabe anderer Charaktere über die  Tastatur wie in Notepad \\
-/FM21/ Beschreibung formaler Eigenschaften als Vor- und Nachbedingung als boolsche Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
+/FM10/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
+/FM20/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
+/FM21/ Beschreibung von formalen Eigenschaften als Vor- und Nachbedingung
+/FM22/ Beschreibung der Vor- und Nachbedingungen als Auflistung boolscher Ausdrücke (siehe \ref{Sprache-für-formale-Eigenschaften})\\
 /FM30/ Bereitstellung von Makros zur Beschreibung der Eigenschaften (siehe \ref{table:Macros_for_formal_Attributes}) \\
 
 \begin{table}[H]
@@ -347,8 +359,13 @@ Makro & Effekt \\
 /FM40/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
 /FM50/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
 /FM51/ Bereitstellen von Operatoren für logisches UND, ODER, GLEICH und NICHT GLEICH \\
-/FM52/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich \\
+/FM52/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich, Gleicheit und Ungleicheit zwischen Typen die diese Vergleiche auch in C zulassen \\
+/FM53/ Möglichkeit zur Abfrage der Stimme eines Wählers v in Wahldurchlauf Nummer x durch VOTESx(v)
+/FM54/ Möglichkeit zur Abfrage des Ergebnisses von Wahldurchlauf Nummer x durch ELECTx
 /FM60/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
+/FM70/ Möglichkeit zum Speichern von Eigenschaften
+/FM70/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format
+
 
 \subsection{Soll-Kriterien}
 /FS10/ Syntax-Highlighting \\
@@ -361,20 +378,34 @@ Makro & Effekt \\
 \item Analyse des Codes und Anzeigen relevanter, bereits definierter Eigenschaften und symbolischer Variablen
 \end{itemize}
 
+\section{Eigenschaften-Liste}
+/F10/ Darstellung der zu analysierenden Eigenschaften in Listenform
+/F20/ Möglichkeit zum Erstellen neuer Eigenschaften
+/F30/ Möglichkeit zum Hinzufügen bereits vorhandener Eigenschaften
+/F40/ Möglichkeit zum Entfernen von Eigenschaften
+/F50/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszustellen
+/F60/ Möglichkeit Listen zu Speichern 
+/F70/ Möglichkeit Listen in korrektem Format zu Laden
+
 \section{Editor für Eingabeparameter}
 /F10/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
+/F21/ Möglichkeit die Parameter in /F10/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden
+/F21/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum 
 /F20/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
+/F30/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden 
+/F40/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern
+/F50/ Möglichkeit die Projekte aus /F40/ zu öffnen und zu bearbeiten
 
-\section{Ausgabe der Analyseergebnisse}
-/F10/ Ausgabe einer Erfolgsmeldung bei Erfolg \\
-/F20/ Darstellung eines Gegenbeispiels bei Misserfolg\\ 
+
+
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
-/D10/ Das Wahlverfahren ist als Methode "`unsigned int voting(params)"' einer C-Headerdatei definiert und wird mit der Endung .h gespeichert.
+/D10/ Das Wahlverfahren wird vom Benutzer als C-Code definiert und in einer Datei mit vom Benutzer gegebenen Namen und der Endung .c gespeichert.
+/D11/ Die Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.
 
 \section{Editor von formalen Eigenschaften}
-/D20/ Die formale Eigenschaft, derer das Wahlverfahren genügen soll, ist als C-Datei definiert, die einmal die Methode voting(params) aus einer Headerdatei aufruft, und wird mit der Endung .c gespeichert.
+/D20/ Eine vom Benutzer dafinierte formale Eigenschaft wird in einer Datei mit vom Benutzer gegebenen Namen und der Endung .eig gespeichert.
 
 \section{Parameter}
 /D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert.
