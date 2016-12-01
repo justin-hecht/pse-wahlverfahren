@@ -22,12 +22,12 @@
 \newglossaryentry{CBMC}
 {
 name={C bounded model checker},
-description={Ein Programm, welches C-Programme mit bounded model checking auf Fehler und vom user definierte assertions untersucht}
+description={Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom user definierte assertions untersucht}
 }
 \newglossaryentry{Makro}
 {
 name={Makro},
-description={Ein Codeabschnitt, der durch einen Präprozessor ersetzt wird.}
+description={Ein Codeabschnitt, der durch den Präprozessor ersetzt wird.}
 }
 
 
@@ -73,23 +73,64 @@ In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eig
 Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
 
 \begin{itemize}
-\item Das logische Und (\verb!&&!), Oder (\verb!&&!), Implikation (\verb!==>!), Äquivalenz (\verb!<==>!), Gleichheit (\verb!==!), Ungleichheit (\texttt{!=}), kleiner als (\texttt{<}), kleiner gleich (\texttt{<=}), größer als (\texttt{>}) und größer gleich (\texttt{>=})\\
+\item Folgende, aus C übernommene binäre Operatoren:
+\begin{table}[H]
+\begin{tabular}{|p{3cm}|p{1,5cm}|p{4,5cm}|p{3cm}|}
+	Operator & Symbol & Erwartet Argumente & Rückgabewert \\
+	\hline
+	Das logische Und & \verb!&&! & zwei boolsche Ausdrücke & \texttt{true} oder \texttt{false} \\
+	Das logische Oder & \verb!||! & zwei boolsche Ausdrücke & \texttt{true} oder \texttt{false}	
+	\end{tabular}
+\end{table}	
+
+\item Folgende, zusätzlich hinzukommende binäre Operatoren:
+\begin{table}[H]
+\begin{tabular}{|p{4cm}|p{1,5cm}|p{4,5cm}|p{3cm}|}
+	Operator & Symbol & Erwartet Argumente & Rückgabewert \\
+	\hline
+	Die logische Implikation & \verb!==>! & zwei boolsche Ausdrücke & \texttt{true} oder \texttt{false} \\
+	Die logische Äquivalenz & \verb!<==>! & zwei boolsche Ausdrücke & \texttt{true} oder \texttt{false}	
+\end{tabular}
+\end{table}	
+
 Beispiel: \verb!x > y <==> x + 1 > y + 1! \\
-Bedeutung: \verb!x! is größer als \verb!y! genau dann, wenn auch \verb!x + 1! größer als \verb!y + 1! ist  	
-\item Symbolische Variablen vom Typ Wähler, Kandidat oder Sitz. Für deren Benennung gelten dieselben Regeln wie für die Benennung von Variablen in C \\
+Bedeutung: \verb!x! ist größer als \verb!y! genau dann, wenn auch \verb!x + 1! größer als \verb!y + 1! ist 
+
+\item Folgende, aus C bekannte Operatoren. "'Vergleichbarer Typen"' bedeutet, dass zwei Variablen dieser Typen bereits in C mit demselben Operator vergleichbar sind. 
+\begin{table}[H]
+\begin{tabular}{|p{2,5cm}|p{1,5cm}|p{6cm}|p{3cm}|}
+	Operator & Symbol & Erwartet Argumente & Rückgabewert \\
+	\hline
+	Gleicheit & \verb!==! & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	Ungleicheit & \verb|!=| & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	kleiner als & \texttt{<} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	kleiner gleich & \texttt{<=} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	größer als & \texttt{>} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	größer gleich & \texttt{>=} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+\end{tabular}
+\end{table}	
+ 	
+\item Symbolische Variablen vom Typ Wähler, Kandidat oder Sitz. Für deren Benennung gelten dieselben Regeln wie für die Benennung von Variablen in C. \\
+
 Beispiel: \verb!Wähler v, Kandidat c!
+
 \item Quantoren für Wähler, Kandidaten und Sitze in der Form von \gls{Makro}s. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden. \\
+
 Beispiel: \verb|FOR_ALL_VOTERS(v) : EXISTS_ONE_CANDIDATE(c) : v mag c| \\
-Bedeutung: Für jeden Wähler (\verb!v!) gibt es zumindest einen Kandidaten, welchen er 'mag' (Dies ist nur ein Beispiel, der Editor wird die Eigenschaft 'mögen' nicht zu Verfügung stellen)
-\item Ausgabe der Anzahl Stimmen für einen Kandidaten in der Form eines Makros
-\item Viele Eigenschaften benötigen zu ihrer Überprüfung das Vergleichen mehrerer Wahlen. Dies wird ermöglicht durch Variablen VOTESx() und ELECTx. Dabei steht 'x' für die Nummer des Wahldurchangs. VOTESx() erwartet als Argument eine symblische Variable vom Typ Wähler. Zurück gibt es die Stimme, welche v im Wahldurchgang x abgegeben hat. ELECTx erwartet kein Argument und gibt das Wahlergebnis im x-ten Durchgang zurück. Der Rückgabetyp beider Makros hängt von der Kategorie des Wahlverfahrens ab. Gibt das Wahlverfahren zum Beispiel nur einen "Gewinner" aus, so ist ELECTx vom Typ Kandidat. \\
+Bedeutung: Für jeden Wähler (\verb!v!) gibt es zumindest einen Kandidaten (\verb!c!) sodass das Tupel die Eigenschaft "'der Wähler v mag den Kandidaten c"' erfüllt (Dies ist nur ein Beispiel, der Editor wird die Eigenschaft 'mögen' nicht zu Verfügung stellen. An dessen Stelle könnte jedoch jeder andere binäre Operator stehen, welcher eine Variable vom Typ Wähler und eine Variable vom Typ Kandidat erwartet und \texttt{true} oder \texttt{false} zurückgibt).
+
+\item Ausgabe der Anzahl Stimmen für einen Kandidaten in der Form eines Makros.
+
+\item Viele Eigenschaften benötigen zu ihrer Überprüfung das Vergleichen mehrerer Wahldurchläufe. Dies wird ermöglicht durch Variablen VOTESx() und ELECTx. Dabei steht 'x' für die Nummer des Wahldurchangs. VOTESx() erwartet als Argument eine symblische Variable vom Typ Wähler. Zurück gibt es die Stimme, welche v im Wahldurchgang x abgegeben hat. ELECTx erwartet kein Argument und gibt das Wahlergebnis im x-ten Durchgang zurück. Der Rückgabetyp beider Makros hängt von der Kategorie des Wahlverfahrens ab. Gibt das Wahlverfahren zum Beispiel nur einen "'Gewinner"' aus, so ist ELECTx vom Typ Kandidat. \\
+
 Beispiel: \verb|FOR_ALL_VOTERS(v) : VOTES1(v) == VOTES2(v)| \\
 Bedeutung: Alle Wähler wählen in beiden Wahlen (\verb!VOTES1! und \verb!VOTES2! ) gleich. \\
+
 Beispiel: \verb|ELECT1 == ELECT2|
-Bedeutung: Das Ergebnis der ersten Wahl stimmt mit dem der zweiten überein
-\item Folgende Konstanten: Anzahl Wähler (\verb!V!), Anzahl Kandidaten (\verb!C!) und Anzahl Sitze (\verb!S!)
+Bedeutung: Das Ergebnis des ersten Wahldurchlaufs stimmt mit dem des zweiten Wahldurchlaufs überein.
+\item Folgende Konstanten: Anzahl Wähler (\verb!V!), Anzahl Kandidaten (\verb!C!) und Anzahl Sitze. (\verb!S!)
 \end{itemize}
-Beendet wird ein boolscher Ausdruck mit einem Semikolon. 
+Beendet wird ein boolscher Ausdruck durch ein Semikolon. 
 
 
 \chapter{Zielbestimmung}
