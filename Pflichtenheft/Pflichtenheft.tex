@@ -5,6 +5,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{ae}
 \usepackage[bookmarks,bookmarksnumbered]{hyperref}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
 %graphics
 \usepackage{graphicx}
 \graphicspath{ {images/GUI/c-editor/}
@@ -903,12 +906,98 @@ Der Pfeil und das Stopp-Zeichen des Tool-Streifens haben ebenfalls die Wirkungen
 
 Klickt der \gls{Benutzer} auf Erweitert, so öffnet sich Dialog \ref{Argumente-editor}. Darin kann der \gls{Benutzer} direkt die an \ac{CBMC} gereichten Argumente editieren. Vom \gls{Benutzer} gegebene Argumente unterliegen keiner Überprüfung durch das Program und führen daher zu undefiniertem Verhalten. 
 
+\chapter{Zeit- und Resourcenplanung}
+
+Für den Rest des Projektes veranschlagen wir 1500 Mannstunden. Die Verteilung
+der Stunden sieht wie folgt aus.
+
+\section{Zeitplan}
+
+\begin{table}[H]
+  \begin{tabular}{|p{3cm}|P{2cm}|P{2cm}|}
+    Phase & Zeitraum & Studen \\ \hline
+    Entwurf & 05.12.16 - 16.01.17 & 480 Mannstunden \\ \hline
+    Implementierung & 18.01.17 - 13.02.17 & 560 Mannstunden \\ \hline
+    Qualitätssicherung & 01.03.1 - 20.03.17 & 480 Mannstunden \\
+  \end{tabular}
+  \newline\newline
+  \caption{Zeiträume und Arbeitsanteile}\label{tab1}
+\end{table}
+
+
+\section{Unteraufteilung der Phase}
+Nun unterteilen wir die einzelnen Phasen in ihre Unterbestandteile,
+zusammen mit den Veranschlagungen für den veranschlagten Anteil am Gesamtaufwand
+der Phase.
+
+\subsection{Entwurfsphase}
+
+\begin{table}[H]
+  \begin{tabular}{|p{3cm}|P{2cm}|P{2cm}|}
+    Sub-Phase & Anteil \\ \hline
+    GUI & 35\%\\ \hline
+    C-Code Analyse & 30\%\\ \hline
+    Dateiverwaltung & 10\%\\ \hline
+    Rest & 25\%\\
+  \end{tabular}
+  \newline\newline
+  \caption{Unteraufteilung der Entwurfsphase}\label{entw}
+\end{table}
+
+\subsection{Implementierungsphase}
+
+\begin{table}[H]
+  \begin{tabular}{|p{3cm}|P{2cm}|P{2cm}|}
+    Sub-Phase & Anteil \\ \hline
+    GUI & 35\%\\ \hline
+    C-Code Analyse & 30\% \\ \hline
+    Dateiverwaltung & 10\% \\ \hline
+    Rest & 25\%  \\
+  \end{tabular}
+  \newline\newline
+  \caption{Unteraufteilung der Implementierungsphase}\label{impl}
+\end{table} 
+
+\subsection{Qualitätssicherung}
+\begin{table}[H]
+  \begin{tabular}{|p{3cm}|P{2cm}|P{2cm}|}
+    Sub-Phase & Anteil \\ \hline
+    Test der GUI & 25\% \\ \hline
+    Testfälle  für die Codeanalyse & 25\% \\ \hline
+    Testfälle für CBMC & 15\% \\ \hline
+    Test des Dateisystems & 10\% \\ \hline
+    Rest & 25\%  \\
+  \end{tabular}
+  \newline\newline
+  \caption{Unteraufteilung der Entwurfsphase}\label{qs}
+\end{table}
+
+
 \chapter{Phasenverantwortliche}
 \section{Pflichtenheft} Justin Hecht
 \section{Entwurf} Holger Klein 
 \section{Implementierung} Niels Hanselmann, Nikolai Schnell
 \section{Qualitätssicherung} Lukas Stapelbroek
 \section{Abschlusspräsentation} Jonas Wohnig
+
+
+\chapter{Qualitätsanforderungen}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|P{3cm}|P{2cm}|P{2cm}|P{2cm}|P{2cm}|}
+    Name & sehr gut & gut & normal & nicht relevant\\ \hline
+    Fehlertoleranz & x &  &  &  \\ \hline
+    Sicherheit & x &  &  &  \\ \hline
+    Bedienbarkeit &  &  &  & x \\ \hline
+  	Zeitverhalten Editor &  & x &  &  \\ \hline
+  	Zeitverhalten Analyse &  &  &  & x \\ \hline
+  	Erlernbarkeit &  & x &  &  \\ \hline 
+    Modifizierbarkeit & x &  &  &  \\
+  \end{tabular}
+  \newline\newline
+  \caption{Qualitätsanforderungen}\label{qa}
+\end{table}
 
 
 \printglossaries
