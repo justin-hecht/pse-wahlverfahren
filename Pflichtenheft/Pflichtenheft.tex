@@ -539,29 +539,38 @@ Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von
 \caption{Unterpunkte des Code-Menüs}
 \end{table}
 
-Über den Tool-Streifen lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen.
-
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-ohne-text.png}
-\caption{Der C Editor ohne Code}
+\caption{Der C Editor ohne Code. Direkt unter dem Menü-Streifen befindet sich der Tool-Streifen}
+\label{C-Editor-Tool-Streifen}
 \end{figure}
 
+Über den Tool-Streifen (siehe \ref{C-Editor-Tool-Streifen}) lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen. Aktivieren der Aktion "'Neu"' öffnet einen Dialog, welcher vim Nutzer die Eingabe folgender Eigenschaften erwartet: Speicherort, Name und Kategorie des Wahlverfahrens.
+
 \begin{figure}[H]
-\includegraphics[scale=0.5]{Editor-mit-text.png}
+\includegraphics[scale=0.5]{Wahlverfahren-Erstellen.png}
+\caption{Der Dialog welcher dem User das Erstellen neuer Wahlverfahren ermöglicht}
+\label{C-Editor-Tool-Streifen}
+\end{figure}
+
+Bei erfolgreicher Eingabe wird eine neue Datei geöffnet, welche der Nutzer editieren kann. Die Kategorie des Wahlverfahrens wird durch die Funktionssignatur der Wahlfunktion (\texttt{voting}) dargestellt, welche nicht vom Nutzer verändert werden kann. 
+
+\begin{figure}[H]
+\includegraphics[scale=0.4]{Editor-mit-text.png}
 \caption{Der C Editor mit Code und Anzeige der Wahlart}
 \label{Editor-mit-text}
 \end{figure}
 
-In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an, dass man den vorgegebenen Funktionskörper nicht editieren kann.
+In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an, dass man den vorgegebenen Funktionskörper nicht editieren kann. Der Kommentar rechts der Funktionsdefinition gibt die Kategorie des Wahlverfahrens an.
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{Editor-mit-Fehler-ohne-hover.png}
+\includegraphics[scale=0.4]{Editor-mit-Fehler-ohne-hover.png}
 \caption{Fehleranzeige bei syntaktischem Fehler ohne Maus-Hover (Kann-Kriterium)}
 \label{Editor-mit-Fehler-ohne-hover}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{Editor-mit-Fehler-mit-hover.png}
+\includegraphics[scale=0.4]{Editor-mit-Fehler-mit-hover.png}
 \caption{Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium)}
 \label{Editor-mit-Fehler-mit-hover}
 \end{figure}
@@ -569,7 +578,7 @@ In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der
 In \ref{Editor-mit-Fehler-ohne-hover} sieht man, wie der gefundene syntaktische Fehler während des Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
 
 \begin{figure}[H]
-\includegraphics[scale=0.5]{Editor-mit-Fehler-nach-statischer-analyse.png}
+\includegraphics[scale=0.4]{Editor-mit-Fehler-nach-statischer-analyse.png}
 \caption{Fehleranzeige nach statischer Analyse}
 \label{Editor-mit-Fehler-nach-statischer-analyse}
 \end{figure}
@@ -577,7 +586,24 @@ In \ref{Editor-mit-Fehler-ohne-hover} sieht man, wie der gefundene syntaktische 
 \ref{Editor-mit-Fehler-nach-statischer-analyse} Zeigt die Anzeige der Fehler nach ausführend einer statischen Code Analyse. Markierung der Zeile ist Kann-Kriterium.
 
 \section{Eigenschaften-Liste}
-Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe \ref{Sprache-für-formale-Eigenschaften}) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel wiederverwertet und kombiniert werden. Das Zuordnen zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe ). Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
+Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe \ref{Sprache-für-formale-Eigenschaften}) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel wiederverwertet und kombiniert werden. Das Zuordnen der Eigenschaften zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe \ref{Eigenschaften-Liste-vor}). 
+
+\begin{figure}[H]
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{Eigenschaften-Liste.png}
+  \caption{Eigenschaften-Liste vor einer Überprüfung}
+  \label{Eigenschaften-Liste-vor}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{Eigenschaften-Liste-waehrend-testen.png}
+  \caption{Eigenschaften-Liste während einer Überprüfung}
+  \label{fig:sub2}
+\end{minipage}
+\end{figure}
+
+Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
@@ -609,18 +635,18 @@ Der Tool-Streifen hat exakt den selben Zweck wie der des Code-Editors, ohne die 
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[scale=0.5]{nach-testen.png}
-  \caption{•}{figure}{Liste nach Überprüfung}
+  \caption{Liste nach Überprüfung}
   \label{fig:sub1}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[scale=0.5]{gegenbeispiel.png}
-  \caption{figure}{Anzeige des Gegenbeispiels}
+  \caption{Anzeige des Gegenbeispiels}
   \label{fig:sub2}
 \end{minipage}
 \end{figure}
 
-Es folgt eine Beschreibung der Icons, welche zu sehen sind.
+Es folgt eine Beschreibung der Icons, welche in den Listenelementen zu sehen sind.
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
@@ -636,7 +662,7 @@ Gründes Plus & Fügt neue, leere Eigenschaft oder bereits gespeicherte Eigensch
 \caption{Icons der Eigenschaften-Liste}
 \end{table}
 
-\section{Eigenschaften Editor}
+\section{Eigenschaften-Editor}
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{raw-ohne-code.png}
@@ -681,12 +707,12 @@ Wie man zusätzlich sehen kann, sind auch Implikationen (\verb!==>!) möglich. A
 Der Parameter Editor stellt das Hauptfenster der Anwendung dar. Es erlaubt das Einstellen und Starten der Tests. Hier lassen sich auch komplette Projekte Speichern - Code, Eigenschaften und Parameter gebündelt.
 
 \begin{figure}[H]
-\includegraphics[scale=1]{Parameter-editor.png}
+\includegraphics[scale=0.6]{Parameter-Editor.png}
 \caption{Der Parameter Editor. PERS steht für Professional Election Rigging System}
 \label{Parameter-editor}
 \end{figure}
 
-Das Datei Menü ist analog zu dem des C Editors. Das Projekt Menü wird im Folgenden erläutert. 
+Der Menüpunkt Datei ist analog zu dem des C Editors. Der Menüpunkt Projekt wird im Folgenden erläutert. 
 
 \begin{table}[H]
 \begin{tabular}{|p{5cm}|p{10cm}|}
@@ -699,9 +725,15 @@ Stop Test & Unterbricht momentan laufenden Test
 \caption{Parameter Editor Projekt Menüpunkte}
 \end{table}
 
-Der Pfeil und das Stopp-Zeichen des Tool-Streifens haben ebenfalls die Wirkungen Teste Eigenschaften und Stop Test. 
+Der Pfeil und das Stopp-Zeichen des Tool-Streifens haben ebenfalls die Wirkungen Teste Eigenschaften und Stop Test. Als Mögliche Zeitangaben stehen Sekunden, Minuten, Stunden und Tage zur Verfügung. 
 
-Als Mögliche Zeitangaben stehen Sekunden, Minuten, Stunden und Tage zur Verfügung.
+\begin{figure}[H]
+\includegraphics[scale=0.6]{CBMC-Args-Editor.png}
+\caption{Das Fenster, welches dem Benutzer erlaubt die an CBMC gereichten Argumente zu editieren}
+\label{Argumente-editor}
+\end{figure}
+
+Klickt der Benutzer auf Erweitert, so öffnet sich Dialog \ref{Argumente-editor}. Darin kann der Benutzer direkt die an \ac{CBMC} gereichten Argumente editieren. Vom Benutzer gegebene Argumente unterliegen keiner Überprüfung durch das Program und führen daher zu undefiniertem Verhalten. 
 
 \chapter{Phasenverantwortliche}
 \section{Pflichtenheft} Justin Hecht

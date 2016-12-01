@@ -43,7 +43,7 @@
 \contentsline {chapter}{\numberline {10}GUI}{24}{chapter.10}
 \contentsline {section}{\numberline {10.1}C-Editor}{24}{section.10.1}
 \contentsline {section}{\numberline {10.2}Eigenschaften-Liste}{29}{section.10.2}
-\contentsline {section}{\numberline {10.3}Eigenschaften Editor}{31}{section.10.3}
+\contentsline {section}{\numberline {10.3}Eigenschaften-Editor}{31}{section.10.3}
 \contentsline {section}{\numberline {10.4}Parameter Editor}{32}{section.10.4}
 \contentsline {chapter}{\numberline {11}Phasenverantwortliche}{34}{chapter.11}
 \contentsline {section}{\numberline {11.1}Pflichtenheft}{34}{section.11.1}
