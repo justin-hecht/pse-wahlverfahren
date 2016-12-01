@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.30)  1 DEC 2016 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.30)  1 DEC 2016 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1688,7 +1688,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 508.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 508.
- <UseCaseDiagram.png, id=462, 4496.8pt x 2698.08pt>
+ <UseCaseDiagram.png, id=471, 4496.8pt x 2698.08pt>
 File: UseCaseDiagram.png Graphic file (type png)
 
 <use UseCaseDiagram.png>
@@ -1701,7 +1701,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 516.
 
-<images/architecture_first_scetch.jpg, id=464, 1114.1625pt x 897.3525pt>
+<images/architecture_first_scetch.jpg, id=473, 1114.1625pt x 897.3525pt>
 File: images/architecture_first_scetch.jpg Graphic file (type jpg)
 
 <use images/architecture_first_scetch.jpg>
@@ -1811,7 +1811,7 @@ Overfull \hbox (32.53577pt too wide) in paragraph at lines 597--603
 [][]
  []
 
-<images/GUI/c-editor/Editor-ohne-text.png, id=489, 686.565pt x 495.35063pt>
+<images/GUI/c-editor/Editor-ohne-text.png, id=498, 686.565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-ohne-text.png Graphic file (type png)
 
 <use images/GUI/c-editor/Editor-ohne-text.png>
@@ -1855,7 +1855,7 @@ l.611
                                                   \fi \fi 
 l.611 
       ]
-<images/GUI/c-editor/Wahlverfahren-Erstellen.png, id=499, 464.73625pt x 170.637
+<images/GUI/c-editor/Wahlverfahren-Erstellen.png, id=508, 464.73625pt x 170.637
 5pt>
 File: images/GUI/c-editor/Wahlverfahren-Erstellen.png Graphic file (type png)
  <use images/GUI/c-editor/Wahlverfahren-Erstellen.png>
@@ -1863,7 +1863,7 @@ Package pdftex.def Info: images/GUI/c-editor/Wahlverfahren-Erstellen.png used o
 n input line 615.
 (pdftex.def)             Requested size: 232.36755pt x 85.31853pt.
 
-<images/GUI/c-editor/Editor-mit-text.png, id=500, 686.565pt x 495.35063pt>
+<images/GUI/c-editor/Editor-mit-text.png, id=509, 686.565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-mit-text.png Graphic file (type png)
 
 <use images/GUI/c-editor/Editor-mit-text.png>
@@ -1896,7 +1896,7 @@ l.627
 l.627 
        <./images/GUI/c-editor/Editor-ohne-text.png> <./images/GUI/c-editor/Wahl
 verfahren-Erstellen.png>]
-<images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png, id=507, 686.565pt x 495.
+<images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png, id=516, 686.565pt x 495.
 35063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-ohne-hover.png Graphic file (type p
 ng)
@@ -1911,7 +1911,7 @@ er (Kann-
  []
 
 
-<images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png, id=508, 686.565pt x 495.3
+<images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png, id=517, 686.565pt x 495.3
 5063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png Graphic file (type pn
 g)
@@ -1951,7 +1951,7 @@ l.641
 l.641 
        <./images/GUI/c-editor/Editor-mit-text.png> <./images/GUI/c-editor/Edito
 r-mit-Fehler-ohne-hover.png>]
-<images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png, id=517, 686
+<images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png, id=526, 686
 .565pt x 495.35063pt>
 File: images/GUI/c-editor/Editor-mit-Fehler-nach-statischer-analyse.png Graphic
  file (type png)
@@ -1993,7 +1993,7 @@ l.654
 l.654 
        <./images/GUI/c-editor/Editor-mit-Fehler-mit-hover.png> <./images/GUI/c-
 editor/Editor-mit-Fehler-nach-statischer-analyse.png>]
-<images/GUI/Eigenschaften-Liste/Eigenschaften-Liste.png, id=528, 327.47343pt x 
+<images/GUI/Eigenschaften-Liste/Eigenschaften-Liste.png, id=537, 327.47343pt x 
 480.29437pt>
 File: images/GUI/Eigenschaften-Liste/Eigenschaften-Liste.png Graphic file (type
  png)
@@ -2002,7 +2002,7 @@ Package pdftex.def Info: images/GUI/Eigenschaften-Liste/Eigenschaften-Liste.png
  used on input line 658.
 (pdftex.def)             Requested size: 163.73631pt x 240.14659pt.
 
-<images/GUI/Eigenschaften-Liste/Eigenschaften-Liste-waehrend-testen.png, id=529
+<images/GUI/Eigenschaften-Liste/Eigenschaften-Liste-waehrend-testen.png, id=538
 , 327.47343pt x 481.04718pt>
 File: images/GUI/Eigenschaften-Liste/Eigenschaften-Liste-waehrend-testen.png Gr
 aphic file (type png)
@@ -2063,7 +2063,7 @@ l.695
 l.695 
        <./images/GUI/Eigenschaften-Liste/Eigenschaften-Liste.png> <./images/GUI
 /Eigenschaften-Liste/Eigenschaften-Liste-waehrend-testen.png>]
-<images/GUI/Eigenschaften-Liste/nach-testen.png, id=537, 328.22626pt x 481.0471
+<images/GUI/Eigenschaften-Liste/nach-testen.png, id=547, 328.22626pt x 481.0471
 8pt>
 File: images/GUI/Eigenschaften-Liste/nach-testen.png Graphic file (type png)
  <use images/GUI/Eigenschaften-Liste/nach-testen.png>
@@ -2071,7 +2071,7 @@ Package pdftex.def Info: images/GUI/Eigenschaften-Liste/nach-testen.png used on
  input line 701.
 (pdftex.def)             Requested size: 164.11272pt x 240.523pt.
 
-<images/GUI/Eigenschaften-Liste/gegenbeispiel.png, id=538, 327.47343pt x 480.29
+<images/GUI/Eigenschaften-Liste/gegenbeispiel.png, id=548, 327.47343pt x 480.29
 437pt>
 File: images/GUI/Eigenschaften-Liste/gegenbeispiel.png Graphic file (type png)
  <use images/GUI/Eigenschaften-Liste/gegenbeispiel.png>
@@ -2100,7 +2100,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 729.
 
-<images/GUI/Eigenschaften/raw-ohne-code.png, id=539, 591.71063pt x 443.40656pt>
+<images/GUI/Eigenschaften/raw-ohne-code.png, id=549, 591.71063pt x 443.40656pt>
 File: images/GUI/Eigenschaften/raw-ohne-code.png Graphic file (type png)
 <use images/GUI/Eigenschaften/raw-ohne-code.png>
 Package pdftex.def Info: images/GUI/Eigenschaften/raw-ohne-code.png used on inp
@@ -2164,7 +2164,7 @@ Package babel Info: Redefining german shorthand "~
 l.757 \end{itemize}
                     <./images/GUI/Eigenschaften/raw-ohne-code.png>]
 <images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlighting.pn
-g, id=554, 591.71063pt x 443.40656pt>
+g, id=563, 591.71063pt x 443.40656pt>
 File: images/GUI/Eigenschaften/Editor-vor-und-nachbedingungen-syntax-highlighti
 ng.png Graphic file (type png)
 
@@ -2180,7 +2180,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 769.
 
-<images/GUI/Parameter-editor/Parameter-Editor.png, id=555, 433.62pt x 320.19624
+<images/GUI/Parameter-editor/Parameter-Editor.png, id=564, 433.62pt x 320.19624
 pt>
 File: images/GUI/Parameter-editor/Parameter-Editor.png Graphic file (type png)
  <use images/GUI/Parameter-editor/Parameter-Editor.png>
@@ -2212,7 +2212,7 @@ Overfull \hbox (32.53578pt too wide) in paragraph at lines 782--789
  []
 
 
-<images/GUI/Parameter-editor/CBMC-Args-Editor.png, id=561, 572.1375pt x 100.375
+<images/GUI/Parameter-editor/CBMC-Args-Editor.png, id=570, 572.1375pt x 100.375
 pt>
 File: images/GUI/Parameter-editor/CBMC-Args-Editor.png Graphic file (type png)
  <use images/GUI/Parameter-editor/CBMC-Args-Editor.png>
@@ -2342,9 +2342,9 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 814.
  ) 
 Here is how much of TeX's memory you used:
- 13906 strings out of 494901
- 214306 string characters out of 6178616
- 430633 words of memory out of 5000000
+ 13907 strings out of 494901
+ 214318 string characters out of 6178616
+ 430627 words of memory out of 5000000
  16767 multiletter control sequences out of 15000+600000
  28002 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -2355,10 +2355,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Pflichtenheft.pdf (38 pages, 804866 bytes).
+Output written on Pflichtenheft.pdf (38 pages, 805459 bytes).
 PDF statistics:
- 634 PDF objects out of 1000 (max. 8388607)
- 556 compressed objects within 6 object streams
- 136 named destinations out of 1000 (max. 500000)
+ 652 PDF objects out of 1000 (max. 8388607)
+ 573 compressed objects within 6 object streams
+ 137 named destinations out of 1000 (max. 500000)
  537 words of extra memory for PDF output out of 10000 (max. 10000000)
 
