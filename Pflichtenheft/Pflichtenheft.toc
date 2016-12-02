@@ -52,8 +52,9 @@
 \contentsline {section}{\numberline {8.3}Testf\IeC {\"a}lle f\IeC {\"u}r die Editoren}{29}{section.8.3}
 \contentsline {section}{\numberline {8.4}Testf\IeC {\"a}lle f\IeC {\"u}r den C-Editor}{31}{section.8.4}
 \contentsline {section}{\numberline {8.5}Testf\IeC {\"a}lle f\IeC {\"u}r den Eigenschafteneditor}{31}{section.8.5}
-\contentsline {section}{\numberline {8.6}Testf\IeC {\"a}lle f\IeC {\"u}r die Eigenschaftenliste}{31}{section.8.6}
+\contentsline {section}{\numberline {8.6}Testf\IeC {\"a}lle f\IeC {\"u}r die Eigenschaftenliste}{32}{section.8.6}
 \contentsline {section}{\numberline {8.7}Testf\IeC {\"a}lle f\IeC {\"u}r den Parametereditor}{32}{section.8.7}
+\contentsline {section}{\numberline {8.8}Allgemeine Testf\IeC {\"a}lle}{32}{section.8.8}
 \contentsline {chapter}{\numberline {9}Systemmodelle}{33}{chapter.9}
 \contentsline {section}{\numberline {9.1}Anwendungsf\IeC {\"a}lle}{33}{section.9.1}
 \contentsline {section}{\numberline {9.2}High-Level-Beschreibung der Architektur}{34}{section.9.2}

@@ -390,6 +390,7 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 \item Jeder Wähler wählt genau einen Kandidaten
 \item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge 
 \item Jeder Wähler ordnet Kandidaten eine Nummer zwischen MAX (maximale Zustimmung) und MIN (maximale Abneigung) zu. MAX und MIN sind dabei vom User konfigurierbar. 
+\item Jeder Wähler gibt zu jedem Kandidaten entweder ein Ja oder Nein ab. Zustimmungswahl.
 \end{itemize}
 
 \subsection{Kann-Kriterien}
@@ -518,14 +519,15 @@ Die Testfälle innerhalb dieses Abschnittes betreffen alle 4 GUI-Elemente. \\\\
 \textbf{/T010/}\\
 \textbf{Prozess: }Erstellen eines neuen Dokuments  \\
 \textbf{Abgedeckte Funktionale Anforderungen:} \\
-C: /FS1030/ /FS1100/\\
+C: /FS1030/ /FS1100/ /FS1110/ \\
 E: /FM2100/	\\
 L: /F3020/ \\
 P: /F4050/	\\
 \textbf{Ziel:} Es kann ein neues Dokument angelegt werden\\
 \textbf{Kategorie:} muss\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer wählt einen korrekter Speicherpunkt und einen gültiger Dateiname.\\
-\textbf{Nachbedingung (Erfolg):} Das Programm zeigt ein neues, leeres Dokument an, das einen Speicherplatz und einen Namen hat\\
+\textbf{Nachbedingung (Erfolg):} Das Programm zeigt ein neues, leeres Dokument an, das einen Speicherplatz und einen Namen hat.\\
+C: Die für das gewählte Wahl-Template benötigten Funktionsrümpfe werden generiert.
 \textbf{Nachbedingung (Fehlschlag):} Es wurde kein neues, leeres Dokument angelegt und dargestellt\\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein neues Dokument anlegen\\
@@ -534,7 +536,9 @@ P: /F4050/	\\
 Allgemein (auch für C gültig): Der User betätigt den Button Neu des jeweiligen Fensters. \\
 2. Das Programm öffnet einen Dateibrowser.\\
 3. Der User gibt den Speicherort und den Name des neuangelegten Dokuments an. \\
+C: Der Benutzer wählt das zu verwendende Wahl-Template aus.\\
 4. Das Programm zeigt das neue leere Dokument an. \\
+C: Das Programm generiert die für das gewählte Wahl-Template benötigten Funktionsrümpfe. \\
 \textbf {Erweiterung:} Falls es im zuvor geöffneten Dokument ungespeicherte Änderungen gibt, wird der Benutzer gefragt ob er den Vorgang nach 1. abbrechen will oder ob er fortfahren will. Beim Fortfahren werden jegliche Änderungen verworfen. \\
 \textbf {Alternativen:} -keine- \\ \\
 \textbf{/T020/} \\ 
@@ -701,36 +705,38 @@ C: Die Zeilennummern werden angezeigt \\ \\
 \textbf{Prozess: }Auswahl des zu verwendenden Wahl-Templates \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FS1110/ \\
 \textbf{Ziel:} Der Benutzer kann anhand der Wahl-Templates unterschiedliche Wahlverfahren implementieren\\
-\textbf{Kategorie:} \\
+\textbf{Kategorie:} Soll\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
 \textbf{Nachbedingung (Erfolg):} \\
 \textbf{Nachbedingung (Fehlschlag):} \\
-\textbf{Akteur:} \\
+\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} \\
 \textbf{Beschreibung:} \\
+Hierfür gibt es die verschiedenen Anwendungsfälle. In den Musskriterien sind 4 unterschiedliche Wahlmuster beschrieben:
+
 1. \\
 2. \\
 \textbf {Erweiterung:}
 \textbf {Alternativen:}
-Anzeige im Fehlerfenster
-/T140/ Auswahl des zu verwendenden Wahl-Templates \\
-/T160/ Durch den User veränderte Eigenschaften \\
-/T180/ Statische Analyse des Codes \\
+
+/T330/ Durch den User veränderte Eigenschaften \\
+/T340/ Statische Analyse des Codes \\
+/T350/ Anzeige im Fehlerfenster
 \section{Testfälle für den Eigenschafteneditor}
 
-/T311/ Eingabe von Vor- und Nachbedingungen mit Boolschen Aussagen\\
-/boolsche Aussagen unterstützen. Größer kleiner echt und gleich
+/T410/ Eingabe von Vor- und Nachbedingungen mit Boolschen Aussagen\\
+/T411/ boolsche Aussagen unterstützen. Größer kleiner echt und gleich
 und oder gleich nicht gleich
-/T312/ Verwendung der Bereitgestellten Makros \\
-/T313/ Verwendung der symbolischer Variablen 
+/T420/ Verwendung der Bereitgestellten Makros \\
+/T430/ Verwendung der symbolischer Variablen 
 Abfragen von Ergebnissen von Wahldurchlauf x
 Abfrage der Stimme eines Wählers v in Wahldurchlauf x
 
 \section{Testfälle für die Eigenschaftenliste}
 
-/T240/ Ablesen des Ergebnisses der Überprüfung der formalen Eigenschaft. \\
-/T250/ Einstellen ob eine formale Eigenschaft, die in der Liste geladen ist, in der \\ nächsten Überprüfung verwendet werden soll. \\
-/T270/ Eine neue formale Eigenschaft in die Liste aufnehmen \\
+/510/ Ablesen des Ergebnisses der Überprüfung der formalen Eigenschaft. \\
+/T520/ Einstellen ob eine formale Eigenschaft, die in der Liste geladen ist, in der \\ nächsten Überprüfung verwendet werden soll. \\
+/T530/ Eine neue formale Eigenschaft in die Liste aufnehmen \\
 Darstellung in Listenform
 
 
@@ -742,6 +748,11 @@ Darstellung in Listenform
 \end{addmargin}	
 /T420/ Eingabe einer maximalen Zeitspanne \\
 /T430/ Starten und stoppen der Überprüfung des Wahlverfahren auf die gewählte formale Eigenschaft(en) \\
+
+\section{Allgemeine Testfälle}
+/T510/ Einstellungen von CBMC
+/T520/ Die Korrektheit von den Wahlergebnissen. Also des BMC über CBMC.
+/T530/ Ausgabe der Ergebnisse der Analyse (fällt teilweise in die Eigenschaftenliste)
 
 \chapter{Systemmodelle}
 
