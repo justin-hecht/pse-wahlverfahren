@@ -42,7 +42,7 @@ description={Die Person, welche das Program bedient, Eingaben tätigt, etc}
 \begin{document}
 
 \title{Pflichtenheft}
-\author{Beste Gruppe}
+\author{Niels Hanselmann, Justin Hecht, Holger Klein, Nikolai Schnell, Lukas Stapelbroek, Jonas Wonig}
 \maketitle 
 
 \tableofcontents	
@@ -172,31 +172,34 @@ Folgende Funktionalität bietet der C-Editor:
 \end{itemize}
 	
 \subsection{Eigenschafteneditor}
-Es können formale Eigenschaften eingegeben werden. Die Eingabe erfolgt in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax. Die eingegebenen Eigenschaften sind Parameter bei der Ansteuerung von \ac{CBMC}.\\
+Ein Editor wird bereitgestellt, in den formale Eigenschaften eingegeben werden können. Die Eingabe erfolgt in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax. Die eingegebenen Eigenschaften sind Parameter bei der Ansteuerung von \ac{CBMC}.\\
 Folgende Funktionalität bietet der Eigenschafteneditor:
 \begin{itemize}
 	\item Eine formale Eigenschaft kann abgespeichert werden
 	\item Gespeicherte Eigenschaften können in den Eigenschafteneditor geladen werden	
-	\item Fehler in der Eingabe werden angezeigt
+	\item Ein Fehler wird angezeigt, wenn kein korrekter boolscher Ausdruck eingegeben wurde
+	\item Bereitgestellte Makros, symbolische Variablen und Operationen können verwendet werden
+\end{itemize}
+
+\subsection{Eigenschaftenliste}
+Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. Falls alle Eigenschaften erfüllt sind, wird eine Erfolgsmeldung ausgegeben. Ansonsten wird ein Gegenbeispiel ausgegeben
+\begin{itemize}
+	\item Vordefinierte Standardeigenschaften (z.B. Anonymität) können einzeln in die Analyse mitaufgenommen werden.
+	\item Das Ergebnis der Analyse für diese Standardeigenschaften wird für jede Eigenschaft einzeln ausgegeben.
+	\item Eigenschaften können der Liste hinzugefügt werden und von ihr entfernt werden.
 \end{itemize}
 
 \subsection{Parametereditor}
 Parameter für eine Wahl (Anzahl der Wähler, Kandidaten und Sitzen) können festgelegt werden. Bei der Analyse wird das Wahlverfahren nur innerhalb dieser Wahlparameter geprüft. Werden keine Parameter angegeben, wird \ac{CBMC} ohne sie aufgerufen.\\
 Folgende Funktionalität bietet der Parametereditor:
 \begin{itemize}
-	\item Die Anzahl der Wähler kann festgelegt werden
-	\item Die Anzahl der Kandidaten kann festgelegt werden
-	\item Die Anzahl der Sitze kann festgelegt werden
+	\item Die Anzahl der Wähler, Kandidaten und Sitze kann festgelegt werden
 	\item Die Analyse des Wahlverfahrens kann gestartet werden
 	\item Es kann ein Timeout festgelegt werden, nach dem die Analyse automatisch abgebrochen wird
+	\item Projektdaten (Wahlverfahren, Eigenschaften, Parameter) können abgespeichert werden und Projekte können geladen werden
 \end{itemize}
 
-\subsection{Eigenschaftenliste}
-Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. 
-\begin{itemize}
-	\item Falls alle Eigenschaften erfüllt sind, wird eine Erfolgsmeldung ausgegeben
-	\item Ansonsten wird ein Gegenbeispiel ausgegeben
-\end{itemize}
+
 
 
 \section{Sollkriterien}
@@ -204,29 +207,28 @@ Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben.
 Folgende Funktionalität bietet der C-Editor zusätzlich:
 \begin{itemize}
 	\item Syntax-Highlighting
-	\item Automatisches Einrücken
 	\item Tastatur-Shortcuts
+	\item Zeilennummern
 	\item Codevorlagen können in den Editor geladen werden
+	\item Beim Laden eines Wahlverfahrens wird das Format der geladenen Datei überprüft
+	\item Fehleranzeige bei Konstrukten, die der C-Grammatik widersprechen
 \end{itemize}
 
 \subsection{Eigenschafteneditor}
 Folgende Funktionalität bietet der Eigenschafteneditor zusätzlich:
 \begin{itemize}
-	\item Code completion
+	\item Syntax-Highlighting
+	\item Fehleranzeige bei syntaktischen Fehlern
+	\item Tastatur-Shortcuts
 \end{itemize}
 
 \subsection{Parametereditor}
 Folgende Funktionalität bietet der Parametereditor zusätzlich:
 \begin{itemize}
-	\item Die Anzahl der Wähler kann als Intervall festgelegt werden (von x bis y Wähler, x < y)
-	\item Die Anzahl der Kandidaten kann als Intervall festgelegt werden (von w bis z Kandidaten, w < z)
-	\item Die Anzahl der Sitze kann als Intervall festgelegt werden (von m bis n Sitzen, m < n)
+	\item Die Anzahl der Wähler, Kandidaten und Sitze kann als Intervall festgelegt werden (z.B. von x bis y Wähler, x < y)
 	\item Die Analyse von \ac{CBMC} kann jederzeit abgebrochen werden
 \end{itemize}
 
-\subsection{Eigenschaftenliste}
-Vordefinierte Standardeigenschaften (z.B. Anonymität) können einzeln in die Analyse mitaufgenommen werden. \\
-Das Ergebnis der Analyse für diese Standardeigenschaften wird für jede Eigenschaft einzeln ausgegeben.
 
 
 \section{Wunschkriterien}
@@ -238,11 +240,16 @@ Das Ergebnis der Analyse für diese Standardeigenschaften wird für jede Eigensc
 \subsection{C-Editor}
 Folgende Funktionalität bietet der C-Editor zusätzlich:
 \begin{itemize}
-	\item Warnung vor nicht unterstützten Elementen der Programmiersprache wie z.B. Threads
+	\item Code completion
+	\item Automatisches Einrücken
+	\item Optionen für Individualisierung (z.B. Fontwahl)
+	\item Fehleranzeige asynchron während der Eingabe
 \end{itemize}
 
-\subsection{Parametereditor}
-Es kann eine Wahl als Stimmenarray eingegeben werden. Das Ergebnis der Wahl wird in der Eigenschaftenliste angezeigt.
+\subsection{Eigenschafteneditor}
+\begin{itemize}
+\item Code completion
+\end{itemize}
 
 
 \section{Abgrenzungskriterien}
