@@ -309,22 +309,33 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 
 \section{Software}
 \begin{itemize}
-\item Das Betriebssystem ist entweder Microsoft Windows (7 oder moderner) oder eine der Linux-Distributionen Arch oder Ubuntu.
-\item Java der Version 1.5 oder höher ist installiert.
-\item CBMC der Version 5.6 mit dem eingebauten SAT-Solver MiniSat ist installiert.
+\item Das Betriebssystem ist entweder Microsoft Windows (7,8 oder 10) oder eine der Linux-Distributionen Arch oder Ubuntu.
+\item Java SE Runtime Environment 8 ist installiert.
+\item Ist das Betriebssystem Microsoft Windows 7, 8 oder 10 benötigt man zusätzlich
+\begin{itemize}
+\item Die Developer Command Prompt für Visual Studio
+\item cl.exe, ein tool welches die Microsoft Compiler und Linker kontrolliert. Es wird ebenfalls mit Visual Studio geliefert.
+\end{itemize}
 \end{itemize}
 
 \section{Hardware}
 \begin{itemize}
-\item Standardrechner (ca. 2GHz und 1GB RAM)
+\item Arbeitsspeicher: 4 GB DDR3 RAM oder besser
+\item Prozessor: Intel i3 dual core mit 2 * 1,7 GHz oder äquivalent
+\item Grafik: Intel HD3000 oder besser
+\item Maus, Tastatur und Bildschirm
 \end{itemize}
 
 \section{Produkt-Schnittstellen}
-Mithilfe von ANTLR wird durch das Produkt \ac{CBMC} angesteuert.
+\begin{itemize}
+\item ANTLR zur Echtzeit-Überprüfung des Codes
+\item CBMC zur Überprüfung der formalen Eigenschaften
+\item GNU C-Compiler zur statischen Analyse des C-Codes
+\end{itemize}
 
 \chapter{Funktionale Anforderungen}
 \section{Allgemein}
-/F0010/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
+/FM0010/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
 /F0020/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
 /F0030/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
 /F0031/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
