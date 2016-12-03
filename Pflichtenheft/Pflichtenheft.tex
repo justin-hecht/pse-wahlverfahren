@@ -143,11 +143,11 @@ Beendet wird ein boolscher Ausdruck durch ein Semikolon.
 Ziel des Programmes ist es eine  Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Die Analyse solcher Eigenschaften ist ein nicht entscheidbares Problem und wird deshalb innerhalb von Grenzen mit Hilfe eine \ac{BMC} ausgeführt. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
 Das Programm soll Folgendes bereitstellen:
 \begin{itemize}
-\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist
-\item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax 
-\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze)
-\item Eine Möglichkeit, die Analyse auszuführen
-\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst
+\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist.
+\item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax .
+\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze).
+\item Eine Möglichkeit, die Analyse auszuführen.
+\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst.
 \end{itemize}
 
 Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
@@ -157,28 +157,28 @@ Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Pro
 \section{Musskriterien}
 \subsection{Allgemein}
 \begin{itemize}
-\item Das Programm kann auf 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden
-\item Alle Abhängigkeiten werden mit dem Programm ausgeliefert
+\item Das Programm kann auf 32-Bit Versionen von Windows und Linux-Betriebssystemen betrieben werden.
+\item Alle Abhängigkeiten werden mit dem Programm ausgeliefert.
 \end{itemize}
 
 \subsection{C-Editor}
 Das Programm bietet einen Editor für das zu prüfende Wahlverfahren. Der Editor erwartet eine Eingabe in der Programmiersprache C.\\
 Folgende Funktionalität bietet der C-Editor:
 \begin{itemize}
-	\item Eingegebener Code kann abgespeichert werden
-	\item Gespeicherter Code kann in den C-Editor geladen werden
-	\item Der Code-Editor zeigt Fehler im eingegebenen Code an
-	\item Aktionen können widerrufen und wiederhergestellt werden
+	\item Eingegebener Code kann abgespeichert werden.
+	\item Gespeicherter Code kann in den C-Editor geladen werden.
+	\item Der Code-Editor zeigt Fehler im eingegebenen Code an.
+	\item Aktionen können widerrufen und wiederhergestellt werden.
 \end{itemize}
 	
 \subsection{Eigenschafteneditor}
 Ein Editor wird bereitgestellt, in den formale Eigenschaften eingegeben werden können. Die Eingabe erfolgt in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax. Die eingegebenen Eigenschaften sind Parameter bei der Ansteuerung von \ac{CBMC}.\\
 Folgende Funktionalität bietet der Eigenschafteneditor:
 \begin{itemize}
-	\item Eine formale Eigenschaft kann abgespeichert werden
-	\item Gespeicherte Eigenschaften können in den Eigenschafteneditor geladen werden	
-	\item Ein Fehler wird angezeigt, wenn kein korrekter boolscher Ausdruck eingegeben wurde
-	\item Bereitgestellte Makros, symbolische Variablen und Operationen können verwendet werden
+	\item Eine formale Eigenschaft kann abgespeichert werden.
+	\item Gespeicherte Eigenschaften können in den Eigenschafteneditor geladen werden.
+	\item Ein Fehler wird angezeigt, wenn kein korrekter boolscher Ausdruck eingegeben wurde.
+	\item Bereitgestellte Makros, symbolische Variablen und Operationen können verwendet werden.
 \end{itemize}
 
 \subsection{Eigenschaftenliste}
@@ -193,10 +193,10 @@ Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. Falls alle Eige
 Parameter für eine Wahl (Anzahl der Wähler, Kandidaten und Sitzen) können festgelegt werden. Bei der Analyse wird das Wahlverfahren nur innerhalb dieser Wahlparameter geprüft. Werden keine Parameter angegeben, wird \ac{CBMC} ohne sie aufgerufen.\\
 Folgende Funktionalität bietet der Parametereditor:
 \begin{itemize}
-	\item Die Anzahl der Wähler, Kandidaten und Sitze kann festgelegt werden
-	\item Die Analyse des Wahlverfahrens kann gestartet werden
-	\item Es kann ein Timeout festgelegt werden, nach dem die Analyse automatisch abgebrochen wird
-	\item Projektdaten (Wahlverfahren, Eigenschaften, Parameter) können abgespeichert werden und Projekte können geladen werden
+	\item Die Anzahl der Wähler, Kandidaten und Sitze kann festgelegt werden.
+	\item Die Analyse des Wahlverfahrens kann gestartet werden.
+	\item Es kann ein Timeout festgelegt werden, nach dem die Analyse automatisch abgebrochen wird.
+	\item Projektdaten (Wahlverfahren, Eigenschaften, Parameter) können abgespeichert werden und Projekte können geladen werden.
 \end{itemize}
 
 
@@ -209,9 +209,9 @@ Folgende Funktionalität bietet der C-Editor zusätzlich:
 	\item Syntax-Highlighting
 	\item Tastatur-Shortcuts
 	\item Zeilennummern
-	\item Codevorlagen können in den Editor geladen werden
-	\item Beim Laden eines Wahlverfahrens wird das Format der geladenen Datei überprüft
-	\item Fehleranzeige bei Konstrukten, die der C-Grammatik widersprechen
+	\item Codevorlagen können in den Editor geladen werden.
+	\item Beim Laden eines Wahlverfahrens wird das Format der geladenen Datei überprüft.
+	\item Fehleranzeige bei Konstrukten, die der C-Grammatik widersprechen.
 \end{itemize}
 
 \subsection{Eigenschafteneditor}
@@ -225,8 +225,8 @@ Folgende Funktionalität bietet der Eigenschafteneditor zusätzlich:
 \subsection{Parametereditor}
 Folgende Funktionalität bietet der Parametereditor zusätzlich:
 \begin{itemize}
-	\item Die Anzahl der Wähler, Kandidaten und Sitze kann als Intervall festgelegt werden (z.B. von x bis y Wähler, x < y)
-	\item Die Analyse von \ac{CBMC} kann jederzeit abgebrochen werden
+	\item Die Anzahl der Wähler, Kandidaten und Sitze kann als Intervall festgelegt werden (z.B. von x bis y Wähler, x < y).
+	\item Die Analyse von \ac{CBMC} kann jederzeit abgebrochen werden.
 \end{itemize}
 
 
@@ -234,7 +234,7 @@ Folgende Funktionalität bietet der Parametereditor zusätzlich:
 \section{Wunschkriterien}
 \subsection{Allgemein}
 \begin{itemize}
-\item Das Programm kann auf einem Mac betrieben werden
+\item Das Programm kann auf einem Mac betrieben werden.
 \end{itemize}
 
 \subsection{C-Editor}
@@ -254,7 +254,7 @@ Folgende Funktionalität bietet der C-Editor zusätzlich:
 
 \section{Abgrenzungskriterien}
 \begin{itemize}
-\item Das Programm kann keine Angabe darüber machen, wie lange die Überprüfung einer Eigenschaft dauern wird
+\item Das Programm kann keine Angabe darüber machen, wie lange die Überprüfung einer Eigenschaft dauern wird.
 \end{itemize}
 
 
@@ -400,15 +400,15 @@ Strg + z & Zuletzt ausgeführte Aktion Rückgängig machen \\
 Strg + r & Zuletzt rückgängig gemachte Aktion erneut ausführen \\
 Strg + s & Speichern \\
 Strg + o & Öffnen \\
-Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
+Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 \end{tabular}
 \label{table:Hotkeys_and_operations}
 \end{table}
 
 /FS1110/ Bereitstellen von Wahl-Templates
 \begin{itemize}
-\item Jeder Wähler wählt genau einen Kandidaten
-\item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge 
+\item Jeder Wähler wählt genau einen Kandidaten.
+\item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge .
 \item Jeder Wähler ordnet Kandidaten eine Nummer zwischen MAX (maximale Zustimmung) und MIN (maximale Abneigung) zu. MAX und MIN sind dabei vom User konfigurierbar. 
 \item Jeder Wähler gibt zu jedem Kandidaten entweder ein Ja oder Nein ab. Zustimmungswahl.
 \end{itemize}
@@ -417,14 +417,14 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 /FK1120/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
 /FK1130/ Code-Completion
 \begin{itemize}
-\item Automatisches Schließen von Klammern und Anführungszeichen
+\item Automatisches Schließen von Klammern und Anführungszeichen.
 \item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
 \item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben.
 \end{itemize}
 
 /FK1140/ Durch den User konfigurierbares Verhalten:
 \begin{itemize}
-\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
+\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden.
 \item Festlegen des verwendeten Fonts
 \item An- und Ausschalten der angezeigten Zeilennummern
 \item Festlegen wie vielen Leerzeichen ein Tab entspricht
