@@ -559,8 +559,7 @@ C: Die für das gewählte Wahl-Template benötigten Funktionsrümpfe werden gene
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein neues Dokument anlegen\\
 \textbf{Beschreibung:} \\
-1. C: Der Nutzer drückt Strg + N \\
-Allgemein (auch für C gültig): Der User betätigt den Button Neu des jeweiligen Fensters. \\
+1. Der Nutzer verwendet die Tastenkombination Strg + N (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Neu des jeweiligen Fensters. \\
 2. Das Programm öffnet einen Dateibrowser.\\
 3. Der User gibt den Speicherort und den Name des neuangelegten Dokuments an. \\
 C: Der Benutzer wählt das zu verwendende Wahl-Template aus.\\
@@ -601,8 +600,7 @@ P: /F4050/\\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will das Dokument speichern\\
 \textbf{Beschreibung:} \\
-1. C: Der Benutzer drückt Strg + S
-Allgemein (auch für C gültig): Der Benutzer betätigt die Taste Speichern im betrachteten Fenster.
+1. Der Nutzer verwendet die Tastenkombination Strg + S (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Speichern des jeweiligen Fensters.
 2. Das Programm speichert das Dokument an der zuvor genannten Stelle mit dem zuvor eingegebenen Namen
 \textbf {Erweiterung:} -keine-
 \textbf {Alternativen:} Mit Speichern unter die vorherige Datei überschreiben. \\
@@ -622,8 +620,7 @@ P: /F4060/\\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein Dokument laden \\
 \textbf{Beschreibung:} \\
-1. C: Der Benutzer betätigt Strg + O \\
-Allgemein (auch für C gültigt): Der Benutzer betätigt den Button Öffnen im gewünschten Fenster \\
+1. Der Nutzer verwendet die Tastenkombination Strg + O (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Öffnen des jeweiligen Fensters. \\
 2. Das Programm öffnet einen Dateibrowser\\
 3. Der Benutzer wählt im Dateibrowser das zu ladende Dokument \\
 4. Das Programm lädt das gewählte Dokument \\
@@ -645,8 +642,7 @@ Allgemein: /F0010/ /F0050/ \\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer will einen oder mehrere Bearbeitungsschritte rückgängig machen.\\
 \textbf{Beschreibung:} \\
-1. C: Der Benutzer betätigt Strg + Z \\
-Allgemein (auch für C gültig): Der Benutzer betätigt Rückgängig innerhalb des gewünschten Fensters\\
+1. Der Nutzer verwendet die Tastenkombination Strg + Z (hierbei muss das GUI-Fensters ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Rückgängig des jeweiligen Fensters.\\
 2. Das Programm lädt den vorherigen Zustand des Dokuments in das gewählte Fenster. Somit wird der letzte Bearbeitungsschritt rückgängig gemacht. \\
 \textbf {Erweiterung:} -keine- \\
 \textbf {Alternativen:} -keine- \\\\
@@ -663,8 +659,7 @@ Allgemein: /F0010/ /F0050/ \\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer will einen oder mehrere Bearbeitungsschritte, die er zuvor rückgängig gemacht hat, wiederherstellen\\
 \textbf{Beschreibung:} \\
-1. C: Der Benutzer betätigt Strg +  R\\
-Allgemein (auch für C gültig): Der Benutzer betätigt Wiederherstellen innerhalb des gewünschten Fensters\\
+1. Der Nutzer verwendet die Tastenkombination Strg + R (hierbei muss das GUI-Fensters ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Wiederherstellen des jeweiligen Fensters.\\
 2. Das Programm lädt den zuvor Rückgängig gemachten Zustand des Dokuments in das gewählte Fenster. Somit wird der letzte Bearbeitungsschritt, welcher rückgängig gemacht wurde, wiederhergestellt \\
 \textbf {Erweiterung:} -keine- \\
 \textbf {Alternativen:} -keine- \\
@@ -775,11 +770,25 @@ Darstellung in Listenform
 \end{addmargin}	
 /T420/ Eingabe einer maximalen Zeitspanne \\
 /T430/ Starten und stoppen der Überprüfung des Wahlverfahren auf die gewählte formale Eigenschaft(en) \\
+/T440/ Einstellungen von CBMC \\
 
 \section{Allgemeine Testfälle}
-/T510/ Einstellungen von CBMC
-/T520/ Die Korrektheit von den Wahlergebnissen. Also des BMC über CBMC.
-/T530/ Ausgabe der Ergebnisse der Analyse (fällt teilweise in die Eigenschaftenliste)
+\textbf{/T510/} \\
+\textbf{Prozess: }Prüfung formaler Eigenschaften von Wahlverfahren über CBMC \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM0020/ /FM0030/ /FM0031/ \\
+\textbf{Ziel:} Der Benutzer kann Wahlverfahren auf formale Eigenschaften innerhalb gewählter Grenzen testen\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Das eingegebene Wahlverfahren ist in richtiger Form (d.h. ausführbar und dem gewählten Template entsprechend). Die zu prüfende Eigenschaft ist syntaktisch korrekt. Es wurden gültige Werte für die Parameter eingegeben. Eine oder mehrere Eigenschaften wurden in der Eingeschaftenliste zur Überprüfung in der nächsten Überprüfung ausgewählt. \\
+\textbf{Nachbedingung (Erfolg):} In der Eigenschaftenliste wird die Eigenschaft entweder als erfüllt angezeigt, oder es wird ein Gegenbeispiel angezeigt.\\
+\textbf{Nachbedingung (Fehlschlag):} Es wird kein Ergebnis angezeigt\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Benutzer will ein Wahlverfahren auf eine formale Eigenschaft innerhalb fester Grenzen überprüfen\\
+\textbf{Beschreibung:} \\
+1. Der Benutzer betätigt den Button Teste Eigenschaften in dem Parametereditor. \\
+2. Das Programm testen mithilfe von CBMC das Wahlverfahren auf die formale Eigenschaft(en). \\
+3. In der Eigenschaftenliste sind die gerade getesteten Wahlverfahren entweder grün hinterlegt (Die Eigenschaft trifft zu) oder rot hinterlegt und ausklappbar (Die Eigenschaft trifft nicht zu). Klappt der Benutzer nun eine dieser nicht zutreffenden Eigenschaft auf, sieht er ein Gegenbeispiel. \\
+\textbf {Erweiterung:} -keine- \\
+\textbf {Alternativen:} -keine- \\
 
 \chapter{Systemmodelle}
 
