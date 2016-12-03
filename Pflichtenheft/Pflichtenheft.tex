@@ -335,10 +335,11 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 
 \chapter{Funktionale Anforderungen}
 \section{Allgemein}
+\subsection{Muss-Kriterien}
 /FM0010/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
 /F0020/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
-/F0030/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
-/F0031/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
+/FM0030/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
+/FM0031/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
 \begin{itemize}
 \item Zahlen in Dezimaldarstellung
 \item Ausgabe der Eingabeparameter des Wahldurchlaufs bzw. der Wahldurchläufe:
@@ -349,8 +350,9 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 \end{itemize}
 \item Ausgabe des Ergebnisses des Wahldurchlaufs bzw. der Wahldurchläufe
 \end{itemize} 
-/F0040/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
-/F0050/ Möglichkeit des Öffnens und Editierens der Projekte aus /F0040/
+/FM0040/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
+/FM0050/ Möglichkeit des Öffnens und Editierens der Projekte aus /F0040/
+
 
 \section{C-Code Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
@@ -358,7 +360,7 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 /FM1020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
 /FM1030/ Speichern von erstelltem Code als Datei auf der Festplatte an vom User angegebenen Ort \\
 /FM1040/ Laden und Darstellen von Dateien korrekten Formats \\
-/FM1050/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse})
+/FM1050/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}). Nicht asynchron während Eingeben des Codes sondern synchron nach Eingabe des entsprechenden Befehls.
 
 \subsection{Soll-Kriterien}
 /FS1060/ Überprüfen des Formats beim Ladevorgang. Falls falsches Format: Ausgabe einer Fehlermeldung \\
@@ -377,6 +379,7 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 \item Nicht geschlossene Klammern und Anführungszeichen
 \item Andere Konstrukte, welche der Grammatik der C-Sprache widersprechen
 \end{itemize}
+Wie /FM1050/ ist dies von /FK1150/ abgegrenzt durch synchronen Aufruf der Funktionalität.
 
 /FS1100/ Reaktion auf typische Tastenkürzel\\
 \begin{table}[H]
@@ -420,6 +423,7 @@ Strg + Leer & Anzeigen der Code-Completion Vorschläge\\
 \item An- und Ausschalten der angezeigten Zeilennummern
 \item Festlegen wie vielen Leerzeichen ein Tab entspricht
 \end{itemize}
+/FK1150/ Anzeige syntaktischer Fehler im Code Editor asynchron während Eingabe des Codes.
  
 \section{Editor für formale Eigenschaften}
 \subsection{Muss-Kriterien}
@@ -461,8 +465,8 @@ Makro & Effekt \\
 /FM2080/ Möglichkeit zur Abfrage des Ergebnisses von Wahldurchlauf Nummer x durch ELECTx \\
 /FM2090/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
 /FM2100/ Möglichkeit zum Speichern von Eigenschaften \\
-/FM2110/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format
-
+/FM2110/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format \\
+/FM2120/ Sanity-Checks: Nur korrekte boolsche Ausdrücke werden zugelassen.
 
 \subsection{Soll-Kriterien}
 /FS2120/ Syntax-Highlighting \\
@@ -476,22 +480,27 @@ Makro & Effekt \\
 \end{itemize}
 
 \section{Eigenschaften-Liste}
-/F3010/ Darstellung der zu analysierenden Eigenschaften in Listenform \\
-/F3020/ Möglichkeit zum Erstellen neuer Eigenschaften \\
-/F3030/ Möglichkeit zum Hinzufügen bereits vorhandener Eigenschaften \\
-/F3040/ Möglichkeit zum Entfernen von Eigenschaften \\
-/F3050/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszustellen \\
-/F3060/ Möglichkeit Listen zu Speichern \\
-/F3070/ Möglichkeit Listen in korrektem Format zu Laden \\
+\subsection{Muss-Kriterien}
+/FM3010/ Darstellung der zu analysierenden Eigenschaften in Listenform \\
+/FM3020/ Möglichkeit zum Erstellen neuer Eigenschaften \\
+/FM3030/ Möglichkeit zum Hinzufügen bereits vorhandener Eigenschaften \\
+/FM3040/ Möglichkeit zum Entfernen von Eigenschaften \\
+/FM3050/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszustellen \\
+/FM3060/ Möglichkeit Listen zu Speichern \\
+/FM3070/ Möglichkeit Listen in korrektem Format zu Laden \\
 
 \section{Editor für Eingabeparameter}
-/F4010/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
-/F4011/ Möglichkeit die Parameter in /F4010/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden \\
-/F4020/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
-/F4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
-/F4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
-/F4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern \\
-/F4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten
+\subsection{Muss-Kriterien}
+/MF4010/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
+/MF4011/ Möglichkeit die Parameter in /F4010/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden \\
+/FM4020/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
+/FM4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
+/FM4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
+/FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern \\
+/FM4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten
+/FM4070/ Möglichkeit Überprüfungen zu starten
+/FM4070/ Möglichkeit Überprüfungen zu beenden
+
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
@@ -512,7 +521,12 @@ Makro & Effekt \\
 /D50/ Die in der Eigenschaften-Liste erstellten Listen werden in Textdateien gespeichert
 
 \chapter{Nichtfunktionale Anforderungen}
-/F10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Completion
+/NF10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Completion \\
+/NF20/ Maximal 10000 Kandidaten, Wähler oder Sitze pro Überprüfung \\
+/NF30/ Maximal 10000 Zeilen C-Code \\
+/NF40/ Maximal 100 Vor- und Nachbedingungen pro formaler Eigenschaft \\
+/NF50/ Maximal 50 symbolische Variablen pro formaler Eigenschaften \\
+/NF60/ Maximal 10 Jahre währender timeout \\
 
 
 \chapter{Globale Testfälle und Testszenarien}
