@@ -1107,77 +1107,81 @@ In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der
 
 \begin{figure}[H]
 \includegraphics[scale=0.4]{Editor-mit-Fehler-mit-hover.png}
-\caption{Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium)}
+\caption{Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium).}
 \label{Editor-mit-Fehler-mit-hover}
 \end{figure}
 
-In \ref{Editor-mit-Fehler-ohne-hover} sieht man, wie der gefundene syntaktische Fehler während des Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
+In \ref{Editor-mit-Fehler-ohne-hover} sieht man, wie der gefundene syntaktische Fehler während dem Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
 
 \begin{figure}[H]
 \includegraphics[scale=0.4]{Editor-mit-Fehler-nach-statischer-analyse.png}
-\caption{Fehleranzeige nach statischer Analyse}
+\caption{Fehleranzeige nach statischer Analyse.}
 \label{Editor-mit-Fehler-nach-statischer-analyse}
 \end{figure}
 
-\ref{Editor-mit-Fehler-nach-statischer-analyse} Zeigt die Anzeige der Fehler nach ausführend einer statischen Code Analyse. Markierung der Zeile ist Kann-Kriterium.
+\ref{Editor-mit-Fehler-nach-statischer-analyse} Zeigt die Anzeige der Fehler nach Durchführung einer statischen Code Analyse. Markierung der Zeile ist Kann-Kriterium.
 
-\section{Eigenschaften-Liste}
-Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe \ref{Sprache-für-formale-Eigenschaften}) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel wiederverwertet und kombiniert werden. Das Zuordnen der Eigenschaften zu Wahlverfahren geschieht in der Eigenschaften-Liste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe \ref{Eigenschaften-Liste-vor}). 
+\section{Eigenschaftenliste}
+Die GUI trennt das Editieren der zu überprüfenden Eigenschaften (in eigens zu diesem Zweck erstellter Syntax, siehe \ref{Sprache-für-formale-Eigenschaften}) und das Zuordnen dieser Eigenschaften zu Wahlverfahren. Dadurch können diese Eigenschaften einzeln abgespeichert und flexibel wiederverwertet und kombiniert werden. Das Zuordnen der Eigenschaften zu Wahlverfahren geschieht in der Eigenschaftenliste. Darin werden die einzelnen Eigenschaften namentlich aufgelistet (siehe \ref{Eigenschaften-Liste-vor}). 
 
 \begin{figure}[H]
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[scale=0.5]{Eigenschaften-Liste.png}
-  \caption{Eigenschaften-Liste vor einer Überprüfung}
+  \caption{Eigenschaftenliste vor einer Überprüfung}
   \label{Eigenschaften-Liste-vor}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[scale=0.5]{Eigenschaften-Liste-waehrend-testen.png}
-  \caption{Eigenschaften-Liste während einer Überprüfung}
+  \caption{Eigenschaftenliste während einer Überprüfung}
   \label{fig:sub2}
 \end{minipage}
 \end{figure}
 
-Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und der Funktionalität erläutert.
+Im Folgenden werden die einzelnen \ac{GUI}-Bestandteile und deren Funktionalität erläutert.
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Neu & Startet eine neue Liste \\
-Speichern & Speichert die Liste \\
-Speichern unter & Speichert die Liste unter neuem Namen an neuem Ort \\
-Öffnen & öffnet Liste (Ort von User angegeben)
+Neu & Erstellt eine neue Liste.\\
+\hline
+Speichern & Speichert die Liste.\\
+\hline
+Speichern unter & Speichert die Liste unter neuem Namen an neuem Ort.\\
+\hline
+Öffnen & Öffnet Liste (Ort von User angegeben).
 \end{tabular}
 \label{Eigenschaftenliste-Datei-Menüpunkte}
-\caption{Unterpunkte des Datei-Menüs}
+\caption{Unterpunkte des Datei-Menüs.}
 \end{table}
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion Rückgängig \\
-Wiederholen & Wiederholt die zuletzt Rückgängig gemachte Aktion 
+Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion rückgängig.\\
+\hline
+Wiederholen & Wiederholt die zuletzt rückgängig gemachte Aktion.
 \end{tabular}
 \label{Eigenschaftenliste-Bearbeiten-Menüpunkte}
-\caption{Unterpunkte des Bearbeiten-Menüs}
+\caption{Unterpunkte des Bearbeiten-Menüs.}
 \end{table}
 
-Der Tool-Streifen hat exakt den selben Zweck wie der des Code-Editors, ohne die Funktionen Kopieren, Ausschneiden und Einfügen.
+Der Tool-Streifen hat den selben Zweck wie der des C-Editors, jedoch ohne die Funktionen Kopieren, Ausschneiden und Einfügen.
 
 \begin{figure}[H]
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[scale=0.5]{nach-testen.png}
-  \caption{Liste nach Überprüfung}
+  \caption{Liste nach Überprüfung.}
   \label{fig:sub1}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[scale=0.5]{gegenbeispiel.png}
-  \caption{Anzeige des Gegenbeispiels}
+  \caption{Anzeige des Gegenbeispiels.}
   \label{fig:sub2}
 \end{minipage}
 \end{figure}
@@ -1188,25 +1192,29 @@ Es folgt eine Beschreibung der Icons, welche in den Listenelementen zu sehen sin
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Icon & Bedeutung \\
 \hline
-Pfeil nach rechts & Falls Gegenbeispiel gefunden: Durch Klicken öffnet sich unter dem Listenelement ein Textfeld in welchen das Gegenbeispiel dargestellt wird \\
-Checkbox & Nur falls aktiviert, wird das Wahlverfahren auf die Eigenschaft getestet \\
-Maulschlüssel & Öffnet den Eigenschaften-Editor für die Eigenschaft\\
-Rotes Kreuz & Entfernt die Eigenschaft aus der Liste \\
-Gründes Plus & Fügt neue, leere Eigenschaft oder bereits gespeicherte Eigenschaft der Liste hinzu
+Pfeil nach rechts & Falls Gegenbeispiel gefunden: Durch Klicken öffnet sich unter dem Listenelement ein Textfeld in welchen das Gegenbeispiel dargestellt wird. \\
+\hline
+Checkbox & Nur falls aktiviert, wird das Wahlverfahren auf die Eigenschaft getestet. \\
+\hline
+Maulschlüssel & Öffnet den Eigenschafteneditor für die Eigenschaft.\\
+\hline
+Rotes Kreuz & Entfernt die Eigenschaft aus der Liste. \\
+\hline
+Grünes Plus & Fügt neue, leere Eigenschaft oder bereits gespeicherte Eigenschaft der Liste hinzu.
 \end{tabular}
 \label{Eigenschaftenliste-Bearbeiten-Menüpunkte}
-\caption{Icons der Eigenschaften-Liste}
+\caption{Icons der Eigenschaftenliste.}
 \end{table}
 
-\section{Eigenschaften-Editor}
+\section{Eigenschafteneditor}
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{raw-ohne-code.png}
-\caption{Eigenschaften-Editor ohne Code mit symbolischen Variablen}
+\caption{Eigenschafteneditor ohne Code mit symbolischen Variablen.}
 \label{Eigenschaften-Editor-ohne-code}
 \end{figure}
 
-Der Eigenschaften-Editor hat den Zweck, das Bearbeiten der zu überprüfenden Eigenschaften zu ermöglichen. Eigenschaften werden aufgeteilt in Vor- und Nachbedingungen. Möglich ist die Verwendung sowohl von Quantoren in der Form von Makros als auch symbolischer Variablen. 
+Der Eigenschafteneditor hat den Zweck, das Bearbeiten der zu überprüfenden Eigenschaften zu ermöglichen. Eigenschaften werden aufgeteilt in Vor- und Nachbedingungen. Möglich ist die Verwendung sowohl von Quantoren in der Form von Makros als auch symbolischer Variablen. 
 
 Die Untermenüs Datei, Bearbeiten und Code sowie der Tool-Streifen sind analog zu denen des C-Editors. Hinzu kommen jedoch Konstanten und Makros. Bereitgestellte Konstanten sind: 
 
@@ -1228,53 +1236,52 @@ Bereitgestellte Makros sind:
 \item \verb!SUM_VOTES_FOR_CANDIDATE()!
 \end{itemize}
 
-Jedes dieser Makros bis auf das Letzte nimmt eine bisher ungenutzte Variable als Argument. Diese kann im darauf Folgenden boolschen Ausdruck verwendet werden (siehe \ref{Eigenschaften-Editor-Anonymität}). Das Letzte Makro nimmt eine bereits definierte symbolische Variable vom Typ Kandidaten und gibt berechnet die Anzahl Stimmen für diesen Kandidaten.
+Jedes dieser Makros bis auf das Letzte nimmt eine bisher ungenutzte Variable als Argument. Diese kann im darauf Folgenden boolschen Ausdruck verwendet werden (siehe \ref{Eigenschaften-Editor-Anonymität}). Das letzte Makro nimmt eine bereits definierte symbolische Variable vom Typ Kandidaten und gibt berechnet die Anzahl Stimmen für diesen Kandidaten.
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-vor-und-nachbedingungen-syntax-highlighting.png}
-\caption{Eigenschaften-Editor mit Beispielhafter Eigenschaft Anonymität und beispielhaft dargestelltem Syntax-Highlighting (Kann-Kriterium)}
+\caption{Eigenschafteneditor mit Beispielhafter Eigenschaft Anonymität und beispielhaft dargestelltem Syntax-Highlighting (Kann-Kriterium).}
 \label{Eigenschaften-Editor-Anonymität}
 \end{figure}
 
-Wie man zusätzlich sehen kann, sind auch Implikationen (\verb!==>!) möglich. Auch das logische und (\verb!&&!), oder (\verb!||!) und die Äquivalenz (\verb!<==>!) werden zur Verfügung stehen. Die Anzeige erkannter Fehler wird analog zum C-Editor geschehen.
+Wie man sehen kann, sind auch Implikationen (\verb!==>!) möglich. Auch das logische Und (\verb!&&!), Oder (\verb!||!) und die Äquivalenz (\verb!<==>!) werden zur Verfügung stehen. Die Anzeige erkannter Fehler wird analog zum C-Editor geschehen.
 
-\section{Parameter Editor}
+\section{Parametereditor}
 
-Der Parameter Editor stellt das Hauptfenster der Anwendung dar. Es erlaubt das Einstellen und Starten der Tests. Hier lassen sich auch komplette Projekte Speichern - Code, Eigenschaften und Parameter gebündelt.
+Der Parametereditor stellt das Hauptfenster der Anwendung dar. Es ermöglicht das Starten und Beenden von Tests. Hier lassen sich auch komplette Projekte Speichern. Code, Eigenschaften und Parameter werden dabei in einer Datei gebündelt.
 
 \begin{figure}[H]
 \includegraphics[scale=0.6]{Parameter-Editor.png}
-\caption{Der Parameter Editor. PERS steht für Professional Election Rigging System}
+\caption{Der Parametereditor.}
 \label{Parameter-editor}
 \end{figure}
 
-Der Menüpunkt Datei ist analog zu dem des C Editors. Der Menüpunkt Projekt wird im Folgenden erläutert. 
+Der Menüpunkt Datei ist analog zu dem des C-Editors. Der Menüpunkt Projekt wird im Folgenden erläutert. 
 
 \begin{table}[H]
 \begin{tabular}{|p{5cm}|p{10cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Teste Eigenschaften & Startet Tests mit den angegebenen Parametern \\
+Teste Eigenschaften & Startet Tests mit den angegebenen Parametern \\ \hline
 Stop Test & Unterbricht momentan laufenden Test
 \end{tabular}
 \label{Parameter-Projekt-Menü}
-\caption{Parameter Editor Projekt Menüpunkte}
+\caption{Menüunterpunkte vom Menüpunkt "Projekt".}
 \end{table}
 
 Der Pfeil und das Stopp-Zeichen des Tool-Streifens haben ebenfalls die Wirkungen Teste Eigenschaften und Stop Test. Als Mögliche Zeitangaben stehen Sekunden, Minuten, Stunden und Tage zur Verfügung. 
 
 \begin{figure}[H]
 \includegraphics[scale=0.6]{CBMC-Args-Editor.png}
-\caption{Das Fenster, welches dem \gls{Benutzer} erlaubt die an CBMC gereichten Argumente zu editieren}
+\caption{Das Fenster, welches dem \gls{Benutzer} erlaubt die an CBMC weitergegebenen Argumente zu spezifizieren.}
 \label{Argumente-editor}
 \end{figure}
 
-Klickt der \gls{Benutzer} auf Erweitert, so öffnet sich Dialog \ref{Argumente-editor}. Darin kann der \gls{Benutzer} direkt die an \ac{CBMC} gereichten Argumente editieren. Vom \gls{Benutzer} gegebene Argumente unterliegen keiner Überprüfung durch das Program und führen daher zu undefiniertem Verhalten. 
+Klickt der \gls{Benutzer} auf das Feld "Erweitert", so öffnet sich Dialog \ref{Argumente-editor}. Darin kann der \gls{Benutzer} direkt die an \ac{CBMC} gereichten Argumente zu spezifizieren. Vom \gls{Benutzer} gegebene Argumente unterliegen keiner Überprüfung durch das Programm können daher zu unerwünschtem Verhalten führen.
 
 \chapter{Zeit- und Resourcenplanung}
 
-Für den Rest des Projektes veranschlagen wir 1500 Mannstunden. Die Verteilung
-der Stunden sieht wie folgt aus.
+Für den Rest des Projektes veranschlagen wir 1500 Mannstunden. Die Verteilung der Stunden sieht wie folgt aus.
 
 \section{Zeitplan}
 
@@ -1287,14 +1294,13 @@ der Stunden sieht wie folgt aus.
     Qualitätssicherung & 01.03.1 - 20.03.17 & 480 Mannstunden \\
   \end{tabular}
   \newline\newline
-  \caption{Zeiträume und Arbeitsanteile}\label{tab1}
+  \caption{Zeiträume und Arbeitsanteile.}\label{tab1}
 \end{table}
 
 
 \section{Unteraufteilung der Phase}
 Nun unterteilen wir die einzelnen Phasen in ihre Unterbestandteile,
-zusammen mit den Veranschlagungen für den veranschlagten Anteil am Gesamtaufwand
-der Phase.
+zusammen mit den Veranschlagungen für den veranschlagten Anteil am Gesamtaufwand der Phase.
 
 \subsection{Entwurfsphase}
 
@@ -1308,7 +1314,7 @@ der Phase.
     Rest & 25\%\\
   \end{tabular}
   \newline\newline
-  \caption{Unteraufteilung der Entwurfsphase}\label{entw}
+  \caption{Unteraufteilung der Entwurfsphase.}\label{entw}
 \end{table}
 
 \subsection{Implementierungsphase}
@@ -1323,7 +1329,7 @@ der Phase.
     Rest & 25\%  \\
   \end{tabular}
   \newline\newline
-  \caption{Unteraufteilung der Implementierungsphase}\label{impl}
+  \caption{Unteraufteilung der Implementierungsphase.}\label{impl}
 \end{table} 
 
 \subsection{Qualitätssicherung}
@@ -1338,7 +1344,7 @@ der Phase.
     Rest & 25\%  \\
   \end{tabular}
   \newline\newline
-  \caption{Unteraufteilung der Entwurfsphase}\label{qs}
+  \caption{Unteraufteilung der Entwurfsphase.}\label{qs}
 \end{table}
 
 
@@ -1355,7 +1361,7 @@ der Phase.
 \begin{table}[H]
   \centering
   \begin{tabular}{|P{3cm}|P{2cm}|P{2cm}|P{2cm}|P{2cm}|}
-    Name & sehr gut & gut & normal & nicht relevant\\ \hline
+    Name & sehr relevant & relevant & weniger relevant & nicht relevant\\ \hline
     Fehlertoleranz & x &  &  &  \\ \hline
     Sicherheit &  &  &  & x \\ \hline
     Bedienbarkeit & x &  &  &  \\ \hline
@@ -1365,7 +1371,7 @@ der Phase.
     Modifizierbarkeit & x &  &  &  \\
   \end{tabular}
   \newline\newline
-  \caption{Qualitätsanforderungen}\label{qa}
+  \caption{Qualitätsanforderungen.}\label{qa}
 \end{table}
 
 

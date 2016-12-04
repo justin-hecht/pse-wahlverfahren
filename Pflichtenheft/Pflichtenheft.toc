@@ -62,9 +62,9 @@
 \contentsline {section}{\numberline {9.2}High-Level-Beschreibung der Architektur}{41}{section.9.2}
 \contentsline {chapter}{\numberline {10}GUI}{43}{chapter.10}
 \contentsline {section}{\numberline {10.1}C-Editor}{43}{section.10.1}
-\contentsline {section}{\numberline {10.2}Eigenschaften-Liste}{48}{section.10.2}
-\contentsline {section}{\numberline {10.3}Eigenschaften-Editor}{50}{section.10.3}
-\contentsline {section}{\numberline {10.4}Parameter Editor}{51}{section.10.4}
+\contentsline {section}{\numberline {10.2}Eigenschaftenliste}{48}{section.10.2}
+\contentsline {section}{\numberline {10.3}Eigenschafteneditor}{50}{section.10.3}
+\contentsline {section}{\numberline {10.4}Parametereditor}{51}{section.10.4}
 \contentsline {chapter}{\numberline {11}Zeit- und Resourcenplanung}{53}{chapter.11}
 \contentsline {section}{\numberline {11.1}Zeitplan}{53}{section.11.1}
 \contentsline {section}{\numberline {11.2}Unteraufteilung der Phase}{53}{section.11.2}
