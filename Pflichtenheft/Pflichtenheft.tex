@@ -26,7 +26,7 @@
 \newglossaryentry{CBMC}
 {
 name={C bounded model checker},
-description={Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom user definierte assertions untersucht}
+description={Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom Benutzer definierte Assertions untersucht}
 }
 \newglossaryentry{Makro}
 {
@@ -429,7 +429,7 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 \end{itemize}
 /FK1150/ Anzeige syntaktischer Fehler im Code Editor asynchron während Eingabe des Codes.
  
-\section{Editor für formale Eigenschaften}
+	\section{Editor für formale Eigenschaften}
 \subsection{Muss-Kriterien}
 /FM2010/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
 /FM2020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
@@ -440,42 +440,42 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 \begin{table}[H]
 \caption{Makros zur Beschreibung formaler Eigenschaften}
 \begin{tabular}{|p{5cm}|p{10cm}|}
-\hline 
+
 Makro & Effekt \\
 \hline 
-\verb!FOR_ALL_VOTERS(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Wähler gilt \\
+\verb!FOR_ALL_VOTERS(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Wähler verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für alle Wähler gilt \\
 \hline 
-\verb!FOR_ALL_CANDIDATES(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Kandidaten gilt \\
+\verb!FOR_ALL_CANDIDATES(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Kandidat verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für alle Kandidaten gilt \\
 \hline 
-\verb!FOR_ALL_SEATS(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für alle Sitze gilt \\
+\verb!FOR_ALL_SEATS(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für alle Sitze gilt \\
 \hline 
-\verb!EXISTS_ONE_VOTER(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für mindesten einen Wähler gilt \\
+\verb!EXISTS_ONE_VOTER(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Wähler verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für mindesten einen Wähler gilt \\
 \hline 
-\verb!EXISTS_ONE_CANDIDATE(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden. Gesamtausdruck ist wahr falls sie für mindesten einen Kandidaten gilt \\
+\verb!EXISTS_ONE_CANDIDATE(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Kandidat verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für mindesten einen Kandidat gilt \\
 \hline 
-\verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable verwendet werden.Gesamtausdruck ist wahr falls sie für mindesten einen Sitz gilt \\
+\verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für mindesten einen Sitz gilt \\
 \hline 
 \verb!VOTE_SUM_FOR_CANDIDATE(c)! & Gibt die Anzahl Stimmen für Kandidaten c zurück\\
-\hline 
+
 \end{tabular}
 \label{table:Macros_for_formal_Attributes}
 \end{table}
 
-/FM2060/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitze \\
+/FM2060/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitzes \\
 /FM2070/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
-/FM2071/ Bereitstellen von Operatoren für logisches UND, ODER, GLEICH und NICHT GLEICH \\
-/FM2072/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich,  Gleicheit und Ungleicheit zwischen Typen die diese Vergleiche auch in C zulassen \\
+/FM2071/ Bereitstellen von Operatoren für logisches UND und ODER \\
+/FM2072/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich,  Gleichheit und Ungleichheit zwischen Typen die diese Vergleiche auch in C zulassen \\
 /FM2073/ Möglichkeit zur Abfrage der Stimme eines Wählers v in Wahldurchlauf Nummer x durch VOTESx(v)\\
 /FM2080/ Möglichkeit zur Abfrage des Ergebnisses von Wahldurchlauf Nummer x durch ELECTx \\
 /FM2090/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
 /FM2100/ Möglichkeit zum Speichern von Eigenschaften \\
 /FM2110/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format \\
-/FM2120/ Sanity-Checks: Nur korrekte boolsche Ausdrücke werden zugelassen.
+/FM2120/ Sanity-Checks: Nur syntaktisch korrekte boolsche Ausdrücke werden zur Überprüfung zugelassen.
 
 \subsection{Soll-Kriterien}
 /FS2120/ Syntax-Highlighting \\
-/FS2130/ Anzeigen von Syntaktischen Fehlern im Code \\
-/FS2131/ Reaktion auf typische Tastenkürzel wie in /FS1100/, siehe \ref{table:Hotkeys_and_operations}. \\
+/FS2130/ Anzeigen von Syntaktischen Fehlern im Code. \\
+/FS2131/ Reaktion auf typische Tastenkürzel wie in /FS1100/, siehe \ref{table:Hotkeys_and_operations} \\
 
 
 \subsection{Kann-Kriterien}
@@ -491,9 +491,9 @@ Makro & Effekt \\
 /FM3020/ Möglichkeit zum Erstellen neuer Eigenschaften \\
 /FM3030/ Möglichkeit zum Hinzufügen bereits vorhandener Eigenschaften \\
 /FM3040/ Möglichkeit zum Entfernen von Eigenschaften \\
-/FM3050/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszustellen \\
-/FM3060/ Möglichkeit Listen zu Speichern \\
-/FM3070/ Möglichkeit Listen in korrektem Format zu Laden \\
+/FM3050/ Möglichkeit das Überprüfen einzelner Eigenschaften an- und auszuschalten \\
+/FM3060/ Möglichkeit Listen zu speichern \\
+/FM3070/ Möglichkeit Listen in korrektem Format zu laden und zu editieren \\
 
 
 \section{Editor für Eingabeparameter}
@@ -504,27 +504,27 @@ Makro & Effekt \\
 /FM4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
 /FM4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
 /FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern \\
-/FM4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten
-/FM4070/ Möglichkeit Überprüfungen zu starten
-/FM4070/ Möglichkeit Überprüfungen zu beenden
+/FM4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten \\
+/FM4070/ Möglichkeit Überprüfungen zu starten \\
+/FM4070/ Möglichkeit Überprüfungen zu beenden \\
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
-/D10/ Das Wahlverfahren wird vom \gls{Benutzer} als C-Code definiert und in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .c gespeichert.
-/D11/ Die verfügbaren Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.
+/D10/ Das Wahlverfahren wird vom \gls{Benutzer} als C-Code definiert und in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .c gespeichert \\
+/D11/ Die verfügbaren Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert\\
 
 \section{Editor von formalen Eigenschaften}
-/D20/ Eine vom \gls{Benutzer} definierte formale Eigenschaft wird in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .eig gespeichert.
+/D20/ Eine vom \gls{Benutzer} definierte formale Eigenschaft wird in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .eig gespeichert \\
 
 \section{Parameter}
-/D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert.
+/D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert \\
 
 
 \section{Projektdaten}
-/D40/ Ein Projekt wird als Liste von Dateien in einer Textdatei gespeichert.
+/D40/ Ein Projekt besteht aus Parametern, Eigenschaften und Wahlverfahren. Diese werden gemeinsam in einer Textdatei gespeichert \\
 
 \section{Eigenschaften-Liste}
-/D50/ Die in der Eigenschaften-Liste erstellten Listen werden in Textdateien gespeichert
+/D50/ Die in der Eigenschaften-Liste erstellten Listen werden in Textdateien gespeichert \\
 
 \chapter{Nichtfunktionale Anforderungen}
 /NF10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Completion \\
@@ -537,12 +537,12 @@ Makro & Effekt \\
 
 \chapter{Globale Testfälle und Testszenarien}
 
-Generell testet ein Testfall nicht alle Funktionen einer aufgelisteten funktionalen Eigenschaft. Somit müssen alle Tests, in denen eine funktionale Eigenschaft aufgelistet ist, gelingen, damit eine funktionale Eigenschaft als erfüllt gilt. \\
-Innerhalb des kompletten Kapitels 8 ist mit dem Ausdruck \textbf{Dokument} je nachdem welches GUI-Fenster betrachtet wird etwas anderes gemeint. Außerdem werden Im Text GUI-spezifische Sonderfälle mit einem Kürzel markiert. \\
+Generell testet ein Testfall nicht alle Funktionen einer aufgelisteten funktionalen Eigenschaft. Somit müssen alle Tests in denen eine funktionale Eigenschaft aufgelistet ist gelingen, damit eine funktionale Eigenschaft als erfüllt gilt. \\
+Innerhalb des kompletten Kapitels 8 ist mit dem Ausdruck \textbf{Dokument} je nachdem welches \ac{GUI}-Fenster betrachtet wird etwas anderes gemeint. Außerdem werden Im Text \ac{GUI}-spezifische Sonderfälle mit einem Kürzel markiert. \\
 Im Falle des \textbf{C-Editors} handelt es sich um den C-Code und das Kürzel \textbf{C}. \\
 Im Falle des \textbf{Eingeschafteneditors} handelt es sich um eine spezifische Eigenschaft von Wahlverfahren und das Kürzel \textbf{E}. \\
 Im Falle der \textbf{Eigenschaftenliste} handelt es sich um die Liste der Eigenschaften von Wahlverfahren und das Kürzel \textbf{L}. \\
-Im Falle des \textbf{Parametereditors} handelt es sich um den kompletten Programmzustand. Genauer gesagt also den C-Code, die Parameter und die Eigenschaften für Wahlverfahren inklusive der kompletten Eigenschaften-Liste. Der Kürzel für den Parametereditor lautet \textbf{P}. \\ \\
+Im Falle des \textbf{Parametereditors} handelt es sich um ein komplettes Projekt. Genauer gesagt also den C-Code, die Parameter und die Eigenschaften für Wahlverfahren inklusive der kompletten Eigenschaften-Liste. Der Kürzel für den Parametereditor lautet \textbf{P}. \\
 
 \section{Testfälle für die Datenverwaltung}
 
@@ -556,20 +556,20 @@ L: /F3020/ \\
 P: /F4050/	\\
 \textbf{Ziel:} Es kann ein neues Dokument angelegt werden\\
 \textbf{Kategorie:} muss\\
-\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer wählt einen korrekter Speicherpunkt und einen gültiger Dateiname.\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer wählt einen korrekten Speicherort und einen gültigen Dateinamen.\\
 \textbf{Nachbedingung (Erfolg):} Das Programm zeigt ein neues, leeres Dokument an, das einen Speicherplatz und einen Namen hat.\\
-C: Die für das gewählte Wahl-Template benötigten Funktionsrümpfe werden generiert.
+C: Der für das gewählte Wahl-Template benötigte Funktionsrumpf wird generiert.
 \textbf{Nachbedingung (Fehlschlag):} Es wurde kein neues, leeres Dokument angelegt und dargestellt\\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein neues Dokument anlegen\\
 \textbf{Beschreibung:} \\
-1. Der Nutzer verwendet die Tastenkombination Strg + N (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Neu des jeweiligen Fensters. \\
+1. Der Nutzer verwendet die Tastenkombination Strg + N (hierbei muss das GUI-Element ausgewählt sein, welches getestet werden soll) oder der Benutzer betätigt den Button Neu des jeweiligen Fensters. \\
 2. Das Programm öffnet einen Dateibrowser.\\
-3. Der User gibt den Speicherort und den Name des neuangelegten Dokuments an. \\
+3. Der User gibt den Speicherort und den Name des neuen Dokuments an. \\
 C: Der Benutzer wählt das zu verwendende Wahl-Template aus.\\
 4. Das Programm zeigt das neue leere Dokument an. \\
-C: Das Programm generiert die für das gewählte Wahl-Template benötigten Funktionsrümpfe. \\
-\textbf {Erweiterung:} Falls es im zuvor geöffneten Dokument ungespeicherte Änderungen gibt, wird der Benutzer gefragt ob er den Vorgang nach 1. abbrechen will oder ob er fortfahren will. Beim Fortfahren werden jegliche Änderungen verworfen. \\
+C: Das Programm generiert den für das gewählte Wahl-Template benötigten Funktionsrumpf. \\
+\textbf {Erweiterung:} Falls es im zuvor geöffneten Dokument noch nicht gespeicherte Änderungen gibt, wird der Benutzer gefragt ob er den Vorgang nach 1. abbrechen will oder ob er fortfahren will. Beim Fortfahren werden jegliche Änderungen verworfen. \\
 \textbf {Alternativen:} -keine- \\ \\
 \textbf{/T020/} \\ 
 \textbf{Prozess: }Speichern der Dokumente\\
@@ -585,10 +585,10 @@ P: /F4050/\\
 \textbf{Kategorie:} muss\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Name und der gewählte Speicherort sind gültig\\
 \textbf{Nachbedingung (Erfolg):} Das Dokument wurde korrekt an den gewählten Speicherort mit dem gewählten Namen gespeichert.  \\
-\textbf{Nachbedingung (Fehlschlag):} Das Dokument wurde nicht korrekt gespeichert oder unter falschem Namen oder dem falschen Ort gespeichert. \\
+\textbf{Nachbedingung (Fehlschlag):} Das Dokument wurde nicht gespeichert \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will das Dokument an einem anderen Ort oder unter einem anderen Name speichern\\
 \textbf{Beschreibung:} \\
-1. Der Benutzer betätigt die Taste Speichern unter innerhalb des der gewünschten Fensters\\
+1. Der Benutzer betätigt die Taste Speichern unter innerhalb des des gewünschten Fensters\\
 2. Das Programm öffnet einen Dateibrowser\\
 3. Der Benutzer gibt Name und Speicherort des Dokuments im Dateibrowser ein.
 4. Das Programm speichert das Dokument an der genannten Stelle mit dem eingegebenen Namen.
@@ -600,14 +600,14 @@ P: /F4050/\\
 \textbf{Kategorie:} muss\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe.\\
 \textbf{Nachbedingung (Erfolg):} Das Dokument wurde korrekt gespeichert. Ort und Name wurden nicht verändert.\\
-\textbf{Nachbedingung (Fehlschlag):} Das Dokument wurde nicht korrekt gespeichert oder unter verändertem Namen oder an einem verändertem Speicherort gespeichert. \\
+\textbf{Nachbedingung (Fehlschlag):} Das Dokument wurde nicht gespeichert. \\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will das Dokument speichern\\
 \textbf{Beschreibung:} \\
-1. Der Nutzer verwendet die Tastenkombination Strg + S (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Speichern des jeweiligen Fensters.
+1. Der Nutzer verwendet die Tastenkombination Strg + s (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Speichern des jeweiligen Fensters.
 2. Das Programm speichert das Dokument an der zuvor genannten Stelle mit dem zuvor eingegebenen Namen
 \textbf {Erweiterung:} -keine-
-\textbf {Alternativen:} Mit Speichern unter die vorherige Datei überschreiben. \\
+\textbf {Alternativen:} Mit Speichern unter die Datei an anderer Stelle speichern. \\
 \end{addmargin}
 \textbf{/T030/} \\
 \textbf{Prozess: }Laden eines Dokuments aus einer Datei \\
@@ -620,19 +620,19 @@ P: /F4060/\\
 \textbf{Kategorie:} muss\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Es existiert ein zu ladendes Dokument, welches korrekt gespeichert wurde\\
 \textbf{Nachbedingung (Erfolg):} Das Dokument wurde korrekt in den Editor geladen. \\
-\textbf{Nachbedingung (Fehlschlag):} Das Dokument wird entweder falsch dargestellt oder konnte trotz einem richtigen Format nicht geladen werden. \\ 
+\textbf{Nachbedingung (Fehlschlag):} Das zuvor geöffnete Dokument ist geladen. \\ 
 \textbf{Akteur:} Benutzer\\
-\textbf{Auslösendes Ereignis:} Der Benutzer will ein Dokument laden \\
+\textbf{Auslösendes Ereignis:} Der Benutzer möchte ein Dokument laden \\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastenkombination Strg + O (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Öffnen des jeweiligen Fensters. \\
 2. Das Programm öffnet einen Dateibrowser\\
 3. Der Benutzer wählt im Dateibrowser das zu ladende Dokument \\
 4. Das Programm lädt das gewählte Dokument \\
-\textbf {Erweiterung:} Allgemein: Falls es im zuvor geöffneten Dokument ungespeicherte Änderungen gibt, wird der Benutzer gefragt ob er den Vorgang nach 1. abbrechen will oder ob er fortfahren will. Beim Fortfahren werden jegliche Änderungen verworfen. \\
-C: Das Programm überprüft beim Ladevorgang das Format des zu ladenden Dokuments. Ist das Format falsch wird eine Fehlermeldung ausgegeben und das Dokument nicht geladen. \\
-\textbf {Alternativen:} -keine- \\ \\
+\textbf {Erweiterung:} Allgemein: Falls es im zuvor geöffneten Dokument noch nicht gespeicherte Änderungen gibt, wird der Benutzer gefragt ob er den Vorgang nach 1. abbrechen will oder ob er fortfahren will. Beim Fortfahren werden jegliche Änderungen verworfen. \\
+5. Das Programm überprüft beim Ladevorgang das Format des zu ladenden Dokuments. Ist das Format falsch wird eine Fehlermeldung ausgegeben und das Dokument nicht geladen. \\
+\textbf {Alternativen:} -keine- 
 \section{Testfälle für Rückgängig und Wiederherstellen}
-Die 2 Nachfolgende Testfälle /T100/ und /T110/ betreffen die 3 Fenster C-Editor, Eigenschaftenliste und Eigenschafteneditor. Also explizit nicht das Parameterfenster \\\\
+Die 2 Nachfolgende Testfälle /T100/ und /T110/ betreffen die 3 Fenster C-Editor, Eigenschaftenliste und Eigenschafteneditor. \\\\
 \textbf{/T100/} \\ 
 \textbf{Prozess: }Rückgängig \\
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
@@ -642,11 +642,11 @@ Allgemein: /F0010/ /F0050/ \\
 \textbf{Kategorie:} soll\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer hat zuvor Bearbeitungsschritte ausgeführt. \\
 \textbf{Nachbedingung (Erfolg):} Der letzte Bearbeitungsschritt wurde rückgängig gemacht.
-\textbf{Nachbedingung (Fehlschlag):} Der letzte Bearbeitungsschritt wurde nicht rückgängig gemacht.\\
+\textbf{Nachbedingung (Fehlschlag):} Das geöffnete Dokument bleibt unverändert\\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer will einen oder mehrere Bearbeitungsschritte rückgängig machen.\\
 \textbf{Beschreibung:} \\
-1. Der Nutzer verwendet die Tastenkombination Strg + Z (hierbei muss das GUI-Fensters ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Rückgängig des jeweiligen Fensters.\\
+1. Der Nutzer verwendet die Tastenkombination Strg + z (hierbei muss das GUI-Fenster ausgewählt sein, welches getestet werden soll) oder der Benutzer betätigt den Button Rückgängig des jeweiligen Fensters.\\
 2. Das Programm lädt den vorherigen Zustand des Dokuments in das gewählte Fenster. Somit wird der letzte Bearbeitungsschritt rückgängig gemacht. \\
 \textbf {Erweiterung:} -keine- \\
 \textbf {Alternativen:} -keine- \\\\
@@ -659,11 +659,11 @@ Allgemein: /F0010/ /F0050/ \\
 \textbf{Kategorie:} soll\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer hat zuvor einen oder mehrere Bearbeitungsschritte rückgängig gemacht\\
 \textbf{Nachbedingung (Erfolg):} Der zuletzt rückgängig gemachte Stand des Dokuments, der noch nicht wiederhergestellt wurde, wird wiederhergestellt.
-\textbf{Nachbedingung (Fehlschlag):} Der zuletzt rückgängig gemachte Stand des Dokuments wird nicht wiederhergestellt.\\
+\textbf{Nachbedingung (Fehlschlag):} Der Zustand des Dokuments bleibt unverändert.\\
 \textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer will einen oder mehrere Bearbeitungsschritte, die er zuvor rückgängig gemacht hat, wiederherstellen\\
 \textbf{Beschreibung:} \\
-1. Der Nutzer verwendet die Tastenkombination Strg + R (hierbei muss das GUI-Fensters ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Wiederherstellen des jeweiligen Fensters.\\
+1. Der Nutzer verwendet die Tastenkombination Strg + r (hierbei muss das GUI-Fensters ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Wiederherstellen des jeweiligen Fensters.\\
 2. Das Programm lädt den zuvor Rückgängig gemachten Zustand des Dokuments in das gewählte Fenster. Somit wird der letzte Bearbeitungsschritt, welcher rückgängig gemacht wurde, wiederhergestellt \\
 \textbf {Erweiterung:} -keine- \\
 \textbf {Alternativen:} -keine- \\
@@ -685,7 +685,7 @@ C: /FS1100/ \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will eine der Funktionen Kopieren, Ausschneiden oder Einfügen verwenden\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet entweder die Buttons in der GUI oder die Tastenkürzel:\\
-Strg + X für ausschneiden. Strg + C für kopieren und Strg + V für einfügen. \\
+Strg + x für Ausschneiden, Strg + c für Kopieren und Strg + v für Einfügen. \\
 2. Das Programm führt die gewählte Aktion im Text aus.\\
 \textbf {Erweiterung:} -keine- \\
 \textbf {Alternativen:} -keine- \\\\
