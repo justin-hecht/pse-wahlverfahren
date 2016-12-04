@@ -514,7 +514,7 @@ Makro & Effekt \\
 /D11/ Die verfügbaren Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.
 
 \section{Editor von formalen Eigenschaften}
-/D20/ Eine vom \gls{Benutzer} dafinierte formale Eigenschaft wird in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .eig gespeichert.
+/D20/ Eine vom \gls{Benutzer} definierte formale Eigenschaft wird in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .eig gespeichert.
 
 \section{Parameter}
 /D30/ Angegebene Parameter für Wahlen werden in einer Textdatei gespeichert.
@@ -532,7 +532,7 @@ Makro & Effekt \\
 /NF30/ Maximal 10000 Zeilen C-Code \\
 /NF40/ Maximal 100 Vor- und Nachbedingungen pro formaler Eigenschaft \\
 /NF50/ Maximal 50 symbolische Variablen pro formaler Eigenschaften \\
-/NF60/ Maximal 10 Jahre währender timeout \\
+/NF60/ Maximal 10 Jahre währender Timeout \\
 
 
 \chapter{Globale Testfälle und Testszenarien}
@@ -728,35 +728,53 @@ C: Die Zeilennummern werden angezeigt \\ \\
 \textbf{Alternativen:} -keine- \\
 \section{Testfälle für den C-Editor}
 \textbf{/T310/} \\
-\textbf{Prozess: }Auswahl des zu verwendenden Wahl-Templates \\
+\textbf{Prozess:} Auswahl des zu verwendenden Wahl-Templates \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FS1110/ \\
-\textbf{Ziel:} Der Benutzer kann anhand der Wahl-Templates unterschiedliche Wahlverfahren implementieren\\
-\textbf{Kategorie:} Soll\\
+\textbf{Ziel:} Der Benutzer kann anhand der Wahl-Templates unterschiedliche Wahlverfahren implementieren. \\
+\textbf{Kategorie:} soll \\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
-\textbf{Nachbedingung (Erfolg):} \\
-\textbf{Nachbedingung (Fehlschlag):} \\
-\textbf{Akteur:} Benutzer\\
-\textbf{Auslösendes Ereignis:} \\
+\textbf{Nachbedingung (Erfolg):} Der Funktionskörper wird entsprechend des gewählten Wahlverfahrens geändert. \\
+\textbf{Nachbedingung (Fehlschlag):} Der Funktionskörper bleibt derselbe. \\
+\textbf{Akteur:} Benutzer \\
+\textbf{Auslösendes Ereignis:} Der Benutzer will ein anderes Wahl-Template verwenden. \\
 \textbf{Beschreibung:} \\
-Hierfür gibt es die verschiedenen Anwendungsfälle. In den Musskriterien sind 4 unterschiedliche Wahlmuster beschrieben:
+1. Der Benutzer klickt auf Bearbeiten -> Wahlart ändern und wählt dort ein neues Wahl-Template. \\
+2. Der Funktionskörper wird durch den Funktionskörper des neuen Wahl-Templates ersetzt. \\
+\textbf {Erweiterung:} -keine- \\
+\textbf {Alternativen:} -keine- \\
+\\
+\textbf{/T320/} \\
+\textbf{Prozess:} Statische Analyse des Codes \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM1050/ \\
+\textbf{Ziel:} Der Benutzer kann den geschriebenen Code auf syntaktische Fehler untersuchen lassen. \\
+\textbf{Kategorie:} muss \\
+\textbf{Vorbedingung:} Der Editor enthält Code des Benutzers. \\
+\textbf{Nachbedingung (Erfolg):} Alle durch Lexer oder Parser erkennbaren Fehler werden im Fehlerfenster ausgegeben. \\
+\textbf{Nachbedingung (Fehlschlag):} Fehler werden nicht ausgegeben. \\
+\textbf{Akteur:} Benutzer \\
+\textbf{Auslösendes Ereignis:} Der Benutzer will Fehler in seinem Code finden. \\
+\textbf{Beschreibung:} \\
+1. Der Benutzer klickt auf Code -> Statische Analyse. \\
+2. Syntaktische Fehler werden im Fehlerfenster ausgegeben. \\
+\textbf {Erweiterung:} -keine- \\
+\textbf {Alternativen:} -keine- \\
 
-1. \\
-2. \\
-\textbf {Erweiterung:}
-\textbf {Alternativen:}
-
-/T330/ Durch den User veränderte Eigenschaften \\
-/T340/ Statische Analyse des Codes \\
-/T350/ Anzeige im Fehlerfenster
 \section{Testfälle für den Eigenschafteneditor}
-
-/T410/ Eingabe von Vor- und Nachbedingungen mit Boolschen Aussagen\\
-/T411/ boolsche Aussagen unterstützen. Größer kleiner echt und gleich
-und oder gleich nicht gleich
-/T420/ Verwendung der Bereitgestellten Makros \\
-/T430/ Verwendung der symbolischer Variablen 
-Abfragen von Ergebnissen von Wahldurchlauf x
-Abfrage der Stimme eines Wählers v in Wahldurchlauf x
+\textbf{/T410/} \\
+\textbf{Prozess:} Erstellen einer korrekten Eigenschaft \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM2040/ /FM2050/ /FM2060/ /FM2070/ /FM2071/ /FM2072/ /FM2073/ /FM2080/ /FM2090/ /FM2100/ /FM2120/ \\
+\textbf{Ziel:} Der Benutzer kann durch korrektes Anwenden der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax Eigenschaften erstellen. \\
+\textbf{Kategorie:} muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
+\textbf{Nachbedingung (Erfolg):} Die Eingabe wird korrekt erkannt und als Eigenschaft gespeichert. \\
+\textbf{Nachbedingung (Fehlschlag):} Einzelne Elemente der Syntax werden nicht erkannt oder ein inkorrekter boolscher Ausdruck wird akzeptiert. \\
+\textbf{Akteur:} Benutzer \\
+\textbf{Auslösendes Ereignis:} Der Benutzer will eine neue Eigenschaft erstellen. \\
+\textbf{Beschreibung:} \\
+1. Der Benutzer erstellt eine neue Eigenschaft unter Verwendung beliebiger Elemente der Syntax aus \ref{Sprache-für-formale-Eigenschaften}. \\
+2. Der boolsche Ausdruck der Eigenschaft wird korrekt erkannt und gespeichert oder als fehlerhaft erkannt, woraufhin eine Fehlermeldung ausgegeben wird. \\
+\textbf {Erweiterung:} -keine- \\
+\textbf {Alternativen:} -keine- \\
 
 \section{Testfälle für die Eigenschaftenliste}
 
