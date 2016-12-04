@@ -355,7 +355,7 @@ Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfü
 \item Ausgabe des Ergebnisses des Wahldurchlaufs bzw. der Wahldurchläufe
 \end{itemize} 
 /FM0040/ Möglichkeit des Speicherns von Code, formalen Anforderungen und Eingabeparametern als ein Projekt \\
-/FM0050/ Möglichkeit des Öffnens und Editierens der Projekte aus /F0040/
+/FM0050/ Möglichkeit des Öffnens und Editierens der Projekte aus /FM0040/
 
 
 \section{C-Editor für Wahlverfahren}
@@ -376,14 +376,14 @@ Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfü
 \item Kommentare
 \end{itemize}
 /FS1080/ Anzeigen der Zeilennummern am linken Zeilenrand \\
-/FS1090/ Anzeigen von syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
+/FS1090/ Anzeigen von syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: Wie /FM1050/ ist dies von /FK1150/ abgegrenzt durch synchronen Aufruf der Funktionalität.
 \begin{itemize}
 \item Verwendung von Schlüsselwörtern als Variablennamen 
 \item Vergessene Semikolons am Ende von Anweisungen
 \item Nicht geschlossene Klammern und Anführungszeichen
 \item Andere Konstrukte, welche der Grammatik der C-Sprache widersprechen
 \end{itemize}
-Wie /FM1050/ ist dies von /FK1150/ abgegrenzt durch synchronen Aufruf der Funktionalität.
+
 \\
 /FS1100/ Reaktion auf typische Tastenkürzel\\
 \begin{table}[H]
@@ -456,11 +456,9 @@ Makro & Effekt \\
 \verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für mindestens einen Sitz gilt. \\
 \hline 
 \verb!VOTE_SUM_FOR_CANDIDATE(c)! & Gibt die Anzahl Stimmen für Kandidaten c zurück\\
-
 \end{tabular}
 \label{table:Macros_for_formal_Attributes}
-\end{table} \\
-
+\end{table}
 /FM2060/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitzes \\
 /FM2070/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
 /FM2071/ Bereitstellen von Operatoren für logisches UND und ODER \\
@@ -473,9 +471,9 @@ Makro & Effekt \\
 /FM2120/ Sanity-Checks: Nur syntaktisch korrekte boolsche Ausdrücke werden zur Überprüfung zugelassen.
 
 \subsection{Soll-Kriterien}
-/FS2120/ Syntax-Highlighting \\
-/FS2130/ Anzeigen von syntaktischen Fehlern im Code \\
-/FS2131/ Reaktion auf typische Tastenkürzel wie in /FS1100/ (siehe \ref{table:Hotkeys_and_operations}) \\
+/FS2130/ Syntax-Highlighting \\
+/FS2140/ Anzeigen von syntaktischen Fehlern im Code \\
+/FS2150/ Reaktion auf typische Tastenkürzel wie in /FS1100/ (siehe \ref{table:Hotkeys_and_operations}) \\
 
 
 \subsection{Kann-Kriterien}
@@ -505,8 +503,9 @@ Makro & Effekt \\
 /FM4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
 /FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaftenliste zusammen als Projekt zu speichern \\
 /FM4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten \\
-/FM4070/ Möglichkeit Überprüfungen zu starten \\
-/FM4070/ Möglichkeit Überprüfungen zu beenden \\
+/FM4070/ Möglichkeit die Überprüfungen zu starten \\
+/FM4080/ Möglichkeit die Überprüfungen abzubrechen \\
+
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
