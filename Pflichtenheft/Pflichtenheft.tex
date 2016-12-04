@@ -240,7 +240,7 @@ Folgende Funktionalität bietet der Parametereditor zusätzlich:
 \subsection{C-Editor}
 Folgende Funktionalität bietet der C-Editor zusätzlich:
 \begin{itemize}
-	\item Code completion
+	\item Code-Completion
 	\item Automatisches Einrücken
 	\item Optionen für Individualisierung (z.B. Fontwahl)
 	\item Fehleranzeige asynchron während der Eingabe
@@ -248,7 +248,7 @@ Folgende Funktionalität bietet der C-Editor zusätzlich:
 
 \subsection{Eigenschafteneditor}
 \begin{itemize}
-\item Code completion
+\item Code-Completion
 \end{itemize}
 
 
@@ -485,7 +485,7 @@ Makro & Effekt \\
 \item Analyse des Codes und Anzeigen relevanter, bereits definierter Eigenschaften und symbolischer Variablen
 \end{itemize}
 
-\section{Eigenschaften-Liste}
+\section{Eigenschaftenliste}
 \subsection{Muss-Kriterien}
 /FM3010/ Darstellung der zu analysierenden Eigenschaften in Listenform \\
 /FM3020/ Möglichkeit zum Erstellen neuer Eigenschaften \\
@@ -503,7 +503,7 @@ Makro & Effekt \\
 /FM4020/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
 /FM4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
 /FM4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
-/FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaften-Liste als Projekt zu speichern \\
+/FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaftenliste als Projekt zu speichern \\
 /FM4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten \\
 /FM4070/ Möglichkeit Überprüfungen zu starten \\
 /FM4070/ Möglichkeit Überprüfungen zu beenden \\
@@ -523,8 +523,8 @@ Makro & Effekt \\
 \section{Projektdaten}
 /D40/ Ein Projekt besteht aus Parametern, Eigenschaften und Wahlverfahren. Diese werden gemeinsam in einer Textdatei gespeichert \\
 
-\section{Eigenschaften-Liste}
-/D50/ Die in der Eigenschaften-Liste erstellten Listen werden in Textdateien gespeichert \\
+\section{Eigenschaftenliste}
+/D50/ Die in der Eigenschaftenliste erstellten Listen werden in Textdateien gespeichert \\
 
 \chapter{Nichtfunktionale Anforderungen}
 /NF10/ Nicht mehr als 0,5 Sekunden Verzögerung bei Erfragen der Code-Completion \\
@@ -542,7 +542,7 @@ Innerhalb des kompletten Kapitels 8 ist mit dem Ausdruck \textbf{Dokument} je na
 Im Falle des \textbf{C-Editors} handelt es sich um den C-Code und das Kürzel \textbf{C}. \\
 Im Falle des \textbf{Eingeschafteneditors} handelt es sich um eine spezifische Eigenschaft von Wahlverfahren und das Kürzel \textbf{E}. \\
 Im Falle der \textbf{Eigenschaftenliste} handelt es sich um die Liste der Eigenschaften von Wahlverfahren und das Kürzel \textbf{L}. \\
-Im Falle des \textbf{Parametereditors} handelt es sich um ein komplettes Projekt. Genauer gesagt also den C-Code, die Parameter und die Eigenschaften für Wahlverfahren inklusive der kompletten Eigenschaften-Liste. Der Kürzel für den Parametereditor lautet \textbf{P}. \\
+Im Falle des \textbf{Parametereditors} handelt es sich um ein komplettes Projekt. Genauer gesagt also den C-Code, die Parameter und die Eigenschaften für Wahlverfahren inklusive der kompletten Eigenschaftenliste. Der Kürzel für den Parametereditor lautet \textbf{P}. \\
 
 \section{Testfälle für die Datenverwaltung}
 
@@ -996,11 +996,11 @@ Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwares
 
 \ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Diese einzelnen Packete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor wie aufwendig die implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Packete im Verlauf des Entwurfs als Klassen realisiert werden. Andernseits ist es auch möglich, dass weitere Packete hinzu kommen. Abhängigkeiten zu Java-Bibliotheken wie zum Beispiel Swing sind nicht dargestellt.
 
-Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweiße haben C- und Eigenschaften-Editor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es geben in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI}. Daher wird diese Funktionalität gekapselt in einem eigenen Packet. 
+Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweiße haben C- und Eigenschafteneditor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es geben in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI}. Daher wird diese Funktionalität gekapselt in einem eigenen Packet. 
 
 Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle da über welche man Instanzen der benötigten Komponenten beziehen kann. In dem Diagram werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency Manager geregelt. 
 
-Das Kommunikator-Packet übernimmt die Kommunikation zwischen dem Parameter-Editor und den Komponenten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaften-Liste weiterleiten.
+Das Kommunikator-Packet übernimmt die Kommunikation zwischen dem Parametereditor und den Komponenten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaftenliste weiterleiten.
 
 Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Packet wird Funktionalität zu diesem Zweck bereitstellen. 
 
