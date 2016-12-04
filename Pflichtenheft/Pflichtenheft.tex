@@ -296,12 +296,12 @@ Zuletzt speichert er das Gesamtprojekt und einzeln das Wahlverfahren ab. Letzter
 \caption{Aktivitätsdiagramm zu Szenario 1}
 \label{Packet-scetch}
 \end{figure}
-
+\\
 \textbf{Szenario 2}\\
 Eine Prüfstelle bekommt ein Wahlverfahren übergeben welches sie auf bestimmte formale Eigenschaften testen soll.\\
 Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
 Um das Wahlverfahren auf die Eigenschaften zu prüfen werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
-Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.\\
+Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.\\
 
 \begin{figure}[H]
 \includegraphics[scale=0.12]{ActivityDiagramScenario2.png}
@@ -341,30 +341,30 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 \section{Allgemein}
 \subsection{Muss-Kriterien}
 /FM0010/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
-/F0020/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
+/FM0020/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
 /FM0030/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
 /FM0031/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
 \begin{itemize}
 \item Zahlen in Dezimaldarstellung
 \item Ausgabe der Eingabeparameter des Wahldurchlaufs bzw. der Wahldurchläufe:
 \begin{itemize}
-\item Ausgabe des Stimmen Arrays (Anzahl Stimmen und Stimmen) 
+\item Ausgabe des Stimmenarrays (Anzahl Stimmen und einzelne Stimmen) 
 \item Ausgabe der Kandidaten (Anzahl)
 \item Ausgabe der Sitze (Anzahl)
 \end{itemize}
 \item Ausgabe des Ergebnisses des Wahldurchlaufs bzw. der Wahldurchläufe
 \end{itemize} 
-/FM0040/ Möglichkeit des Speicherns von Code, formaler Anforderungen und Eingabeparametern als ein Projekt \\
+/FM0040/ Möglichkeit des Speicherns von Code, formalen Anforderungen und Eingabeparametern als ein Projekt \\
 /FM0050/ Möglichkeit des Öffnens und Editierens der Projekte aus /F0040/
 
 
-\section{C-Code Editor für Wahlverfahren}
+\section{C-Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
 /FM1010/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
 /FM1020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
-/FM1030/ Speichern von erstelltem Code als Datei auf der Festplatte an vom User angegebenen Ort \\
+/FM1030/ Speichern von erstelltem Code als Datei auf der Festplatte an vom \gls{Benutzer} angegebenen Ort \\
 /FM1040/ Laden und Darstellen von Dateien korrekten Formats \\
-/FM1050/ Anzeigen syntaktischer Fehler in dem Fehler Fenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}). Nicht asynchron während Eingeben des Codes sondern synchron nach Eingabe des entsprechenden Befehls.
+/FM1050/ Anzeigen syntaktischer Fehler im Fehlerfenster (siehe \ref{Editor-mit-Fehler-nach-statischer-analyse}). Nicht asynchron während Eingabe des Codes, sondern synchron nach Eingabe des entsprechenden Befehls.
 
 \subsection{Soll-Kriterien}
 /FS1060/ Überprüfen des Formats beim Ladevorgang. Falls falsches Format: Ausgabe einer Fehlermeldung \\
@@ -376,7 +376,7 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 \item Kommentare
 \end{itemize}
 /FS1080/ Anzeigen der Zeilennummern am linken Zeilenrand \\
-/FS1090/ Anzeigen von Syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
+/FS1090/ Anzeigen von syntaktischen Fehlern im Code, welche durch einen Lexer oder Parser erkannt werden können: 
 \begin{itemize}
 \item Verwendung von Schlüsselwörtern als Variablennamen 
 \item Vergessene Semikolons am Ende von Anweisungen
@@ -384,8 +384,8 @@ Wenn das Tool fertig mit dem Überprüfen ist, werden erfüllte und nichterfüll
 \item Andere Konstrukte, welche der Grammatik der C-Sprache widersprechen
 \end{itemize}
 Wie /FM1050/ ist dies von /FK1150/ abgegrenzt durch synchronen Aufruf der Funktionalität.
-
-Reaktion auf typische Tastenkürzel\\
+\\
+/FS1100/ Reaktion auf typische Tastenkürzel\\
 \begin{table}[H]
 \caption{Hotkeys und verbundene Operationen}
 \begin{tabular}{lcr} 
@@ -402,12 +402,12 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 \end{tabular}
 \label{table:Hotkeys_and_operations}
 \end{table}
-
+\\
 /FS1110/ Bereitstellen von Wahl-Templates
 \begin{itemize}
 \item Jeder Wähler wählt genau einen Kandidaten.
-\item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge .
-\item Jeder Wähler ordnet Kandidaten eine Nummer zwischen MAX (maximale Zustimmung) und MIN (maximale Abneigung) zu. MAX und MIN sind dabei vom User konfigurierbar. 
+\item Jeder Wähler ordnet Kandidaten nach Präferenz in absteigender Reihenfolge.
+\item Jeder Wähler ordnet Kandidaten eine Nummer zwischen MAX (maximale Zustimmung) und MIN (maximale Abneigung) zu. MAX und MIN sind dabei vom \gls{Benutzer} konfigurierbar. 
 \item Jeder Wähler gibt zu jedem Kandidaten entweder ein Ja oder Nein ab. Zustimmungswahl.
 \end{itemize}
 
@@ -415,21 +415,21 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 /FK1120/ Automatisches Einrücken des Codes in Schleifen und if-Statements \\
 /FK1130/ Code-Completion
 \begin{itemize}
-\item Automatisches Schließen von Klammern und Anführungszeichen.
+\item Automatisches Schließen von Klammern und Anführungszeichen
 \item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
-\item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben.
+\item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben
 \end{itemize}
-
+\\
 /FK1140/ Durch den User konfigurierbares Verhalten:
 \begin{itemize}
-\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden.
+\item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
 \item Festlegen des verwendeten Fonts
 \item An- und Ausschalten der angezeigten Zeilennummern
-\item Festlegen wie vielen Leerzeichen ein Tab entspricht
+\item Festlegen, wie vielen Leerzeichen ein Tab entspricht
 \end{itemize}
-/FK1150/ Anzeige syntaktischer Fehler im Code Editor asynchron während Eingabe des Codes.
+/FK1150/ Anzeige syntaktischer Fehler im Code Editor asynchron während Eingabe des Codes
  
-	\section{Editor für formale Eigenschaften}
+\section{Eigenschafteneditor}
 \subsection{Muss-Kriterien}
 /FM2010/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
 /FM2020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
@@ -443,39 +443,39 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 
 Makro & Effekt \\
 \hline 
-\verb!FOR_ALL_VOTERS(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Wähler verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für alle Wähler gilt \\
+\verb!FOR_ALL_VOTERS(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Wähler verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für alle Wähler gilt. \\
 \hline 
-\verb!FOR_ALL_CANDIDATES(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Kandidat verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für alle Kandidaten gilt \\
+\verb!FOR_ALL_CANDIDATES(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Kandidat verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für alle Kandidaten gilt. \\
 \hline 
-\verb!FOR_ALL_SEATS(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für alle Sitze gilt \\
+\verb!FOR_ALL_SEATS(i)! & In dem darauf folgenden boolschen Ausdruck kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für alle Sitze gilt. \\
 \hline 
-\verb!EXISTS_ONE_VOTER(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Wähler verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für mindesten einen Wähler gilt \\
+\verb!EXISTS_ONE_VOTER(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Wähler verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für mindestens einen Wähler gilt. \\
 \hline 
-\verb!EXISTS_ONE_CANDIDATE(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Kandidat verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für mindesten einen Kandidat gilt \\
+\verb!EXISTS_ONE_CANDIDATE(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Kandidat verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für mindestens einen Kandidat gilt. \\
 \hline 
-\verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr falls der folgende Ausdruck für mindesten einen Sitz gilt \\
+\verb!EXISTS_ONE_SEAT(i)! & In der darauf folgenden Eigenschaft kann i als symbolische Variable von Typ Sitz verwendet werden. Der Gesamtausdruck ist wahr, falls der folgende Ausdruck für mindestens einen Sitz gilt. \\
 \hline 
 \verb!VOTE_SUM_FOR_CANDIDATE(c)! & Gibt die Anzahl Stimmen für Kandidaten c zurück\\
 
 \end{tabular}
 \label{table:Macros_for_formal_Attributes}
-\end{table}
+\end{table} \\
 
 /FM2060/ Bereitstellen symbolischer Variablen für Wähler, Kandidaten und Sitzes \\
 /FM2070/ Bereitstellen von Operatoren für Implikation und Äquivalenz \\
 /FM2071/ Bereitstellen von Operatoren für logisches UND und ODER \\
-/FM2072/ Bereitstellen von Vergleichen: Kleiner, Kleiner gleich, größer, größer gleich,  Gleichheit und Ungleichheit zwischen Typen die diese Vergleiche auch in C zulassen \\
+/FM2072/ Bereitstellen von Vergleichen: Kleiner, kleiner gleich, größer, größer gleich,  Gleichheit und Ungleichheit zwischen Typen, die diese Vergleiche auch in C zulassen \\
 /FM2073/ Möglichkeit zur Abfrage der Stimme eines Wählers v in Wahldurchlauf Nummer x durch VOTESx(v)\\
 /FM2080/ Möglichkeit zur Abfrage des Ergebnisses von Wahldurchlauf Nummer x durch ELECTx \\
-/FM2090/ Beliebig tiefe, lediglich von Hardware begrenzte, Schachtelung dieser Konstrukte \\
+/FM2090/ Beliebig tiefe, lediglich von Hardware begrenzte Schachtelung dieser Konstrukte \\
 /FM2100/ Möglichkeit zum Speichern von Eigenschaften \\
 /FM2110/ Möglichkeit zum Laden und Bearbeiten von Eigenschaften in korrektem Format \\
 /FM2120/ Sanity-Checks: Nur syntaktisch korrekte boolsche Ausdrücke werden zur Überprüfung zugelassen.
 
 \subsection{Soll-Kriterien}
 /FS2120/ Syntax-Highlighting \\
-/FS2130/ Anzeigen von Syntaktischen Fehlern im Code. \\
-/FS2131/ Reaktion auf typische Tastenkürzel wie in /FS1100/, siehe \ref{table:Hotkeys_and_operations} \\
+/FS2130/ Anzeigen von syntaktischen Fehlern im Code \\
+/FS2131/ Reaktion auf typische Tastenkürzel wie in /FS1100/ (siehe \ref{table:Hotkeys_and_operations}) \\
 
 
 \subsection{Kann-Kriterien}
@@ -500,10 +500,10 @@ Makro & Effekt \\
 \subsection{Muss-Kriterien}
 /MF4010/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
 /MF4011/ Möglichkeit die Parameter in /F4010/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden \\
-/FM4020/ Sanity-checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
+/FM4020/ Sanity-Checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
 /FM4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
 /FM4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
-/FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaftenliste als Projekt zu speichern \\
+/FM4050/ Möglichkeiten das momentan geöffnete Wahlverfahren, die momentan eingestellten Parameter und die momentan geöffnete Eigenschaftenliste zusammen als Projekt zu speichern \\
 /FM4060/ Möglichkeit die Projekte aus /F4050/ zu öffnen und zu bearbeiten \\
 /FM4070/ Möglichkeit Überprüfungen zu starten \\
 /FM4070/ Möglichkeit Überprüfungen zu beenden \\
