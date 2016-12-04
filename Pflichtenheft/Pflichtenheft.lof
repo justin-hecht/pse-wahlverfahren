@@ -10,23 +10,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Anwendungsfalldiagramm von B.E.A.S.T.}}{39}{figure.9.1}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Skizzenhfte Beschreibung der Packete und ihrer Abh\IeC {\"a}ngigkeiten}}{41}{figure.9.2}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Anwendungsfalldiagramm von B.E.A.S.T.}}{38}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Skizzenhfte Beschreibung der Packete und ihrer Abh\IeC {\"a}ngigkeiten}}{40}{figure.9.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Der C-Editor ohne Code. Direkt unter dem Men\IeC {\"u}-Streifen befindet sich der Tool-Streifen.}}{45}{figure.10.1}
-\contentsline {figure}{\numberline {10.2}{\ignorespaces Der Dialog welcher dem User das Erstellen neuer Wahlverfahren erm\IeC {\"o}glicht.}}{45}{figure.10.2}
-\contentsline {figure}{\numberline {10.3}{\ignorespaces Der C-Editor mit Code und Anzeige der Wahlart.}}{46}{figure.10.3}
-\contentsline {figure}{\numberline {10.4}{\ignorespaces Fehleranzeige bei syntaktischem Fehler ohne Maus-Hover (Kann-Kriterium).}}{46}{figure.10.4}
-\contentsline {figure}{\numberline {10.5}{\ignorespaces Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium).}}{47}{figure.10.5}
-\contentsline {figure}{\numberline {10.6}{\ignorespaces Fehleranzeige nach statischer Analyse.}}{47}{figure.10.6}
-\contentsline {figure}{\numberline {10.7}{\ignorespaces Eigenschaftenliste vor einer \IeC {\"U}berpr\IeC {\"u}fung.}}{48}{figure.10.7}
-\contentsline {figure}{\numberline {10.8}{\ignorespaces Eigenschaftenliste w\IeC {\"a}hrend einer \IeC {\"U}berpr\IeC {\"u}fung.}}{48}{figure.10.8}
-\contentsline {figure}{\numberline {10.9}{\ignorespaces Liste nach \IeC {\"U}berpr\IeC {\"u}fung.}}{49}{figure.10.9}
-\contentsline {figure}{\numberline {10.10}{\ignorespaces Anzeige des Gegenbeispiels.}}{49}{figure.10.10}
-\contentsline {figure}{\numberline {10.11}{\ignorespaces Eigenschafteneditor ohne Code mit symbolischen Variablen.}}{50}{figure.10.11}
-\contentsline {figure}{\numberline {10.12}{\ignorespaces Eigenschafteneditor mit Beispielhafter Eigenschaft Anonymit\IeC {\"a}t und beispielhaft dargestelltem Syntax-Highlighting (Kann-Kriterium).}}{51}{figure.10.12}
-\contentsline {figure}{\numberline {10.13}{\ignorespaces Der Parametereditor.}}{52}{figure.10.13}
-\contentsline {figure}{\numberline {10.14}{\ignorespaces Das Fenster, welches dem \gls {Benutzer} erlaubt die an CBMC weitergegebenen Argumente zu spezifizieren.}}{52}{figure.10.14}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Der C-Editor ohne Code. Direkt unter dem Men\IeC {\"u}-Streifen befindet sich der Tool-Streifen.}}{44}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Der Dialog welcher dem User das Erstellen neuer Wahlverfahren erm\IeC {\"o}glicht.}}{44}{figure.10.2}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Der C-Editor mit Code und Anzeige der Wahlart.}}{45}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Fehleranzeige bei syntaktischem Fehler ohne Maus-Hover (Kann-Kriterium).}}{45}{figure.10.4}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium).}}{46}{figure.10.5}
+\contentsline {figure}{\numberline {10.6}{\ignorespaces Fehleranzeige nach statischer Analyse.}}{46}{figure.10.6}
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Eigenschaftenliste vor einer \IeC {\"U}berpr\IeC {\"u}fung.}}{47}{figure.10.7}
+\contentsline {figure}{\numberline {10.8}{\ignorespaces Eigenschaftenliste w\IeC {\"a}hrend einer \IeC {\"U}berpr\IeC {\"u}fung.}}{47}{figure.10.8}
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Liste nach \IeC {\"U}berpr\IeC {\"u}fung.}}{48}{figure.10.9}
+\contentsline {figure}{\numberline {10.10}{\ignorespaces Anzeige des Gegenbeispiels.}}{48}{figure.10.10}
+\contentsline {figure}{\numberline {10.11}{\ignorespaces Eigenschafteneditor ohne Code mit symbolischen Variablen.}}{49}{figure.10.11}
+\contentsline {figure}{\numberline {10.12}{\ignorespaces Eigenschafteneditor mit Beispielhafter Eigenschaft Anonymit\IeC {\"a}t und beispielhaft dargestelltem Syntax-Highlighting (Kann-Kriterium).}}{50}{figure.10.12}
+\contentsline {figure}{\numberline {10.13}{\ignorespaces Der Parametereditor.}}{51}{figure.10.13}
+\contentsline {figure}{\numberline {10.14}{\ignorespaces Das Fenster, welches dem \gls {Benutzer} erlaubt die an CBMC weitergegebenen Argumente zu spezifizieren.}}{51}{figure.10.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -301,7 +301,6 @@ Zuletzt speichert er das Gesamtprojekt und einzeln das Wahlverfahren ab. Letzter
 \caption{Aktivitätsdiagramm zu Szenario 1}
 \label{Packet-scetch}
 \end{figure}
-\\
 \textbf{Szenario 2}\\
 Eine Prüfstelle bekommt ein Wahlverfahren übergeben, welches sie auf bestimmte formale Eigenschaften testen soll.\\
 Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
@@ -389,7 +388,7 @@ Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfü
 \item Andere Konstrukte, welche der Grammatik der C-Sprache widersprechen
 \end{itemize}
 
-\\
+
 /FS1100/ Reaktion auf typische Tastenkürzel\\
 \begin{table}[H]
 \caption{Hotkeys und verbundene Operationen}
@@ -407,7 +406,6 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 \end{tabular}
 \label{table:Hotkeys_and_operations}
 \end{table}
-\\
 /FS1110/ Bereitstellen von Wahl-Templates
 \begin{itemize}
 \item Jeder Wähler wählt genau einen Kandidaten.
@@ -424,7 +422,6 @@ Strg + Leer & Anzeigen der Code-Completion-Vorschläge\\
 \item Primitiv: Vorschlagen bereits im Code vorgekommener Wörter
 \item Intelligent: Durch Analysieren eines ASTs nur Vorschlagen der Wörter welche im Kontext Sinn ergeben
 \end{itemize}
-\\
 /FK1140/ Durch den User konfigurierbares Verhalten:
 \begin{itemize}
 \item Festlegen der Farben, welche beim Syntax-Highlighting verwendet werden
@@ -501,8 +498,8 @@ Makro & Effekt \\
 
 \section{Editor für Eingabeparameter}
 \subsection{Muss-Kriterien}
-/MF4010/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
-/MF4011/ Möglichkeit die Parameter in /F4010/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden \\
+/FM4010/ Möglichkeit zur Angabe der zu analysierenden Anzahl von Wählern, Kandidaten und Sitzen \\
+/FM4011/ Möglichkeit die Parameter in /F4010/ als Minimum und Maximum anzugeben, welche nacheinander abgearbeitet werden \\
 /FM4020/ Sanity-Checks der eingegebenen Parameter: Alle größer 0, Minimum kleiner gleich Maximum \\
 /FM4030/ Möglichkeit zum Eingeben einer Zeitspanne nach welcher die Berechnung abgebrochen wird \\
 /FM4040/ Möglichkeit direkter Eingabe von Argumenten, welche dem Aufruf von CBMC mitgegeben werden \\
@@ -555,16 +552,15 @@ Die Testfälle innerhalb dieses Abschnittes betreffen alle 4 GUI-Elemente. \\\\
 \textbf{Prozess: }Erstellen eines neuen Dokuments  \\
 \textbf{Abgedeckte Funktionale Anforderungen:} \\
 C: /FS1030/ /FS1100/ /FS1110/ \\
-E: /FM2100/	\\
-L: /F3020/ \\
-P: /F4050/	\\
+E: /FM2100/	/FS2150/\\
+L: /FM3020/ \\
+P: /FM4050/	\\
 \textbf{Ziel:} Es kann ein neues Dokument angelegt werden\\
 \textbf{Kategorie:} muss\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer wählt einen korrekten Speicherort und einen gültigen Dateinamen.\\
 \textbf{Nachbedingung (Erfolg):} Das Programm zeigt ein neues, leeres Dokument an, das einen Speicherplatz und einen Namen hat.\\
 C: Der für das gewählte Wahl-Template benötigte Funktionsrumpf wird generiert.
 \textbf{Nachbedingung (Fehlschlag):} Es wurde kein neues, leeres Dokument angelegt und dargestellt\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein neues Dokument anlegen\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastenkombination Strg + N (hierbei muss das GUI-Element ausgewählt sein, welches getestet werden soll) oder der Benutzer betätigt den Button Neu des jeweiligen Fensters. \\
@@ -578,10 +574,10 @@ C: Das Programm generiert den für das gewählte Wahl-Template benötigten Funkt
 \textbf{/T020/} \\ 
 \textbf{Prozess: }Speichern der Dokumente\\
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
-C: /FS1030/ /FS1100/\\
+C: /FM1030/ /FS1100/\\
 E: /FM2100/	\\
-L: /F3060/ \\
-P: /F4050/\\
+L: /FM3060/ \\
+P: /FM4050/\\
 \begin{addmargin}[15pt]{0pt}
 \textbf{/T021/} \\ 
 \textbf{Prozess: }Speichern unter\\
@@ -605,7 +601,6 @@ P: /F4050/\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe.\\
 \textbf{Nachbedingung (Erfolg):} Das Dokument wurde korrekt gespeichert. Ort und Name wurden nicht verändert.\\
 \textbf{Nachbedingung (Fehlschlag):} Das Dokument wurde nicht gespeichert. \\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will das Dokument speichern\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastenkombination Strg + s (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Speichern des jeweiligen Fensters.
@@ -618,14 +613,13 @@ P: /F4050/\\
 \textbf{Abgedeckte Funktionale Anforderungen:} \\
 C: /FS1040/ /FS1060/ /FS1100/\\
 E: /FM2110/	\\
-L: /F3070/ \\
-P: /F4060/\\
+L: /FM3070/ \\
+P: /FM4060/\\
 \textbf{Ziel:} Ein zuvor gespeichertes Dokument wird geladen\\
 \textbf{Kategorie:} muss\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Es existiert ein zu ladendes Dokument, welches korrekt gespeichert wurde\\
 \textbf{Nachbedingung (Erfolg):} Das Dokument wurde korrekt in den Editor geladen. \\
 \textbf{Nachbedingung (Fehlschlag):} Das zuvor geöffnete Dokument ist geladen. \\ 
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer möchte ein Dokument laden \\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastenkombination Strg + O (hierbei muss das GUI-Element ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Öffnen des jeweiligen Fensters. \\
@@ -641,13 +635,13 @@ Die 2 Nachfolgende Testfälle /T100/ und /T110/ betreffen die 3 Fenster C-Editor
 \textbf{Prozess: }Rückgängig \\
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
 C: /FS1100/ \\
+E: /FS2150/ \\
 Allgemein: /F0010/ /F0050/ \\
 \textbf{Ziel:} Einzelne Änderungsschritte innerhalb der Bearbeitung rückgängig machen können\\
 \textbf{Kategorie:} soll\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer hat zuvor Bearbeitungsschritte ausgeführt. \\
 \textbf{Nachbedingung (Erfolg):} Der letzte Bearbeitungsschritt wurde rückgängig gemacht.
 \textbf{Nachbedingung (Fehlschlag):} Das geöffnete Dokument bleibt unverändert\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer will einen oder mehrere Bearbeitungsschritte rückgängig machen.\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastenkombination Strg + z (hierbei muss das GUI-Fenster ausgewählt sein, welches getestet werden soll) oder der Benutzer betätigt den Button Rückgängig des jeweiligen Fensters.\\
@@ -658,13 +652,13 @@ Allgemein: /F0010/ /F0050/ \\
 \textbf{Prozess: }Wiederherstellen \\
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
 C: /FS1100/ \\
+E: /FS2150/ \\
 Allgemein: /F0010/ /F0050/ \\
 \textbf{Ziel:} Einzelne Änderungsschritte innerhalb der Bearbeitung, die zuvor mithilfe des Rückgängig-Prozesses rückgängig gemacht wurden, können wiederhergestellt werden.\\
 \textbf{Kategorie:} soll\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Der Benutzer hat zuvor einen oder mehrere Bearbeitungsschritte rückgängig gemacht\\
 \textbf{Nachbedingung (Erfolg):} Der zuletzt rückgängig gemachte Stand des Dokuments, der noch nicht wiederhergestellt wurde, wird wiederhergestellt.
 \textbf{Nachbedingung (Fehlschlag):} Der Zustand des Dokuments bleibt unverändert.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer will einen oder mehrere Bearbeitungsschritte, die er zuvor rückgängig gemacht hat, wiederherstellen\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastenkombination Strg + r (hierbei muss das GUI-Fensters ausgewählt sein, welches verwendet werden soll) oder der Benutzer betätigt den Button Wiederherstellen des jeweiligen Fensters.\\
@@ -680,12 +674,12 @@ Die Nachfolgenden Testfälle betreffen nur die 2 GUI-Elemente C-Editor und Eigen
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
 Allgemein: /F0010/ \\
 C: /FS1100/ \\
+E: /FS2150/ \\
 \textbf{Ziel: Bearbeiten des Textes mit den aus anderen Editoren bekannten Funktionen Kopieren Ausschneiden und Rückgängig} \\
 \textbf{Kategorie:} soll\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
 \textbf{Nachbedingung (Erfolg):} Der Text wurde wie gewünscht bearbeitet\\
 \textbf{Nachbedingung (Fehlschlag):} Der Text wurde nicht wie gewünscht bearbeitet\\
-\textbf{Akteur:} Benutzer \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will eine der Funktionen Kopieren, Ausschneiden oder Einfügen verwenden\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet entweder die Buttons in der GUI oder die Tastenkürzel:\\
@@ -698,13 +692,12 @@ Strg + x für Ausschneiden, Strg + c für Kopieren und Strg + v für Einfügen. 
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
 Allgemein: /F0010/  \\
 C: /FM1010/ /FM1020/ /FS1070/ /FS1080/ /FS1090/ /FS1120/ /FS1130/   \\
-E: /FM2010/ /FM2020/ /FS2120 /FS2130/ /FS2140/ \\
-\textbf{Ziel: Der angezeigte Text in den Editoren kann bearbeitet werden. Die Bearbeitung wird mit der Bereitstellung von unterstützenden Funktionen weiterhin vereinfacht} \\
+E: /FM2010/ /FM2020/ /FM2120 /FS2130/ /FS2140/ \\
+\textbf{Ziel:} Der angezeigte Text in den Editoren kann bearbeitet werden. Die Bearbeitung wird mit der Bereitstellung von unterstützenden Funktionen weiterhin vereinfacht\\
 \textbf{Kategorie:} muss bzw. soll oder kann bei den Erweiterungen\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
 \textbf{Nachbedingung (Erfolg):} Der Text kann bearbeitet werden. Die unterstützenden Funktionen funktionieren wie beschrieben\\
 \textbf{Nachbedingung (Fehlschlag):} Der Text kann nicht bearbeitet werden\\
-\textbf{Akteur:} Benutzer \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will seinen Code bearbeiten\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer verwendet die Tastatur um neuen Text einzugeben bzw. zu verändern\\
@@ -739,7 +732,6 @@ C: Die Zeilennummern werden angezeigt \\ \\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe.\\
 \textbf{Nachbedingung (Erfolg):} Der Funktionskörper wird entsprechend des gewählten Wahlverfahrens geändert. \\
 \textbf{Nachbedingung (Fehlschlag):} Der Funktionskörper bleibt derselbe. \\
-\textbf{Akteur:} Benutzer \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein anderes Wahl-Template verwenden. \\
 \textbf{Beschreibung:} \\
 1. Der Benutzer klickt auf Bearbeiten -> Wahlart ändern und wählt dort ein neues Wahl-Template. \\
@@ -755,7 +747,6 @@ C: Die Zeilennummern werden angezeigt \\ \\
 \textbf{Vorbedingung:} Der Editor enthält Code des Benutzers. \\
 \textbf{Nachbedingung (Erfolg):} Alle durch Lexer oder Parser erkennbaren Fehler werden im Fehlerfenster ausgegeben. \\
 \textbf{Nachbedingung (Fehlschlag):} Fehler werden nicht ausgegeben. \\
-\textbf{Akteur:} Benutzer \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will Fehler in seinem Code finden. \\
 \textbf{Beschreibung:} \\
 1. Der Benutzer klickt auf Code -> Statische Analyse. \\
@@ -772,7 +763,6 @@ C: Die Zeilennummern werden angezeigt \\ \\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe\\
 \textbf{Nachbedingung (Erfolg):} Die Eingabe wird korrekt erkannt und als Eigenschaft gespeichert. \\
 \textbf{Nachbedingung (Fehlschlag):} Einzelne Elemente der Syntax werden nicht erkannt oder ein inkorrekter boolscher Ausdruck wird akzeptiert. \\
-\textbf{Akteur:} Benutzer \\
 \textbf{Auslösendes Ereignis:} Der Benutzer will eine neue Eigenschaft erstellen. \\
 \textbf{Beschreibung:} \\
 1. Der Benutzer erstellt eine neue Eigenschaft unter Verwendung beliebiger Elemente der Syntax aus \ref{Sprache-für-formale-Eigenschaften}. \\
@@ -782,7 +772,7 @@ C: Die Zeilennummern werden angezeigt \\ \\
 
 \section{Testfälle für die Eigenschaftenliste}
 
-\textbf{/T410/}\\
+\textbf{/T510/}\\
 \textbf{Prozess: }Ablesen des Ergebnisses der Überprüfung der formalen Eigenschaft. \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM0010/ /FM0020/ /FM0030/ /FM0031/ \\
 \textbf{Ziel:} Der Benutzer kann die Ergebnisse der Überprüfung der formalen
@@ -795,7 +785,6 @@ vorher eingegebenes Wahlverfahren zu beginnen.\\
 und zeigt das Ergebnis dieser korrekt an.\\
 \textbf{Nachbedingung (Fehlschlag):} Es wird kein oder ein falsches Ergebnis
 angezeigt.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer startet die Überprüfung und wartet
 auf die Beendigung.	\\
 \textbf{Beschreibung:} \\
@@ -805,11 +794,8 @@ haben will, und wählt sie aus. \\
 3. Das Program überprüft die Eigenschaft. \\
 4. Nach der Überprüfung zeigt das Program das Ergebnis dem Benutzer an. \\
 \textbf {Erweiterung:} -keine- \\
-\textbf {Alternativen:} -keine- \\ \\
-
-
-
-\textbf{/T420/}\\
+\textbf {Alternativen:} -keine- \\\\
+\textbf{/T520/}\\
 \textbf{Prozess: }Einstellen ob eine formale Eigenschaft, die in der Liste geladen ist, in der nächsten Überprüfung verwendet werden soll. \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM3010/ /FM3050/ \\
 \textbf{Ziel:} Der Benutzer kann die Überprüfung einzelner formaler
@@ -824,7 +810,6 @@ wurden alle ausgewählten Eigenschaften überprüft\\
 \textbf{Nachbedingung (Fehlschlag):} Es wurden Eigenschaften nicht überprüft,
 die überprüft werden sollten und/oder es wurden Eigenschaften überprüft, die
 nicht überprüft werden sollen.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer wählt die Eigenschaften, startet die
 Überprüfung, und wartet auf die Beendigugn	\\
 \textbf{Beschreibung:} \\
@@ -836,9 +821,7 @@ die er vom Programm überprüft haben möchte.\\
 Eigenschaften an, ob diese erfolgreich waren, oder fehlschlugen.\\
 \textbf {Erweiterung:}  -keine- \\
 \textbf {Alternativen:} -keine- \\ \\
-
-
-\textbf{/T430/}\\
+\textbf{/T530/}\\
 \textbf{Prozess: }Eine neue formale Eigenschaft in die Liste aufnehmen
 und die Darstellung in Listenform. \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM3010/ /FM3020/ \\
@@ -850,7 +833,6 @@ aufnehmen.\\
 \textbf{Nachbedingung (Erfolg):} Eine neue formale Eigenschaft wurde
 hinzugefügt.\\
 \textbf{Nachbedingung (Fehlschlag):} Die Eigenschaft wurde nicht hinzugefügt.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer drückt auf das grüne Plus.\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer drückt das grüne Plus, und erstellt damit eine neue formale
@@ -863,7 +845,7 @@ Eigenschaft und gibt ihr, wenn gewünscht, einen Name.\\
 \section{Testfälle für den Parametereditor}
 
 
-\textbf{/T510/}\\
+\textbf{/T610/}\\
 \textbf{Prozess: }Eingabe der Anzahl von Wählern, Kandidaten und Sitzen.\\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM4010/ /FM4020/ /FM4070/ \\
 \textbf{Ziel:} Der Benutzer kann die Anzahl der Wähler, Kandidaten und zu
@@ -873,7 +855,6 @@ vergebenden Sitze angeben. \\
 \textbf{Nachbedingung (Erfolg):} Die Parameter der Wahl wurden angeben.\\
 \textbf{Nachbedingung (Fehlschlag):} Die Eigenschaften konnten nicht angegeben
 werden.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer wählt die gewünschten Eigenschaften
 aus.\\
 \textbf{Beschreibung:} \\
@@ -883,9 +864,7 @@ Feldern ein.\\
 \textbf {Erweiterung:}  Es werden zusätzlich zu den Eigenschaften Intervalle
 angegeben.\\
 \textbf {Alternativen:} -keine- \\ \\
-
-
-\textbf{/T520/}\\
+\textbf{/T620/}\\
 \textbf{Prozess:} Eingabe einer maximalen Zeitspanne. \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM4020/ /FM4030/ \\
 \textbf{Ziel:} Der Benutzer kann die maximale Länge einer Überprüfung angeben.\\
@@ -897,7 +876,6 @@ beendet.\\
 , wenn das Program länger als die eingegebene Zeit braucht.\\
 \textbf{Nachbedingung (Fehlschlag):} Das Program stell die Berechnung nicht
 aus, wenn die Zeit überschritten wurde, oder es stell sie zu früh aus.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer wählt die Dauer aus, die das Program
 maximal laufen darf.\\
 \textbf{Beschreibung:} \\
@@ -908,11 +886,9 @@ maximal laufen darf.\\
 4. Dem Benutzer wird angezeigt, dass die Zeit überschritten wurde.\\
 \textbf {Erweiterung:}  -keine- \\
 \textbf {Alternativen:} -keine- \\ \\
-
-
-\textbf{/T530/}\\
+\textbf{/T630/}\\
 \textbf{Prozess:} Starten und stoppen der Überprüfung des Wahlverfahren auf die gewählte formale Eigenschaft(en).\\
-\textbf{Abgedeckte Funktionale Anforderungen:} /FM4070/ \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM4070/ /FM4080/\\
 \textbf{Ziel:} Der Benutzer kann die Überprüfung einschalten, und auch wieder
 ausschalten.\\
 \textbf{Kategorie:} Muss\\
@@ -921,7 +897,6 @@ ausschalten.\\
 beendet eine schon laufende Überprüfung.\\
 \textbf{Nachbedingung (Fehlschlag):} Die Überprüfung lässt sich nicht
 starten oder nicht beenden.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer startet die Überprüfung.\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer drückt auf den Start Knopf und startet damit die Überprüfung.\\
@@ -930,10 +905,7 @@ starten oder nicht beenden.\\
 4. Dem Benutzer wird angezeigt, dass die Zeit überschritten wurde.\\
 \textbf {Erweiterung:}  -keine- \\
 \textbf {Alternativen:} -keine- \\ \\
-
-
-
-\textbf{/T540/}\\
+\textbf{/T640/}\\
 \textbf{Prozess:} Einstellungen von CBMC.\\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM4040/ \\
 \textbf{Ziel:} Der Benutzer kann die Argumente die CBMC beim Aufruf
@@ -944,7 +916,6 @@ mitgegeben werden eingeben.\\
 aufgerufen.\\
 \textbf{Nachbedingung (Fehlschlag):} CBMC wird nicht mit den gegebenen
 Argumenten gestartet.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Nutzer klickt auf "`Erweitert"' um CBMC Einstellungen zu verändern .\\
 \textbf{Beschreibung:} \\
 1. Der Nutzer drückt "`Erweitert"'.\\
@@ -954,7 +925,7 @@ Argumenten gestartet.\\
 \textbf {Alternativen:} -keine- \\ \\
 
 \section{Allgemeine Testfälle}
-\textbf{/T610/} \\
+\textbf{/T710/} \\
 \textbf{Prozess: }Prüfung formaler Eigenschaften von Wahlverfahren über CBMC.\\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM0020/ /FM0030/ /FM0031/ \\
 \textbf{Ziel:} Der Benutzer kann Wahlverfahren auf formale Eigenschaften innerhalb gewählter Grenzen testen.\\
@@ -962,7 +933,6 @@ Argumenten gestartet.\\
 \textbf{Vorbedingung:} Das Programm wartet auf eine Eingabe. Das eingegebene Wahlverfahren ist in richtiger Form (d.h. ausführbar und dem gewählten Template entsprechend). Die zu prüfende Eigenschaft ist syntaktisch korrekt. Es wurden gültige Werte für die Parameter eingegeben. Eine oder mehrere Eigenschaften wurden in der Eingeschaftenliste zur Überprüfung in der nächsten Überprüfung ausgewählt. \\
 \textbf{Nachbedingung (Erfolg):} In der Eigenschaftenliste wird die Eigenschaft entweder als erfüllt angezeigt, oder es wird ein Gegenbeispiel angezeigt.\\
 \textbf{Nachbedingung (Fehlschlag):} Es wird kein Ergebnis angezeigt.\\
-\textbf{Akteur:} Benutzer\\
 \textbf{Auslösendes Ereignis:} Der Benutzer will ein Wahlverfahren auf eine formale Eigenschaft innerhalb fester Grenzen überprüfen.\\
 \textbf{Beschreibung:} \\
 1. Der Benutzer betätigt den Button Teste Eigenschaften in dem Parametereditor. \\
