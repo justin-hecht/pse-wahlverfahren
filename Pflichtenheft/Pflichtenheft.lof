@@ -13,9 +13,9 @@
 \contentsline {figure}{\numberline {9.1}{\ignorespaces Anwendungsfalldiagramm von B.E.A.S.T.}}{39}{figure.9.1}
 \contentsline {figure}{\numberline {9.2}{\ignorespaces Skizzenhfte Beschreibung der Packete und ihrer Abh\IeC {\"a}ngigkeiten}}{41}{figure.9.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {10.1}{\ignorespaces Der C Editor ohne Code. Direkt unter dem Men\IeC {\"u}-Streifen befindet sich der Tool-Streifen}}{45}{figure.10.1}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Der C_Editor ohne Code. Direkt unter dem Men\IeC {\"u}-Streifen befindet sich der Tool-Streifen}}{45}{figure.10.1}
 \contentsline {figure}{\numberline {10.2}{\ignorespaces Der Dialog welcher dem User das Erstellen neuer Wahlverfahren erm\IeC {\"o}glicht}}{45}{figure.10.2}
-\contentsline {figure}{\numberline {10.3}{\ignorespaces Der C Editor mit Code und Anzeige der Wahlart}}{46}{figure.10.3}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Der C-Editor mit Code und Anzeige der Wahlart}}{46}{figure.10.3}
 \contentsline {figure}{\numberline {10.4}{\ignorespaces Fehleranzeige bei syntaktischem Fehler ohne Maus-Hover (Kann-Kriterium)}}{46}{figure.10.4}
 \contentsline {figure}{\numberline {10.5}{\ignorespaces Fehleranzeige bei syntaktischem Fehler mit Maus-Hover (Kann-Kriterium).}}{47}{figure.10.5}
 \contentsline {figure}{\numberline {10.6}{\ignorespaces Fehleranzeige nach statischer Analyse.}}{47}{figure.10.6}

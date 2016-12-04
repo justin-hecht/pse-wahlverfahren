@@ -980,8 +980,8 @@ Argumenten gestartet.\\
 
 Der Nutzer (Entwickler, Wahlforscher, Prüfstelle...) kann Wahlverfahren und formale Eigenschaften in den jeweiligen Editoren des Tools Laden bzw. neu entwickeln und editieren.
 Beide Editoren verfügen über die Option zum Speichern, sowie dem Anzeigen von syntaktischen Fehlern.\\
-Es kann nach Eingabe von Wahlverfahren und Eigenschaften geprüft werden, ob das Wahlverfahren die formalen Eigenschaften erfüllt. Voraussetzung dafür sind ein syntaktisch fehlerfreies Wahlverfahren und mindestens eine syntaktisch fehlerfreie formale Eigenschaft. Vor dem Prüfen kann der Nutzer Testparameter angeben (Anzahl von Kandidaten, Wählern, Sitzen und einem Timeout, dass dem Prüfen eine zeitliche Obergrenze gibt). Diese können auch gespeichert werden.\\
-Nach dem Prüfen wird für jede Eigenschaft angezeigt, ob sie vom Wahlverfahren erfüllt wird oder nicht. Bei Abbruch des Prüfens wegen erreichtem Timeout-Parameters wird dies natürlich auch nur für die angezeigt, die auch fertig geprüft wurden. Werden formale Eigenschaften als nicht erfüllt erkannt werden Gegenbeispiele angezeigt, die die Nichterfüllbarkeit beweisen. Anhand dieser Informationen kann der Nutzer dann das Wahlverfahren und die Eigenschaften analysieren und falls nötig modifizieren und erneut testen.\\
+Es kann nach Eingabe von Wahlverfahren und Eigenschaften geprüft werden, ob das Wahlverfahren die formalen Eigenschaften erfüllt. Voraussetzung dafür sind ein syntaktisch fehlerfreies Wahlverfahren und mindestens eine syntaktisch fehlerfreie formale Eigenschaft. Vor dem Prüfen kann der Nutzer Testparameter angeben (Anzahl von Kandidaten, Wählern, Sitzen und einem Timeout, welches dem Prüfen eine zeitliche Obergrenze gibt). Die Testparameter können gespeichert werden.\\
+Nach dem Prüfen wird für jede Eigenschaft angezeigt, ob sie vom Wahlverfahren - innerhalb der eingestellten Grenzen - erfüllt wird oder nicht. Das Ergebnis wird nur angezeigt wenn kein Abbruch (Durch den Timeout-Parameter oder einem manuellen Abbruch) eintrifft. Werden formale Eigenschaften als nicht erfüllt erkannt, werden ein oder mehrere Gegenbeispiele angezeigt, welche die Nichterfüllbarkeit beweisen. Anhand dieser Informationen kann der Nutzer dann das Wahlverfahren und die Eigenschaften analysieren, falls nötig modifizieren und erneut testen.\\
 Zudem kann der Nutzer das Wahlverfahren, Eigenschaften und die Parameter gebündelt als ein Projekt speichern.
 \pagebreak
 
@@ -994,26 +994,26 @@ Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwares
 \label{Packet-scetch}
 \end{figure}
 
-\ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Diese einzelnen Packete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor wie aufwendig die implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Packete im Verlauf des Entwurfs als Klassen realisiert werden. Andernseits ist es auch möglich, dass weitere Packete hinzu kommen. Abhängigkeiten zu Java-Bibliotheken wie zum Beispiel Swing sind nicht dargestellt.
+\ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Diese einzelnen Packete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor, wie aufwendig die Implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Pakete im Verlauf des Entwurfs als Klassen realisiert werden. Anderseits ist es auch möglich, dass weitere Pakete hinzukommen. Abhängigkeiten zu Java-Bibliotheken, wie zum Beispiel Swing, sind nicht dargestellt.
 
-Ziel ist, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweiße haben C- und Eigenschafteneditor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es geben in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI}. Daher wird diese Funktionalität gekapselt in einem eigenen Packet. 
+Ziel ist es, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispiels weiße haben C- und Eigenschafteneditor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebnisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI} geben. Daher wird diese Funktionalität in einem eigenen Paket gekapselt. 
 
-Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle da über welche man Instanzen der benötigten Komponenten beziehen kann. In dem Diagram werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency Manager geregelt. 
+Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle dar, über welcher man Instanzen der benötigten Komponenten beziehen kann. In dem Diagramm werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency-Manager geregelt. 
 
-Das Kommunikator-Packet übernimmt die Kommunikation zwischen dem Parametereditor und den Komponenten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaftenliste weiterleiten.
+Das Kommunikator-Paket übernimmt die Kommunikation zwischen dem Parameter-Editor und den Komponenten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaftenliste weiterleiten.
 
-Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Packet wird Funktionalität zu diesem Zweck bereitstellen. 
+Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Paket wird Funktionalität zu diesem Zweck bereitstellen. 
 
 Die CBMC-Schnittstelle erwartet die Beschreibung des Wahlverfahrens sowie die zu überprüfenden Eigenschaften (jeweils in Wrapper-Klassen). Sie erzeugt den Input für CBMC, ruft CBMC mit diesem Input auf und gibt das Ergebnis (in einer Wrapper-Klasse) zurück.
 
-Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für CBMC-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für CBMC notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der CBMC-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist. Allgemein sorgt diese zusätliche  Abstraktion für eine flexible Architektur. Sollte das Program in Zukunft um weitere Programmiersprachen oder einen graphischen Editor zur Beschreibung von Wahlverfahren erweitert werden, so muss lediglich die entsprechende Wrapper-Klasse korrekt erzeugt werden.
+Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für CBMC-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für CBMC notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der CBMC-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist. Allgemein sorgt diese zusätzliche  Abstraktion für eine flexible Architektur. Sollte das Programm in Zukunft um weitere Programmiersprachen oder einen graphischen Editor zur Beschreibung von Wahlverfahren erweitert werden, so muss lediglich die entsprechende Wrapper-Klasse korrekt erzeugt werden.
 
-Alle Editoren benötigen Funktionalität zum Wiederholen sowie Rückgängig machen von Aktionen. Dazu müssen Eingaben des Benutzers entsprechend gekapselt werden. Funktionaliät hierzu befindet sich im Input-Packet.
+Alle Editoren benötigen Funktionalität zum Wiederholen sowie zum Rückgängig machen von Aktionen. Dazu müssen Eingaben des Benutzers entsprechend gekapselt werden. Funktionalität hierzu befindet sich im Input-Paket.
 
-Sämtliche Resourcen wie Strings und durch den Benutzer konfigurierbare Eigenschaften wie der verwendete Font werden über den Resource Manager bereitgestellt. Dieser kann die vom Benutzer gegebenen Einstellungen auch speichern und laden.
+Sämtliche Ressourcen wie Strings und durch den Benutzer konfigurierbare Eigenschaften, wie der verwendete Font, werden über den Ressource-Manager bereitgestellt. Dieser kann die vom Benutzer gegebenen Einstellungen auch speichern und laden.
 
 \chapter{GUI}
-Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweichen. Im Folgenden wird jedes mal darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
+Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweichen. Im Folgenden wird stets explizit darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
 Die \ac{GUI} besteht aus 4 verschiedenen Fenstern: 
 \begin{itemize}
 \item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können
@@ -1024,15 +1024,15 @@ Die \ac{GUI} besteht aus 4 verschiedenen Fenstern:
 Jedes dieser Elemente verfügt auch über weitere Eigenschaften, die im Folgenden beschrieben werden.
 
 \section{C-Editor}
-Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es, das Eingeben von Funktionen, welche ein Wahlverfahren implementiert, zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl, repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, diese Funktion zu editieren. Während des Eingebens des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
-Der C-Editor teilt sich in vier Untereinheiten auf: Der Menüstreifen, die Tool-Leiste, das Textfeld und das Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller geöffneten Untermenüs befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
+Der C-Editor verfügt über dieselbe Funktionalität, welche andere Texteditoren wie zum Beispiel Notepad aufweisen. Ziel ist es, das Eingeben von Funktionen, welche ein Wahlverfahren implementiert, zu ermöglichen. Dazu bietet er die Möglichkeit, C-Code zu schreiben und zu bearbeiten. Ein angemessener Funktionskörper, welcher die auswählbare Art der Wahl repräsentiert, wird dabei automatisch generiert (siehe \ref{Editor-mit-text}). Es wird nicht möglich sein, diese Funktion zu editieren. Während des Eingebens des Codes wird dieser automatisch analysiert, um Schlüsselwörter sowie syntaktische Fehler zu markieren. 
+Der C-Editor teilt sich in vier Untereinheiten auf: Dem Menüstreifen, der Tool-Leiste, dem Textfeld und dem Fehlerfeld. Der Menü-Streifen ist unterteilt in Datei, Bearbeiten, Editor (Kann) und Code. Bilder aller geöffneten Untermenüs befinden sich im Anhang. Sie beinhalten folgende Funktionalität:
 
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Neu & öffnet ein neues Dokument, wobei die Art der Wahl vom User angegeben wird \\
-Speichern & speichert das Dokument unter bereits gegebenem Namen \\
+Neu & Öffnet ein neues Dokument, wobei die Art der Wahl vom User angegeben wird \\
+Speichern & Speichert das Dokument unter bereits gegebenem Namen \\
 Speichern unter & Speichert das Dokument unter neuem Namen an neuem Ort, beide durch User angegeben \\
 Öffnen & Öffnet neues Dokument des richtigen Formats
 \end{tabular}
@@ -1044,8 +1044,8 @@ Speichern unter & Speichert das Dokument unter neuem Namen an neuem Ort, beide d
 \begin{tabular}{|p{3cm}|p{12cm}|}
 Menüpunkt & Bedeutung \\
 \hline
-Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion Rückgängig \\
-Wiederholen & Wiederholt die zuletzt Rückgängig gemachte Aktion \\
+Rückgängig & Falls möglich: Macht die letzte ausgeführte Aktion rückgängig \\
+Wiederholen & Wiederholt die zuletzt rückgängig gemachte Aktion \\
 Kopieren & Fügt markierten Text in die Zwischenablage ein \\
 Ausschneiden & Fügt markierten Text in die Zwischenablage ein und entfernt ihn aus dem Textfeld \\
 Einfügen & Fügt Text aus der Zwischenablage an der Stelle des Cursors ein \\
@@ -1077,11 +1077,11 @@ Statische Analyse & Startet eine statische Analyse des Codes, welche ihn auf von
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Editor-ohne-text.png}
-\caption{Der C Editor ohne Code. Direkt unter dem Menü-Streifen befindet sich der Tool-Streifen}
+\caption{Der C_Editor ohne Code. Direkt unter dem Menü-Streifen befindet sich der Tool-Streifen}
 \label{C-Editor-Tool-Streifen}
 \end{figure}
 
-Über den Tool-Streifen (siehe \ref{C-Editor-Tool-Streifen}) lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen. Aktivieren der Aktion "'Neu"' öffnet einen Dialog, welcher vim Nutzer die Eingabe folgender Eigenschaften erwartet: Speicherort, Name und Kategorie des Wahlverfahrens.
+Über den Tool-Streifen (siehe \ref{C-Editor-Tool-Streifen}) lassen sich einige dieser Aktionen ohne Öffnen eines Menüs ausführen. Von Links nach Rechts: Neu, Rückgängig, Wiederholen, Speichern, Speichern unter, Öffnen, Kopieren, Ausschneiden, Einfügen. Aktivieren der Aktion "'Neu"' öffnet einen Dialog, welcher vom Benutzer die Eingabe folgender Eigenschaften erwartet: Speicherort, Name und Kategorie des Wahlverfahrens.
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Wahlverfahren-Erstellen.png}
@@ -1093,11 +1093,11 @@ Bei erfolgreicher Eingabe wird eine neue Datei geöffnet, welche der Nutzer edit
 
 \begin{figure}[H]
 \includegraphics[scale=0.4]{Editor-mit-text.png}
-\caption{Der C Editor mit Code und Anzeige der Wahlart}
+\caption{Der C-Editor mit Code und Anzeige der Wahlart}
 \label{Editor-mit-text}
 \end{figure}
 
-In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium, Möglichkeit diese Funktion zu deaktivieren Kann-Kriterium. Die grauen Balken zeigen an, dass man den vorgegebenen Funktionskörper nicht editieren kann. Der Kommentar rechts der Funktionsdefinition gibt die Kategorie des Wahlverfahrens an.
+In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der C-Sprache. Anzeige der Zeilennummern ist Soll-Kriterium. Die Möglichkeit, diese Funktion zu deaktivieren, ist ein Kann-Kriterium. Die grauen Balken zeigen an, dass man den vorgegebenen Funktionskörper nicht editieren kann. Der Kommentar rechts der Funktionsdefinition gibt die Kategorie des Wahlverfahrens an.
 
 \begin{figure}[H]
 \includegraphics[scale=0.4]{Editor-mit-Fehler-ohne-hover.png}
@@ -1111,7 +1111,7 @@ In \ref{Editor-mit-text} sieht man den Editor nach Eingabe diverser Elemente der
 \label{Editor-mit-Fehler-mit-hover}
 \end{figure}
 
-In \ref{Editor-mit-Fehler-ohne-hover} sieht man, wie der gefundene syntaktische Fehler während dem Editieren des Codes angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man mit der Maus über die markierte Stelle geht, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
+In \ref{Editor-mit-Fehler-ohne-hover} sieht man wie der gefundene syntaktische Fehler, während des Editierrens des Codes, angezeigt wird. Dies ist ein Kann-Kriterium. Sobald man die Maus über die markierte Stelle bewegt, wird in einem neuen Fenster nahe der Maus eine Beschreibung des Fehlers angezeigt. Dies ist ebenfalls ein Kann-Kriterium (siehe \ref{Editor-mit-Fehler-mit-hover}).
 
 \begin{figure}[H]
 \includegraphics[scale=0.4]{Editor-mit-Fehler-nach-statischer-analyse.png}
