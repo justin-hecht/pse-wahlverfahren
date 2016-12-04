@@ -288,7 +288,7 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz.
 
 \section{Szenarien}
 \textbf{Szenario 1}\\
-Ein Wahlforscher wird von der Regierung eines Landes beauftragt ein neues Wahlverfahren zu entwerfen. Dieses soll bestimmte, vorgegebene formale Eigenschaften erfüllen.\\
+Ein Wahlforscher wird von der Regierung eines Landes beauftragt, ein neues Wahlverfahren zu entwerfen. Dieses soll bestimmte, vorgegebene formale Eigenschaften erfüllen.\\
 Er installiert das Tool und entwickelt mit diesem eine erste Version des Wahlverfahrens. Zusätzlich gibt er die vorgegebenen Eigenschaften als formale Eigenschaften in das Tool ein.\\
 Nun gibt er Parameter zum Prüfen an (Wähler, Stimmen, Sitze, Timeout) und lässt das Wahlverfahren auf die formalen Eigenschaften prüfen.\\
 Das Ergebnis des Prüfens zeigt, dass nicht alle Eigenschaften vom Wahlverfahren erfüllt werden.\
@@ -303,9 +303,9 @@ Zuletzt speichert er das Gesamtprojekt und einzeln das Wahlverfahren ab. Letzter
 \end{figure}
 \\
 \textbf{Szenario 2}\\
-Eine Prüfstelle bekommt ein Wahlverfahren übergeben welches sie auf bestimmte formale Eigenschaften testen soll.\\
+Eine Prüfstelle bekommt ein Wahlverfahren übergeben, welches sie auf bestimmte formale Eigenschaften testen soll.\\
 Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
-Um das Wahlverfahren auf die Eigenschaften zu prüfen werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
+Um das Wahlverfahren auf die Eigenschaften zu prüfen, werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
 Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.\\
 
 \begin{figure}[H]
@@ -1000,7 +1000,7 @@ Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwares
 
 \ref{Packet-scetch} zeigt einen ersten Entwurf der Packete und ihrer Abhängigkeiten untereinander. Diese einzelnen Packete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor, wie aufwendig die Implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Pakete im Verlauf des Entwurfs als Klassen realisiert werden. Anderseits ist es auch möglich, dass weitere Pakete hinzukommen. Abhängigkeiten zu Java-Bibliotheken, wie zum Beispiel Swing, sind nicht dargestellt.
 
-Ziel ist es, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispiels weiße haben C- und Eigenschafteneditor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebnisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI} geben. Daher wird diese Funktionalität in einem eigenen Paket gekapselt. 
+Ziel ist es, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweise haben C- und Eigenschafteneditor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebnisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI} geben. Daher wird diese Funktionalität in einem eigenen Paket gekapselt. 
 
 Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle dar, über welcher man Instanzen der benötigten Komponenten beziehen kann. In dem Diagramm werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency-Manager geregelt. 
 
@@ -1020,10 +1020,10 @@ Sämtliche Ressourcen wie Strings und durch den Benutzer konfigurierbare Eigensc
 Die hier vorgestellte \ac{GUI} erfüllt alle Muss-, Soll- und Kann-Kriterien. Das endgültige Produkt kann daher davon abweichen. Im Folgenden wird stets explizit darauf hingewiesen, falls es sich bei einem Feature um ein Kann-Kriterium handelt.
 Die \ac{GUI} besteht aus 4 verschiedenen Fenstern: 
 \begin{itemize}
-\item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können
-\item Eine Liste, in welcher alle für dieses Wahlverfahren zu überprüfenden Eigenschaften angezeigt werden
-\item Ein Editor in welchem Eigenschaften editiert werden können
-\item Das Hauptfenster, dessen Schließen ein Beenden des kompletten Tools nach sich zieht. Darin können Parameter für Überprüfungen eingestellt und Überprüfungen gestartet bzw. beendet werden
+\item Ein Editor für C-Code, in welchem die Wahlverfahren editiert werden können.
+\item Eine Liste, in welcher alle für dieses Wahlverfahren zu überprüfenden Eigenschaften angezeigt werden.
+\item Ein Editor in welchem Eigenschaften editiert werden können.
+\item Das Hauptfenster, dessen Schließen ein Beenden des kompletten Tools nach sich zieht. Darin können Parameter für Überprüfungen eingestellt und Überprüfungen gestartet bzw. beendet werden.
 \end{itemize}
 Jedes dieser Elemente verfügt auch über weitere Eigenschaften, die im Folgenden beschrieben werden.
 
