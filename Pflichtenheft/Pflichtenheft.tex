@@ -72,10 +72,10 @@ Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle, um mit 
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
-\item "`C-Editor"': Code-Editor für Wahlverfahren in der Programmiersprache C
-\item "`Eigenschaftenliste"': Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen, und Ausgabe der Analyse
-\item "`Eigenschafteneditor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in nachfolgend beschriebener Grammatik
-\item "`Parametereditor"': Eingabe von Parametern einer zu analysierenden Wahl
+\item "`C-Editor"': Code-Editor für Wahlverfahren in der Programmiersprache .
+\item "`Eigenschaftenliste"': Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen, und Ausgabe der Analyse.
+\item "`Eigenschafteneditor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in nachfolgend beschriebener Grammatik.
+\item "`Parametereditor"': Eingabe von Parametern einer zu analysierenden Wahl.
 \end{enumerate}
 
 \section{Die Syntax zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
@@ -148,16 +148,16 @@ Beendet wird ein boolscher Ausdruck durch ein Semikolon.
 Ziel des Programmes ist es eine  Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Die Analyse solcher Eigenschaften ist ein nicht entscheidbares Problem und wird deshalb innerhalb von Grenzen mit Hilfe eines \ac{BMC} ausgeführt. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
 Das Programm soll Folgendes bereitstellen:
 \begin{itemize}
-\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist
+\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist.
 \item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax
-\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze)
-\item Eine Möglichkeit, die Analyse auszuführen
-\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst
+\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze).
+\item Eine Möglichkeit, die Analyse auszuführen.
+\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst.
 \end{itemize}
 
 Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
 
-Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand, verbunden, der sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Weiterhin ist damit großer, sich jedes Mal wiederholender Aufwand, verbunden, der sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \subsection{Allgemein}
