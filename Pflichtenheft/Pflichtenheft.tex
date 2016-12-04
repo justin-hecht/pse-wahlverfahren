@@ -762,24 +762,179 @@ Abfrage der Stimme eines Wählers v in Wahldurchlauf x
 
 \section{Testfälle für die Eigenschaftenliste}
 
-/510/ Ablesen des Ergebnisses der Überprüfung der formalen Eigenschaft. \\
-/T520/ Einstellen ob eine formale Eigenschaft, die in der Liste geladen ist, in der \\ nächsten Überprüfung verwendet werden soll. \\
-/T530/ Eine neue formale Eigenschaft in die Liste aufnehmen \\
-Darstellung in Listenform
+\textbf{/T410/}\\
+\textbf{Prozess: }Ablesen des Ergebnisses der Überprüfung der formalen Eigenschaft \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM0010/ /FM0020/ /FM0030/ /FM0031/ \\
+\textbf{Ziel:} Der Benutzer kann die Ergebnisse der Überprüfung der formalen
+Eigenschaften ablesen\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Das Programm wartet auf den Druck des Knopfes, um mit
+der Überprüfung einer vorher eingegebenen Formalen Eigenschaft für ein ebenso
+vorher eingegebenes Wahlverfahren zu beginnen.\\
+\textbf{Nachbedingung (Erfolg):} Das Programm hat die Überprüfung abgeschlossen
+und zeigt das Ergebnis dieser korrekt an.\\
+\textbf{Nachbedingung (Fehlschlag):} Es wird kein oder ein falsches Ergebnis
+angezeigt.\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer startet die Überprüfung und wartet
+auf die Beendigugn	\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer gibt mindestens eine formale Eigenschaft ein, die er überprüft
+haben will, und wählt sie aus. \\
+2. Der Nutzer startet die Überprüfung\\
+3. Das Program überprüft die Eigenschaft. \\
+4. Nach der Überprüfung zeigt das Program das Ergebnis dem Benutzer an. \\
+\textbf {Erweiterung:} -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
+
+
+
+\textbf{/T420/}\\
+\textbf{Prozess: }Einstellen ob eine formale Eigenschaft, die in der Liste geladen ist, in der nächsten Überprüfung verwendet werden soll. \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM3010/ /FM3050/ \\
+\textbf{Ziel:} Der Benutzer kann die Überprüfung einzelner formaler
+Eigenschaften an und aus stellen\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Es sind mehrere formale Eigenschaften in der Liste
+geladen. Der Benutzer wählt nun die formalen Eigenschaften aus, die er überprüft
+haben wird, indem der Benutzer für jede dieser Eigenschaft auf die Checkbox,
+neben der "`Überprüfen"' steht, klickt.\\
+\textbf{Nachbedingung (Erfolg):} Nachdem die Überprüfung abgeschlossen sind
+wurden alle ausgewählten Eigenschaften überprüft\\
+\textbf{Nachbedingung (Fehlschlag):} Es wurden Eigenschaften nicht überprüft,
+die überprüft werden sollten und/oder es wurden Eigenschaften überprüft, die
+nicht überprüft werden sollen.\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer wählt die Eigenschaften, startet die
+Überprüfung, und wartet auf die Beendigugn	\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer wählt die Eigenschaften über die "`Überprüfen"'-Checkboxen aus,
+die er vom Programm überprüft haben möchte.\\
+2. Der Nutzer startet das Program.\\
+3. Das Program startet die überprüfung der ausgewählten Elemente.\\
+4. Das Programm beendet die Überprüfung und zeigt bei allen ausgewählten
+Eigenschaften an, ob diese erfolgreich waren, oder fehlschlugen.\\
+\textbf {Erweiterung:}  -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
+
+
+\textbf{/T430/}\\
+\textbf{Prozess: }Eine neue formale Eigenschaft in die Liste aufnehmen
+und die Darstellung in Listenform \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM3010/ /FM3020/ \\
+\textbf{Ziel:} Der Benutzer kann neue formale Eigenschaften in die Liste
+aufnehmen\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Der Nutzer will eine neue formale Eigenschaft
+aufnehmen.\\
+\textbf{Nachbedingung (Erfolg):} Eine neue formale Eigenschaft wurde
+hinzugefügt.\\
+\textbf{Nachbedingung (Fehlschlag):} Die Eigenschaft wurde nicht hinzugefügt\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer drückt auf das grüne Plus\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer drückt das grüne Plus, und erstellt damit eine neue formale
+Eigenschaft und gibt ihm wenn gewünscht einen Name.\\
+2. Die Eigenschaft taucht nach dem Abschluss der Erstellung in der Liste auf.\\
+\textbf {Erweiterung:}  -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
 
 
 \section{Testfälle für den Parametereditor}
 
-/T410/ Eingabe der Anzahl von Wählern, Kandidaten und Sitzen
-\begin{addmargin}[25pt]{0pt}
-/T411/ Eventuell erfolgt die Eingabe in Intervallen
-\end{addmargin}	
-/T420/ Eingabe einer maximalen Zeitspanne \\
-/T430/ Starten und stoppen der Überprüfung des Wahlverfahren auf die gewählte formale Eigenschaft(en) \\
-/T440/ Einstellungen von CBMC \\
+
+\textbf{/T510/}\\
+\textbf{Prozess: }Eingabe der Anzahl von Wählern, Kandidaten und Sitzen\\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM4010/ /FM4020/ /FM4070/ \\
+\textbf{Ziel:} Der Benutzer kann die Anzahl der Wähler, Kandidaten und zu
+vergebenden Sitze angeben \\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Der Nutzer will die Parameter der Wahl angeben.\\
+\textbf{Nachbedingung (Erfolg):} Die Parameter der Wahl wurden angeben.\\
+\textbf{Nachbedingung (Fehlschlag):} Die Eigenschaften konnten nicht angegeben
+werden\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer wählt die gewünschten Eigenschaften
+aus\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer gibt die Eigenschaften der Wahl in den dafür vorgesehenden
+Feldern ein\\
+2. Die Eigenschaften der Wahl werden bei der nächsten Überprüfung angewendet.\\
+\textbf {Erweiterung:}  Es werden zusätzlich zu den Eigenschaften Intervalle
+angegeben.\\
+\textbf {Alternativen:} -keine- \\ \\
+
+
+\textbf{/T520/}\\
+\textbf{Prozess:} Eingabe einer maximalen Zeitspanne. \\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM4020/ /FM4030/ \\
+\textbf{Ziel:} Der Benutzer kann die maximale Länge einer Überprüfung angeben.\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Der Nutzer will, dass das Program beim
+überschreiten einer Zeit, wenn es noch nicht fertig ist, die Überprüfung
+beendet.\\
+\textbf{Nachbedingung (Erfolg):} Das Program beendet die Überprüfung von selbst
+, wenn das Program länger als die eingegebene Zeit braucht.\\
+\textbf{Nachbedingung (Fehlschlag):} Das Program stell die Berechnung nicht
+aus, wenn die Zeit überschritten wurde, oder es stell sie zu früh aus.\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer wählt die Dauer aus, die das Program
+maximal laufen darf.\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer wählt eine Dauer aus.\\
+2. Der Nutzer startet die Berechnung.\\
+3. Das Program überschreitet die gegebene Zeitdauer und beendet die
+Überprüfung.\\
+4. Dem Benutzer wird angezeigt, dass die Zeit überschritten wurde.\\
+\textbf {Erweiterung:}  -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
+
+
+\textbf{/T530/}\\
+\textbf{Prozess:} Starten und stoppen der Überprüfung des Wahlverfahren auf die gewählte formale Eigenschaft(en)\\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM4070/ \\
+\textbf{Ziel:} Der Benutzer kann die Überprüfung einschalten, und auch wieder
+ausschalten.\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Der Nutzer kann die Überprüfung und an aus schalten.\\
+\textbf{Nachbedingung (Erfolg):} Der Nutzer startet die Überprüfung, oder
+beendet eine schon laufende Überprüfung.\\
+\textbf{Nachbedingung (Fehlschlag):} Die Überprüfung lässt sich nicht
+starten oder nicht beenden.\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer startet die Überprüfung.\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer drückt auf den Start Knopf und startet damit die Überprüfung.\\
+2. Das Program startet die Überprüfung.\\
+3. Der Nutzer drückt den Beenden Knof.\\
+4. Dem Benutzer wird angezeigt, dass die Zeit überschritten wurde.\\
+\textbf {Erweiterung:}  -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
+
+
+
+\textbf{/T540/}\\
+\textbf{Prozess:} Einstellungen von CBMC\\
+\textbf{Abgedeckte Funktionale Anforderungen:} /FM4040/ \\
+\textbf{Ziel:} Der Benutzer kann die Argumente die CBMC beim Aufruf
+mitgegeben werden eingeben.\\
+\textbf{Kategorie:} Muss\\
+\textbf{Vorbedingung:} Der Nutzer will Argumente an CBMC übergeben.\\
+\textbf{Nachbedingung (Erfolg):} CBMC wird mit den gegebenen Argumenten
+aufgerufen.\\
+\textbf{Nachbedingung (Fehlschlag):} CBMC wird nicht mit den gegebenen
+Argumenten gestartet.\\
+\textbf{Akteur:} Benutzer\\
+\textbf{Auslösendes Ereignis:} Der Nutzer klickt auf "`Erweitert"' und .\\
+\textbf{Beschreibung:} \\
+1. Der Nutzer drückt "`Erweitere"'.\\
+2. Er gibt die gewünschten Argumente ein und speichert sie.\\
+3. Beim nächsten Aufruf werden die Argumente an CBMC mit übergeben.\\
+\textbf {Erweiterung:}  -keine- \\
+\textbf {Alternativen:} -keine- \\ \\
 
 \section{Allgemeine Testfälle}
-\textbf{/T510/} \\
+\textbf{/T610/} \\
 \textbf{Prozess: }Prüfung formaler Eigenschaften von Wahlverfahren über CBMC \\
 \textbf{Abgedeckte Funktionale Anforderungen:} /FM0020/ /FM0030/ /FM0031/ \\
 \textbf{Ziel:} Der Benutzer kann Wahlverfahren auf formale Eigenschaften innerhalb gewählter Grenzen testen\\
