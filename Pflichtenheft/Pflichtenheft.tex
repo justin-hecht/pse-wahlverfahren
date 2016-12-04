@@ -57,29 +57,29 @@ description={Die Person, welche das Program bedient, Eingaben tätigt, etc}
 \end{acronym}
  
 \chapter{Produktübersicht}
-Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Nachweisen deren Abwesenheit ist absolut nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem die Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Präsenz erwünschter Eigenschaften zu untersuchen.
+Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Ein Nachweis deren Abwesenheit ist nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem die Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Präsenz erwünschter Eigenschaften zu untersuchen.
 
 \ac{BMC} wird normalerweise dazu verwendet zu überprüfen, ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade - also Schleifen - bis zu einer vom \gls{Benutzer} bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die erfüllbar ist, genau dann wenn das Programm einen Zustand einnehmen kann, welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
 
-In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt. Allerdings ist es kompliziert, dies direkt zu tun. 
+In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren, wie z.B. die einfache Mehrheitswahl darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt.
 
-Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem \gls{Benutzer} über eine \ac{GUI} die Möglichkeiten, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler, Plätze etc die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der \gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
+Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle um mit \ac{CBMC} zu kommunizieren. Es bietet dem \gls{Benutzer} über eine \ac{GUI} die Möglichkeit, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst, anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler etc. die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der \gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
 \item "`C-Editor"': Code-Editor für Wahlverfahren in der Programmiersprache C
-\item "Eigenschaften-Liste": Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen
-\item "`Eigenschaften-Editor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in eigens dafür vorgesehener Grammatik
-\item "`Params"': Eingabe von Parametern einer zu analysierenden Wahl
+\item "`Eigenschaftenliste"': Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen, und Ausgabe der Analyse
+\item "`Eigenschafteneditor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in nachfolgend beschriebener Grammatik
+\item "`Parametereditor"': Eingabe von Parametern einer zu analysierenden Wahl
 \end{enumerate}
 
 \section{Die Syntax zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
-In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eigenschaften-Editor verwendet, gegeben. Es handelt sich um ein Subset der C-Sprache mit einigen Ergänzungen. Diese werden im Folgenden erläutert. 
+In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eigenschafteneditor verwendet, gegeben. Es handelt sich um ein \gls{Subset} der C-Sprache mit einigen Ergänzungen. Diese werden im Folgenden erläutert. 
 
 Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
 
 \begin{itemize}
-\item Folgende, aus C übernommene binäre Operatoren:
+\item Folgende, aus C übernommene, binäre Operatoren:
 \begin{table}[H]
 \begin{tabular}{|p{3cm}|p{1,5cm}|p{4,5cm}|p{3cm}|}
 	Operator & Symbol & Erwartet Argumente & Rückgabewert \\
@@ -100,15 +100,15 @@ Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiede
 \end{table}	
 
 Beispiel: \verb!x > y <==> x + 1 > y + 1! \\
-Bedeutung: \verb!x! ist größer als \verb!y! genau dann, wenn auch \verb!x + 1! größer als \verb!y + 1! ist 
+Bedeutung: \verb!x! ist größer als \verb!y! genau dann, wenn auch \verb!x + 1! größer als \verb!y + 1! ist.
 
-\item Folgende, aus C bekannte Operatoren. "'Vergleichbarer Typen"' bedeutet, dass zwei Variablen dieser Typen bereits in C mit demselben Operator vergleichbar sind. 
+\item Folgende aus C bekannte Operatoren. "'Vergleichbarer Typen"' bedeutet, dass zwei Variablen dieser Typen bereits in C mit demselben Operator vergleichbar sind. 
 \begin{table}[H]
 \begin{tabular}{|p{2,5cm}|p{1,5cm}|p{6cm}|p{3cm}|}
 	Operator & Symbol & Erwartet Argumente & Rückgabewert \\
 	\hline
-	Gleicheit & \verb!==! & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
-	Ungleicheit & \verb|!=| & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	Gleichheit & \verb!==! & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
+	Ungleichheit & \verb|!=| & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
 	kleiner als & \texttt{<} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
 	kleiner gleich & \texttt{<=} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
 	größer als & \texttt{>} & zwei Variablen vergleichbarer Typen & \texttt{true} oder \texttt{false} \\
@@ -123,16 +123,16 @@ Beispiel: \verb!Wähler v, Kandidat c!
 \item Quantoren für Wähler, Kandidaten und Sitze in der Form von \gls{Makro}s. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden. \\
 
 Beispiel: \verb|FOR_ALL_VOTERS(v) : EXISTS_ONE_CANDIDATE(c) : v mag c| \\
-Bedeutung: Für jeden Wähler (\verb!v!) gibt es zumindest einen Kandidaten (\verb!c!) sodass das Tupel die Eigenschaft "'der Wähler v mag den Kandidaten c"' erfüllt (Dies ist nur ein Beispiel, der Editor wird die Eigenschaft 'mögen' nicht zu Verfügung stellen. An dessen Stelle könnte jedoch jeder andere binäre Operator stehen, welcher eine Variable vom Typ Wähler und eine Variable vom Typ Kandidat erwartet und \texttt{true} oder \texttt{false} zurückgibt).
+Bedeutung: Für jeden Wähler (\verb!v!) gibt es zumindest einen Kandidaten (\verb!c!), sodass das Tupel die Eigenschaft "'der Wähler v mag den Kandidaten c"' erfüllt (Dies ist nur ein Beispiel, der Editor wird die Eigenschaft 'mögen' nicht zu Verfügung stellen. An dessen Stelle könnte jeder andere binäre Operator stehen, welcher eine Variable vom Typ Wähler und eine Variable vom Typ Kandidat erwartet und \texttt{true} oder \texttt{false} zurückgibt).
 
-\item Ausgabe der Anzahl Stimmen für einen Kandidaten in der Form eines Makros.
+\item Ausgabe der Anzahl der Stimmen für einen Kandidaten in der Form eines Makros
 
-\item Viele Eigenschaften benötigen zu ihrer Überprüfung das Vergleichen mehrerer Wahldurchläufe. Dies wird ermöglicht durch Variablen VOTESx() und ELECTx. Dabei steht 'x' für die Nummer des Wahldurchangs. VOTESx() erwartet als Argument eine symblische Variable vom Typ Wähler. Zurück gibt es die Stimme, welche v im Wahldurchgang x abgegeben hat. ELECTx erwartet kein Argument und gibt das Wahlergebnis im x-ten Durchgang zurück. Der Rückgabetyp beider Makros hängt von der Kategorie des Wahlverfahrens ab. Gibt das Wahlverfahren zum Beispiel nur einen "'Gewinner"' aus, so ist ELECTx vom Typ Kandidat. \\
+\item Viele Eigenschaften benötigen zu ihrer Überprüfung den Vergleich mehrerer Wahldurchläufe. Dies wird ermöglicht durch die Variablen VOTESx() und ELECTx. Dabei steht 'x' für die Nummer des Wahldurchangs. VOTESx() erwartet als Argument eine symbolische Variable vom Typ Wähler. Die Methode gibt die Stimme zurück, welche v im Wahldurchgang x abgegeben hat. ELECTx erwartet kein Argument und gibt das Wahlergebnis im x-ten Durchgang zurück. Der Rückgabetyp beider Makros hängt von der Kategorie des Wahlverfahrens ab. Gibt das Wahlverfahren zum Beispiel nur einen "'Gewinner"' aus, so ist ELECTx vom Typ Kandidat. \\
 
 Beispiel: \verb|FOR_ALL_VOTERS(v) : VOTES1(v) == VOTES2(v)| \\
-Bedeutung: Alle Wähler wählen in beiden Wahlen (\verb!VOTES1! und \verb!VOTES2! ) gleich. \\
+Bedeutung: Alle Wähler wählen in beiden Wahlen (\verb!VOTES1! und \verb!VOTES2!) gleich. \\
 
-Beispiel: \verb|ELECT1 == ELECT2|
+Beispiel: \verb|ELECT1 == ELECT2| \\
 Bedeutung: Das Ergebnis des ersten Wahldurchlaufs stimmt mit dem des zweiten Wahldurchlaufs überein.
 \item Folgende Konstanten: Anzahl Wähler (\verb!V!), Anzahl Kandidaten (\verb!C!) und Anzahl Sitze. (\verb!S!)
 \end{itemize}
@@ -140,19 +140,19 @@ Beendet wird ein boolscher Ausdruck durch ein Semikolon.
 
 
 \chapter{Zielbestimmung}
-Ziel des Programmes ist es eine  Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Die Analyse solcher Eigenschaften ist ein nicht entscheidbares Problem und wird deshalb innerhalb von Grenzen mit Hilfe eine \ac{BMC} ausgeführt. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
+Ziel des Programmes ist es eine  Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Die Analyse solcher Eigenschaften ist ein nicht entscheidbares Problem und wird deshalb innerhalb von Grenzen mit Hilfe eines \ac{BMC} ausgeführt. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
 Das Programm soll Folgendes bereitstellen:
 \begin{itemize}
-\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist.
-\item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax .
-\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze).
-\item Eine Möglichkeit, die Analyse auszuführen.
-\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst.
+\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist
+\item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax
+\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze)
+\item Eine Möglichkeit, die Analyse auszuführen
+\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst
 \end{itemize}
 
-Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird es sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
+Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
 
-Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch, vor allem bei der Eingabe formaler Eigenschaften. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand, verbunden, der sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll das Untersuchen von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Weiterhin ist damit viel, sich jedes Mal wiederholender Aufwand, verbunden, der sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \subsection{Allgemein}
@@ -182,7 +182,7 @@ Folgende Funktionalität bietet der Eigenschafteneditor:
 \end{itemize}
 
 \subsection{Eigenschaftenliste}
-Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. Falls alle Eigenschaften erfüllt sind, wird eine Erfolgsmeldung ausgegeben. Ansonsten wird ein Gegenbeispiel ausgegeben
+Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. Falls alle Eigenschaften erfüllt sind, wird eine Erfolgsmeldung ausgegeben, ansonsten wird ein Gegenbeispiel ausgegeben.
 \begin{itemize}
 	\item Vordefinierte Standardeigenschaften (z.B. Anonymität) können einzeln in die Analyse mitaufgenommen werden.
 	\item Das Ergebnis der Analyse für diese Standardeigenschaften wird für jede Eigenschaft einzeln ausgegeben.
@@ -211,7 +211,7 @@ Folgende Funktionalität bietet der C-Editor zusätzlich:
 	\item Zeilennummern
 	\item Codevorlagen können in den Editor geladen werden.
 	\item Beim Laden eines Wahlverfahrens wird das Format der geladenen Datei überprüft.
-	\item Fehleranzeige bei Konstrukten, die der C-Grammatik widersprechen.
+	\item Fehleranzeige bei Konstrukten, die der C-Grammatik widersprechen
 \end{itemize}
 
 \subsection{Eigenschafteneditor}
