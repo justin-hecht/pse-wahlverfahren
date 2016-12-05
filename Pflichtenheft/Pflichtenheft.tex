@@ -25,8 +25,8 @@
 \makeglossaries
 \newglossaryentry{CBMC}
 {
-name={C bounded model checker},
-description={Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom Benutzer definierte Assertions untersucht}
+name={CBMC},
+description={C Bounded Model Checker: Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom Benutzer definierte Assertions untersucht}
 }
 \newglossaryentry{Makro}
 {
@@ -41,8 +41,14 @@ description={Die Person, welche das Program bedient, Eingaben tätigt, etc}
 \newglossaryentry{Subset}
 {
 name={Subset},
-description={Ein definierter Teilbereich}
+description={Macht nur Sinn relativ zu einem Superset. Alle Elemente des Subsets sind auch Elemente des Supersets}
 }
+\newglossaryentry{Quantor}
+{
+name={Quantor},
+description={Ein Operator der Prädikatenlogik. Bindet eine Variable. Am öftesten verwendet sind Existenz- und Allquantor}
+}
+
 
 \begin{document}
 
@@ -62,26 +68,26 @@ description={Ein definierter Teilbereich}
 \end{acronym}
  
 \chapter{Produktübersicht}
-Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Ein der Abwesenheit dieser ist nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem die Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Präsenz erwünschter Eigenschaften zu untersuchen.
+Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anforderungen an sie gestellt, welche unsere intuitiven Ideen über Gerechtigkeit formalisieren: Proportionalität, Anonymität, etc. Moderne Wahlverfahren sind oft so komplex, dass sie viele überraschende und teils unerwünschte Eigenschaften haben. Deren Abwesenheit zu beweisen dieser ist nicht trivial. So wurde beispielsweise 2008 das Bundestagswahlrecht vom BVerfG für verfassungswidrig erklärt, da es unter anderem die Gleichheit der Wirkung verschiedener Stimmen verletzte. Auf der anderen Seite ist es auch sehr schwer, Wahlverfahren auf die Präsenz erwünschter Eigenschaften zu untersuchen.
 
 \ac{BMC} wird normalerweise dazu verwendet zu überprüfen, ob ein gegebenes Programm gegebene Eigenschaften erfüllt. Da dieses Problem im Allgemeinen unentscheidbar ist, werden nur endliche Codepfade überprüft. Dadurch wird der Zustandsraum endlich und das Problem entscheidbar. Um dies zu bewerkstelligen, werden potentiell unendliche Codepfade, also Schleifen, bis zu einer vom \gls{Benutzer} bestimmten Grenze aufgerollt. Danach wird eine SAT-Formel erstellt, die genau dann erfüllbar ist,	 wenn das Programm einen Zustand einnehmen kann, welcher die gegebene Eigenschaft nicht erfüllt. Dies ist vollautomatisch und gibt bei Nichterfüllung das Gegenbeispiel zurück.  
 
-In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen, ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren, wie z.B. die einfache Mehrheitswahl, darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt.
+In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen, ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren (wie z.B. die einfache Mehrheitswahl) darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt.
 
-Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle, um mit \ac{CBMC} zu kommunizieren. Es bietet dem \gls{Benutzer} über eine \ac{GUI} die Möglichkeit, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler etc. die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \ac{CBMC} bekommt der \gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
+Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle, um mit \ac{CBMC} zu kommunizieren. Es bietet dem \gls{Benutzer} über eine \ac{GUI} die Möglichkeit, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler etc. die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \gls{CBMC} bekommt der \gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
-\item "`C-Editor"': Code-Editor für Wahlverfahren in der Programmiersprache .
+\item "`C-Editor"': Code-Editor für Wahlverfahren in der Programmiersprache C.
 \item "`Eigenschaftenliste"': Listenansicht aller Eigenschaften, die für dieses Wahlverfahren untersucht werden sollen, und Ausgabe der Analyse.
 \item "`Eigenschafteneditor"': Editor für Spezifikation formaler Eigenschaften als boolsche Ausdrücke in nachfolgend beschriebener Grammatik.
 \item "`Parametereditor"': Eingabe von Parametern einer zu analysierenden Wahl.
 \end{enumerate}
 
 \section{Die Syntax zur Angabe der formalen Eigenschaften} \label{Sprache-für-formale-Eigenschaften}
-In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eigenschafteneditor verwendet, gegeben. Es handelt sich um ein \gls{Subset} der C-Sprache mit einigen Ergänzungen. Diese werden im Folgenden erläutert. 
+In diesem Abschnitt wird ein grober Überblick über die Sprache, welche der Eigenschafteneditor verwendet, gegeben. Es handelt sich um ein \gls{Subset} der C-Sprache zusammen mit einigen Ergänzungen. Diese werden im Folgenden erläutert. 
 
-Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Darstellung boolscher Ausdrücke:
+Formale Eigenschaften werden in Vor- und Nachbedingungen unterteilt. Diese wiederum werden vom User als eine Liste boolscher Ausdrücke angegeben. Die Sprache erlaubt folgende Konstrukte zur Konstruktion boolscher Ausdrücke:
 
 \begin{itemize}
 \item Folgende, aus C übernommene, binäre Operatoren:
@@ -125,7 +131,7 @@ Bedeutung: \verb!x! ist größer als \verb!y! genau dann, wenn auch \verb!x + 1!
 
 Beispiel: \verb!Wähler v, Kandidat c!
 
-\item Quantoren für Wähler, Kandidaten und Sitze in der Form von \gls{Makro}s. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden. \\
+\item \gls{Quantor}en für Wähler, Kandidaten und Sitze in der Form von \gls{Makro}s. Ein bisher ungenutzter Variablenname wird als Argument erwartet. Dieser kann in dem darauf folgenden Ausdruck als symbolische Variable entsprechenden Typs verwendet werden. \\
 
 Beispiel: \verb|FOR_ALL_VOTERS(v) : EXISTS_ONE_CANDIDATE(c) : v mag c| \\
 Bedeutung: Für jeden Wähler (\verb!v!) gibt es zumindest einen Kandidaten (\verb!c!), sodass das Tupel die Eigenschaft "'der Wähler v mag den Kandidaten c"' erfüllt (Dies ist nur ein Beispiel, der Editor wird die Eigenschaft 'mögen' nicht zu Verfügung stellen. An dessen Stelle könnte jeder andere binäre Operator stehen, welcher eine Variable vom Typ Wähler und eine Variable vom Typ Kandidat erwartet und \texttt{true} oder \texttt{false} zurückgibt).
@@ -145,19 +151,19 @@ Beendet wird ein boolscher Ausdruck durch ein Semikolon.
 
 
 \chapter{Zielbestimmung}
-Ziel des Programmes ist es eine  Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Die Analyse solcher Eigenschaften ist ein nicht entscheidbares Problem und wird deshalb innerhalb von Grenzen mit Hilfe eines \ac{BMC} ausgeführt. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
+Ziel des Programmes ist es eine Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Zur Analyse wird dazu \gls{CBMC} verwendet. Das Programm soll auch von Nicht-Informatikern mit minimalem Aufwand erlernt und eingesetzt werden können.
 Das Programm soll Folgendes bereitstellen:
 \begin{itemize}
-\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens, das in C-Code geschrieben ist.
+\item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens in der Programmiersprache C
 \item Eine Möglichkeit zur Beschreibung von formalen Eigenschaften, welche das Wahlverfahren erfüllen soll, in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax
-\item Eine Möglichkeit zum Angeben der Parameter des angegebenen Wahlverfahrens (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze).
+\item Eine Möglichkeit zum Angeben der Parameter für welche das angegebenen Wahlverfahren analysiert werden soll (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze).
 \item Eine Möglichkeit, die Analyse auszuführen.
-\item Eine Ausgabe des Ergebnisses der Analyse: eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst.
+\item Eine Ausgabe des Ergebnisses der Analyse: Eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst.
 \end{itemize}
 
-Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
+Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} damit aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
 
-Die Analyse der Eigenschaften lässt sich auch schon ohne Verwendung unseres Programms erledigen. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Weiterhin ist damit großer, sich jedes Mal wiederholender Aufwand, verbunden, der sich automatisieren lässt. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+Alles bisher Beschriebene wäre theoretisch schon ohne Verwendung des Programmes möglich. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Außerdem sind mit dem \gls{CBMC}-Aufruf "'von Hand"' einige Aufgaben verbunden, welche sich schneller und korrekter durch den Computer automatisieren lassen. Hinzu kommen große Anforderungen an die Informatikkenntnisse des \gls{Benutzer}s. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \subsection{Allgemein}
@@ -177,7 +183,7 @@ Folgende Funktionalität bietet der C-Editor:
 \end{itemize}
 	
 \subsection{Eigenschafteneditor}
-Ein Editor wird bereitgestellt, in den formale Eigenschaften eingegeben werden können. Die Eingabe erfolgt in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax. Die eingegebenen Eigenschaften sind Parameter bei der Ansteuerung von \ac{CBMC}.\\
+Ein Editor wird bereitgestellt, in dem formale Eigenschaften beschrieben werden können. Die Beschreibung erfolgt in der in \ref{Sprache-für-formale-Eigenschaften} beschriebenen Syntax. \\
 Folgende Funktionalität bietet der Eigenschafteneditor:
 \begin{itemize}
 	\item Eine formale Eigenschaft kann abgespeichert werden.
