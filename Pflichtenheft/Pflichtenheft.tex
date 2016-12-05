@@ -65,6 +65,7 @@ description={Ein Operator der Prädikatenlogik. Bindet eine Variable. Am öftest
 \acro{CBMC}{C Bounded Model Checker}
 \acro{BMC}{Bounded Model Checking}
 \acro{GUI}{Graphical User Interface}
+\acro{BEAST}{Bounded Election Attribute Structuring Tool}
 \end{acronym}
  
 \chapter{Produktübersicht}
@@ -74,7 +75,7 @@ Wahlverfahren bilden den Grundstein unserer Demokratie. Dabei werden viele Anfor
 
 In unserem Fall kann \ac{BMC} konkret dazu verwendet werden, ein C-Programm darauf zu untersuchen, ob es im Falle gegebener Vorbedingungen gegebene Nachbedingungen erfüllt. Dies wird dazu verwendet, obige Problemstellung innerhalb einer bestimmten Genauigkeit zu lösen: so kann ein in C beschriebenes Wahlverfahren (wie z.B. die einfache Mehrheitswahl) darauf geprüft werden, ob es bestimmte Eigenschaften erfüllt.
 
-Unser Programm ist im Wesentlichen eine sehr umfangreiche Schnittstelle, um mit \ac{CBMC} zu kommunizieren. Es bietet dem \gls{Benutzer} über eine \ac{GUI} die Möglichkeit, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler etc. die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \gls{CBMC} bekommt der \gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
+Unser Programm, das \ac{BEAST}, ist im Wesentlichen eine sehr umfangreiche Schnittstelle, um mit \ac{CBMC} zu kommunizieren. Es bietet dem \gls{Benutzer} über ein \ac{GUI} die Möglichkeit, formale Eigenschaften für Wahlverfahren sowie diese Wahlverfahren selbst anzugeben und zu editieren. Weiterhin liefert es Möglichkeiten, die Interaktion mit \ac{CBMC} zu gestalten: Für wie viele Wähler etc. die Eigenschaft überprüft werden soll. Nach erfolgreicher Überprüfung durch \gls{CBMC} bekommt der \gls{Benutzer} schließlich eine Antwort des Programms, in der er bei Nichterfüllung der Eigenschaft ein Gegenbeispiel angezeigt bekommt. Wird kein Gegenbeispiel gefunden, so wird eine Erfolgsmeldung ausgegeben. All dies wird graphisch über die \ac{GUI} aufbereitet.
 
 Die \ac{GUI} ist nach Funktionalität in vier Teilen angeordnet:
 \begin{enumerate}
@@ -163,7 +164,7 @@ Das Programm soll Folgendes bereitstellen:
 
 Die Analyse der gegebenen Eigenschaften wird durch \ac{CBMC} geschehen. Aufgabe des Programmes wird sein, die Eingaben des \gls{Benutzer}s aufzubereiten, so dass \ac{CBMC} damit aufgerufen werden kann. Die Ausgabe von \ac{CBMC} wird dann vom Programm interpretiert und dem Benutzer präsentiert. 
 
-Alles bisher Beschriebene wäre theoretisch schon ohne Verwendung des Programmes möglich. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Außerdem sind mit dem \gls{CBMC}-Aufruf "'von Hand"' einige Aufgaben verbunden, welche sich schneller und korrekter durch den Computer automatisieren lassen. Hinzu kommen große Anforderungen an die Informatikkenntnisse des \gls{Benutzer}s. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
+Alles bisher Beschriebene wäre theoretisch schon ohne Verwendung des Programmes möglich. Allerdings wäre der damit verbundene Lern- und Einarbeitungsaufwand sehr hoch. Außerdem sind mit dem \gls{CBMC}-Aufruf "'von Hand"' einige Aufgaben verbunden, welche sich schneller und korrekter durch den Computer automatisieren lassen. Hinzu kommen große Anforderungen an die Informatikkenntnisse des \gls{Benutzer}s. Dies ist ein Problem, da die Erforschung von Wahlverfahren auch von Nicht-Informatikern durchgeführt wird. Daher ist ein Schwerpunkt unseres Programms einfache Benutzbarkeit, besonders für Nicht-Informatiker. Dies soll erreicht werden über eine \ac{GUI}, welche oft benötigte Funktionalität bereitstellt. Einfache syntaktische Fehler im Code sollen während des Editierens erkannt werden. Dadurch soll die Untersuchung von Wahlverfahren leichter und schneller werden, was den Mehrwert unseres Programmes ausmacht.
 
 \section{Musskriterien}
 \subsection{Allgemein}
@@ -198,11 +199,12 @@ Das Ergebnis der Analyse wird vom Programm graphisch ausgegeben. Falls alle Eige
 	\item Vordefinierte Standardeigenschaften (z.B. Anonymität) können einzeln in die Analyse mitaufgenommen werden.
 	\item Das Ergebnis der Analyse für diese Standardeigenschaften wird für jede Eigenschaft einzeln ausgegeben.
 	\item Eigenschaften können der Liste hinzugefügt werden und von ihr entfernt werden.
+	\item Listen können gespeichert und geladen werden
 \end{itemize}
 
 \subsection{Parametereditor}
-Parameter für eine Wahl (Anzahl der Wähler, Kandidaten und Sitzen) können festgelegt werden. Bei der Analyse wird das Wahlverfahren nur innerhalb dieser Wahlparameter geprüft. Werden keine Parameter angegeben, wird \ac{CBMC} ohne sie aufgerufen.\\
-Folgende Funktionalität bietet der Parametereditor:
+Parameter für eine Wahl (Anzahl der Wähler, Kandidaten und Sitzen) können festgelegt werden. Bei der Analyse wird das Wahlverfahren nur innerhalb dieser Wahlparameter geprüft. \\
+Folgende Parameter bietet der Parametereditor:
 \begin{itemize}
 	\item Die Anzahl der Wähler, Kandidaten und Sitze kann festgelegt werden.
 	\item Die Analyse des Wahlverfahrens kann gestartet werden.
@@ -272,7 +274,7 @@ Folgende Funktionalität bietet der C-Editor zusätzlich:
 
 \chapter{Produkteinsatz}
 Das Programm dient dazu, Wahlverfahren auf ihre formalen Eigenschaften hin zu analysieren. Es richtet sich an Benutzer, die ein Interesse an der Erforschung oder Entwicklung solcher Wahlverfahren haben. Benutzer kommen aus dem Bereich der theoretischen Informatik oder der Politwissenschaft. Deshalb soll das Programm auch für Nicht-Informatiker zugänglich sein. Für die Bedienung des Programms ist jedoch Kenntnis der Programmiersprache C und der Aussagen- und Prädikatenlogik nötig.\\
-Das Erstellen von neuen Wahlverfahren gestaltet sich ohne Hilfsmittel als schwierig. Besonders aber die Analyse solcher Wahlverfahren auf die Einhaltung von gegebenen Vor- und Nachbedingungen ist für viele Menschen eine Unmöglichkeit. Das Produkt soll diese Analyse stark vereinfachen.\\
+Das Erstellen und Überprüfen von neuen Wahlverfahren gestaltet sich ohne Hilfsmittel als schwierig. Das Produkt soll diese Aufgabe stark vereinfachen.\\
 
 \section{Anwendungsbereiche}
 \begin{itemize}
@@ -295,11 +297,11 @@ Das Produkt kommt in einer Büroumgebung zum Einsatz.
 \section{Szenarien}
 \textbf{Szenario 1}\\
 Ein Wahlforscher wird von der Regierung eines Landes beauftragt, ein neues Wahlverfahren zu entwerfen. Dieses soll bestimmte, vorgegebene formale Eigenschaften erfüllen.\\
-Er installiert das Tool und entwickelt mit diesem eine erste Version des Wahlverfahrens. Zusätzlich gibt er die vorgegebenen Eigenschaften als formale Eigenschaften in das Tool ein.\\
+Er installiert das Tool und entwickelt damit eine erste Version des Wahlverfahrens. Zusätzlich gibt er die vorgegebenen Eigenschaften als formale Eigenschaften in das Tool ein.\\
 Nun gibt er Parameter zum Prüfen an (Wähler, Stimmen, Sitze, Timeout) und lässt das Wahlverfahren auf die formalen Eigenschaften prüfen.\\
-Das Ergebnis des Prüfens zeigt, dass nicht alle Eigenschaften vom Wahlverfahren erfüllt werden.\
+Das Ergebnis der Überprüfung zeigt, dass nicht alle Eigenschaften vom Wahlverfahren erfüllt werden und gibt ein Gegenbeispiel aus.\
 Mithilfe der Informationen aus der Ergebnisausgabe analysiert und modifiziert der Entwickler das Wahlverfahren so, dass es alle Eigenschaften erfüllt.\\
-Er prüft es nochmals auf alle Eigenschaften und nun werden alle erfüllt.\\
+Er prüft es nochmals auf alle Eigenschaften welche nun alle erfüllt werden.\\
 Zuletzt speichert er das Gesamtprojekt und einzeln das Wahlverfahren ab. Letzteres sendet er dann an eine Prüfstelle der Regierung.
 
 \begin{figure}[H]
@@ -309,9 +311,9 @@ Zuletzt speichert er das Gesamtprojekt und einzeln das Wahlverfahren ab. Letzter
 \end{figure}
 \textbf{Szenario 2}\\
 Eine Prüfstelle bekommt ein Wahlverfahren übergeben, welches sie auf bestimmte formale Eigenschaften testen soll.\\
-Das Tool wird installiert und das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
-Um das Wahlverfahren auf die Eigenschaften zu prüfen, werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie einem Timeout als obere Zeitgrenze für das Prüfen angegeben.\\
-Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.\\
+Das Tool wird installiert, das Wahlverfahren im C-Editor geladen und es werden formale Eigenschaften erstellt.\\
+Um das Wahlverfahren auf die Eigenschaften zu prüfen, werden Parameter zu \\Kandidaten-, Stimmen- und Wähleranzahl, sowie ein Timeout als obere Zeitgrenze für die Überprüfung angegeben.\\
+Sobald das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfüllte Eigenschaften angezeigt. Diese Informationen benutzt die Prüfstelle dann in ihrem Bericht über das Wahlverfahren.\\
 
 \begin{figure}[H]
 \includegraphics[scale=0.12]{ActivityDiagramScenario2.png}
@@ -351,7 +353,7 @@ Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfü
 \section{Allgemein}
 \subsection{Muss-Kriterien}
 /FM0010/ Bereitstellen von Editoren zur Beschreibung des Wahlverfahrens sowie zur Beschreibung zu erfüllender formaler Eigenschaften \\
-/FM0020/ Kommunikation und Überprüfung dieser Eigenschaften via \ac{CBMC} \\
+/FM0020/ Überprüfung dieser Eigenschaften via \ac{CBMC} \\
 /FM0030/ Bereitstellen von Kommunikationsschnittstellen mit \ac{CBMC} sowohl für Eingabe von Parametern als auch zur Ausgabe der Ergebnisse einer Überprüfung \\
 /FM0031/ Darstellung der Ergebnisse einer Überprüfung in für Nicht-Informatiker verständlicher Form:
 \begin{itemize}
@@ -370,7 +372,7 @@ Wenn das Tool mit der Überprüfung fertig ist, werden erfüllte und nicht erfü
 
 \section{C-Editor für Wahlverfahren}
 \subsection{Muss-Kriterien}
-/FM1010/ Darstellung aller für das Programmieren in C benötigten Zeichen \\
+/FM1010/ Darstellung aller für das Programmieren in C benötigter Zeichen \\
 /FM1020/ Veränderung des dargestellten Textes durch Eingabe über Tastatur und Maus wie in Notepad \\
 /FM1030/ Speichern von erstelltem Code als Datei auf der Festplatte an vom \gls{Benutzer} angegebenen Ort \\
 /FM1040/ Laden und Darstellen von Dateien korrekten Formats \\
@@ -517,7 +519,7 @@ Makro & Effekt \\
 
 \chapter{Produktdaten}
 \section{Code-Editor Wahlverfahren}
-/D10/ Das Wahlverfahren wird vom \gls{Benutzer} als C-Code definiert und in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .c gespeichert. \\
+/D10/ Wahlverfahren werden vom \gls{Benutzer} in der Programmiersprache C beschrieben. Diese Beschreibungen werden in einer Datei mit vom \gls{Benutzer} gegebenen Namen und der Endung .c gespeichert. \\
 /D11/ Die verfügbaren Kategorien an Wahlverfahren werden in einer Datei namens electionTemplates gespeichert.\\
 
 \section{Editor von formalen Eigenschaften}
@@ -674,7 +676,7 @@ Allgemein: /F0010/ /F0050/ \\
 
 \section{Testfälle für die Editoren}
 
-Die Nachfolgenden Testfälle betreffen nur die 2 GUI-Elemente C-Editor und Eigenschafteneditor. \\\\
+Die Nachfolgenden Testfälle betreffen nur die 2 GUI-Elemente C-Editor und Eigenschafteneditor. \\\\\\
 \textbf{/T200/} \\
 \textbf{Prozess: Kopieren, Ausschneiden und Einfügen} \\
 \textbf{Abgedeckte Funktionale Anforderungen:}\\
@@ -719,13 +721,13 @@ Anzeige von syntaktischen Fehlern im Code
 \begin{addmargin}[15pt]{0pt}
 \textbf{Beschreibung der Erweiterungen:}\\
 1. Der Benutzer verändert seinen Code. \\
-2. Während der Nutzer seinen Code verändert werden syntaktische Fehler wie vergessene Semicolon, nicht geschlossene Klammern, Verwendung von Schlüsselwörtern als Variablennamen und andere Konstrukte, welche nicht der (C) C-Grammatik oder der (E) Grammatik für die Beschreibung der Wahlverfahren entsprechen. \\
+2. Während der Nutzer seinen Code verändert werden syntaktische Fehler erkannt wie vergessene Semicolon, nicht geschlossene Klammern und andere Konstrukte, welche der (C) C-Grammatik oder der (E) Grammatik widersprechen. \\
 \end{addmargin}
 C: Automatisches Einrücken des Codes in Schleifen und if-Statements 
 \begin{addmargin}[15pt]{0pt}
 \textbf{Beschreibung der Erweiterungen:}\\
 1. Der Benutzer verändert seinen Code. \\
-2. Während der Nutzer seinen Code verändert werden die Strukturen von Schleifen und if-Statements erkannt und automatisch eingerückt. \\
+2. Während der Nutzer seinen Code verändert werden Zeilen in Schleifen und if-Statements erkannt und automatisch eingerückt. \\
 \end{addmargin}
 C: Die Zeilennummern werden angezeigt. \\ \\
 \textbf{Alternativen:} -keine- \\
@@ -974,19 +976,19 @@ Es folgt eine skizzenhafte Beschreibung der High-Level-Architektur des Softwares
 \label{Packet-scetch}
 \end{figure}
 
-\ref{Packet-scetch} zeigt einen ersten Entwurf der Pakete und ihrer Abhängigkeiten untereinander. Diese einzelnen Packete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor, wie aufwendig die Implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Pakete im Verlauf des Entwurfs als Klassen realisiert werden. Anderseits ist es auch möglich, dass weitere Pakete hinzukommen. Abhängigkeiten zu Java-Bibliotheken, wie zum Beispiel Swing, sind nicht dargestellt.
+\ref{Packet-scetch} zeigt einen ersten Entwurf der Pakete und ihrer Abhängigkeiten untereinander. Diese einzelnen Pakete sollen ähnliche Funktionalität bündeln. Zum momentanen Zeitpunkt liegen nur grobe Schätzungen vor, wie aufwendig die Implementierung der verschiedenen Funktionalitäten sein wird. Daher ist es möglich, dass manche Pakete im Verlauf des Entwurfs als Klassen realisiert werden. Anderseits ist es auch möglich, dass weitere Pakete hinzukommen. Abhängigkeiten zu Java-Bibliotheken, wie zum Beispiel Swing, sind nicht dargestellt.
 
 Ziel ist es, möglichst  viel gemeinsame Funktionalität zu kapseln und wiederzuverwerten. Beispielsweise haben C- und Eigenschafteneditor viele analoge Aufgaben. Beide müssen Text darstellen und es dem Benutzer erlauben, diesen zu bearbeiten. Beide müssen eingegebenen Code auf syntaktische Fehler untersuchen und die Ergebnisse dieser Untersuchung dem Benutzer signalisieren. Unterschiede wird es in den Regeln der einzuhaltenden Syntax sowie der \ac{GUI} geben. Daher wird diese Funktionalität in einem eigenen Paket gekapselt. 
 
-Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle dar, über welcher man Instanzen der benötigten Komponenten beziehen kann. In dem Diagramm werden dennoch die konkreten "benutzen" Beziehungen visualisiert. In dem konkreten Entwurf werden diese jedoch über den Dependency-Manager geregelt. 
+Diese Kapselung setzt voraus, dass die verschiedenen Komponenten mit den korrekten Abhängigkeiten konstruiert werden. Funktionalität hierzu befindet sich in dem Dependency-Manager. Dieser stellt eine Schnittstelle dar, über welche die Klassen Instanzen der von ihnen benötigten Komponenten beziehen können. In dem Diagramm werden dennoch die konkreten "benutzen" Beziehungen visualisiert. 
 
-Das Kommunikator-Paket übernimmt die Kommunikation zwischen dem Parameter-Editor und den Komponenten. So wird es unter anderem der CBMC-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaftenliste weiterleiten.
+Das Kommunikator-Paket übernimmt die Kommunikation zwischen dem Parameter-Editor und den restlichen Komponenten. So wird es unter anderem der \ac{CBMC}-Schnittstelle die korrekten Daten zukommen lassen und deren Ergebnisse an die Eigenschaftenliste weiterleiten.
 
 Alle Haupt-Komponenten müssen Dateien speichern und laden können. Ebenso müssen alle Haupt-Komponenten geladene Dateien auf korrektes Format hin überprüfen und das Ergebnis dieser Überprüfung mit dem Benutzer kommunizieren. Das mit Laden/Speichern beschriftete Paket wird Funktionalität zu diesem Zweck bereitstellen. 
 
-Die CBMC-Schnittstelle erwartet die Beschreibung des Wahlverfahrens sowie die zu überprüfenden Eigenschaften (jeweils in Wrapper-Klassen). Sie erzeugt den Input für CBMC, ruft CBMC mit diesem Input auf und gibt das Ergebnis (in einer Wrapper-Klasse) zurück.
+Die \ac{CBMC}-Schnittstelle erwartet die Beschreibung des Wahlverfahrens sowie die zu überprüfenden Eigenschaften (jeweils in Wrapper-Klassen). Sie erzeugt den Input für \ac{CBMC}, ruft \ac{CBMC} mit diesem Input auf und gibt das Ergebnis (in einer Wrapper-Klasse) zurück.
 
-Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für CBMC-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für CBMC notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der CBMC-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist. Allgemein sorgt diese zusätzliche  Abstraktion für eine flexible Architektur. Sollte das Programm in Zukunft um weitere Programmiersprachen oder einen graphischen Editor zur Beschreibung von Wahlverfahren erweitert werden, so muss lediglich die entsprechende Wrapper-Klasse korrekt erzeugt werden.
+Diese Wrapper-Klassen erleichtern den Umgang mit den enthaltenen Daten. Die Wrapper-Klasse für \ac{CBMC}-Ergebnisse wird Funktionen zur Abfrage der Wahleingaben und Wahlergebnisse bereitstellen. Die Wrapper-Klassen für Eigenschaften und C-Code werden es erleichtern, den für \ac{CBMC} notwendigen Code zu generieren. Zusätzlich erleichtern sie eine Trennung der internen (Model) und externen (View) Darstellung der Daten. So kann die Visualisierung der \ac{CBMC}-Ergebnisse von einer weiteren Klasse übernommen werden. Diese erwartet lediglich die Ergebnis-Wrapper-Klasse sowie eine Swing-Komponente auf welcher das Ergebnis darzustellen ist. Allgemein sorgt diese zusätzliche  Abstraktion für eine flexible Architektur. Sollte das Programm in Zukunft um weitere Programmiersprachen oder einen graphischen Editor zur Beschreibung von Wahlverfahren erweitert werden, so muss lediglich die entsprechende Wrapper-Klasse korrekt erzeugt werden.
 
 Alle Editoren benötigen Funktionalität zum Wiederholen sowie zum Rückgängig machen von Aktionen. Dazu müssen Eingaben des Benutzers entsprechend gekapselt werden. Funktionalität hierzu befindet sich im Input-Paket.
 
@@ -1278,7 +1280,7 @@ Für den Rest des Projektes veranschlagen wir ungefähr 1500 Mannstunden. Die Ve
 
 \begin{table}[H]
 \centering
-  \begin{tabular}{|p{3cm}|P{2cm}|P{2cm}|}
+  \begin{tabular}{|p{4cm}|P{4cm}|P{3cm}|}
     Phase & Zeitraum & Studen \\ \hline
     Entwurf & 05.12.16 - 16.01.17 & 480 Mannstunden \\ \hline
     Implementierung & 18.01.17 - 13.02.17 & 560 Mannstunden \\ \hline
