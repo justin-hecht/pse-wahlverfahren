@@ -1,0 +1,60 @@
+Schnell:
+BooleanExpEditor Interfaces (1)
+BooleanExpEditor GUI-Dummy (1)
+CodeArea Basisimplementierung [mit Klein] (1-2)
+BooleanExpEditor GUI-Funktionalität (2)
+BooleanExpEditor Fehlererkennungskommunikation (2) 
+Toolbox ANTLRHandler [mit Schnell] (2-3) 
+CodeArea Syntaxhighliting (3)
+BooleanExpEditor Speichern und Laden (3) 
+BooleanExpEditor Kannkriterien (4)
+CodeArea Kannkriterien [mit Klein] (4)
+Sonstiges Präsentationsplanung [mit Hanselmann] (4)
+
+Klein:
+CodeArea Interfaces (1)
+CElectionDescriptionEditor GUI-Dummy (1) 
+CElectionDescriptionEditor Interfaces (1)
+CodeArea Basisimplementierung [mit Schnell] (1-2)
+CElectionDescriptionEditor GUI Funktionalität (2)
+CElectionDescriptionEditor Fehlererkennung (2) 
+Toolbox ANTLRHandler [mit Schnell] (2-3) 
+CElectionDescriptionEditor Speichern und Laden (3)
+CodeArea Kannkriterien [mit Schnell] (4)
+CElectionDescriptionEditor Kannkriterien (4)
+
+Hecht:
+PropertyList Interfaces (1)
+PropertyList GUI-Dummy (1)
+PropertyList GUI-Funktionalität (2)
+PropertyList Ergebnisdarstellung (2-3)
+PropertyList Speichern und Laden (3)
+StringRessource Anlegen Textdatei Englisch (4)
+
+Stapelbroek:
+Datatypes Implementierung [mit Hanselmann] (1)
+Options Interface (1)
+Options Basisimplementierung Implementierung (1-2)
+PropertyChecker CBMC-Ansteuerung (2-3) 
+PropertyChecker Codegenerierung [mit Hanselmann] (2-3) 
+PropertyChecker Eventuelle Multithreadverbesserung (4)
+
+Hanselmann:
+Datatypes Implementierung [mit Stapelbroek] (1)
+PropertyChecker Interfaces (1)
+SaverLoader Interface (1)
+StringRessource Interface (1)
+StringRessource Anlegen und verwalten der Textdatei Deutsch (1)
+PropertyChecker Codegenerierung [mit Stapelbroek] (2-3)
+Sonstiges Präsentationsplanung [mit Schnell] (4)
+
+Wohnig:
+Parametereditor Interfaces (1)
+Parametereditor GUI-Dummy (1)
+Parametereditor Mainmethode (1)
+Sonstiges Eine zusammenhängende Jar aus Code generieren (1)
+Toolbox UserActionKlasse (1-2)
+Parametereditor GUI-Funktionalität (2)
+Parametereditor Speichern und Laden (3)
+Sonstiges Änderungsdokument erstellen (1-4)
+Options Kannkriterien (4)

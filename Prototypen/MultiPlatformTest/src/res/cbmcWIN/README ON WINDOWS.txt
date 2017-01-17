@@ -1,0 +1,2 @@
+Because I don't know the license of cbmc right now, I deleted the binaries for Windows from here.
+If you want to run this program on windows please download it on your own and put the contents of the folder in here.
