@@ -8,7 +8,22 @@
 \chapter{Implementierungsplanung}
 Die Packages (hier fett) sind mit allen ihren Meilensteinen jeweils einem der Phasenverantwortlichen zugeordnet. \\
 Die Meilensteinen sind Personen zugeordnet. \\
-Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der Meilenstein implementiert werden soll. \\
+Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der Meilenstein implementiert werden soll. \\\\
+
+Die Meilensteine lassen sich wie folgt zusammenfassen: \\
+\begin{itemize} 
+\item Nach der ersten Woche soll ein GUI-Dummy fertig sein, der sich über eine JAR öffnen lässt. Ein GUI-Dummy ist eine GUI, die schon das fertige Layout jedoch noch keine Funktionalität besitzt. Außerdem sind intern alle Interfaces aller Pakete zu implementiert, sowie die komplette Pakete HighLevel und DataTypes. Die Grammatik für die formalen Eigenschaften wird 
+\item Am Ende der zweiten Woche soll die GUI-Funktionalität fertig sein. Gemeint ist damit, dass alle Buttons intern schon abgefangen werden. Außerdem läuft die Implementierung weiterer Muss- und Sollkriterien. 
+\item In der dritten Woche werden die Funktionen zum Speicher und Laden implementiert sowie alle Muss- und Sollkriterien fertig gestellt. Das Produkt soll also nach dem Ende der dritten Woche schon einsatzfähig sein.
+\item In der vierten und letzten Woche werden eventuell die Kann- und Wunschkriterien umgesetzt. Außerdem werden die Dokumente zur Vorstellung der Phase, welche die Präsentation sowie das Änderungsdokument zu vermeintlichen Änderungen im Entwurf und oder Pflichtenheft darstellen, erstellt. Falls die eingeplante Zeit für Muss- und Kannkriterien nicht reichen sollte, dient diese Zeit auch als Puffer.
+
+
+\end{itemize} 
+
+
+
+
+
 \begin{tabular}{ | p{7cm} | p{7cm} |}
     \hline
 	Was & Wer\\
@@ -65,13 +80,17 @@ Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der
 	\hline
 	GUI-Dummy (1) & Hecht\\
 	\hline
-	GUI-Funktionalität (2)& Hecht\\
+	GUI-Funktionalität (2) & Hecht\\
 	\hline
 	Speichern und Laden (3)& Hecht\\
 	\hline
 	Ergebnisdarstellung (2-3) & Hecht\\
 	\hline	
-	
+	\rule{0pt}{15pt}\textbf {SaverLoader} & Hanselmann\\
+	&\\
+	\hline
+	Interfaces (1) & Hecht\\
+	\hline
 	\rule{0pt}{15pt}\textbf {Options} & Hanselmann\\
 	&\\
 	\hline
@@ -122,13 +141,13 @@ Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der
 	\rule{0pt}{15pt}\textbf {Toolbox} & Schnell\\
 	&\\
 	\hline	
-	ANTLRHandler (2-3)  & Schnell\\
+	BooleanExpressionToASTConverter (2-3)  & Schnell\\
 	(Erstellung des AST, Fehlererkennung in den formalen Eigenschaften) &\\
 	\hline
 	UserActionKlasse (1-2) & Wohnig\\
 	\hline
 	
-	\rule{0pt}{15pt}\textbf {StringRessource} & Hanselmann\\
+	\rule{0pt}{15pt}\textbf {StringResource} & Hanselmann\\
 	&\\
 	\hline	
 	Interface (1) & Hanselmann \\
@@ -138,11 +157,7 @@ Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der
 	Anlegen Textdatei Englisch (4) & Hanselmann \\
 	\hline
 	
-	\rule{0pt}{15pt}\textbf {SaverLoader} & Hanselmann\\
-	&\\
-	\hline
-	Interfaces (1) & Hecht\\
-	\hline	
+	
 	
 	\rule{0pt}{15pt}\textbf {HighLevel} & Hanselmann\\
 	&\\
@@ -158,6 +173,9 @@ Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der
 	Präsentationsplanung (4) & Schnell und Hanselmann  \\
 	\hline
 	Änderungsdokument erstellen (1-4) & Wohnig \\
+	\hline
+	BooleanExp Antlr-Grammatik erstellen (1) & Schnell und Klein \\
+	& (Schnell betreut diesen Meilenstein) \\
 	\hline
 	
     \end{tabular}\\\\
@@ -199,7 +217,7 @@ Hecht:
 \item PropertyList GUI-Funktionalität (2)
 \item PropertyList Ergebnisdarstellung (2-3)
 \item PropertyList Speichern und Laden (3)
-\item StringRessource Anlegen Textdatei Englisch (4)
+\item StringResource Anlegen Textdatei Englisch (4)
 \end{itemize} 
 \vspace{8mm}
 Stapelbroek:
@@ -217,8 +235,8 @@ Hanselmann:
 \item Datatypes Implementierung [mit Stapelbroek] (1)
 \item PropertyChecker Interfaces (1)
 \item SaverLoader Interface (1)
-\item StringRessource Interface (1)
-\item StringRessource Anlegen und verwalten der Textdatei Deutsch (1)
+\item StringResource Interface (1)
+\item StringResource Anlegen und verwalten der Textdatei Deutsch (1)
 \item PropertyChecker Codegenerierung [mit Stapelbroek] (2-3)
 \item Sonstiges Präsentationsplanung [mit Schnell] (4)
 \end{itemize}
