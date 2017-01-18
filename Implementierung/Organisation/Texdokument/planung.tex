@@ -14,11 +14,13 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 \item In der dritten Woche werden die Funktionen zum Speicher und Laden implementiert sowie alle Muss- und Sollkriterien fertig gestellt. Das Produkt soll also nach dem Ende der dritten Woche schon einsatzfähig sein.
 \item In der vierten und letzten Woche werden eventuell die Kann- und Wunschkriterien umgesetzt. Außerdem werden die Dokumente zur Vorstellung der Phase, welche die Präsentation sowie das Änderungsdokument zu vermeintlichen Änderungen im Entwurf und oder Pflichtenheft darstellen, erstellt. Falls die eingeplante Zeit für Muss- und Kannkriterien nicht reichen sollte, dient diese Zeit auch als Puffer.
 \end{itemize} 
-
 Die Packages (hier fett) sind mit allen ihren Meilensteinen (falls nicht anders angegeben) jeweils einem der Phasenverantwortlichen zugeordnet. \\
 Die Meilensteinen sind Personen zugeordnet. \\
 Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der Meilenstein implementiert werden soll. \\
-Die Klassen, die die Funktionalität Speichern und Laden ermöglichen sind im Paket SaverLoader. In der Aufteilung sind mit "Speichern und Laden" in den Paketen, die Teile der Software in SaverLoader gemeint. Sie sind unter anderen Paketen aufgelistet, da sie für das Speichern und Laden der Klassen innerhalb der Pakete zuständig sind.
+Die Klassen, die die Funktionalität Speichern und Laden ermöglichen sind im Paket SaverLoader. In der Aufteilung sind mit "Speichern und Laden" in den Paketen, die Teile der Software in SaverLoader gemeint. Sie sind unter anderen Paketen aufgelistet, da sie für das Speichern und Laden der Klassen innerhalb der Pakete zuständig sind. \\
+Mit Restliche Implementierung im Paket Toolbox ist die Implementierung aller Klassen innerhalb diese Paketes gemeint, die sonst nicht explizit genannt sind. \\
+Dieser Zeitplan baut auf das Entwurfsdokument und das Klassendiagramm auf. \\
+Der Begriff Basisimplementierung umfasst alle Klassen innerhalb eines Paketes, die für die Muss- und Sollkriterien implementiert werden müssen. 
 
 \begin{tabular}{ | p{7cm} | p{7cm} |}
     \hline
@@ -104,7 +106,6 @@ Die Klassen, die die Funktionalität Speichern und Laden ermöglichen sind im Pa
 	\hline
 	
 \end{tabular}\\
-\\
 \begin{tabular}{ | p{7cm} | p{7cm} |}
 	\hline
 	Was & Wer\\
@@ -262,8 +263,9 @@ Wohnig:
 \end{itemize}
 \vspace{8mm}
 In dem folgenden Diagramm sieht man die Zeitplanung: \\
+Die Pfeile beschreiben die Abhängigkeiten. \\
 \begin{landscape}
-\includegraphics[width=1.4\textwidth] {planung.jpg}
+\includegraphics[width=1.42\textwidth] {planung.jpg}
 \end{landscape}
 
 
