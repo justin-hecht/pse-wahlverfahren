@@ -5,6 +5,8 @@
  */
 package edu.pse.beast.options;
 
+import java.util.List;
+
 /**
  *
  * @author Lukas
@@ -23,7 +25,9 @@ public abstract class Options{
 	
 	public abstract List<OptionElement> getOptionElements();
 	
-	public abstract List<Options> getOptionElements();
+	public abstract List<Options> getSubOptions();
+	
+	public abstract void reapply();
 	
 	
 	
