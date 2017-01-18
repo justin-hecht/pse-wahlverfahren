@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  17 JAN 2017 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  18 JAN 2017 17:03
 entering extended mode
 **./planung.tex
 (planung.tex
@@ -571,69 +571,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--101
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 138--138
+Underfull \hbox (badness 2326) in paragraph at lines 136--136
 []\OT1/cmr/m/n/10.95 Anlegen und ver-wal-ten der Text-da-tei
  []
 
 
-Overfull \hbox (4.08301pt too wide) in paragraph at lines 9--162
+Overfull \hbox (4.08301pt too wide) in paragraph at lines 9--164
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--162
+Underfull \hbox (badness 10000) in paragraph at lines 9--164
 
  []
 
 
-Overfull \hbox (4.08301pt too wide) in paragraph at lines 9--162
+Overfull \hbox (4.08301pt too wide) in paragraph at lines 9--164
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--162
+Underfull \hbox (badness 10000) in paragraph at lines 9--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--162
+Underfull \hbox (badness 10000) in paragraph at lines 9--164
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+[1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
 
  []
 
-[3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 166.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 168.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 168.
  [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 [6] <planung.jpg, id=24, 1223.57124pt x 686.565pt>
 File: planung.jpg Graphic file (type jpg)
  <use planung.jpg>
-Package pdftex.def Info: planung.jpg used on input line 239.
+Package pdftex.def Info: planung.jpg used on input line 241.
 (pdftex.def)             Requested size: 585.55522pt x 328.5627pt.
 
-Overfull \hbox (0.70499pt too wide) in paragraph at lines 239--240
+Overfull \hbox (0.70499pt too wide) in paragraph at lines 241--242
 [][] 
  []
 
@@ -653,7 +646,7 @@ c/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 sbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b>
-Output written on planung.pdf (7 pages, 179152 bytes).
+Output written on planung.pdf (7 pages, 179521 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
