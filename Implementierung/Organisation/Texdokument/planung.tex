@@ -6,9 +6,6 @@
 
 \begin{document}
 \chapter{Implementierungsplanung}
-Die Packages (hier fett) sind mit allen ihren Meilensteinen jeweils einem der Phasenverantwortlichen zugeordnet. \\
-Die Meilensteinen sind Personen zugeordnet. \\
-Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der Meilenstein implementiert werden soll. \\\\
 
 Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 \begin{itemize} 
@@ -16,13 +13,12 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 \item Am Ende der zweiten Woche soll die GUI-Funktionalität fertig sein. Gemeint ist damit, dass alle Buttons intern schon abgefangen werden. Außerdem läuft die Implementierung weiterer Muss- und Sollkriterien. 
 \item In der dritten Woche werden die Funktionen zum Speicher und Laden implementiert sowie alle Muss- und Sollkriterien fertig gestellt. Das Produkt soll also nach dem Ende der dritten Woche schon einsatzfähig sein.
 \item In der vierten und letzten Woche werden eventuell die Kann- und Wunschkriterien umgesetzt. Außerdem werden die Dokumente zur Vorstellung der Phase, welche die Präsentation sowie das Änderungsdokument zu vermeintlichen Änderungen im Entwurf und oder Pflichtenheft darstellen, erstellt. Falls die eingeplante Zeit für Muss- und Kannkriterien nicht reichen sollte, dient diese Zeit auch als Puffer.
-
-
 \end{itemize} 
 
-
-
-
+Die Packages (hier fett) sind mit allen ihren Meilensteinen (falls nicht anders angegeben) jeweils einem der Phasenverantwortlichen zugeordnet. \\
+Die Meilensteinen sind Personen zugeordnet. \\
+Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der Meilenstein implementiert werden soll. \\
+Die Klassen, die die Funktionalität Speichern und Laden ermöglichen sind im Paket SaverLoader. In der Aufteilung sind mit "Speichern und Laden" in den Paketen, die Teile der Software in SaverLoader gemeint. Sie sind unter anderen Paketen aufgelistet, da sie für das Speichern und Laden der Klassen innerhalb der Pakete zuständig sind.
 
 \begin{tabular}{ | p{7cm} | p{7cm} |}
     \hline
@@ -35,8 +31,6 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	Interfaces (1) & Klein\\
 	\hline
 	Basisimplementierung (1-2) & Schnell und Klein\\
-	\hline
-	Syntaxhighliting (3) & Schnell \\
 	\hline
 	Kannkriterien (4) & Schnell und Klein \\
 	\hline
@@ -56,6 +50,8 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	\hline
 	Speichern und Laden (3) & Klein\\
 	\hline
+	Sollkriterien (3) & Klein\\
+	\hline
 	Kannkriterien (4) & Klein\\
 	\hline
 	
@@ -72,6 +68,8 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	\hline
 	Speichern und Laden (3) & Schnell\\
 	\hline	
+	Sollkriterien (3) & Schnell\\
+	\hline
 	AntlrHandler (2-3) & Schnell\\
 	\hline
 	Kannkriterien (4) & Schnell\\
@@ -193,8 +191,8 @@ Schnell:
 \item BooleanExpEditor GUI-Funktionalität (2)
 \item BooleanExpEditor Fehlererkennungskommunikation (2) 
 \item Toolbox BooleanExpressionToASTConverter [mit Klein] (2-3) 
-\item CodeArea Syntaxhighliting (3)
 \item BooleanExpEditor Speichern und Laden (3) 
+\item BooleanExpEditor Sollkriterien (3)
 \item BooleanExpEditor Kannkriterien (4)
 \item CodeArea Kannkriterien [mit Klein] (4)
 \item Sonstiges Präsentationsplanung [mit Hanselmann] (4)
@@ -210,6 +208,7 @@ Klein:
 \item CElectionDescriptionEditor AntlrHandler (2-3)
 \item CElectionDescriptionEditor Fehlererkennung (2) 
 \item Toolbox BooleanExpressionToASTConverter [mit Schnell] (2-3) 
+\item CElectionDescriptionEditorSollkriterien (3)
 \item CElectionDescriptionEditor Speichern und Laden (3)
 \item CodeArea Kannkriterien [mit Schnell] (4)
 \item CElectionDescriptionEditor Kannkriterien (4)
