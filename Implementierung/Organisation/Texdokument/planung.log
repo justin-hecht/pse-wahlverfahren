@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  18 JAN 2017 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  18 JAN 2017 22:49
 entering extended mode
 **./planung.tex
 (planung.tex
@@ -582,37 +582,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--122
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 157--157
+Underfull \hbox (badness 2326) in paragraph at lines 159--159
 []\OT1/cmr/m/n/10.95 Anlegen und ver-wal-ten der Text-da-tei
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 179--179
+Underfull \hbox (badness 2088) in paragraph at lines 181--181
 []\OT1/cmr/m/n/10.95 BooleanExp Antlr-Grammatik er-stel-len
  []
 
 
-Overfull \hbox (15.03304pt too wide) in paragraph at lines 23--184
+Overfull \hbox (15.03304pt too wide) in paragraph at lines 23--186
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--184
+Underfull \hbox (badness 10000) in paragraph at lines 23--186
 
  []
 
 
-Overfull \hbox (4.08301pt too wide) in paragraph at lines 23--184
+Overfull \hbox (4.08301pt too wide) in paragraph at lines 23--186
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--184
+Underfull \hbox (badness 10000) in paragraph at lines 23--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--184
+Underfull \hbox (badness 10000) in paragraph at lines 23--186
 
  []
 
@@ -623,27 +623,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--184
 Overfull \vbox (3.57939pt too high) has occurred while \output is active []
 
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 185--187
+[2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
 
  []
 
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-[6] <planung.jpg, id=24, 1223.57124pt x 686.565pt>
+[7] <planung.jpg, id=28, 1223.57124pt x 686.565pt>
 File: planung.jpg Graphic file (type jpg)
  <use planung.jpg>
-Package pdftex.def Info: planung.jpg used on input line 263.
+Package pdftex.def Info: planung.jpg used on input line 266.
 (pdftex.def)             Requested size: 585.55522pt x 328.5627pt.
 
-Overfull \hbox (0.70499pt too wide) in paragraph at lines 263--264
+Overfull \hbox (0.70499pt too wide) in paragraph at lines 266--267
 [][] 
  []
 
-[7
+[8
 
  <./planung.jpg>] (planung.aux) ) 
 Here is how much of TeX's memory you used:
@@ -659,9 +659,9 @@ c/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 sbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b>
-Output written on planung.pdf (7 pages, 182660 bytes).
+Output written on planung.pdf (8 pages, 183282 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
