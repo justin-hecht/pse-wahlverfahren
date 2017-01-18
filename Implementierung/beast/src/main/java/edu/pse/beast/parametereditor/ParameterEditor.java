@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datatypes;
+package edu.pse.beast.parametereditor;
 
 /**
  *
  * @author Niels
  */
-public class InternalTypeContainer {
+public class ParameterEditor {
     
 }

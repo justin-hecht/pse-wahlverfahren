@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pse.beast.codearea;
+package edu.pse.beast.booleanexpeditor;
 
 /**
  *
  * @author Niels
  */
-public class CodeArea {
+public class BooleanExpEditor {
     
 }

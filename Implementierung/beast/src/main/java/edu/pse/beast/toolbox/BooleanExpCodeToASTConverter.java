@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package booleanexpeditor;
+package edu.pse.beast.toolbox;
 
 /**
  *
  * @author Niels
  */
-public class BooleanExpEditor {
+public class BooleanExpCodeToASTConverter {
     
 }

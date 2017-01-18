@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stringressource;
+package edu.pse.beast.datatypes;
 
 /**
  *
  * @author Niels
  */
-public class StringLoaderInterface {
+public class InternalTypeContainer {
     
 }

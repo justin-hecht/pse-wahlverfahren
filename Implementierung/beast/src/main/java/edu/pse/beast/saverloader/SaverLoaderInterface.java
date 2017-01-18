@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package celectiondescriptioneditor;
+package edu.pse.beast.saverloader;
 
 /**
  *
  * @author Niels
  */
-public class CElectionDescriptionEditor {
+public class SaverLoaderInterface {
     
 }

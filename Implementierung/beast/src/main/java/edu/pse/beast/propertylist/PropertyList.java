@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package propertychecker;
+package edu.pse.beast.propertylist;
 
 /**
  *
  * @author Niels
  */
-public class PropertyChecker {
+public class PropertyList {
     
 }
