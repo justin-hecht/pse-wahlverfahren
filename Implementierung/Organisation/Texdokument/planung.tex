@@ -12,7 +12,7 @@ Die Zahl in der Klammer jedes Meilensteins erklärt, in der wievielten Woche der
 
 Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 \begin{itemize} 
-\item Nach der ersten Woche soll ein GUI-Dummy fertig sein, der sich über eine JAR öffnen lässt. Ein GUI-Dummy ist eine GUI, die schon das fertige Layout jedoch noch keine Funktionalität besitzt. Außerdem sind intern alle Interfaces aller Pakete zu implementiert, sowie die komplette Pakete HighLevel und DataTypes. Die Grammatik für die formalen Eigenschaften wird 
+\item Nach der ersten Woche soll ein GUI-Dummy fertig sein, der sich über eine JAR öffnen lässt. Ein GUI-Dummy ist eine GUI, die schon das fertige Layout jedoch noch keine Funktionalität besitzt. Außerdem sind intern alle Interfaces aller Pakete zu implementiert, sowie die komplette Pakete HighLevel und DataTypes. Die Grammatik für die formalen Eigenschaften wird erstellt.
 \item Am Ende der zweiten Woche soll die GUI-Funktionalität fertig sein. Gemeint ist damit, dass alle Buttons intern schon abgefangen werden. Außerdem läuft die Implementierung weiterer Muss- und Sollkriterien. 
 \item In der dritten Woche werden die Funktionen zum Speicher und Laden implementiert sowie alle Muss- und Sollkriterien fertig gestellt. Das Produkt soll also nach dem Ende der dritten Woche schon einsatzfähig sein.
 \item In der vierten und letzten Woche werden eventuell die Kann- und Wunschkriterien umgesetzt. Außerdem werden die Dokumente zur Vorstellung der Phase, welche die Präsentation sowie das Änderungsdokument zu vermeintlichen Änderungen im Entwurf und oder Pflichtenheft darstellen, erstellt. Falls die eingeplante Zeit für Muss- und Kannkriterien nicht reichen sollte, dient diese Zeit auch als Puffer.
@@ -50,9 +50,11 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	\hline
 	Interfaces (1) & Klein\\
 	\hline
-	Speichern und Laden (3) & Klein\\
+	AntlrHandler (2-3) & Klein\\
 	\hline
-	Fehlererkennung (2-3)& Klein\\
+	Fehlererkennung (2-3) & Klein\\
+	\hline
+	Speichern und Laden (3) & Klein\\
 	\hline
 	Kannkriterien (4) & Klein\\
 	\hline
@@ -64,11 +66,13 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	\hline
 	GUI-Dummy (1) & Schnell\\
 	\hline
+	Fehlererkennungskommunikation (2) & Schnell\\
+	\hline
 	GUI-Funktionalität (2) & Schnell\\
 	\hline
 	Speichern und Laden (3) & Schnell\\
 	\hline	
-	Fehlererkennungskommunikation (2) & Schnell\\
+	AntlrHandler (2-3) & Schnell\\
 	\hline
 	Kannkriterien (4) & Schnell\\
 	\hline
@@ -82,10 +86,10 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	\hline
 	GUI-Funktionalität (2) & Hecht\\
 	\hline
-	Speichern und Laden (3)& Hecht\\
-	\hline
 	Ergebnisdarstellung (2-3) & Hecht\\
-	\hline	
+	\hline
+	Speichern und Laden (3) & Hecht\\
+	\hline
 	\rule{0pt}{15pt}\textbf {SaverLoader} & Hanselmann\\
 	&\\
 	\hline
@@ -141,7 +145,7 @@ Die Meilensteine lassen sich wie folgt zusammenfassen: \\
 	\rule{0pt}{15pt}\textbf {Toolbox} & Schnell\\
 	&\\
 	\hline	
-	BooleanExpressionToASTConverter (2-3)  & Schnell\\
+	BooleanExpressionToASTConverter (2-3)  & Schnell und Klein\\
 	(Erstellung des AST, Fehlererkennung in den formalen Eigenschaften) &\\
 	\hline
 	UserActionKlasse (1-2) & Wohnig\\
@@ -188,7 +192,7 @@ Schnell:
 \item CodeArea Basisimplementierung [mit Klein] (1-2)
 \item BooleanExpEditor GUI-Funktionalität (2)
 \item BooleanExpEditor Fehlererkennungskommunikation (2) 
-\item Toolbox ANTLRHandler [mit Schnell] (2-3) 
+\item Toolbox BooleanExpressionToASTConverter [mit Klein] (2-3) 
 \item CodeArea Syntaxhighliting (3)
 \item BooleanExpEditor Speichern und Laden (3) 
 \item BooleanExpEditor Kannkriterien (4)
@@ -203,8 +207,9 @@ Klein:
 \item CElectionDescriptionEditor Interfaces (1)
 \item CodeArea Basisimplementierung [mit Schnell] (1-2)
 \item CElectionDescriptionEditor GUI Funktionalität (2)
+\item CElectionDescriptionEditor AntlrHandler (2-3)
 \item CElectionDescriptionEditor Fehlererkennung (2) 
-\item Toolbox ANTLRHandler [mit Schnell] (2-3) 
+\item Toolbox BooleanExpressionToASTConverter [mit Schnell] (2-3) 
 \item CElectionDescriptionEditor Speichern und Laden (3)
 \item CodeArea Kannkriterien [mit Schnell] (4)
 \item CElectionDescriptionEditor Kannkriterien (4)
