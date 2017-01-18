@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/SymbolicVariable.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/BooleanExpNodeVisitor.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/BooleanAstVisitor.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/ForAllNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/ThereExistsNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/BooleanExpNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/ImplicationNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/MakroNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/AndNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/CompareNodes.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/BooleanExpListNode.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/BooleanASTTranslater.java</file>
+            <file>file:/D:/studium/PSE/Entwurf/ANTLR4/C/BooleanASTTranslater/src/booleanasttranslater/AST/BinaryExpresionNode.java</file>
+        </group>
+    </open-files>
+</project-private>
