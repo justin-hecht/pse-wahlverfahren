@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stringressource;
+package edu.pse.beast.propertylist;
 
 /**
  *
  * @author Niels
  */
-public class StringLoaderInterface {
+public class PropertyList {
     
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package parametereditor;
+package edu.pse.beast.saverloader;
 
 /**
  *
  * @author Niels
  */
-public class ParameterEditor {
+public class SaverLoaderInterface {
     
 }

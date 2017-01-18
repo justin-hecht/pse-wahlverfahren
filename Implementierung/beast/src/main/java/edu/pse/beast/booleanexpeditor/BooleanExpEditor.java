@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package saverloader;
+package edu.pse.beast.booleanexpeditor;
 
 /**
  *
  * @author Niels
  */
-public class SaverLoaderInterface {
+public class BooleanExpEditor {
     
 }
