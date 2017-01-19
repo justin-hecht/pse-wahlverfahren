@@ -5,10 +5,16 @@
  */
 package com.pse.beast.codearea.InputToCode;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author Holger-Desktop
  */
 public class ShortcutHandler {
+
+    public void handleKey(KeyEvent ke) {
+        
+    }
     
 }

@@ -13,8 +13,15 @@ import java.awt.event.KeyEvent;
  */
 public class CodeInputHandler {
 
-    void handleKey(KeyEvent ke) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private UserInsertToCode insertToCode;
+    
+    public CodeInputHandler(UserInsertToCode insertToCode) {
+        this.insertToCode = insertToCode;
+    }
+    
+    public void handleKey(KeyEvent ke) {
+        if(ke.getKeyChar() == '\n') insertToCode.insertNewline();
+        insertToCode.insertChar(ke.getKeyChar());
     }
     
 }
