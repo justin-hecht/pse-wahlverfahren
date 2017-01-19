@@ -1,0 +1,2 @@
+FileLoader ist nun im Packet Toolbox und alle Methoden von FileLoader sind static.
+
