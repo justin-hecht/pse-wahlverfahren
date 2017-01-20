@@ -1,2 +1,3 @@
 FileLoader ist nun im Packet Toolbox und alle Methoden von FileLoader sind static.
 
+TimeOut verwendet jetzt nicht mehr Duration, sondern das Enum TimeUnit
