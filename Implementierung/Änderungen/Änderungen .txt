@@ -1,5 +1,8 @@
 FileLoader ist nun im Packet Toolbox und alle Methoden von FileLoader sind static.
 
 TimeOut verwendet jetzt nicht mehr Duration, sondern das Enum TimeUnit
+Timeout now contains a boolean "active" that shows if the timeout should be used (if active is true) or if it should be ignored (if active is false)
 
 Result ist nun eine abstrakte Klasse, welche wichtige Methoden schon bereitstellt.
+
+in ActionIDAndListener changed the name from ActionListener "l" to "listener"
