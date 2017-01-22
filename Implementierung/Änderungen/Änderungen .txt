@@ -6,3 +6,6 @@ Timeout now contains a boolean "active" that shows if the timeout should be used
 Result ist nun eine abstrakte Klasse, welche wichtige Methoden schon bereitstellt.
 
 in ActionIDAndListener changed the name from ActionListener "l" to "listener"
+
+Die Methoden der Klasse "Options" sind nun nicht mehr abstrakt, da die funktionalität allgemein war.
+Außerdem gibt es nun auch setter für die zwei veränderbaren Variablen.
