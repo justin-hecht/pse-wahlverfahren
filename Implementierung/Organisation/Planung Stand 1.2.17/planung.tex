@@ -1,0 +1,74 @@
+\documentclass[a4paper]{scrreprt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+
+\begin{document}
+\chapter{Implementierungsplanung 01.02 bis 15.02}
+
+Die neue Zeitplanung für den Rest der Implementierungsphase vom 1.02. bis zum 15.02 bezieht den derzeitig tatsächlich erreichten Stand und individuelle Unterschiede in möglichem Zeitaufwand mit ein. Das Ziel der Abgabe am Montag den 6.02. ist nach wie vor eine Version von BEAST mit der (vielleicht nur bestimmte) Wahlverfahren auf Eigenschaften getestet werden können. Dazu sollen bis Ende Freitag den 3.02. alle als hierfür notwendig gedachten Funktionalitäten implementiert sein, so dass Samstag und Sonntag 4.02. und 5.02. sich voll auf das Debuggen der Grundfunktionalität (Wahlverfahren auf Eigenschaften Testen) konzentriert werden kann.
+Woche 4 gilt dem Implementieren von Kann-Kriterien, dem Erstellen des Implementierungsdokuments und Vorbereitung auf das Kolloquium, sowie die Verbesserung des Quellcodes durch das Ergänzen fehlender Dokumentation und dem Ausmerzen von Inkonsistenzen.
+Die Umsetzung von Punkten die mit (kritisch) markiert sieht derzeit unwahrscheinlich aus.
+Hier nun alle Aufgaben nach Personen sortiert. \\
+
+Alle:
+\begin{itemize}
+\item Debugging von Grundfunktionalität, d.h. Testen eines Wahlverfahrens auf Eigenschaft mit Angabe von Parametern (4.02. und 5.02.)
+\item Dokumentation schreiben (mit Invarianten) (4. Woche bis 10.02)
+\item Eingehen auf spezifische Mängel, die in Betreuertreffen als Feedback genannt werden/wurden (3. und 4. Woche bis Freitag 3.02)
+\item Beheben von inkonsistenten Namensgebungen (z.B. BooleanExpEditorWindow vs CElectionDescriptionEditorGUI), Darstellungen (z.B. Reihenfolge von Menüs und Untermnenüs) im Quellcode sowie in der GUI (4. Woche, bis Freitag 10.02)
+\end{itemize}
+\vspace{8mm}
+Schnell:
+\begin{itemize}
+\item Speichern und Laden in allen GUIs (bis Freitag 3.02.)
+\item Kleinere Bugs in CElectionEditor und BooleanExpEditor beheben (bis Sonntag 5.02.)
+\item SyntaxHL in den Editoren abschließen (bis Sonntag 5.02.)
+\item CodeArea Kannkriterien [mit Klein] (kritisch) (4. Woche, bis Freitag 10.02)
+\item BooleanExpEditor Kannkriterien (kritisch) (4. Woche, bis Freitag 10.02)
+\item Präsentationsplanung [mit Hanselmann] (4. Woche, 11.02-14.02)
+\item Finalisierung des Implementierungsdokuments [mit Hanselnmann] (4. Woche, 11.02-14.02)
+\end{itemize}
+\vspace{8mm}
+Klein:
+\begin{itemize}
+\item CElectionDescriptionEditor Fehlererkennung in den Editoren (3-4) (Bereitstellung von isCorrect-Methoden bis Freitag 3.02.)
+\item Eventuelle Veränderungen an BooleanExpressionToASTConverter (bis Freitag 3.02.)
+\item CodeArea Kannkriterien [mit Schnell] (kritisch) (4. Woche, bis Freitag 10.02)
+\item CElectionDescriptionEditor Kannkriterien (kritisch) (4. Woche, bis Freitag 10.02)
+\item CodeArea-Kannkriterien (kritisch) (4. Woche, bis Freitag 10.02)
+\end{itemize} 
+\vspace{8mm}
+Hecht: 
+\begin{itemize}
+\item PropertyList Ergebnisdarstellung [mit Stapelbroek] (bis Freitag 3.02.)
+\item StringResource Anlegen Textdatei Englisch (4. Woche, bis Freitag 10.02)
+\end{itemize} 
+\vspace{8mm}
+Stapelbroek:
+\begin{itemize}
+\item PropertyList Ergebnisdarstellung [mit Hecht] (bis Freitag 3.02.)
+\item CBMC-Ansteurung unter Windows fertigstellen (bis Freitag 3.02.)
+\item Implementierung Sprachoption (4. Woche bis Freitag 5.02)
+\end{itemize}
+\vspace{8mm}
+Hanselmann:
+\begin{itemize}
+\item PropertyChecker Codegenerierung fertigstellen (bis Freitag 3.02.)
+\item Ersten Draft des Implementierungsdokuments (bis Sonntag 5.02.)
+\item ErrorLogger (kritisch) (4. Woche bis 10.02)
+\item Präsentationsplanung [mit Schnell] (4. Woche, 11.02.-14.02.)
+\item Finalisierung des Implementierungsdokuments [mit Schnell] (4. Woche, 11.02.-14.02.)
+\end{itemize}
+\vspace{8mm}
+Wohnig:
+\begin{itemize}
+\item Parametereditor Bugs in Funktionalität beheben (z.B. nur Eingabe von Zahlen in Spinnern erlauben) (bis Sonntag 5.02.)
+\item HighLevel fertigstellen (bis Freitag 3.02.)
+\item Änderungsdokument erstellen (bis Freitag 10.02.)
+\end{itemize}
+\vspace{8mm}
+
+
+\end{document}
