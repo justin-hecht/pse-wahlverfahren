@@ -1,0 +1,49 @@
+\documentclass[a4paper]{scrreprt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+
+\begin{document}
+\title{Implementierungsdokument}
+\author{Hanselmann, Hecht, Klein, Schnell, Stapelbroek, Wohnig}
+\maketitle 
+\tableofcontents	
+
+\chapter{Einleitung}
+Dieses Implementierungsdokument baut auf das Pflichtenheft und das Entwurfsdokument auf...
+
+\chapter{Abdeckung der im Pflichtenheft gestellten Kriterien}
+
+Eventuell auch Trennung nach GUI-Fenstern, obwohl das vermutlich weniger sinnvoll ist.
+\section{Musskriterien}
+Eingehaltene Musskriterien: 
+Die Eingehaltenen Kriterien
+
+Falls Ein Kriterium nicht implementiert wurde, ausführlich begründen warum nicht.
+
+
+
+
+\section{Sollkritierien}
+\section{Kannkriterien}
+Falls Ein Kriterium nicht implementiert wurde, begründen warum nicht. 
+\section{Wunschkriterien}
+Hier reicht auch die Begründung, dass die Zeit nicht ausreichend war.
+
+\chapter{Änderungen am Entwurf}
+Bspw. \\
+Änderung abstrakte Fabrik in highlevel ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces. \\
+Die Lösung des Problems bietet ein so von uns genannter CentralObjectProvider der, bei seiner eigenen Konstruktion alle anderen Highlevelobjekte baut und diese dann über get zu Verfügung stellt.
+Somit hat der BEASTCommunicator immer noch eine abstrakte Sicht auf alle Interfaces.
+
+\chapter{Zeitablauf Implementierungsphase}
+
+\section{Geplanter Ablauf}
+\section{Eigentlicher Ablauf}
+Lines of Code\\
+Graphiken dazu, wer was gemacht hat.
+Vielleicht eine Graphik über die Commits.
+
+
+\end{document}
