@@ -45,10 +45,20 @@ Die Interfaces um diese Anforderungen zu implementieren existieren zwar, es fehl
 Fehlt vollständig da die Zeit von mindestens 8 Mannstunden fehlt.
 
 \chapter{Änderungen am Entwurf}
-Bspw. \\
-Änderung abstrakte Fabrik in highlevel ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces. \\
-Die Lösung des Problems bietet ein so von uns genannter CentralObjectProvider der, bei seiner eigenen Konstruktion alle anderen Highlevelobjekte baut und diese dann über get zu Verfügung stellt.
-Somit hat der BEASTCommunicator immer noch eine abstrakte Sicht auf alle Interfaces.
+\section{highlevel}
+
+AbstractFactory in highlevel ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl ParameterSource, als auch ProjectSource und MainNotifier implementiert). \\
+Deshalb wurde sie durch das Interface CentralObjectProvider und PSECentralObjectProvider, der dieses implementiert, ersetzt. CentralObjectProvider verwirklicht die ursprüngliche Funktion der Abstrakten Fabrik, unabhängig von konkreten Implementierungen zu sein. \\
+PSECentralObjectProvider erzeugt die konkreten Objekte für unsere Implementierung der highlevel Interfaces und stellt diese dem BEASTCommunicator zur Verfügung. Dieser muss weiterhin nur von den Interfaces wissen. \\
+\\
+Es wurde das Interface DisplaysStringsToUser hinzugefügt. Es wird von allen Elementen, die dem Nutzer Text anzeigen, implementiert. Damit wird die Einbindung anderer Sprachen vereinfacht. \\
+\\
+Allen Interfaces zu Paketen mit GUI wurden die Methoden stopReacting() und resumeReacting() hinzugefügt. Diese verhindern, dass der Nutzer während einer laufenden Analyse Änderungen an dafür benötigten Daten vornimmt. \\
+\\
+Es wurde das Interface ProjectSource hinzugefügt. Es wird von ParameterEditor implementiert. Damit wird es möglich das Speichern und Laden von ganzen Projekten in zukünftigen Versionen leichter einem anderen Fenster als dem Parametereditor zu überlassen. \\
+\\
+Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Methode isCorrect() hinzugefügt. Damit kann vor Start einer Analyse überprüft werden, ob die bereitgestellten Daten frei von Fehlern sind, die die Analyse beeinträchtigen würden.
+
 
 \section{CodeGenerierung}
 

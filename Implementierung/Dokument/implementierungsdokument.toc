@@ -1,0 +1,25 @@
+\select@language {german}
+\contentsline {chapter}{\numberline {1}Einleitung}{4}
+\contentsline {section}{\numberline {1.1}Ziel des Programmes}{4}
+\contentsline {chapter}{\numberline {2}Unterschiede zu den im Pflichtenheft gestellten Kriterien}{5}
+\contentsline {section}{\numberline {2.1}Musskriterien}{5}
+\contentsline {section}{\numberline {2.2}Sollkritierien}{5}
+\contentsline {section}{\numberline {2.3}Kannkriterien}{5}
+\contentsline {subsection}{\numberline {2.3.1}/FK1130/- Code Completion C-Editor}{5}
+\contentsline {subsection}{\numberline {2.3.2}/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}{5}
+\contentsline {subsection}{\numberline {2.3.3}/FK2140/ - Code Completion Eigenschafteneditor}{5}
+\contentsline {chapter}{\numberline {3}\IeC {\"A}nderungen am Entwurf}{6}
+\contentsline {section}{\numberline {3.1}highlevel}{6}
+\contentsline {section}{\numberline {3.2}CodeGenerierung}{7}
+\contentsline {section}{\numberline {3.3}UserActions}{7}
+\contentsline {section}{\numberline {3.4}SaverLoader}{7}
+\contentsline {section}{\numberline {3.5}FileChooser}{7}
+\contentsline {section}{\numberline {3.6}DataTypes}{8}
+\contentsline {section}{\numberline {3.7}Codearea}{8}
+\contentsline {subsection}{\numberline {3.7.1}UserInsertToCode}{8}
+\contentsline {section}{\numberline {3.8}BooleanExpEditor}{9}
+\contentsline {section}{\numberline {3.9}CElectionDescriptionEditor}{9}
+\contentsline {section}{\numberline {3.10}PropertyChecker}{9}
+\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{11}
+\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{11}
+\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{11}
