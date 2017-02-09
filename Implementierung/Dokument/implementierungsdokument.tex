@@ -131,6 +131,23 @@ Neues Package ElectionTemplates kam hinzu. Dises enthält folgende Klassen\\
 ElectionTemplateHandler: Gibt alle Election Input und Output datentypen und deren ids aus\\
 ElectionTemplateChooser: Zeigt dem Benutzer einen Dialog welcher es ermöglicht Input und result eines neuen Wahlverfahrens zu wählen
 
+\section{PropertyChecker}
+Beim PropertyChecker haben sich folgende Sachen im Vergleich zum Entwurf
+verändert:
+\begin{itemize}
+\item Die Klasse CBMC\_Result besitzt nun die Methode ``createFailureExample''
+  samt zugehöriger Untermethoden, welche zur Erstellung des Failurexamples
+  genutzt werden. Deshalb besitzt die Klasse Checker diese Fähigkeit nicht mehr.
+
+\item Es wurden drei neue Klassen namens
+``CBMC\_Result\_Wrapper\_/long/singleArray/multiArray'' erstellt. Diese werden
+während des parsens der Rückgabe von CBMC verwendet um die Teilergebnisse in
+Listen zu speichern und sie dann am Ende als Array ausgeben zu können. Dies
+wurde auf diese Weise implementiert, da am Anfang des parsens nicht bekannt
+sein kann, wie groß die Datentypen bei der Rückgabe werden würden und es die
+eigentliche Methode ``createFailureExample'' deutlich verkürzen konnte.
+
+\end{itemize}
 \chapter{Zeitablauf Implementierungsphase}
 
 \section{Geplanter Ablauf}
