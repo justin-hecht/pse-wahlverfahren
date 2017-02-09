@@ -5,6 +5,9 @@
 \contentsline {section}{\numberline {2.1}Musskriterien}{5}
 \contentsline {section}{\numberline {2.2}Sollkritierien}{5}
 \contentsline {section}{\numberline {2.3}Kannkriterien}{5}
+\contentsline {subsection}{\numberline {2.3.1}/FK1130/- Code Completion C-Editor}{5}
+\contentsline {subsection}{\numberline {2.3.2}/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}{5}
+\contentsline {subsection}{\numberline {2.3.3}/FK2140/ - Code Completion Eigenschafteneditor}{5}
 \contentsline {chapter}{\numberline {3}\IeC {\"A}nderungen am Entwurf}{6}
 \contentsline {section}{\numberline {3.1}CodeGenerierung}{6}
 \contentsline {section}{\numberline {3.2}UserActions}{6}
@@ -12,6 +15,7 @@
 \contentsline {section}{\numberline {3.4}FileChooser}{7}
 \contentsline {section}{\numberline {3.5}DataTypes}{7}
 \contentsline {section}{\numberline {3.6}BooleanExpEditor}{7}
+\contentsline {section}{\numberline {3.7}CElectionDescriptionEditor}{7}
 \contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{8}
 \contentsline {section}{\numberline {4.1}Geplanter Ablauf}{8}
 \contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{8}

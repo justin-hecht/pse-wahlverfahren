@@ -27,17 +27,22 @@ Ziel des Programmes ist es eine Lösung zur Analyse von formalen Eigenschaften v
 \end{itemize}
 
 
-
 \chapter{Unterschiede zu den im Pflichtenheft gestellten Kriterien}
 
-
-Eventuell auch Trennung nach GUI-Fenstern, obwohl das vermutlich weniger sinnvoll ist.
 \section{Musskriterien}
 Falls Ein Kriterium nicht implementiert wurde, ausführlich begründen warum nicht.
 
 \section{Sollkritierien}
 \section{Kannkriterien}
-Falls Ein Kriterium nicht implementiert wurde, begründen warum nicht. 
+
+\subsection{/FK1130/- Code Completion C-Editor}
+Das automatische Schließen von Klammern und Anführungszeichen ist implementiert. Vorschlagen von Wörtern ist weder primitiv noch intelligent implementiert, da dies zeitlich noch mindestens 8 Mannstunden in Anspruch nehmen würde, und wir diese Zeit nicht haben.
+
+\subsection{/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}
+Die Interfaces um diese Anforderungen zu implementieren existieren zwar, es fehlt allerdings an der Zeit dies jetzt noch fertig zu stellen (6-8 Mannstunden).
+
+\subsection{/FK2140/ - Code Completion Eigenschafteneditor}
+Fehlt vollständig da die Zeit von mindestens 8 Mannstunden fehlt.
 
 \chapter{Änderungen am Entwurf}
 Bspw. \\
@@ -64,23 +69,32 @@ Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den
 \section{SaverLoader}
 PostAndPrePropertiesDescriptionSaverLoader, ElectionDescriptionSaverLoader, ParameterCheckParameterSaverLoader und ProjectSaverLoader implementieren nun das Interface SaverLoader mit den dargestellten Methoden. Dies ermöglicht es der Klasse FileChooser, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
 Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
-Zudem gibt es noch eine \verb!StringSaverLoader! Klasse die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, bzw. dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Möglichkeit zur Erstellung von nicht ladbaren Dateien trotz validen Nutzer-Eingaben.
+Zudem gibt es noch eine \verb!StringSaverLoader! Klasse die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, bzw. dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Erstellung von nicht ladbaren Dateien trotz validen Nutzer-Eingaben.
 \newline
 (Diagramm folgt)
 \newline
 
 \section{FileChooser}
-Diese Klasse kümmert sich um das Laden und Speichern von den 
+Diese Klasse kümmert sich um das Laden und Speichern der speicherbaren Datentypen.
 \newline
 (Diagramm folgt)
 \newline
 
 \section{DataTypes}
 Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \verb!ChangeNameInterface!, dass es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.
+\newline
+(Diagramm folgt)
+\newline
 
 \section{BooleanExpEditor}
+Besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist
+\newline
+(Diagramm folgt)
+\newline
 
-Besitzt jetzt eine \verb!FileChooser!-Instanz.
+\section{CElectionDescriptionEditor}
+
+Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt, da es sehr wenig Sinn macht ein bestehendes Wahlverfahren grundsätzlich zu ändern anstatt einfach ein neues zu erstellen und die Implementierung dieser \verb!UserAction! somit unnötig kompliziert wäre.
 \newline
 (Diagramm folgt)
 \newline
@@ -88,10 +102,14 @@ Besitzt jetzt eine \verb!FileChooser!-Instanz.
 \chapter{Zeitablauf Implementierungsphase}
 
 \section{Geplanter Ablauf}
-\section{Eigentlicher Ablauf}
-Lines of Code\\
-Graphiken dazu, wer was gemacht hat.
-Vielleicht eine Graphik über die Commits.
 
+\includegraphics[width=1.3\textwidth] {originalPlanung.jpg}
+
+\section{Eigentlicher Ablauf}
+Der ursprüngliche Plan wurde hauptsächlich eingehalten. Ein Paar Komplikationen bei den Paketen \verb!highlevel!, \verb!parametereditor! und \verb!propertylist! verzögerten die Fertigstellung einiger Meilensteine.
+
+(Genauere Beschreibung von Aufgabenumverteilung bzw. Ablaufänderung folgt)
+
+(GANTT Diagramm von tatsächlichem Ablauf folgt)
 
 \end{document}
