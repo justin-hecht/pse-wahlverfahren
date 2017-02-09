@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  9 FEB 2017 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  9 FEB 2017 14:21
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -570,11 +570,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (implementierungsdokument
 .toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 4.
+(Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 3.
 )
 \tf@toc=\write3
 \openout3 = `implementierungsdokument.toc'.
@@ -595,7 +595,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--19
 
  []
 
-[4
+
+Overfull \hbox (2.39223pt too wide) in paragraph at lines 20--21
+\OT1/cmr/m/n/10.95 Checking (Glos-sa-r-ein-trag) ver-wen-det. Der ver-wen-de-te
+ Boun-ded Mo-del Checker ist CBMC
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+ [4
 
 ]
 chapter 2.
@@ -611,21 +623,21 @@ chapter 4.
 
 ] (implementierungsdokument.aux) ) 
 Here is how much of TeX's memory you used:
- 4355 strings out of 493333
- 71835 string characters out of 3139193
+ 4375 strings out of 493333
+ 72175 string characters out of 3139193
  228275 words of memory out of 3000000
- 7831 multiletter control sequences out of 15000+200000
+ 7848 multiletter control sequences out of 15000+200000
  8825 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,6n,66p,8863b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-sbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pf
-b>
-Output written on implementierungsdokument.pdf (7 pages, 69916 bytes).
+sbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on implementierungsdokument.pdf (7 pages, 78744 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
