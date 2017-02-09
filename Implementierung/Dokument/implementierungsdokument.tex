@@ -37,13 +37,14 @@ Falls Ein Kriterium nicht implementiert wurde, ausführlich begründen warum nic
 
 \section{Sollkritierien}
 \section{Kannkriterien}
-Falls Ein Kriterium nicht implementiert wurde, begründen warum nicht. 
+Momentan sind FK1130 und FK2140 noch nicht komplett implementiert. Diese bezogen sich auf automatische Vervollständigung der Benutzereingabe wie es von herkömmlichen IDEs bekannt ist. 
 
 \chapter{Änderungen am Entwurf}
 Bspw. \\
 Änderung abstrakte Fabrik in highlevel ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces. \\
 Die Lösung des Problems bietet ein so von uns genannter CentralObjectProvider der, bei seiner eigenen Konstruktion alle anderen Highlevelobjekte baut und diese dann über get zu Verfügung stellt.
 Somit hat der BEASTCommunicator immer noch eine abstrakte Sicht auf alle Interfaces.
+MenubarHandler ist nun abstrakt. Dies ist weil nur konkrete Subklassen wissen welche Stringressource von StringResourceLoaderInterface benötigt wird.
 
 \section{CodeGenerierung}
 
@@ -78,12 +79,45 @@ Diese Klasse kümmert sich um das Laden und Speichern von den
 \section{DataTypes}
 Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \verb!ChangeNameInterface!, dass es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.
 
+\section{Codearea}
+- Errordisplayer ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
+- Klasse SaveTextBeforeRemove wurde hinzugefügt. Diese speichert den Text einer JTextPane sobald Text daraus entfernt wird. Dies ist nötigt da das RemovedUpdate des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser ist jedoch benötigt um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
+- Klasse TextLineNumber hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen\\
+- Klasse SquigglePainter wurde hinzugefügt. Diese unterstreicht Text in der JTextPane gezackt. Dies wird verwenden um Fehler im Code anzuzeigen. Übernommen von 
+https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
+- Klasse JTextPaneToolbox wurde hinzugefügt. Diese enthält einige statische Methoden welche oft benötigte, aber nicht zusammengehörige Funktionalität für JTextPane liefern. Dazu gehört u.a. das umwandeln absoluter Positionen in Zeilennummern.\\
+- Tabinserter wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
+- Inteface LineBeginningTabsHandler und Implementierung CurlyBracesLineBeginningTabHandler wurden hinzugefügt. LineBeginningTabsHandler berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. CurlyBracesLineBeginningTabHandler errechnet dies anhand der Anzahl '{' in vorangehenden Zeilen minus die Anzahl } am ende der gegebenen Zeile\\
+- Es gibt nun spezielle Useractions für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicher zu stellen dass nicht editierbare Zeilen nicht verändert werden durch diese Aktionen.
+
+\subsection{UserInsertToCode}
+Hinzu kommen folgende Funktionen:
+\begin{itemize}
+\item insertTab fügt an der Momentanen Position ein Tab ein
+\item insertChar Fügt das gegebene Zeichen an der momentanen Position ein
+\item getFirstLockedLine gibt die erste nicht editierbare Zeilennummer
+\item moveToEndOfCurrentLine Bewegt den Caret ans Ende der momentanen Zeile
+\item moveToStartOfCurrentLine Bewegt den Caret an den Start der momentanen Zeile
+\item removeToTheRight Entfernt das Zeichen rechts vom Caret
+\item removeToTheLeft Entfernt das Zeichen links vom Caret
+\end{itemize}
+Entfernt wurden:
+
+\begin{itemize}
+\item msgLockedLinesListeners: wird nun von LockedLineHandler übernommen
+\end{itemize}
 \section{BooleanExpEditor}
 
 Besitzt jetzt eine \verb!FileChooser!-Instanz.
 \newline
 (Diagramm folgt)
 \newline
+
+\section{C-Editor}
+
+Neues Package ElectionTemplates kam hinzu. Dises enthält folgende Klassen\\
+ElectionTemplateHandler: Gibt alle Election Input und Output datentypen und deren ids aus\\
+ElectionTemplateChooser: Zeigt dem Benutzer einen Dialog welcher es ermöglicht Input und result eines neuen Wahlverfahrens zu wählen
 
 \chapter{Zeitablauf Implementierungsphase}
 
