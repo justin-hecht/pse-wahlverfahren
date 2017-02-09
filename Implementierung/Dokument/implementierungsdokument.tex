@@ -54,6 +54,37 @@ Jede Instanz der Klasse CBMCCodeGeneration erstellt eine Instanz eines CBMCCodeG
 Dieser besitzt 2 neue Methode, die einstellen ob er zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
 (Verändertes Klassendiagramm hier)
 
+\section{UserActions}
+Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (FileChooser, SaveBeforeChangeHandler..). Beispielhaft am \verb!BooleanExpEditor! gezeigt:
+\newline
+
+(Diagramm folgt)
+\newline
+
+\section{SaverLoader}
+PostAndPrePropertiesDescriptionSaverLoader, ElectionDescriptionSaverLoader, ParameterCheckParameterSaverLoader und ProjectSaverLoader implementieren nun das Interface SaverLoader mit den dargestellten Methoden. Dies ermöglicht es der Klasse FileChooser, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
+Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
+Zudem gibt es noch eine \verb!StringSaverLoader! Klasse die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, bzw. dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Möglichkeit zur Erstellung von nicht ladbaren Dateien trotz validen Nutzer-Eingaben.
+\newline
+(Diagramm folgt)
+\newline
+
+\section{FileChooser}
+Diese Klasse kümmert sich um das Laden und Speichern von den 
+\newline
+(Diagramm folgt)
+\newline
+
+\section{DataTypes}
+Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \verb!ChangeNameInterface!, dass es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.
+
+\section{BooleanExpEditor}
+
+Besitzt jetzt eine \verb!FileChooser!-Instanz.
+\newline
+(Diagramm folgt)
+\newline
+
 \chapter{Zeitablauf Implementierungsphase}
 
 \section{Geplanter Ablauf}
