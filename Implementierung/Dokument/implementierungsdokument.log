@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  9 FEB 2017 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.11.28)  9 FEB 2017 14:36
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -623,10 +623,10 @@ chapter 4.
 
 ] (implementierungsdokument.aux) ) 
 Here is how much of TeX's memory you used:
- 4375 strings out of 493333
- 72175 string characters out of 3139193
- 228275 words of memory out of 3000000
- 7848 multiletter control sequences out of 15000+200000
+ 4376 strings out of 493333
+ 72209 string characters out of 3139193
+ 228286 words of memory out of 3000000
+ 7849 multiletter control sequences out of 15000+200000
  8825 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,6n,66p,8863b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -635,7 +635,7 @@ ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 sbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on implementierungsdokument.pdf (7 pages, 78744 bytes).
+Output written on implementierungsdokument.pdf (7 pages, 79896 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -45,6 +45,15 @@ Bspw. \\
 Die Lösung des Problems bietet ein so von uns genannter CentralObjectProvider der, bei seiner eigenen Konstruktion alle anderen Highlevelobjekte baut und diese dann über get zu Verfügung stellt.
 Somit hat der BEASTCommunicator immer noch eine abstrakte Sicht auf alle Interfaces.
 
+\section{CodeGenerierung}
+
+Die Klasse CBMCCodeGeneration ist nicht mehr statisch. \\
+Sie wird in der Implementierung von der Klasse CBMCProcessFactory instantiiert. \\
+So wird für jedes erzeugte C-Tempfile (Glossareintrag) eine neue Instanz erstellt. Sinnvoll, da es es genau von den Parametern abhängt. \\
+Jede Instanz der Klasse CBMCCodeGeneration erstellt eine Instanz eines CBMCCodeGenerationVisitor. \\
+Dieser besitzt 2 neue Methode, die einstellen ob er zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
+(Verändertes Klassendiagramm hier)
+
 \chapter{Zeitablauf Implementierungsphase}
 
 \section{Geplanter Ablauf}
