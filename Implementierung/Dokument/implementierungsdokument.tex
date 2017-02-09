@@ -86,6 +86,35 @@ Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \
 (Diagramm folgt)
 \newline
 
+
+\section{Codearea}
+- Errordisplayer ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
+- Klasse SaveTextBeforeRemove wurde hinzugefügt. Diese speichert den Text einer JTextPane sobald Text daraus entfernt wird. Dies ist nötigt da das RemovedUpdate des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser ist jedoch benötigt um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
+- Klasse TextLineNumber hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen\\
+- Klasse SquigglePainter wurde hinzugefügt. Diese unterstreicht Text in der JTextPane gezackt. Dies wird verwenden um Fehler im Code anzuzeigen. Übernommen von 
+https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
+- Klasse JTextPaneToolbox wurde hinzugefügt. Diese enthält einige statische Methoden welche oft benötigte, aber nicht zusammengehörige Funktionalität für JTextPane liefern. Dazu gehört u.a. das umwandeln absoluter Positionen in Zeilennummern.\\
+- Tabinserter wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
+- Inteface LineBeginningTabsHandler und Implementierung CurlyBracesLineBeginningTabHandler wurden hinzugefügt. LineBeginningTabsHandler berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. CurlyBracesLineBeginningTabHandler errechnet dies anhand der Anzahl '{' in vorangehenden Zeilen minus die Anzahl } am ende der gegebenen Zeile\\
+- Es gibt nun spezielle Useractions für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicher zu stellen dass nicht editierbare Zeilen nicht verändert werden durch diese Aktionen.
+
+\subsection{UserInsertToCode}
+Hinzu kommen folgende Funktionen:
+\begin{itemize}
+\item insertTab fügt an der Momentanen Position ein Tab ein
+\item insertChar Fügt das gegebene Zeichen an der momentanen Position ein
+\item getFirstLockedLine gibt die erste nicht editierbare Zeilennummer
+\item moveToEndOfCurrentLine Bewegt den Caret ans Ende der momentanen Zeile
+\item moveToStartOfCurrentLine Bewegt den Caret an den Start der momentanen Zeile
+\item removeToTheRight Entfernt das Zeichen rechts vom Caret
+\item removeToTheLeft Entfernt das Zeichen links vom Caret
+\end{itemize}
+Entfernt wurden:
+
+\begin{itemize}
+\item msgLockedLinesListeners: wird nun von LockedLineHandler übernommen
+\end{itemize}
+
 \section{BooleanExpEditor}
 Besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist
 \newline
@@ -98,6 +127,9 @@ Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt
 \newline
 (Diagramm folgt)
 \newline
+Neues Package ElectionTemplates kam hinzu. Dises enthält folgende Klassen\\
+ElectionTemplateHandler: Gibt alle Election Input und Output datentypen und deren ids aus\\
+ElectionTemplateChooser: Zeigt dem Benutzer einen Dialog welcher es ermöglicht Input und result eines neuen Wahlverfahrens zu wählen
 
 \chapter{Zeitablauf Implementierungsphase}
 
