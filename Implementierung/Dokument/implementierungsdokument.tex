@@ -147,6 +147,14 @@ wurde auf diese Weise implementiert, da am Anfang des parsens nicht bekannt
 sein kann, wie groß die Datentypen bei der Rückgabe werden würden und es die
 eigentliche Methode ``createFailureExample'' deutlich verkürzen konnte.
 
+\item Die Klasse CheckerFactory besitzt nun die zwei neue Methoden: \newline
+``getNewInstance(\ldots)'' wird dazu verwendet eine neue Instanz einer
+Checkerfactory zu erstellen, damit die CheckerFactoryFactory neue CheckerFactory
+erstellen kann. \newline Außerdem gibt es nun die Methode ``getMatchingResult(int
+amount)'' welche die gewünschte Anzahl an Checkerspezifischen Result Objekten
+zurückgibt, sodass die CheckerFactoryFactory von diesen dann auf Wunsch so viele
+wie nötig erstellen kann.
+
 \end{itemize}
 \chapter{Zeitablauf Implementierungsphase}
 
