@@ -7,6 +7,7 @@
 \begin{document}
 \title{Implementierungsdokument}
 \author{Hanselmann, Hecht, Klein, Schnell, Stapelbroek, Wohnig}
+\date{\today\\v0.2}
 \maketitle 
 \tableofcontents	
 \listoffigures
@@ -29,10 +30,6 @@ Ziel des Programmes ist es eine Lösung zur Analyse von formalen Eigenschaften v
 
 \chapter{Unterschiede zu den im Pflichtenheft gestellten Kriterien}
 
-\section{Musskriterien}
-Falls Ein Kriterium nicht implementiert wurde, ausführlich begründen warum nicht.
-
-\section{Sollkritierien}
 \section{Kannkriterien}
 
 \subsection{/FK1130/- Code Completion C-Editor}
@@ -42,7 +39,7 @@ Das automatische Schließen von Klammern und Anführungszeichen ist implementier
 Die Interfaces um diese Anforderungen zu implementieren existieren zwar, es fehlt allerdings an der Zeit dies jetzt noch fertig zu stellen (6-8 Mannstunden).
 
 \subsection{/FK2140/ - Code Completion Eigenschafteneditor}
-Fehlt vollständig da die Zeit von mindestens 8 Mannstunden fehlt.
+Fehlt vollständig da hier auch die Zeit von mindestens 8 Mannstunden fehlt.
 
 \subsection{Betrieb auf dem Betriebssytem MacOS} 
 Da wir keinen MAC zum testen hatten haben wir keine Implementation für MacOS
@@ -214,7 +211,21 @@ Der Container der "`ListItem"' wurde zu einem JPanel.
 
 Neu hinzugekommen ist die Klasse "`ResultPresenterWindow"' , die die Swing-Klasse "`JFrame"' erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine "`JTextPane"' konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
 
+\section{Parametereditor}
 
+Die Klasse ParameterEditor implementiert jetzt nicht mehr BEASTCommunicator aus highlevel. Damit wird ParameterEditor klar von der Kommunikation zwischen den einzelnen Teilen von BEAST getrennt. \\
+\\
+Es wurden neue UserActions hinzugefügt:
+\begin{itemize}
+\item NewProjectUserAction, um neben Laden und Speichern auch das Erstellen eines neuen Projekts zu ermöglichen.
+\item OptionsUserAction, um es dem Nutzer zu ermöglichen, Einstellungen wie etwa die Sprache zu ändern.
+\item ShowHideBooleanExpEditor, ShowHideCElectionEditor und ShowHidePropertyList um die anderen GUI-Fenster vom Parametereditor aus öffnen und schließen zu können.
+\end{itemize}
+Es wurden neue Handler hinzugefügt:
+\begin{itemize}
+\item ArgumentHandler, um die benutzerdefinierten Argumente für CBMC zu verarbeiten.
+\item SaveBeforeChangeHandler, um sicherzustellen, dass der Nutzer nicht versehentlich durch Laden oder Erzeugen eines neuen Projekts ein ungespeichertes Projekt verwirft
+\end{itemize}
 
 
 \chapter{Zeitablauf Implementierungsphase}
