@@ -20,6 +20,10 @@
 \contentsline {section}{\numberline {3.8}BooleanExpEditor}{9}
 \contentsline {section}{\numberline {3.9}CElectionDescriptionEditor}{9}
 \contentsline {section}{\numberline {3.10}PropertyChecker}{9}
-\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{11}
-\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{11}
-\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{11}
+\contentsline {section}{\numberline {3.11}PropertyList}{10}
+\contentsline {subsection}{\numberline {3.11.1}Model}{10}
+\contentsline {subsection}{\numberline {3.11.2}Controller}{10}
+\contentsline {subsection}{\numberline {3.11.3}View}{11}
+\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{12}
+\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{12}
+\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{12}
