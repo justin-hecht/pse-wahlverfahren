@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.4)  9 FEB 2017 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.4)  11 FEB 2017 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -615,52 +615,64 @@ chapter 2.
 ]
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--64
+Underfull \hbox (badness 10000) in paragraph at lines 47--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--64
+Underfull \hbox (badness 10000) in paragraph at lines 47--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--64
+Underfull \hbox (badness 10000) in paragraph at lines 47--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--64
+Underfull \hbox (badness 10000) in paragraph at lines 47--58
 
  []
 
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 
-Overfull \hbox (6.45282pt too wide) in paragraph at lines 83--89
+Overfull \hbox (6.45282pt too wide) in paragraph at lines 77--83
 \OT1/cmr/m/n/10.95 PostAndPrePropertiesDescriptionSaverLoader, Elec-tion-De-s-c
 rip-ti-onS-a-ver-Loa-der, Pa-ra-me-
  []
 
 
-Overfull \hbox (49.37518pt too wide) in paragraph at lines 83--89
+Overfull \hbox (49.37518pt too wide) in paragraph at lines 77--83
 \OT1/cmr/m/n/10.95 edi-tier-ba-ren Strings al-le Vor-kom-men von []"durch []>^^
 ?ersetzt, bzw. dies mit ![]\OT1/cmtt/m/n/10.95 createFromSaveString
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--89
+Underfull \hbox (badness 10000) in paragraph at lines 77--83
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
+
+ []
+
+
+Overfull \hbox (71.33032pt too wide) in paragraph at lines 91--95
+\OT1/cmr/m/n/10.95 Die als Da-tei ab-speicher-ba-ren Da-ten-ty-pen im-ple-men-t
+ie-ren nun al-le das In-ter-face []\OT1/cmtt/m/n/10.95 ChangeNameInterface\OT1/
+cmr/m/n/10.95 ,
  []
 
 
@@ -668,43 +680,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
-
-Overfull \hbox (71.33032pt too wide) in paragraph at lines 97--101
-\OT1/cmr/m/n/10.95 Die als Da-tei ab-speicher-ba-ren Da-ten-ty-pen im-ple-men-t
-ie-ren nun al-le das In-ter-face []\OT1/cmtt/m/n/10.95 ChangeNameInterface\OT1/
-cmr/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--101
-
- []
-
 [7]
-Overfull \hbox (1.25154pt too wide) in paragraph at lines 104--113
+Overfull \hbox (1.25154pt too wide) in paragraph at lines 98--107
 \OT1/cmr/m/n/10.95 - Klas-se Sa-ve-Text-Be-fo-re-Re-mo-ve wur-de hin-zu-gef[]ug
 t. Die-se spei-chert den Text ei-ner JText-
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 
-Overfull \hbox (56.36063pt too wide) in paragraph at lines 156--163
+Overfull \hbox (56.36063pt too wide) in paragraph at lines 150--157
 []\OT1/cmr/m/n/10.95 Es wur-den drei neue Klas-sen na-mens ``CBMC[]Result[]Wrap
 per[]/long/singleArray/multiArray''
  []
 
 [9] [10]
-Overfull \hbox (12.59705pt too wide) in paragraph at lines 199--200
+Overfull \hbox (12.59705pt too wide) in paragraph at lines 193--194
 \OT1/cmr/m/n/10.95 me(PropertyItem prop, String new-Na-me); usw.). Das ge-sch-a
 h, weil sie so klei-ne []Anderungen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--219
+Underfull \hbox (badness 10000) in paragraph at lines 210--213
 
  []
 
@@ -714,10 +714,10 @@ chapter 4.
 File: originalPlanung.jpg Graphic file (type jpg)
 
 <use originalPlanung.jpg>
-Package pdftex.def Info: originalPlanung.jpg used on input line 235.
+Package pdftex.def Info: originalPlanung.jpg used on input line 229.
 (pdftex.def)             Requested size: 543.73349pt x 360.2403pt.
 
-Overfull \hbox (125.47794pt too wide) in paragraph at lines 235--236
+Overfull \hbox (125.47794pt too wide) in paragraph at lines 229--230
 [] 
  []
 
@@ -739,7 +739,7 @@ s/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (13 pages, 250770 bytes).
+Output written on implementierungsdokument.pdf (13 pages, 250192 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream

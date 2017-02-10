@@ -3,10 +3,8 @@
 \contentsline {section}{\numberline {1.1}Ziel des Programmes}{4}
 \contentsline {chapter}{\numberline {2}Unterschiede zu den im Pflichtenheft gestellten Kriterien}{5}
 \contentsline {section}{\numberline {2.1}Kannkriterien}{5}
-\contentsline {subsection}{\numberline {2.1.1}/FK1130/- Code Completion C-Editor}{5}
-\contentsline {subsection}{\numberline {2.1.2}/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}{5}
-\contentsline {subsection}{\numberline {2.1.3}/FK2140/ - Code Completion Eigenschafteneditor}{5}
-\contentsline {subsection}{\numberline {2.1.4}Betrieb auf dem Betriebssytem MacOS}{5}
+\contentsline {subsection}{\numberline {2.1.1}/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}{5}
+\contentsline {subsection}{\numberline {2.1.2}Betrieb auf dem Betriebssytem MacOS}{5}
 \contentsline {chapter}{\numberline {3}\IeC {\"A}nderungen am Entwurf}{6}
 \contentsline {section}{\numberline {3.1}highlevel}{6}
 \contentsline {section}{\numberline {3.2}CodeGenerierung}{7}
