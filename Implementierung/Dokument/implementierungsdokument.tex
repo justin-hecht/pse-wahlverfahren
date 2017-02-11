@@ -168,18 +168,18 @@ wie nötig erstellen kann.
 
 \section{PropertyList}
 
-Das Package PropertyList hat sich hauptsächlich im Subpackage Controller geändert. Durch die Anbindung an die High-Level-Interfaces wurde es nötig, dass das Model der PropertyList kein Singleton mehr ist. Der Controller benötigt deshalb eine eigene Referenz auf das Model. Eine zentrale Controllerklasse übernimmt nun die Steuerung, anstatt wie vorgesehen einzelne Klassen.
+Das Package PropertyList hat sich hauptsächlich im Subpackage Controller geändert. Durch die Anbindung an die High-Level-Interfaces wurde es nötig, dass das Model der PropertyList kein Singleton mehr ist. Der Controller benötigt deshalb eine eigene Referenz auf das Model, weil er nicht auf die einzelne Instanz zugreifen kann. Eine zentrale Controllerklasse übernimmt nun die Steuerung, anstatt wie vorgesehen einzelne Klassen.
 
-Die Methoden für Controller und Model wurden außerdem in eigenen Interfaces beschrieben, sodass ein schneller Überblick möglich ist.
+Die Methoden für Controller und Model wurden außerdem in eigenen Interfaces beschrieben, sodass ein schneller Überblick über die Methoden gegeben ist.
 
-\subsection{Model}
+\subsection{Subpackage Model}
 Die Klasse PropertyList wurde zum "`PLModel"' umbenannt. Sie hat keine Anbindung nach außerhalb des Packages mehr. Das Interface PostAndPrePropertiesDescriptionSource wird nun vom Controller implementiert.
 
 Die Klasse "`PropertyItem"' hält nun zusätzlich Daten zum Ergebnis der Analyse (zusätzlich zu PropertiesDescription und Teststatus).
 
 Das Interface "`PLModelInterface"' beschreibt alle Manipulationen für die Eigenschaftenliste.
 
-\subsection{Controller}
+\subsection{Subpackage Controller}
 Die zentrale Klasse des Controllers heißt "`PropertyList"' und implementiert alle nötigen Interfaces nach außen. Das sind:
 \begin{itemize}
 	\item ResultPresenter (im Entwurf nur vom View implementiert)
@@ -194,14 +194,10 @@ Die Klassen, die "`ListChangeCommand"' erweiterten (ChangeDescription, ChangeDes
 
 Der "`SaveBeforeChangeHandler"' war im Entwurf noch nicht beschrieben.
 
-\subsection{View}
+\subsection{Subpackage View}
 Die Elemente des View sind zum großen Teil gleich geblieben. Sie wurden allerdings nicht mit einem GUI-Builder erstellt, weil dann nicht dynamisch Komponenten hinzugefügt werden hätten können (Formulare mit fester Anzahl von Komponenten).
 
 Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachrichtigt. Nun wird das Observer-Pattern benutzt, um dem View Änderungen im Model mitzuteilen. In diesem Falle wird die Liste der Eigenschaften (ArrayList<ListItem>) neu aufgebaut.
-
-Die Komponenten können aufhören, auf Benutzereingaben zu reagieren und wieder anfangen.
-
-Der Container der "`ListItem"' wurde zu einem JPanel.
 
 Neu hinzugekommen ist die Klasse "`ResultPresenterWindow"' , die die Swing-Klasse "`JFrame"' erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine "`JTextPane"' konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
 
