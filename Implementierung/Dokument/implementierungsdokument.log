@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 19:45
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -621,27 +621,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--101
 
  []
 
-<JTextPaneToolbox.png, id=33, 592.2125pt x 260.975pt>
+<JTextPaneToolbox.png, id=34, 592.2125pt x 260.975pt>
 File: JTextPaneToolbox.png Graphic file (type png)
 
 <use JTextPaneToolbox.png>
 Package pdftex.def Info: JTextPaneToolbox.png used on input line 104.
 (pdftex.def)             Requested size: 296.10551pt x 130.48718pt.
 
-<Errordisplayer_update.png, id=34, 421.575pt x 160.6pt>
+<Errordisplayer_update.png, id=35, 421.575pt x 160.6pt>
 File: Errordisplayer_update.png Graphic file (type png)
 
 <use Errordisplayer_update.png>
 Package pdftex.def Info: Errordisplayer_update.png used on input line 106.
 (pdftex.def)             Requested size: 210.78697pt x 80.29979pt.
 
-<Tabinserter.png, id=35, 260.975pt x 170.6375pt>
+<Tabinserter.png, id=36, 260.975pt x 170.6375pt>
 File: Tabinserter.png Graphic file (type png)
  <use Tabinserter.png>
 Package pdftex.def Info: Tabinserter.png used on input line 113.
 (pdftex.def)             Requested size: 130.48718pt x 85.31853pt.
 
-<insertnewline_update.png, id=36, 843.15pt x 481.8pt>
+<insertnewline_update.png, id=37, 843.15pt x 481.8pt>
 File: insertnewline_update.png Graphic file (type png)
 
 <use insertnewline_update.png>
@@ -812,7 +812,7 @@ s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (17 pages, 357300 bytes).
+Output written on implementierungsdokument.pdf (17 pages, 357313 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
