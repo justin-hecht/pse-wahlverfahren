@@ -222,6 +222,9 @@ Neu hinzugekommen ist die Klasse \verb!ResultPresenterWindow! , die die Swing-Kl
 
 \section{Package Parametereditor}
 
+Das Paket \verb!parametereditor! umfasst die Klassen, die das Hauptfenster von BEAST (das Parametereditorfenster) aufbauen und die dortigen Eingaben des Nutzers verarbeiten. In diesem Fenster können Parameter für die Analyse des Wahlverfahrens (Anzahl von Wählern, Kandidaten und Stimmen, sowie maximale Anzahl von Prozessen und maximale Dauer der Analyse) angegeben werden. Außerdem können hier benutzerdefinierte Argumente für CBMC angegeben und die Analyse gestartet und gestoppt werden.
+
+\subsection{Class ParameterEditor}
 Die Klasse \verb!ParameterEditor! implementiert jetzt nicht mehr \verb!BEASTCommunicator! aus \verb!highlevel!. Damit wird \verb!ParameterEditor! klar von der Kommunikation zwischen den einzelnen Teilen von BEAST getrennt. \\
 
 \subsection{UserActions}
