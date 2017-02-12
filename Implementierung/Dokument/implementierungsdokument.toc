@@ -40,6 +40,7 @@
 \contentsline {subsection}{\numberline {3.12.1}Class ParameterEditor}{16}
 \contentsline {subsection}{\numberline {3.12.2}UserActions}{17}
 \contentsline {subsection}{\numberline {3.12.3}Handlers}{17}
+\contentsline {subsection}{\numberline {3.12.4}VersionWindow}{17}
 \contentsline {section}{\numberline {3.13}Toolbox}{17}
 \contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{18}
 \contentsline {section}{\numberline {4.1}Geplanter Ablauf}{18}

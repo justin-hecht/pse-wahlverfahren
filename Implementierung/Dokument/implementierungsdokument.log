@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 22:53
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -805,7 +805,7 @@ t/m/n/10.95 ShowHideCElectionEditor \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10.9
  []
 
 
-Overfull \hbox (38.57054pt too wide) in paragraph at lines 250--256
+Overfull \hbox (38.57054pt too wide) in paragraph at lines 253--259
 \OT1/cmr/m/n/10.95 - []\OT1/cmtt/m/n/10.95 ActionIdAndListener\OT1/cmr/m/n/10.9
 5 : Ei-ne ein-fa-che Wrapper-Klasse wel-che Zu-griff auf einen []\OT1/cmtt/m/n/
 10.95 ActionListener
@@ -817,10 +817,10 @@ chapter 4.
 File: originalPlanung.jpg Graphic file (type jpg)
 
 <use originalPlanung.jpg>
-Package pdftex.def Info: originalPlanung.jpg used on input line 261.
+Package pdftex.def Info: originalPlanung.jpg used on input line 264.
 (pdftex.def)             Requested size: 543.73349pt x 360.2403pt.
 
-Overfull \hbox (125.47794pt too wide) in paragraph at lines 261--262
+Overfull \hbox (125.47794pt too wide) in paragraph at lines 264--265
 [] 
  []
 
@@ -844,7 +844,7 @@ s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (18 pages, 283449 bytes).
+Output written on implementierungsdokument.pdf (18 pages, 283796 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
