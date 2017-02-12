@@ -42,11 +42,11 @@ Benutzer die dieses Betriebssystem besitzen mit einigen Programmierkenntnisse
 möglich sich diese Option selbst einzubauen. Dazu müsste hauptsächlich die Funktionalität erstellt werden, Prozesse auf diesem Betriebssystem von Java aus zu starten. Mit dieser müssten dann cbmc sowie gcc angesprochen und deren Ausgabe zurückgegeben werden. Alle anderen Systeme sind unabhängig vom Betriebssystem.
 
 \chapter{Änderungen am Entwurf}
-\section{highlevel}
+\section{Package Highlevel}
 
-AbstractFactory in highlevel ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl ParameterSource, als auch ProjectSource und MainNotifier implementiert). \\
+AbstractFactory in \verb!highlevel! ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl ParameterSource, als auch ProjectSource und MainNotifier implementiert). \\
 Deshalb wurde sie durch das Interface CentralObjectProvider und PSECentralObjectProvider, der dieses implementiert, ersetzt. CentralObjectProvider verwirklicht die ursprüngliche Funktion der Abstrakten Fabrik, unabhängig von konkreten Implementierungen zu sein. \\
-PSECentralObjectProvider erzeugt die konkreten Objekte für unsere Implementierung der highlevel Interfaces und stellt diese dem BEASTCommunicator zur Verfügung. Dieser muss weiterhin nur von den Interfaces wissen. \\
+PSECentralObjectProvider erzeugt die konkreten Objekte für unsere Implementierung der Highlevel-Interfaces und stellt diese dem BEASTCommunicator zur Verfügung. Dieser muss weiterhin nur von den Interfaces wissen. \\
 \\
 Es wurde das Interface DisplaysStringsToUser hinzugefügt. Es wird von allen Elementen, die dem Nutzer Text anzeigen, implementiert. Damit wird die Einbindung anderer Sprachen vereinfacht. \\
 \\
@@ -214,9 +214,9 @@ Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachr
 
 Neu hinzugekommen ist die Klasse "`ResultPresenterWindow"' , die die Swing-Klasse "`JFrame"' erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine "`JTextPane"' konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
 
-\section{Parametereditor}
+\section{Package Parametereditor}
 
-Die Klasse ParameterEditor implementiert jetzt nicht mehr BEASTCommunicator aus highlevel. Damit wird ParameterEditor klar von der Kommunikation zwischen den einzelnen Teilen von BEAST getrennt. \\
+Die Klasse ParameterEditor implementiert jetzt nicht mehr BEASTCommunicator aus \verb!highlevel!. Damit wird ParameterEditor klar von der Kommunikation zwischen den einzelnen Teilen von BEAST getrennt. \\
 \\
 Es wurden neue UserActions hinzugefügt:
 \begin{itemize}
