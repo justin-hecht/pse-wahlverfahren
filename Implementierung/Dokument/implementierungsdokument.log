@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 19:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 19:19
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -482,13 +482,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-)
+ [2
+
+])
 \tf@toc=\write3
 \openout3 = `implementierungsdokument.toc'.
 
- [2
-
-] [3] (implementierungsdokument.lof)
+ [3] (implementierungsdokument.lof)
 \tf@lof=\write4
 \openout4 = `implementierungsdokument.lof'.
 
@@ -795,7 +795,7 @@ Here is how much of TeX's memory you used:
  7257 multiletter control sequences out of 15000+200000
  9287 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,6n,66p,8531b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,6n,66p,8531b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Jonas/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
 /Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
@@ -805,7 +805,7 @@ s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (17 pages, 357263 bytes).
+Output written on implementierungsdokument.pdf (17 pages, 357308 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
