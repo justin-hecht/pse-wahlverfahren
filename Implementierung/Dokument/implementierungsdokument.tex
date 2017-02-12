@@ -46,16 +46,20 @@ möglich sich diese Option selbst einzubauen. Dazu müsste hauptsächlich die Fu
 
 Das Paket \verb!highlevel! bildet den Kern von BEAST. Es enthält die \verb!MainClass!, über die BEAST gestartet wird. Weiterhin enthält es Interfaces zu den anderen Paketen, wodurch diese Pakete unabhängiger von einander sind und damit leichter auszutauschen. Der \verb!CentralObjectProvider! generiert Instanzen dieser Interfaces und stellt sie dem \verb!BEASTCommunicator! bereit. \\
 
+\subsection{CentralObjectProvider}
 \verb!AbstractFactory! in \verb!highlevel! ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl \verb!ParameterSource!, als auch \verb!ProjectSource! und \verb!MainNotifier! implementiert). \\
 Deshalb wurde sie durch das Interface \verb!CentralObjectProvider! und \verb!PSECentralObjectProvider!, der dieses implementiert, ersetzt. \verb!CentralObjectProvider! verwirklicht die ursprüngliche Funktion der Abstrakten Fabrik, unabhängig von konkreten Implementierungen zu sein. \\
 \verb!PSECentralObjectProvider! erzeugt die konkreten Objekte für unsere Implementierung der \verb!highlevel!-Interfaces und stellt diese dem \verb!BEASTCommunicator! zur Verfügung. Dieser muss weiterhin nur von den Interfaces wissen. \\
-\\
+
+\subsection{DisplaysStringsToUser}
 Es wurde das Interface \verb!DisplaysStringsToUser! hinzugefügt. Es wird von allen Elementen, die dem Nutzer Text anzeigen, implementiert. Damit wird die Einbindung anderer Sprachen vereinfacht. \\
-\\
+
+\subsection{start-/stopReacting}
 Allen Interfaces zu Paketen mit GUI wurden die Methoden stopReacting() und resumeReacting() hinzugefügt. Diese verhindern, dass der Nutzer während einer laufenden Analyse Änderungen an dafür benötigten Daten vornimmt. \\
-\\
+
+\subsection{ProjectSource}
 Es wurde das Interface \verb!ProjectSource! hinzugefügt. Es wird von \verb!ParameterEditor! implementiert. Damit wird es möglich das Speichern und Laden von ganzen Projekten in zukünftigen Versionen leichter einem anderen Fenster als dem Parametereditor zu überlassen. \\
-\\
+\subsection{isCorrect}
 Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Methode isCorrect() hinzugefügt. Damit kann vor Start einer Analyse überprüft werden, ob die bereitgestellten Daten frei von Fehlern sind, die die Analyse beeinträchtigen würden.
 
 
@@ -219,13 +223,16 @@ Neu hinzugekommen ist die Klasse \verb!ResultPresenterWindow! , die die Swing-Kl
 \section{Package Parametereditor}
 
 Die Klasse \verb!ParameterEditor! implementiert jetzt nicht mehr \verb!BEASTCommunicator! aus \verb!highlevel!. Damit wird \verb!ParameterEditor! klar von der Kommunikation zwischen den einzelnen Teilen von BEAST getrennt. \\
-\\
+
+\subsection{UserActions}
 Es wurden neue \verb!UserActions! hinzugefügt:
 \begin{itemize}
 \item \verb!NewProjectUserAction!, um neben Laden und Speichern auch das Erstellen eines neuen Projekts zu ermöglichen.
 \item \verb!OptionsUserAction!, um es dem Nutzer zu ermöglichen, Einstellungen wie etwa die Sprache zu ändern.
 \item \verb!ShowHideBooleanExpEditor!, \verb!ShowHideCElectionEditor! und \verb!ShowHidePropertyList! um die anderen GUI-Fenster vom Parametereditor aus öffnen und schließen zu können.
 \end{itemize}
+
+\subsection{Handlers}
 Es wurden neue Handler hinzugefügt:
 \begin{itemize}
 \item \verb!ArgumentHandler!, um die benutzerdefinierten Argumente für CBMC zu verarbeiten.

@@ -7,23 +7,30 @@
 \contentsline {subsection}{\numberline {2.1.2}Betrieb auf dem Betriebssytem MacOS}{5}
 \contentsline {chapter}{\numberline {3}\IeC {\"A}nderungen am Entwurf}{6}
 \contentsline {section}{\numberline {3.1}Package Highlevel}{6}
+\contentsline {subsection}{\numberline {3.1.1}CentralObjectProvider}{6}
+\contentsline {subsection}{\numberline {3.1.2}DisplaysStringsToUser}{6}
+\contentsline {subsection}{\numberline {3.1.3}start-/stopReacting}{6}
+\contentsline {subsection}{\numberline {3.1.4}ProjectSource}{7}
+\contentsline {subsection}{\numberline {3.1.5}isCorrect}{7}
 \contentsline {section}{\numberline {3.2}CodeGenerierung}{7}
 \contentsline {section}{\numberline {3.3}UserActions}{7}
 \contentsline {section}{\numberline {3.4}SaverLoader}{7}
-\contentsline {section}{\numberline {3.5}FileChooser}{7}
+\contentsline {section}{\numberline {3.5}FileChooser}{8}
 \contentsline {section}{\numberline {3.6}DataTypes}{8}
 \contentsline {section}{\numberline {3.7}Codearea}{8}
-\contentsline {subsection}{\numberline {3.7.1}UserInsertToCode}{9}
-\contentsline {section}{\numberline {3.8}BooleanExpEditor}{10}
-\contentsline {section}{\numberline {3.9}CElectionDescriptionEditor}{10}
-\contentsline {subsection}{\numberline {3.9.1}ErrorHandling}{11}
-\contentsline {section}{\numberline {3.10}PropertyChecker}{11}
-\contentsline {section}{\numberline {3.11}PropertyList}{12}
-\contentsline {subsection}{\numberline {3.11.1}Subpackage Model}{12}
-\contentsline {subsection}{\numberline {3.11.2}Subpackage Controller}{12}
-\contentsline {subsection}{\numberline {3.11.3}Subpackage View}{13}
-\contentsline {section}{\numberline {3.12}Package Parametereditor}{13}
-\contentsline {section}{\numberline {3.13}Toolbox}{14}
-\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{15}
-\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{15}
-\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{15}
+\contentsline {subsection}{\numberline {3.7.1}UserInsertToCode}{10}
+\contentsline {section}{\numberline {3.8}BooleanExpEditor}{11}
+\contentsline {section}{\numberline {3.9}CElectionDescriptionEditor}{11}
+\contentsline {subsection}{\numberline {3.9.1}ErrorHandling}{12}
+\contentsline {section}{\numberline {3.10}PropertyChecker}{12}
+\contentsline {section}{\numberline {3.11}PropertyList}{13}
+\contentsline {subsection}{\numberline {3.11.1}Subpackage Model}{13}
+\contentsline {subsection}{\numberline {3.11.2}Subpackage Controller}{13}
+\contentsline {subsection}{\numberline {3.11.3}Subpackage View}{14}
+\contentsline {section}{\numberline {3.12}Package Parametereditor}{14}
+\contentsline {subsection}{\numberline {3.12.1}UserActions}{14}
+\contentsline {subsection}{\numberline {3.12.2}Handlers}{15}
+\contentsline {section}{\numberline {3.13}Toolbox}{15}
+\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{16}
+\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{16}
+\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{16}
