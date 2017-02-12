@@ -95,8 +95,8 @@ Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \
 
 \section{Codearea}
 \subsection{JTextPaneToolbox}
-Die Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese implementiert oft benötigte Funktionalität für \verb!JTextPanes!.\\
-\includegraphics[scale=0.5]{JTextPaneToolbox.png}\\
+Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden, welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört unter anderem das Umwandeln absoluter Positionen in Zeilennummern.\\
+\includegraphics[scale=0.5]{JTextPaneToolbox.pdf}\\
 \subsection{Errordisplayer}
 \verb!Errordisplayer! ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
 \includegraphics[scale=0.5]{Errordisplayer_update.pdf}\\
@@ -108,10 +108,10 @@ Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt
 Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in der \verb!JTextPane! gezackt. Dies wird verwendet, um Fehler im Code anzuzeigen. Übernommen von 
 https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
 \subsection{JTextPaneToolbox}
-Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden, welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört unter anderem das Umwandeln absoluter Positionen in Zeilennummern.\\
+
 \subsection{Tabinserter}
 \verb!Tabinserter! wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
-\includegraphics[scale=0.5]{Tabinserter.png}\\
+\includegraphics[scale=0.5]{TabInserter.pdf}\\
 \subsection{LineBeginningTabsHandler}
 Interface \verb!LineBeginningTabsHandler! und Implementierung \verb!CurlyBracesLineBeginningTabHandler! wurden hinzugefügt. \verb!LineBeginningTabsHandler! berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. \verb!CurlyBracesLineBeginningTabHandler! errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am Ende der gegebenen Zeile\\
 \subsection{UserActions}
@@ -138,7 +138,7 @@ Entfernt wurden:
 \item msgLockedLinesListeners: wird nun von \verb!LockedLineHandler! übernommen
 \end{itemize}
 
-\includegraphics[scale=0.5]{inputtocode_update.png}
+\includegraphics[scale=0.45]{inputtocode_update.pdf}
 
 \section{BooleanExpEditor}
 Der \verb!BooleanExpEditor! besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist.
@@ -156,11 +156,11 @@ Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da
 \item \verb!ElectionTemplateHandler!: Gibt alle Election Input und Output Datentypen und deren ids aus.
 \item \verb!ElectionTemplateChooser!: Zeigt dem Benutzer einen Dialog, welcher es ermöglicht Input und Result eines neuen Wahlverfahrens zu wählen.
 \end{itemize}
-\includegraphics[scale=0.5]{ElectionTemplates.png}\\
+\includegraphics[scale=0.5]{ElectionTemplates.pdf}\\
 
 \subsection{ErrorHandling}
 Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.
-\includegraphics[scale=0.5]{CErrorChecking.png}
+\includegraphics[scale=0.5]{CErrorChecking.pdf}
 
 \section{PropertyChecker}
 Beim \verb!PropertyChecker! haben sich folgende Sachen im Vergleich zum Entwurf
