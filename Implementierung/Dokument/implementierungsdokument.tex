@@ -163,7 +163,7 @@ Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compi
 \includegraphics[scale=0.5]{CErrorChecking.pdf}
 
 \section{PropertyChecker}
-Beim \verb!PropertyChecker! haben sich folgende Sachen im Vergleich zum Entwurf
+Beim \verb!PropertyChecker! hat sich folgendes im Vergleich zum Entwurf
 verändert:
 \begin{itemize}
 \item Die Klasse CBMC\_Result besitzt nun die Methode ``createFailureExample''
@@ -171,18 +171,18 @@ verändert:
   genutzt werden. Deshalb besitzt die Klasse \verb!Checker! diese Fähigkeit nicht mehr.
 
 \item Es wurden drei neue Klassen namens
-``CBMC\_Result\_Wrapper\_/long/singleArray/multiArray'' erstellt. Diese werden
-während des parsens der Rückgabe von CBMC verwendet um die Teilergebnisse in
+\verb!CBMC\_Result\_Wrapper\_/long/singleArray/multiArray! erstellt. Diese werden
+während des Parsens der Rückgabe von CBMC verwendet, um die Teilergebnisse in
 Listen zu speichern und sie dann am Ende als Array ausgeben zu können. Dies
-wurde auf diese Weise implementiert, da am Anfang des parsens nicht bekannt
+wurde auf diese Weise implementiert, da am Anfang des Parsens nicht bekannt
 sein kann, wie groß die Datentypen bei der Rückgabe werden würden und es die
 eigentliche Methode ``createFailureExample'' deutlich verkürzen konnte.
 
-\item Die Klasse \verb!CheckerFactory! besitzt nun die zwei neue Methoden: \newline
+\item Die Klasse \verb!CheckerFactory! besitzt nun zwei neue Methoden: \newline
 ``getNewInstance(\ldots)'' wird dazu verwendet eine neue Instanz einer
-\verb!CheckerFactory! zu erstellen, damit die \verb!CheckerFactoryFactory! neue \verb!CheckerFactory!
+\verb!CheckerFactory! zu erstellen, damit die \verb!CheckerFactoryFactory! neue \verb!CheckerFactorys!
 erstellen kann. \newline Außerdem gibt es nun die Methode ``getMatchingResult(int
-amount)'' welche die gewünschte Anzahl an checkerspezifischen \verb!Result! Objekten
+amount)'', welche die gewünschte Anzahl an checkerspezifischen \verb!Result! Objekten
 zurückgibt, sodass die \verb!CheckerFactoryFactory! von diesen dann auf Wunsch so viele
 wie nötig erstellen kann.
 
@@ -191,16 +191,16 @@ wie nötig erstellen kann.
 
 \section{PropertyList}
 
-Das Package \verb!PropertyList! hat sich hauptsächlich im Subpackage \verb!Controller! geändert. Durch die Anbindung an die High-Level-Interfaces wurde es nötig, dass das Model der \verb!PropertyList! kein Singleton mehr ist. Der Controller benötigt deshalb eine eigene Referenz auf das Model, weil er nicht auf die einzelne Instanz zugreifen kann. Eine zentrale Controllerklasse übernimmt nun die Steuerung, anstatt wie vorgesehen einzelne Klassen.
+Das Paket \verb!PropertyList! hat sich im Unterpaket \verb!Controller! geändert. Durch die Anbindung an die \verb!highlevel!-Interfaces wurde es nötig, dass das Model der \verb!PropertyList! kein Einzelstück mehr ist. Der Controller benötigt deshalb eine eigene Referenz auf das Model, weil er nicht auf die einzelne Instanz zugreifen kann. Eine zentrale Controllerklasse übernimmt nun die Steuerung, anstatt wie vorgesehen einzelne Klassen.
 
 Die Methoden für Controller und Model wurden außerdem in eigenen Interfaces beschrieben, sodass ein schneller Überblick über die Methoden gegeben ist.
 
 \subsection{Subpackage Model}
-Die Klasse \verb!PropertyList! wurde zum "`PLModel"' umbenannt. Sie hat keine Anbindung nach außerhalb des Packages mehr. Das Interface \verb!PostAndPrePropertiesDescriptionSource! wird nun vom Controller implementiert.
+Die Klasse \verb!PropertyList! wurde zu \verb!PLModel! umbenannt. Sie hat keine Anbindung nach außerhalb des Pakets mehr. Das Interface \verb!PostAndPrePropertiesDescriptionSource! wird nun vom Controller implementiert.
 
-Die Klasse \verb!PropertyItem! hält nun zusätzlich Daten zum Ergebnis der Analyse (zusätzlich zu \verb!PropertiesDescription! und Teststatus).
+Die Klasse \verb!PropertyItem! hält nun Daten zum Ergebnis der Analyse (zusätzlich zu \verb!PropertiesDescription! und Teststatus).
 
-Das Interface \verb!PLModelInterface! beschreibt alle Manipulationen für die Eigenschaftenliste.
+Das Interface \verb!PLModelInterface! beschreibt alle Manipulationen der Eigenschaftenliste.
 
 \subsection{Subpackage Controller}
 Die zentrale Klasse des Controllers heißt \verb!PropertyList! und implementiert alle nötigen Interfaces nach außen. Das sind:
