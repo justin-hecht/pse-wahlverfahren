@@ -211,18 +211,18 @@ Die zentrale Klasse des Controllers heißt \verb!PropertyList! und implementiert
 	\item \verb!DisplaysStringsToUser! (zur Entgegennahme der Strings für den View)
 	\item \verb!PLControllerInterface! (alle möglichen Befehle für die \verb!PropertyList!)
 \end{itemize}
-Die \verb!Action!- und \verb!Changelistener! wurden aus dem Controller rausgezogen und direkt im View implementiert.
+Die \verb!Action!- und \verb!ChangeListener! wurden aus dem Controller rausgezogen und direkt im View implementiert.
 
 Die Klassen, die \verb!ListChangeCommand! erweiterten (\verb!ChangeDescription!, \verb!ChangeDescriptionName!, \verb!AddStandardDescription!, \verb!AddNewDescription!, \verb!ChangeTestedStatus!, \verb!Redo!, \verb!Undo!), sind nur noch Methoden im Interface des Controllers (void changeName(PropertyItem prop, String newName); usw.). Das geschah, weil sie so kleine Änderungen an der \verb!PropertyList! bedeuten, dass sie nicht rückgängig gemacht werden müssen. Stattdessen kann der Nutzer neu erstellte Eigenschaften mit dem Klick auf den entsprechenden Button wieder löschen. Lediglich \verb!DeleteDescriptionAction! ist den Undo wert und wurde deshalb in einer eigenen Klasse gekapselt.
 
 Der \verb!SaveBeforeChangeHandler! war im Entwurf noch nicht beschrieben.
 
 \subsection{Subpackage View}
-Die Elemente des View sind zum großen Teil gleich geblieben. Sie wurden allerdings nicht mit einem GUI-Builder erstellt, weil dann nicht dynamisch Komponenten hinzugefügt werden hätten können (Formulare mit fester Anzahl von Komponenten).
+Die Elemente des View sind großteils gleich geblieben. Sie wurden allerdings nicht mit einem GUI-Builder erstellt, weil dann nicht dynamisch Komponenten hinzugefügt werden könnten (Formulare mit fester Anzahl von Komponenten).
 
-Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachrichtigt. Nun wird das Observer-Pattern benutzt, um dem View Änderungen im Model mitzuteilen. In diesem Falle wird die Liste der Eigenschaften (ArrayList<ListItem>) neu aufgebaut.
+Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachrichtigt. Nun wird das Beobachtermuster benutzt, um dem View Änderungen im Model mitzuteilen. In diesem Falle wird die Liste der Eigenschaften (ArrayList<ListItem>) neu aufgebaut.
 
-Neu hinzugekommen ist die Klasse \verb!ResultPresenterWindow! , die die Swing-Klasse \verb!JFrame! erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine \verb!JTextPane! konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
+Neu hinzugekommen ist die Klasse \verb!ResultPresenterWindow!, die die Swing-Klasse \verb!JFrame! erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine \verb!JTextPane! konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
 
 \section{Package Parametereditor}
 
@@ -236,14 +236,14 @@ Es wurden neue \verb!UserActions! hinzugefügt:
 \begin{itemize}
 \item \verb!NewProjectUserAction!, um neben Laden und Speichern auch das Erstellen eines neuen Projekts zu ermöglichen.
 \item \verb!OptionsUserAction!, um es dem Nutzer zu ermöglichen, Einstellungen wie etwa die Sprache zu ändern.
-\item \verb!ShowHideBooleanExpEditor!, \verb!ShowHideCElectionEditor! und \verb!ShowHidePropertyList! um die anderen GUI-Fenster vom Parametereditor aus öffnen und schließen zu können.
+\item \verb!ShowHideBooleanExpEditor!, \verb!ShowHideCElectionEditor! und \verb!ShowHidePropertyList!, um die anderen GUI-Fenster vom Parametereditor aus öffnen und schließen zu können.
 \end{itemize}
 
 \subsection{Handlers}
 Es wurden neue Handler hinzugefügt:
 \begin{itemize}
 \item \verb!ArgumentHandler!, um die benutzerdefinierten Argumente für CBMC zu verarbeiten.
-\item \verb!SaveBeforeChangeHandler!, um sicherzustellen, dass der Nutzer nicht versehentlich durch Laden oder Erzeugen eines neuen Projekts ein ungespeichertes Projekt verwirft
+\item \verb!SaveBeforeChangeHandler!, um sicherzustellen, dass der Nutzer nicht versehentlich durch Laden oder Erzeugen eines neuen Projekts ein ungespeichertes Projekt verwirft.
 \end{itemize}
 
 \section{Toolbox}
