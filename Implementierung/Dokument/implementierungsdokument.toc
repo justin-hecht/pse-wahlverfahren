@@ -3,8 +3,7 @@
 \contentsline {section}{\numberline {1.1}Ziel des Programmes}{5}
 \contentsline {chapter}{\numberline {2}Unterschiede zu den im Pflichtenheft gestellten Kriterien}{6}
 \contentsline {section}{\numberline {2.1}Kannkriterien}{6}
-\contentsline {subsection}{\numberline {2.1.1}/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}{6}
-\contentsline {subsection}{\numberline {2.1.2}Betrieb auf dem Betriebssytem MacOS}{6}
+\contentsline {subsection}{\numberline {2.1.1}Betrieb auf dem Betriebssytem MacOS}{6}
 \contentsline {chapter}{\numberline {3}\IeC {\"A}nderungen am Entwurf}{7}
 \contentsline {section}{\numberline {3.1}Package Highlevel}{7}
 \contentsline {subsection}{\numberline {3.1.1}CentralObjectProvider}{7}
@@ -17,21 +16,31 @@
 \contentsline {section}{\numberline {3.4}SaverLoader}{8}
 \contentsline {section}{\numberline {3.5}FileChooser}{9}
 \contentsline {section}{\numberline {3.6}DataTypes}{9}
-\contentsline {section}{\numberline {3.7}Codearea}{9}
-\contentsline {subsection}{\numberline {3.7.1}UserInsertToCode}{11}
-\contentsline {section}{\numberline {3.8}BooleanExpEditor}{12}
-\contentsline {section}{\numberline {3.9}CElectionDescriptionEditor}{12}
-\contentsline {subsection}{\numberline {3.9.1}ErrorHandling}{13}
-\contentsline {section}{\numberline {3.10}PropertyChecker}{13}
-\contentsline {section}{\numberline {3.11}PropertyList}{14}
-\contentsline {subsection}{\numberline {3.11.1}Subpackage Model}{14}
-\contentsline {subsection}{\numberline {3.11.2}Subpackage Controller}{14}
-\contentsline {subsection}{\numberline {3.11.3}Subpackage View}{15}
-\contentsline {section}{\numberline {3.12}Package Parametereditor}{15}
-\contentsline {subsection}{\numberline {3.12.1}Class ParameterEditor}{15}
-\contentsline {subsection}{\numberline {3.12.2}UserActions}{15}
-\contentsline {subsection}{\numberline {3.12.3}Handlers}{16}
-\contentsline {section}{\numberline {3.13}Toolbox}{16}
-\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{17}
-\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{17}
-\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{17}
+\contentsline {section}{\numberline {3.7}Codearea}{10}
+\contentsline {subsection}{\numberline {3.7.1}JTextPaneToolbox}{10}
+\contentsline {subsection}{\numberline {3.7.2}Errordisplayer}{10}
+\contentsline {subsection}{\numberline {3.7.3}SaveTextBeforeRemove}{11}
+\contentsline {subsection}{\numberline {3.7.4}TextLineNumber}{11}
+\contentsline {subsection}{\numberline {3.7.5}SquigglePainter}{11}
+\contentsline {subsection}{\numberline {3.7.6}JTextPaneToolbox}{11}
+\contentsline {subsection}{\numberline {3.7.7}Tabinserter}{11}
+\contentsline {subsection}{\numberline {3.7.8}LineBeginningTabsHandler}{11}
+\contentsline {subsection}{\numberline {3.7.9}UserActions}{12}
+\contentsline {subsection}{\numberline {3.7.10}NewlineInserter}{12}
+\contentsline {subsection}{\numberline {3.7.11}UserInsertToCode}{12}
+\contentsline {section}{\numberline {3.8}BooleanExpEditor}{13}
+\contentsline {section}{\numberline {3.9}CElectionDescriptionEditor}{13}
+\contentsline {subsection}{\numberline {3.9.1}ErrorHandling}{14}
+\contentsline {section}{\numberline {3.10}PropertyChecker}{14}
+\contentsline {section}{\numberline {3.11}PropertyList}{15}
+\contentsline {subsection}{\numberline {3.11.1}Subpackage Model}{15}
+\contentsline {subsection}{\numberline {3.11.2}Subpackage Controller}{15}
+\contentsline {subsection}{\numberline {3.11.3}Subpackage View}{16}
+\contentsline {section}{\numberline {3.12}Package Parametereditor}{16}
+\contentsline {subsection}{\numberline {3.12.1}Class ParameterEditor}{16}
+\contentsline {subsection}{\numberline {3.12.2}UserActions}{17}
+\contentsline {subsection}{\numberline {3.12.3}Handlers}{17}
+\contentsline {section}{\numberline {3.13}Toolbox}{17}
+\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{18}
+\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{18}
+\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{18}

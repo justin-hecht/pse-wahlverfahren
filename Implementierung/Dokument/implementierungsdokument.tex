@@ -32,9 +32,6 @@ Ziel des Programmes ist es, eine Lösung zur Analyse von formalen Eigenschaften 
 
 \section{Kannkriterien}
 
-\subsection{/FK1140/- Durch den User konfigurierbares Verhalten C-Editor}
-Die Interfaces um diese Anforderungen zu implementieren existieren zwar, es fehlt allerdings an der Zeit dies jetzt noch fertig zu stellen (6-8 Mannstunden).
-
 \subsection{Betrieb auf dem Betriebssytem MacOS} 
 Da wir keinen MAC zum Testen hatten, haben wir keine Implementierung für MacOS
 vorgenommen. Da unser Entwurf Erweiterungen aber leicht zulässt, ist es für
@@ -48,7 +45,7 @@ Das Paket \verb!highlevel! bildet den Kern von BEAST. Es enthält die \verb!Main
 
 \subsection{CentralObjectProvider}
 \verb!AbstractFactory! in \verb!highlevel! ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl \verb!ParameterSource!, als auch \verb!ProjectSource! und \verb!MainNotifier! implementiert). \\
-Deshalb wurde sie durch das Interface \verb!CentralObjectProvider! und die Klasse \verb!PSECentralObjectProvider!, die dieses implementiert, ersetzt. \verb!CentralObjectProvider! verwirklicht die ursprüngliche Funktion der Abstrakten Fabrik, unabhängig von konkreten Implementierungen zu sein. \\
+Deshalb wurde sie durch das Interface \verb!CentralObjectProvider! und die Klasse\\ \verb!PSECentralObjectProvider!, die dieses implementiert, ersetzt. \verb!CentralObjectProvider! verwirklicht die ursprüngliche Funktion der Abstrakten Fabrik, unabhängig von konkreten Implementierungen zu sein. \\
 \verb!PSECentralObjectProvider! erzeugt die konkreten Objekte für unsere Implementierung der \verb!highlevel!-Interfaces und stellt diese dem \verb!BEASTCommunicator! zur Verfügung. Dieser muss weiterhin nur von den Interfaces wissen. \\
 
 \subsection{DisplaysStringsToUser}
@@ -68,7 +65,7 @@ Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Metho
 Die Klasse \verb!CBMCCodeGeneration! ist nicht mehr statisch. \\
 Sie wird in der Implementierung von der Klasse \verb!CBMCProcessFactory! instantiiert. \\
 So wird für jedes erzeugte C-Tempfile (Glossareintrag) eine neue Instanz erstellt. Das ist sinnvoll, da es genau von den Parametern abhängt. \\
-Jede Instanz der Klasse \verb!CBMCCodeGeneration! erstellt eine Instanz der Klasse \verb!CBMCCodeGenerationVisitor!. \\
+Jede Instanz der Klasse \verb!CBMCCodeGeneration! erstellt eine Instanz der Klasse \\\verb!CBMCCodeGenerationVisitor!. \\
 Diese besitzen zwei neue Methoden, die einstellen, ob er zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
 (Verändertes Klassendiagramm hier)
 
@@ -82,10 +79,8 @@ Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den
 \section{SaverLoader}
 \verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader! mit den dargestellten Methoden. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
 Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
-Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, beziehungsweise dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.
-\newline
-(Diagramm folgt)
-\newline
+Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, beziehungsweise dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
+\includegraphics[scale=0.5]{SaverLoader.pdf}
 
 \section{FileChooser}
 Diese Klasse kümmert sich um das Laden und Speichern der speicherbaren Datentypen.
@@ -94,27 +89,36 @@ Diese Klasse kümmert sich um das Laden und Speichern der speicherbaren Datentyp
 \newline
 
 \section{DataTypes}
-Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \verb!ChangeNameInterface!, das es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.
-\newline
-(Diagramm folgt)
-\newline
+Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \\ \verb!ChangeNameInterface!, das es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.\\
+\includegraphics[scale=0.5]{NameInterface.pdf}
+
 
 \section{Codearea}
-- Die Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese implementiert oft benötigte Funktionalität für \verb!JTextPanes!.\\
+\subsection{JTextPaneToolbox}
+Die Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese implementiert oft benötigte Funktionalität für \verb!JTextPanes!.\\
 \includegraphics[scale=0.5]{JTextPaneToolbox.png}\\
-- \verb!Errordisplayer! ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
-\includegraphics[scale=0.5]{Errordisplayer_update.png}\\
-- Klasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane!, sobald Text daraus entfernt wird. Dies ist nötig, da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser wird jedoch benötigt, um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
-- Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen.\\
-- Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in der \verb!JTextPane! gezackt. Dies wird verwendet, um Fehler im Code anzuzeigen. Übernommen von 
+\subsection{Errordisplayer}
+\verb!Errordisplayer! ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
+\includegraphics[scale=0.5]{Errordisplayer_update.pdf}\\
+\subsection{SaveTextBeforeRemove}
+DieKlasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane!, sobald Text daraus entfernt wird. Dies ist nötig, da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser wird jedoch benötigt, um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
+\subsection{TextLineNumber}
+Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus \\https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen.\\
+\subsection{SquigglePainter}
+Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in der \verb!JTextPane! gezackt. Dies wird verwendet, um Fehler im Code anzuzeigen. Übernommen von 
 https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
-- Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden, welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört unter anderem das Umwandeln absoluter Positionen in Zeilennummern.\\
-- \verb!Tabinserter! wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
+\subsection{JTextPaneToolbox}
+Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden, welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört unter anderem das Umwandeln absoluter Positionen in Zeilennummern.\\
+\subsection{Tabinserter}
+\verb!Tabinserter! wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
 \includegraphics[scale=0.5]{Tabinserter.png}\\
-- Interface \verb!LineBeginningTabsHandler! und Implementierung \verb!CurlyBracesLineBeginningTabHandler! wurden hinzugefügt. \verb!LineBeginningTabsHandler! berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. \verb!CurlyBracesLineBeginningTabHandler! errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am Ende der gegebenen Zeile\\
-- Es gibt nun spezielle \verb!UserActions! für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicherzustellen, dass nicht editierbare Zeilen nicht durch diese Aktionen verändert werden.\\
-- \verb!NewlineInserter! ist nun ein eigenes Paket. \verb!BetweenCurlyBracesNewlineInserter! verwendet nun \verb!StandardNewlineInserter!.\\
-\includegraphics[scale=0.5]{insertnewline_update.png}
+\subsection{LineBeginningTabsHandler}
+Interface \verb!LineBeginningTabsHandler! und Implementierung \verb!CurlyBracesLineBeginningTabHandler! wurden hinzugefügt. \verb!LineBeginningTabsHandler! berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. \verb!CurlyBracesLineBeginningTabHandler! errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am Ende der gegebenen Zeile\\
+\subsection{UserActions}
+Es gibt nun spezielle \verb!UserActions! für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicherzustellen, dass nicht editierbare Zeilen nicht durch diese Aktionen verändert werden.\\
+\subsection{NewlineInserter}
+\verb!NewlineInserter! ist nun ein eigenes Paket. \verb!BetweenCurlyBracesNewlineInserter! verwendet nun \verb!StandardNewlineInserter!.\\
+\includegraphics[scale=0.5]{insertnewline_update.pdf}
 
 
 \subsection{UserInsertToCode}
