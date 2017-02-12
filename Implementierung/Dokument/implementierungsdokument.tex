@@ -137,9 +137,9 @@ Entfernt wurden:
 \includegraphics[scale=0.5]{inputtocode_update.png}
 
 \section{BooleanExpEditor}
-Besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist.
+Der \verb!BooleanExpEditor! besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist.
 \newline
-Bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da so neu erstellte Eigenschaften in der Liste gespeichert werden können.
+Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da so neu erstellte Eigenschaften in der Liste gespeichert werden können.
 \newline
 (Diagramm folgt)
 \newline
@@ -147,15 +147,15 @@ Bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da so
 \section{CElectionDescriptionEditor}
 
 - Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt. \\
-- Neues Package \verb!ElectionTemplates! kam hinzu. Dises enthält folgende Klassen\\
+- Das neue Paket \verb!ElectionTemplates! kam hinzu. Dieses enthält folgende Klassen:\\
 \begin{itemize}
-\item \verb!ElectionTemplateHandler!: Gibt alle Election Input und Output datentypen und deren ids aus
-\item \verb!ElectionTemplateChooser!: Zeigt dem Benutzer einen Dialog welcher es ermöglicht Input und result eines neuen Wahlverfahrens zu wählen
+\item \verb!ElectionTemplateHandler!: Gibt alle Election Input und Output Datentypen und deren ids aus.
+\item \verb!ElectionTemplateChooser!: Zeigt dem Benutzer einen Dialog, welcher es ermöglicht Input und Result eines neuen Wahlverfahrens zu wählen.
 \end{itemize}
 \includegraphics[scale=0.5]{ElectionTemplates.png}\\
 
 \subsection{ErrorHandling}
-C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und Parsen dessen Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.
+Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.
 \includegraphics[scale=0.5]{CErrorChecking.png}
 
 \section{PropertyChecker}

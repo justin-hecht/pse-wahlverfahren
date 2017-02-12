@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 20:48
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -674,6 +674,13 @@ File: inputtocode_update.png Graphic file (type png)
 Package pdftex.def Info: inputtocode_update.png used on input line 137.
 (pdftex.def)             Requested size: 235.88066pt x 240.8994pt.
  [11 <./insertnewline_update.png (PNG copy)>]
+Overfull \hbox (0.67085pt too wide) in paragraph at lines 140--146
+\OT1/cmr/m/n/10.95 Der []\OT1/cmtt/m/n/10.95 BooleanExpEditor \OT1/cmr/m/n/10.9
+5 be-sitzt jetzt ei-ne Re-fe-renz auf die []\OT1/cmtt/m/n/10.95 CElectonDescrip
+tionEditor\OT1/cmr/m/n/10.95 -
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 140--146
 
  []
@@ -684,9 +691,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--151
  []
 
 
-Overfull \hbox (1.24998pt too wide) in paragraph at lines 153--154
+Overfull \hbox (4.29166pt too wide) in paragraph at lines 153--154
 [][]\OT1/cmtt/m/n/10.95 ElectionTemplateChooser\OT1/cmr/m/n/10.95 : Zeigt dem B
-e-nut-zer einen Dia-log wel-cher es erm[]oglicht
+e-nut-zer einen Dia-log, wel-cher es erm[]oglicht
  []
 
 <ElectionTemplates.png, id=48, 602.25pt x 130.4875pt>
@@ -707,10 +714,10 @@ File: CErrorChecking.png Graphic file (type png)
 Package pdftex.def Info: CErrorChecking.png used on input line 159.
 (pdftex.def)             Requested size: 381.42407pt x 170.63707pt.
 
-Overfull \hbox (25.70549pt too wide) in paragraph at lines 158--160
-\OT1/cmr/m/n/10.95 Die-ser Auf-ruf ge-schieht und Par-sen des-sen R[]uckgabe fi
-n-det in den Klas-sen []\OT1/cmtt/m/n/10.95 DeepErrorChecker\OT1/cmr/m/n/10.95 
-,
+Overfull \hbox (64.2088pt too wide) in paragraph at lines 158--160
+[]\OT1/cmtt/m/n/10.95 DeepErrorChecker\OT1/cmr/m/n/10.95 , []\OT1/cmtt/m/n/10.9
+5 LinuxErrorChecker\OT1/cmr/m/n/10.95 , []\OT1/cmtt/m/n/10.95 WindowsErrorCheck
+er \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10.95 SystemSpecificErrorChecker
  []
 
 
@@ -812,7 +819,7 @@ s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (17 pages, 357324 bytes).
+Output written on implementierungsdokument.pdf (17 pages, 357370 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
