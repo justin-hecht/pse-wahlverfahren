@@ -94,7 +94,7 @@ Diese Klasse kümmert sich um das Laden und Speichern der speicherbaren Datentyp
 \newline
 
 \section{DataTypes}
-Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \verb!ChangeNameInterface!, dass es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.
+Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \verb!ChangeNameInterface!, das es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.
 \newline
 (Diagramm folgt)
 \newline
@@ -104,15 +104,15 @@ Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \
 \includegraphics[scale=0.5]{JTextPaneToolbox.png}\\
 - \verb!Errordisplayer! ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
 \includegraphics[scale=0.5]{Errordisplayer_update.png}\\
-- Klasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane! sobald Text daraus entfernt wird. Dies ist nötigt da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser ist jedoch benötigt um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
-- Klasse \verb!TextLineNumber! hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen\\
+- Klasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane!, sobald Text daraus entfernt wird. Dies ist nötig, da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser wird jedoch benötigt, um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
+- Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen.\\
 - Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in der \verb!JTextPane! gezackt. Dies wird verwendet, um Fehler im Code anzuzeigen. Übernommen von 
 https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
-- Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört u.a. das umwandeln absoluter Positionen in Zeilennummern.\\
+- Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden, welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört unter anderem das Umwandeln absoluter Positionen in Zeilennummern.\\
 - \verb!Tabinserter! wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
 \includegraphics[scale=0.5]{Tabinserter.png}\\
 - Interface \verb!LineBeginningTabsHandler! und Implementierung \verb!CurlyBracesLineBeginningTabHandler! wurden hinzugefügt. \verb!LineBeginningTabsHandler! berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. \verb!CurlyBracesLineBeginningTabHandler! errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am Ende der gegebenen Zeile\\
-- Es gibt nun spezielle \verb!UserActions! für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicher zu stellen dass nicht editierbare Zeilen nicht verändert werden durch diese Aktionen.\\
+- Es gibt nun spezielle \verb!UserActions! für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicherzustellen, dass nicht editierbare Zeilen nicht durch diese Aktionen verändert werden.\\
 - \verb!NewlineInserter! ist nun ein eigenes Paket. \verb!BetweenCurlyBracesNewlineInserter! verwendet nun \verb!StandardNewlineInserter!.\\
 \includegraphics[scale=0.5]{insertnewline_update.png}
 
