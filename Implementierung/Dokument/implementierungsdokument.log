@@ -1,30 +1,30 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 22:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.30)  12 FEB 2017 23:43
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrrep
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrrep
 rt.cls"
 Document Class: scrreprt 2016/05/10 v3.20 KOMA-Script document class (report)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrkba
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrkba
 se.sty"
 Package: scrkbase 2016/05/10 v3.20 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrbas
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrbas
 e.sty"
 Package: scrbase 2016/05/10 v3.20 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
 y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrlfi
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrlfi
 le.sty"
 Package: scrlfile 2016/05/10 v3.20 KOMA-Script package (loading files)
 
@@ -32,7 +32,7 @@ Package scrlfile, 2016/05/10 v3.20 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
 )))
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\tocbas
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\tocbas
 ic.sty"
 Package: tocbasic 2016/05/10 v3.20 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
@@ -53,12 +53,12 @@ Class scrreprt Info: File `scrsize11pt.clo' used instead of
 (scrreprt)           file `scrsize11.clo' to setup font sizes on input line 226
 5.
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrsiz
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrsiz
 e11pt.clo"
 File: scrsize11pt.clo 2016/05/10 v3.20 KOMA-Script font size class option (11pt
 )
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\typear
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\typear
 ea.sty"
 Package: typearea 2016/05/10 v3.20 KOMA-Script package (type area)
 
@@ -119,27 +119,27 @@ LaTeX Info: Redefining \textsubscript on input line 4769.
 Class scrreprt Info: Redefining `\numberline' on input line 5764.
 \bibindent=\dimen102
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/01/08 3.9n The Babel package
 *************************************
 * Local config file bblopts.cfg used
 *
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.c
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.c
 fg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\germa
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\germa
 n.ldf"
 Language: german 2014/10/10 v2.7b German support for babel (traditional orthogr
 aphy)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\germa
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\germa
 nb.ldf"
 Language: germanb 2014/10/10 v2.7b German support for babel (traditional orthog
 raphy)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
@@ -147,18 +147,18 @@ File: babel.def 2016/01/08 3.9n Babel common definitions
 \l@austrian = a dialect from \language\l@german 
 Package babel Info: Making " an active character on input line 110.
 )))
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -318,7 +318,7 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -359,7 +359,7 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -383,32 +383,32 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
 sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
 sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.
 cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.
 def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
 rr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
 .sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
@@ -417,22 +417,22 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape
 .sty"
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.st
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.st
 y"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
 ty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.
 sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )) (implementierungsdokument.aux)
@@ -451,7 +451,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
@@ -474,7 +474,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-{C:/Users/Jonas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (implementierungsdokument.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 3.
@@ -508,7 +508,7 @@ Overfull \hbox (2.39223pt too wide) in paragraph at lines 21--22
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
-("C:\Users\Jonas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("C:\Users\Lukas\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -545,9 +545,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
 
 Overfull \hbox (31.16342pt too wide) in paragraph at lines 55--56
-\OT1/cmr/m/n/10.95 Allen In-ter-fa-ces zu Pa-ke-ten mit GUI wur-den die Me-tho-
-den []\OT1/cmtt/m/n/10.95 stopReacting \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/1
-0.95 resumeReacting
+[]\OT1/cmr/m/n/10.95 Allen In-ter-fa-ces zu Pa-ke-ten mit GUI wur-den die Me-th
+o-den []\OT1/cmtt/m/n/10.95 stopReacting \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n
+/10.95 resumeReacting
  []
 
 
@@ -592,8 +592,9 @@ Package pdftex.def Info: SaverLoader.pdf used on input line 83.
 (pdftex.def)             Requested size: 451.6864pt x 225.84319pt.
 
 Overfull \hbox (4.16664pt too wide) in paragraph at lines 80--84
-[]\OT1/cmtt/m/n/10.95 PostAndPrePropertiesDescriptionSaverLoader\OT1/cmr/m/n/10
-.95 , []\OT1/cmtt/m/n/10.95 ElectionDescriptionSaverLoader\OT1/cmr/m/n/10.95 ,
+[][]\OT1/cmtt/m/n/10.95 PostAndPrePropertiesDescriptionSaverLoader\OT1/cmr/m/n/
+10.95 , []\OT1/cmtt/m/n/10.95 ElectionDescriptionSaverLoader\OT1/cmr/m/n/10.95 
+,
  []
 
 
@@ -674,9 +675,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
 
 Overfull \hbox (65.79182pt too wide) in paragraph at lines 116--117
-\OT1/cmr/m/n/10.95 Interface []\OT1/cmtt/m/n/10.95 LineBeginningTabsHandler \OT
-1/cmr/m/n/10.95 und Im-ple-men-tie-rung []\OT1/cmtt/m/n/10.95 CurlyBracesLineBe
-ginningTabHandler
+[]\OT1/cmr/m/n/10.95 Interface []\OT1/cmtt/m/n/10.95 LineBeginningTabsHandler \
+OT1/cmr/m/n/10.95 und Im-ple-men-tie-rung []\OT1/cmtt/m/n/10.95 CurlyBracesLine
+BeginningTabHandler
  []
 
 
@@ -709,14 +710,14 @@ Package pdftex.def Info: inputtocode_update.pdf used on input line 141.
 (pdftex.def)             Requested size: 478.78433pt x 347.79616pt.
 
 Overfull \hbox (71.4788pt too wide) in paragraph at lines 141--142
-[][] 
+[][][] 
  []
 
 
 Overfull \hbox (0.67085pt too wide) in paragraph at lines 144--150
-\OT1/cmr/m/n/10.95 Der []\OT1/cmtt/m/n/10.95 BooleanExpEditor \OT1/cmr/m/n/10.9
-5 be-sitzt jetzt ei-ne Re-fe-renz auf die []\OT1/cmtt/m/n/10.95 CElectonDescrip
-tionEditor\OT1/cmr/m/n/10.95 -
+[]\OT1/cmr/m/n/10.95 Der []\OT1/cmtt/m/n/10.95 BooleanExpEditor \OT1/cmr/m/n/10
+.95 be-sitzt jetzt ei-ne Re-fe-renz auf die []\OT1/cmtt/m/n/10.95 CElectonDescr
+iptionEditor\OT1/cmr/m/n/10.95 -
  []
 
 
@@ -731,8 +732,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
 [13 <./inputtocode_update.pdf>]
 Overfull \hbox (4.29166pt too wide) in paragraph at lines 157--158
-[][]\OT1/cmtt/m/n/10.95 ElectionTemplateChooser\OT1/cmr/m/n/10.95 : Zeigt dem B
-e-nut-zer einen Dia-log, wel-cher es erm[]oglicht
+[][][]\OT1/cmtt/m/n/10.95 ElectionTemplateChooser\OT1/cmr/m/n/10.95 : Zeigt dem
+ Be-nut-zer einen Dia-log, wel-cher es erm[]oglicht
  []
 
 <ElectionTemplates.pdf, id=86, 602.25pt x 130.4875pt>
@@ -758,12 +759,10 @@ Overfull \hbox (64.2088pt too wide) in paragraph at lines 162--164
 er \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10.95 SystemSpecificErrorChecker
  []
 
-
-Overfull \hbox (76.74237pt too wide) in paragraph at lines 173--180
-[]\OT1/cmr/m/n/10.95 Es wur-den drei neue Klas-sen na-mens []\OT1/cmtt/m/n/10.9
-5 CBMC\_Result\_Wrapper\_/long/singleArray/multiArray
- []
-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 175.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 175.
 [14 <./ElectionTemplates.pdf> <./CErrorChecking.pdf>]
 Overfull \hbox (9.79773pt too wide) in paragraph at lines 181--188
 \OT1/cmr/m/n/10.95 ``getNewInstance(...)'' wird da-zu ver-wen-det ei-ne neue In
@@ -772,10 +771,10 @@ Overfull \hbox (9.79773pt too wide) in paragraph at lines 181--188
 
 [15]
 Overfull \hbox (57.03206pt too wide) in paragraph at lines 216--217
-[]\OT1/cmr/m/n/10.95 Die Klas-sen, die []\OT1/cmtt/m/n/10.95 ListChangeCommand 
-\OT1/cmr/m/n/10.95 er-wei-ter-ten ([]\OT1/cmtt/m/n/10.95 ChangeDescription\OT1/
-cmr/m/n/10.95 , []\OT1/cmtt/m/n/10.95 ChangeDescriptionName\OT1/cmr/m/n/10.95 ,
-
+[][]\OT1/cmr/m/n/10.95 Die Klas-sen, die []\OT1/cmtt/m/n/10.95 ListChangeComman
+d \OT1/cmr/m/n/10.95 er-wei-ter-ten ([]\OT1/cmtt/m/n/10.95 ChangeDescription\OT
+1/cmr/m/n/10.95 , []\OT1/cmtt/m/n/10.95 ChangeDescriptionName\OT1/cmr/m/n/10.95
+ ,
  []
 
 
@@ -799,9 +798,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
 [16]
 Overfull \hbox (25.91496pt too wide) in paragraph at lines 239--240
-[][]\OT1/cmtt/m/n/10.95 ShowHideBooleanExpEditor\OT1/cmr/m/n/10.95 , []\OT1/cmt
-t/m/n/10.95 ShowHideCElectionEditor \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10.9
-5 ShowHidePropertyList\OT1/cmr/m/n/10.95 ,
+[][][]\OT1/cmtt/m/n/10.95 ShowHideBooleanExpEditor\OT1/cmr/m/n/10.95 , []\OT1/c
+mtt/m/n/10.95 ShowHideCElectionEditor \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10
+.95 ShowHidePropertyList\OT1/cmr/m/n/10.95 ,
  []
 
 
@@ -813,7 +812,7 @@ Overfull \hbox (38.57054pt too wide) in paragraph at lines 253--259
 
 [17]
 chapter 4.
-<originalPlanung.jpg, id=109, 1213.53375pt x 804.00375pt>
+<originalPlanung.jpg, id=112, 1213.53375pt x 804.00375pt>
 File: originalPlanung.jpg Graphic file (type jpg)
 
 <use originalPlanung.jpg>
@@ -821,32 +820,36 @@ Package pdftex.def Info: originalPlanung.jpg used on input line 264.
 (pdftex.def)             Requested size: 543.73349pt x 360.2403pt.
 
 Overfull \hbox (125.47794pt too wide) in paragraph at lines 264--265
-[] 
+[][] 
  []
 
 [18
 
  <./originalPlanung.jpg>] (implementierungsdokument.aux) ) 
 Here is how much of TeX's memory you used:
- 3921 strings out of 493634
- 65789 string characters out of 3135239
+ 3929 strings out of 493634
+ 65864 string characters out of 3135239
  220820 words of memory out of 3000000
- 7265 multiletter control sequences out of 15000+200000
- 9287 words of font info for 33 fonts, out of 3000000 for 9000
+ 7270 multiletter control sequences out of 15000+200000
+ 10199 words of font info for 36 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,6n,66p,8531b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Jonas/AppDa
+ 43i,8n,66p,8531b,301s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Lukas/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
-/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (18 pages, 283796 bytes).
+/Lukas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/Lukas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr6.pfb><C:/Users/Lukas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Users/Lukas/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Lukas/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/Lukas/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lukas
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:
+/Users/Lukas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mti10.pfb><C:/Users/Lukas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmtt10.pfb>
+Output written on implementierungsdokument.pdf (18 pages, 311379 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
+ 148 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

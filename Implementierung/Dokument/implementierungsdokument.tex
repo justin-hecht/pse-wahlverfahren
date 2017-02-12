@@ -165,18 +165,18 @@ Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compi
 \section{PropertyChecker}
 Beim \verb!PropertyChecker! hat sich folgendes im Vergleich zum Entwurf
 verändert:
-\begin{itemize}
-\item Die Klasse CBMC\_Result besitzt nun die Methode ``createFailureExample''
-  samt zugehöriger Untermethoden, welche zur Erstellung des \verb!Failurexamples!
-  genutzt werden. Deshalb besitzt die Klasse \verb!Checker! diese Fähigkeit nicht mehr.
 
-\item Es wurden drei neue Klassen namens
-\verb!CBMC\_Result\_Wrapper\_/long/singleArray/multiArray! erstellt. Diese werden
-während des Parsens der Rückgabe von CBMC verwendet, um die Teilergebnisse in
-Listen zu speichern und sie dann am Ende als Array ausgeben zu können. Dies
-wurde auf diese Weise implementiert, da am Anfang des Parsens nicht bekannt
-sein kann, wie groß die Datentypen bei der Rückgabe werden würden und es die
-eigentliche Methode ``createFailureExample'' deutlich verkürzen konnte.
+\begin{itemize}
+\item Die Klasse \verb CBMCResult ! besitzt nun die Methode
+``createFailureExample'' samt zugehöriger Untermethoden, welche zur Erstellung des Failurexamples
+  genutzt werden. Deshalb besitzt die Klasse Checker diese Fähigkeit nicht mehr.
+
+\item Es wurden drei neue Klassen
+\footnote{CBMCResultWrapper/long/singleArray/multiArray} erstellt, welche
+beim parsen der Ergebnisse von CBMC mithelfen. Sie werden während des parsens der Rückgabe von CBMC verwendet um die Teilergebnisse in Listen zu speichern und sie dann am Ende als Array ausgeben zu können. Dies wurde auf diese Weise implementiert, da am
+Anfang des parsens nicht bekannt sein kann, wie groß die Datentypen bei der
+Rückgabe werden würden und es die eigentliche Methode ``createFailureExample''
+deutlich verkürzen konnte.
 
 \item Die Klasse \verb!CheckerFactory! besitzt nun zwei neue Methoden: \newline
 ``getNewInstance(\ldots)'' wird dazu verwendet eine neue Instanz einer
