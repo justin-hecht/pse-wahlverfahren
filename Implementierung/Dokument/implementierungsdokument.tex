@@ -36,10 +36,10 @@ Ziel des Programmes ist es eine Lösung zur Analyse von formalen Eigenschaften v
 Die Interfaces um diese Anforderungen zu implementieren existieren zwar, es fehlt allerdings an der Zeit dies jetzt noch fertig zu stellen (6-8 Mannstunden).
 
 \subsection{Betrieb auf dem Betriebssytem MacOS} 
-Da wir keinen MAC zum testen hatten haben wir keine Implementation für MacOS
+Da wir keinen MAC zum testen hatten haben wir keine Implementierung für MacOS
 vorgenommen. Da unser Entwurf Erweiterungen aber leicht zulässt, ist es für
-Benutzer die dieses Betriebssytem besitzen mit einigen Programmierkenntnisse
-möglich sich diese Option selbst einzubauen.
+Benutzer die dieses Betriebssystem besitzen mit einigen Programmierkenntnisse
+möglich sich diese Option selbst einzubauen. Dazu müsste hauptsächlich die Funktionalität erstellt werden, Prozesse auf diesem Betriebssystem von Java aus zu starten. Mit dieser müssten dann cbmc sowie gcc angesprochen und deren Ausgabe zurückgegeben werden. Alle anderen Systeme sind unabhängig vom Betriebssystem.
 
 \chapter{Änderungen am Entwurf}
 \section{highlevel}
@@ -93,17 +93,23 @@ Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \
 (Diagramm folgt)
 \newline
 
-
 \section{Codearea}
+- Die Klasse JTextPaneToolbox wurde hinzugefügt. Diese implementiert oft benötigte Funktionalität fpr JTextPanes an.\\
+\includegraphics[scale=0.5]{JTextPaneToolbox.png}\\
 - Errordisplayer ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
+\includegraphics[scale=0.5]{Errordisplayer_update.png}\\
 - Klasse SaveTextBeforeRemove wurde hinzugefügt. Diese speichert den Text einer JTextPane sobald Text daraus entfernt wird. Dies ist nötigt da das RemovedUpdate des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser ist jedoch benötigt um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
 - Klasse TextLineNumber hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen\\
 - Klasse SquigglePainter wurde hinzugefügt. Diese unterstreicht Text in der JTextPane gezackt. Dies wird verwenden um Fehler im Code anzuzeigen. Übernommen von 
 https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
 - Klasse JTextPaneToolbox wurde hinzugefügt. Diese enthält einige statische Methoden welche oft benötigte, aber nicht zusammengehörige Funktionalität für JTextPane liefern. Dazu gehört u.a. das umwandeln absoluter Positionen in Zeilennummern.\\
 - Tabinserter wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
-- Inteface LineBeginningTabsHandler und Implementierung CurlyBracesLineBeginningTabHandler wurden hinzugefügt. LineBeginningTabsHandler berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. CurlyBracesLineBeginningTabHandler errechnet dies anhand der Anzahl '{' in vorangehenden Zeilen minus die Anzahl } am ende der gegebenen Zeile\\
-- Es gibt nun spezielle Useractions für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicher zu stellen dass nicht editierbare Zeilen nicht verändert werden durch diese Aktionen.
+\includegraphics[scale=0.5]{Tabinserter.png}\\
+- Inteface LineBeginningTabsHandler und Implementierung CurlyBracesLineBeginningTabHandler wurden hinzugefügt. LineBeginningTabsHandler berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. CurlyBracesLineBeginningTabHandler errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am ende der gegebenen Zeile\\
+- Es gibt nun spezielle Useractions für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicher zu stellen dass nicht editierbare Zeilen nicht verändert werden durch diese Aktionen.\\
+- NewlineInserter ist nun ein eigenes package. BetweenCurlyBracesNewlineInserter verwendet nun StandardNewlineInserter.\\
+\includegraphics[scale=0.5]{insertnewline_update.png}
+
 
 \subsection{UserInsertToCode}
 Hinzu kommen folgende Funktionen:
@@ -116,11 +122,13 @@ Hinzu kommen folgende Funktionen:
 \item removeToTheRight Entfernt das Zeichen rechts vom Caret
 \item removeToTheLeft Entfernt das Zeichen links vom Caret
 \end{itemize}
-Entfernt wurden:
 
+Entfernt wurden:
 \begin{itemize}
 \item msgLockedLinesListeners: wird nun von LockedLineHandler übernommen
 \end{itemize}
+
+\includegraphics[scale=0.5]{inputtocode_update.png}
 
 \section{BooleanExpEditor}
 Besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist.
@@ -132,16 +140,19 @@ Bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da so
 
 \section{CElectionDescriptionEditor}
 
-Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt, da es sehr wenig Sinn macht ein bestehendes Wahlverfahren grundsätzlich zu ändern anstatt einfach ein neues zu erstellen und die Implementierung dieser \verb!UserAction! somit unnötig kompliziert wäre.
-\newline
-(Diagramm folgt)
-\newline
-Neues Package ElectionTemplates kam hinzu. Dises enthält folgende Klassen\\
-ElectionTemplateHandler: Gibt alle Election Input und Output datentypen und deren ids aus\\
-ElectionTemplateChooser: Zeigt dem Benutzer einen Dialog welcher es ermöglicht Input und result eines neuen Wahlverfahrens zu wählen
+- Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt. \\
+- Neues Package ElectionTemplates kam hinzu. Dises enthält folgende Klassen\\
+\begin{itemize}
+\item \verb!ElectionTemplateHandler!: Gibt alle Election Input und Output datentypen und deren ids aus
+\item \verb!ElectionTemplateChooser!: Zeigt dem Benutzer einen Dialog welcher es ermöglicht Input und result eines neuen Wahlverfahrens zu wählen
+\end{itemize}
+\includegraphics[scale=0.5]{ElectionTemplates.png}\\
+
+\subsection{ErrorHandling}
+C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und Parsen dessen Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.
+\includegraphics[scale=0.5]{CErrorChecking.png}
 
 \section{PropertyChecker}
-
 Beim PropertyChecker haben sich folgende Sachen im Vergleich zum Entwurf
 verändert:
 \begin{itemize}
@@ -219,6 +230,13 @@ Es wurden neue Handler hinzugefügt:
 \item SaveBeforeChangeHandler, um sicherzustellen, dass der Nutzer nicht versehentlich durch Laden oder Erzeugen eines neuen Projekts ein ungespeichertes Projekt verwirft
 \end{itemize}
 
+\section{Toolbox}
+Folgende Klassen kamen hinzu:\\
+- SortedIntegerList: Eine einfache Wrapperklasse welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von LockedLinesHandler und TabInserter.\\
+- RepainThread: Implementiert Runnable. Bekommt einen JFrame für welchen er 60 Mal die Sekunde die repaint-Funktion aufruft. Dies ist benötigt da die Frames auf Windows sonst nicht korrekt rendern falls zuvor ein anderes Fenster vor ihnen war.\\
+- CCodeHelper: Diese Klasse enthält Funktionalität um aus den internen Datentypen C Code zu erstellen. Sie wird sowohl von der Codegenerierung als auch dem C-Editor verwendet. \\
+- ActionIdAndListener: Eine einfache Wrapper-Klasse welche zugriff auf einen ActionListener und dazugehörige String-Id bietet.\\
+- Tuple: Eine Klasse welche zwei verschiedene Typen hält.
 
 \chapter{Zeitablauf Implementierungsphase}
 
