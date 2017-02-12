@@ -7,11 +7,11 @@
 \contentsline {subsection}{\numberline {2.1.2}Betrieb auf dem Betriebssytem MacOS}{5}
 \contentsline {chapter}{\numberline {3}\IeC {\"A}nderungen am Entwurf}{6}
 \contentsline {section}{\numberline {3.1}Package Highlevel}{6}
-\contentsline {section}{\numberline {3.2}CodeGenerierung}{6}
+\contentsline {section}{\numberline {3.2}CodeGenerierung}{7}
 \contentsline {section}{\numberline {3.3}UserActions}{7}
 \contentsline {section}{\numberline {3.4}SaverLoader}{7}
 \contentsline {section}{\numberline {3.5}FileChooser}{7}
-\contentsline {section}{\numberline {3.6}DataTypes}{7}
+\contentsline {section}{\numberline {3.6}DataTypes}{8}
 \contentsline {section}{\numberline {3.7}Codearea}{8}
 \contentsline {subsection}{\numberline {3.7.1}UserInsertToCode}{9}
 \contentsline {section}{\numberline {3.8}BooleanExpEditor}{10}

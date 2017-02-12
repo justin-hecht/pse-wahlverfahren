@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 15:54
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -523,40 +523,45 @@ chapter 2.
 ]
 chapter 3.
 
-Overfull \hbox (45.5656pt too wide) in paragraph at lines 47--58
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Overfull \hbox (45.5656pt too wide) in paragraph at lines 49--60
 \OT1/cmr/m/n/10.95 Deshalb wur-de sie durch das In-ter-face []\OT1/cmtt/m/n/10.
 95 CentralObjectProvider \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10.95 PSECentra
 lObjectProvider\OT1/cmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (1.31097pt too wide) in paragraph at lines 47--58
+Overfull \hbox (1.31097pt too wide) in paragraph at lines 49--60
 \OT1/cmr/m/n/10.95 der die-ses im-ple-men-tiert, er-setzt. []\OT1/cmtt/m/n/10.9
 5 CentralObjectProvider \OT1/cmr/m/n/10.95 ver-wirk-licht die ur-spr[]ungliche
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--58
+Underfull \hbox (badness 10000) in paragraph at lines 49--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--58
+Underfull \hbox (badness 10000) in paragraph at lines 49--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--58
+Underfull \hbox (badness 10000) in paragraph at lines 49--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--58
+Underfull \hbox (badness 10000) in paragraph at lines 49--60
 
  []
 
 
-Overfull \hbox (66.15787pt too wide) in paragraph at lines 62--68
+Overfull \hbox (66.15787pt too wide) in paragraph at lines 64--70
 \OT1/cmr/m/n/10.95 Jede In-stanz der Klas-se []\OT1/cmtt/m/n/10.95 CBMCCodeGene
 ration \OT1/cmr/m/n/10.95 er-stellt ei-ne In-stanz ei-nes []\OT1/cmtt/m/n/10.95
  CBMCCodeGenerationVisitor\OT1/cmr/m/n/10.95 . 
@@ -565,47 +570,47 @@ ration \OT1/cmr/m/n/10.95 er-stellt ei-ne In-stanz ei-nes []\OT1/cmtt/m/n/10.95
 [6
 
 ]
-Overfull \hbox (12.47197pt too wide) in paragraph at lines 70--72
+Overfull \hbox (12.47197pt too wide) in paragraph at lines 72--74
 \OT1/cmr/m/n/10.95 Klas-sen ([]\OT1/cmtt/m/n/10.95 FileChooser\OT1/cmr/m/n/10.9
 5 , []\OT1/cmtt/m/n/10.95 SaveBeforeChangeHandler\OT1/cmr/m/n/10.95 ...). Bei-s
 piel-haft am []\OT1/cmtt/m/n/10.95 BooleanExpEditor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
 
-Overfull \hbox (4.16664pt too wide) in paragraph at lines 77--83
+Overfull \hbox (4.16664pt too wide) in paragraph at lines 79--85
 []\OT1/cmtt/m/n/10.95 PostAndPrePropertiesDescriptionSaverLoader\OT1/cmr/m/n/10
 .95 , []\OT1/cmtt/m/n/10.95 ElectionDescriptionSaverLoader\OT1/cmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--83
+Underfull \hbox (badness 10000) in paragraph at lines 79--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
 
 
-Overfull \hbox (71.33032pt too wide) in paragraph at lines 91--95
+Overfull \hbox (71.33032pt too wide) in paragraph at lines 93--97
 \OT1/cmr/m/n/10.95 Die als Da-tei ab-speicher-ba-ren Da-ten-ty-pen im-ple-men-t
 ie-ren nun al-le das In-ter-face []\OT1/cmtt/m/n/10.95 ChangeNameInterface\OT1/
 cmr/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
 
  []
 
@@ -613,43 +618,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--95
 File: JTextPaneToolbox.png Graphic file (type png)
 
 <use JTextPaneToolbox.png>
-Package pdftex.def Info: JTextPaneToolbox.png used on input line 98.
+Package pdftex.def Info: JTextPaneToolbox.png used on input line 100.
 (pdftex.def)             Requested size: 296.10551pt x 130.48718pt.
 
 <Errordisplayer_update.png, id=32, 421.575pt x 160.6pt>
 File: Errordisplayer_update.png Graphic file (type png)
 
 <use Errordisplayer_update.png>
-Package pdftex.def Info: Errordisplayer_update.png used on input line 100.
+Package pdftex.def Info: Errordisplayer_update.png used on input line 102.
 (pdftex.def)             Requested size: 210.78697pt x 80.29979pt.
 
 <Tabinserter.png, id=33, 260.975pt x 170.6375pt>
 File: Tabinserter.png Graphic file (type png)
  <use Tabinserter.png>
-Package pdftex.def Info: Tabinserter.png used on input line 107.
+Package pdftex.def Info: Tabinserter.png used on input line 109.
 (pdftex.def)             Requested size: 130.48718pt x 85.31853pt.
 
 <insertnewline_update.png, id=34, 843.15pt x 481.8pt>
 File: insertnewline_update.png Graphic file (type png)
 
 <use insertnewline_update.png>
-Package pdftex.def Info: insertnewline_update.png used on input line 111.
+Package pdftex.def Info: insertnewline_update.png used on input line 113.
 (pdftex.def)             Requested size: 421.57396pt x 240.8994pt.
 
-Overfull \hbox (224.35808pt too wide) in paragraph at lines 97--112
+Overfull \hbox (224.35808pt too wide) in paragraph at lines 99--114
 \OT1/cmr/m/n/10.95 ge-zackt. Dies wird ver-wen-det, um Feh-ler im Co-de an-zu-z
 ei-gen. []Ubernommen von https://tips4java.wordpress.com/2008/10/28/rectangle-
  []
 
 
-Overfull \hbox (71.87515pt too wide) in paragraph at lines 97--112
+Overfull \hbox (71.87515pt too wide) in paragraph at lines 99--114
 \OT1/cmr/m/n/10.95 - In-ter-face []\OT1/cmtt/m/n/10.95 LineBeginningTabsHandler
  \OT1/cmr/m/n/10.95 und Im-ple-men-tie-rung []\OT1/cmtt/m/n/10.95 CurlyBracesLi
 neBeginningTabHandler
  []
 
 
-Overfull \hbox (3.3184pt too wide) in paragraph at lines 97--112
+Overfull \hbox (3.3184pt too wide) in paragraph at lines 99--114
 [] 
  []
 
@@ -659,63 +664,62 @@ Overfull \hbox (3.3184pt too wide) in paragraph at lines 97--112
 File: inputtocode_update.png Graphic file (type png)
 
 <use inputtocode_update.png>
-Package pdftex.def Info: inputtocode_update.png used on input line 131.
+Package pdftex.def Info: inputtocode_update.png used on input line 133.
 (pdftex.def)             Requested size: 235.88066pt x 240.8994pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--140
+Underfull \hbox (badness 10000) in paragraph at lines 136--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
-
-Overfull \hbox (1.24998pt too wide) in paragraph at lines 147--148
+[10 <./inputtocode_update.png (PNG copy)>]
+Overfull \hbox (1.24998pt too wide) in paragraph at lines 149--150
 [][]\OT1/cmtt/m/n/10.95 ElectionTemplateChooser\OT1/cmr/m/n/10.95 : Zeigt dem B
 e-nut-zer einen Dia-log wel-cher es erm[]oglicht
  []
 
-[10 <./inputtocode_update.png (PNG copy)>]
 <ElectionTemplates.png, id=45, 602.25pt x 130.4875pt>
 File: ElectionTemplates.png Graphic file (type png)
 
 <use ElectionTemplates.png>
-Package pdftex.def Info: ElectionTemplates.png used on input line 149.
+Package pdftex.def Info: ElectionTemplates.png used on input line 151.
 (pdftex.def)             Requested size: 301.12425pt x 65.24358pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
 <CErrorChecking.png, id=46, 762.85pt x 341.275pt>
 File: CErrorChecking.png Graphic file (type png)
  <use CErrorChecking.png>
-Package pdftex.def Info: CErrorChecking.png used on input line 153.
+Package pdftex.def Info: CErrorChecking.png used on input line 155.
 (pdftex.def)             Requested size: 381.42407pt x 170.63707pt.
 
-Overfull \hbox (25.70549pt too wide) in paragraph at lines 152--154
+Overfull \hbox (25.70549pt too wide) in paragraph at lines 154--156
 \OT1/cmr/m/n/10.95 Die-ser Auf-ruf ge-schieht und Par-sen des-sen R[]uckgabe fi
 n-det in den Klas-sen []\OT1/cmtt/m/n/10.95 DeepErrorChecker\OT1/cmr/m/n/10.95 
 ,
  []
 
 
-Overfull \hbox (56.36063pt too wide) in paragraph at lines 163--170
+Overfull \hbox (56.36063pt too wide) in paragraph at lines 165--172
 []\OT1/cmr/m/n/10.95 Es wur-den drei neue Klas-sen na-mens ``CBMC[]Result[]Wrap
 per[]/long/singleArray/multiArray''
  []
 
 [11 <./ElectionTemplates.png (PNG copy)> <./CErrorChecking.png (PNG copy)>]
 [12]
-Overfull \hbox (12.59705pt too wide) in paragraph at lines 206--207
+Overfull \hbox (12.59705pt too wide) in paragraph at lines 208--209
 \OT1/cmr/m/n/10.95 me(PropertyItem prop, String new-Na-me); usw.). Das ge-sch-a
 h, weil sie so klei-ne []Anderungen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
@@ -725,10 +729,10 @@ chapter 4.
 File: originalPlanung.jpg Graphic file (type jpg)
 
 <use originalPlanung.jpg>
-Package pdftex.def Info: originalPlanung.jpg used on input line 245.
+Package pdftex.def Info: originalPlanung.jpg used on input line 247.
 (pdftex.def)             Requested size: 543.73349pt x 360.2403pt.
 
-Overfull \hbox (125.47794pt too wide) in paragraph at lines 245--246
+Overfull \hbox (125.47794pt too wide) in paragraph at lines 247--248
 [] 
  []
 
@@ -752,7 +756,7 @@ s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (15 pages, 354405 bytes).
+Output written on implementierungsdokument.pdf (15 pages, 354740 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
