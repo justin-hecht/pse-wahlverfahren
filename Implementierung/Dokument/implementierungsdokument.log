@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  12 FEB 2017 22:42
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -805,9 +805,9 @@ t/m/n/10.95 ShowHideCElectionEditor \OT1/cmr/m/n/10.95 und []\OT1/cmtt/m/n/10.9
  []
 
 
-Overfull \hbox (36.74553pt too wide) in paragraph at lines 250--256
+Overfull \hbox (38.57054pt too wide) in paragraph at lines 250--256
 \OT1/cmr/m/n/10.95 - []\OT1/cmtt/m/n/10.95 ActionIdAndListener\OT1/cmr/m/n/10.9
-5 : Ei-ne ein-fa-che Wrapper-Klasse wel-che zu-griff auf einen []\OT1/cmtt/m/n/
+5 : Ei-ne ein-fa-che Wrapper-Klasse wel-che Zu-griff auf einen []\OT1/cmtt/m/n/
 10.95 ActionListener
  []
 
@@ -844,7 +844,7 @@ s/cm/cmssbx10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Jonas/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Jonas/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (18 pages, 283425 bytes).
+Output written on implementierungsdokument.pdf (18 pages, 283449 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

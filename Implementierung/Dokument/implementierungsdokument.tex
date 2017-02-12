@@ -248,11 +248,11 @@ Es wurden neue Handler hinzugefügt:
 
 \section{Toolbox}
 Folgende Klassen kamen hinzu:\\
-- \verb!SortedIntegerList!: Eine einfache Wrapperklasse welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von \verb!LockedLinesHandler! und \verb!TabInserter!.\\
-- \verb!RepainThread!: Implementiert \verb!Runnable!. Bekommt einen \verb!JFrame! für welchen er 60 Mal die Sekunde die repaint-Funktion aufruft. Dies ist benötigt da die Frames auf Windows sonst nicht korrekt rendern falls zuvor ein anderes Fenster vor ihnen war.\\
+- \verb!SortedIntegerList!: Eine einfache Wrapperklasse, welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von \verb!LockedLinesHandler! und \verb!TabInserter!.\\
+- \verb!RepaintThread!: Implementiert \verb!Runnable!. Bekommt einen \verb!JFrame! für welchen er 60 Mal pro Sekunde die repaint-Funktion aufruft. Dies ist benötigt, da die Frames auf Windows sonst nicht korrekt rendern, falls zuvor ein anderes Fenster vor ihnen war.\\
 - \verb!CCodeHelper!: Diese Klasse enthält Funktionalität um aus den internen Datentypen C Code zu erstellen. Sie wird sowohl von der Codegenerierung als auch dem C-Editor verwendet. \\
-- \verb!ActionIdAndListener!: Eine einfache Wrapper-Klasse welche zugriff auf einen \verb!ActionListener! und dazugehörige String-Id bietet.\\
-- \verb!Tuple!: Eine Klasse welche zwei verschiedene Typen hält.
+- \verb!ActionIdAndListener!: Eine einfache Wrapper-Klasse welche Zugriff auf einen \verb!ActionListener! und die dazugehörige String-Id bietet.\\
+- \verb!Tuple!: Eine Klasse, welche zwei verschiedene Typen hält.
 
 \chapter{Zeitablauf Implementierungsphase}
 
@@ -261,7 +261,7 @@ Folgende Klassen kamen hinzu:\\
 \includegraphics[width=1.3\textwidth] {originalPlanung.jpg}
 
 \section{Eigentlicher Ablauf}
-Der ursprüngliche Plan wurde hauptsächlich eingehalten. Ein Paar Komplikationen bei den Paketen \verb!highlevel!, \verb!parametereditor! und \verb!propertylist! verzögerten die Fertigstellung einiger Meilensteine.
+Der ursprüngliche Plan wurde hauptsächlich eingehalten. Ein paar Komplikationen bei den Paketen \verb!highlevel!, \verb!parametereditor! und \verb!propertylist! verzögerten die Fertigstellung einiger Meilensteine.
 
 (Genauere Beschreibung von Aufgabenumverteilung bzw. Ablaufänderung folgt)
 
