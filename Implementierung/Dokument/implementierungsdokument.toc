@@ -1,6 +1,5 @@
 \select@language {german}
 \contentsline {chapter}{\numberline {1}Einleitung}{5}
-\contentsline {section}{\numberline {1.1}Ziel des Programmes}{5}
 \contentsline {chapter}{\numberline {2}Unterschiede zu den im Pflichtenheft gestellten Kriterien}{6}
 \contentsline {section}{\numberline {2.1}Kannkriterien}{6}
 \contentsline {subsection}{\numberline {2.1.1}Betrieb auf dem Betriebssytem MacOS}{6}
