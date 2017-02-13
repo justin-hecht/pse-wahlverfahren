@@ -29,8 +29,8 @@ Das implementierte Programm sollte folgende Module bereitstellen:
 \begin{itemize}
 \item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens in der Programmiersprache C. 
 \item Eine Möglichkeit zur Beschreibung von Eigenschaften, auf die das Wahlverfahren geprüft werden soll. Die Beschreibung erfolgt in einer von der Entwicklergruppe definierten Makrosprache. \footnote{Makro: Ein Codeabschnitt, der durch den Präprozessor ersetzt wird.}
-\item Eine Möglichkeit zum Angeben der Parameter für welche das angegebenen Wahlverfahren analysiert werden soll (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze). 
-\item Eine Möglichkeit, das beschriebene Wahlverfahren auf die eingegeben Eigenschaften zu überprüfen. Diese Überprüfung soll durch eine Schnittstelle mit CBMC \footnote{CBMC (C Bounded Model Checker): Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom Benutzer definierte Assertions untersucht. } verwirklicht
+\item Eine Möglichkeit zum Angeben der Parameter, für welche das angegebenen Wahlverfahren analysiert werden soll (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze). 
+\item Eine Möglichkeit, das beschriebene Wahlverfahren auf die eingegeben Eigenschaften zu überprüfen. Diese Überprüfung soll durch eine Schnittstelle mit CBMC \footnote{CBMC (C Bounded Model Checker): Ein Programm, welches C-Programme mittels bounded model checking auf Fehler und vom Benutzer definierte Assertions untersucht. } verwirklicht werden.
 \item Eine Ausgabe des Ergebnisses der Analyse: Eine Erfolgsmeldung, für jede Eigenschaft, die erfüllt wurde, sowie eine Darstellung eines Gegenbeispieles, für jede nicht erfüllte Eigenschaft. 
 \end{itemize}
 
