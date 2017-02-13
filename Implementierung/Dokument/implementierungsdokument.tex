@@ -4,6 +4,15 @@
 \usepackage{graphicx}
 \usepackage{pdflscape}
 \usepackage{wrapfig}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
 
 \begin{document}
 \title{Implementierungsdokument}
@@ -16,13 +25,13 @@
 
 \chapter{Einleitung}
 Dieses Dokument beschreibt die Implementierungsphase einer Praxis der Softwareentwicklungsgruppe am Karlsruher Institut für Technologie. \\
-Ziel des implementierten Programmes ist es, eine Lösung zur Analyse von formalen Eigenschaften von Wahlverfahren zu präsentieren. Zur Analyse der Eigenschaften wird CBMC (Glossareintrag) verwendet. Das Programm soll folgende Module bereitstellen: 
+Das implementierte Programm sollte folgende Module bereitstellen: 
 \begin{itemize}
 \item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens in der Programmiersprache C. 
-\item Eine Möglichkeit zur Beschreibung von Eigenschaften, auf die das Wahlverfahren geprüft werden soll. Die Beschreibung erfolgt in einer Makrosprache (Glossareintrag).
+\item Eine Möglichkeit zur Beschreibung von Eigenschaften, auf die das Wahlverfahren geprüft werden soll. Die Beschreibung erfolgt in einer von der Entwicklergruppe definierten Makrosprache (Glossareintrag).
 \item Eine Möglichkeit zum Angeben der Parameter für welche das angegebenen Wahlverfahren analysiert werden soll (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze). 
-\item Eine Möglichkeit, die Analyse auszuführen.
-\item Eine Ausgabe des Ergebnisses der Analyse: Eine Erfolgsmeldung falls alle Eigenschaften erfüllt werden und Präsentation eines Gegenbeispiels sonst.
+\item Eine Möglichkeit, das beschriebene Wahlverfahren auf die eingegeben Eigenschaften zu überprüfen. Diese Überprüfung soll durch eine Schnittstelle mit CBMC (Glossareintrag) verwirklicht
+\item Eine Ausgabe des Ergebnisses der Analyse: Eine Erfolgsmeldung, für jede Eigenschaft, die erfüllt wurde, sowie eine Darstellung eines Gegenbeispieles, für jede nicht erfüllte Eigenschaft. 
 \end{itemize}
 
 
