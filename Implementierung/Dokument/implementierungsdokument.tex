@@ -78,20 +78,20 @@ Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Metho
 \section{UserActions}
 Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (\verb!FileChooser!, \verb!SaveBeforeChangeHandler!...).
 
+\section{Package DataTypes}
+Die als Datei abspeicherbaren Datentypen \verb!Project!, \verb!PostAndPrePropertiesDescription!, \verb!PLModel!, und \verb!ElectrionDescription! implementieren nun alle das Interface \verb!ChangeNameInterface!, das es dem \verb!FileChooser! ermöglicht das \verb!name!-Attribut dieser Klassen generisch zu verändern.\\
+\includegraphics[scale=0.5]{NameInterface.pdf}
+
 \section{Package SaverLoader}
-\verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader!. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden. \\
-Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
-Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von "$>$"  durch "$>$$>"$ ersetzt, beziehungsweise dies mit \verb!createFromSaveString! rückgängig macht. Dies vehindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
+\verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader!. Dies ermöglicht es der Klasse \verb!FileChooser! generisch zu seiner \verb!SaverLoader!-Instanz passende Datentypen abzuspeichern und gegebene Dateien zu laden.
+Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden die von den schon genannten aufgerufen werden.
+Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von "$>$" durch "$>$$>"$ ersetzt, beziehungsweise dies mit \verb!createFromSaveString! rückgängig macht. Dies vehindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
 \includegraphics[scale=0.5]{SaverLoader.pdf}
 
 \subsection{FileChooser}
-Diese Klasse kümmert sich um das Laden und Speichern der speicherbaren Datentypen.
+Diese Klasse kümmert sich um das Laden und Speichern der abspeicherbaren \verb!datatypes!-Klassen. Sie besitzt eine SaverLoader Instanz mit der sie beim Aufrufen von \verb!loadObject! und \verb!saveObject! entsprechende Dateien generisch laden und Speichern kann.
 \\
 \includegraphics[scale=0.5]{FileChooser.pdf}
-
-\section{Package DataTypes}
-Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \\ \verb!ChangeNameInterface!, das es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.\\
-\includegraphics[scale=0.5]{NameInterface.pdf}
 
 
 \section{Package Codearea}

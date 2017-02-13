@@ -13,9 +13,9 @@
 \contentsline {subsection}{\numberline {3.1.4}ProjectSource}{7}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}isCorrect}{7}{subsection.3.1.5}
 \contentsline {section}{\numberline {3.2}UserActions}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Package SaverLoader}{7}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}FileChooser}{8}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Package DataTypes}{8}{section.3.4}
+\contentsline {section}{\numberline {3.3}Package DataTypes}{7}{section.3.3}
+\contentsline {section}{\numberline {3.4}Package SaverLoader}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}FileChooser}{8}{subsection.3.4.1}
 \contentsline {section}{\numberline {3.5}Package Codearea}{9}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}JTextPaneToolbox}{9}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Errordisplayer}{9}{subsection.3.5.2}

@@ -12,9 +12,9 @@
 \BOOKMARK [2][-]{subsection.3.1.4}{ProjectSource}{section.3.1}% 12
 \BOOKMARK [2][-]{subsection.3.1.5}{isCorrect}{section.3.1}% 13
 \BOOKMARK [1][-]{section.3.2}{UserActions}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Package SaverLoader}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.1}{FileChooser}{section.3.3}% 16
-\BOOKMARK [1][-]{section.3.4}{Package DataTypes}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Package DataTypes}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Package SaverLoader}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.4.1}{FileChooser}{section.3.4}% 17
 \BOOKMARK [1][-]{section.3.5}{Package Codearea}{chapter.3}% 18
 \BOOKMARK [2][-]{subsection.3.5.1}{JTextPaneToolbox}{section.3.5}% 19
 \BOOKMARK [2][-]{subsection.3.5.2}{Errordisplayer}{section.3.5}% 20
