@@ -226,9 +226,9 @@ Der \verb!SaveBeforeChangeHandler! war im Entwurf noch nicht beschrieben.
 \includegraphics[width=0.4\textwidth]{PropertyListView.pdf}
 \end{wrapfigure}
 
-Die Elemente des View sind großteils gleich geblieben. Sie wurden allerdings nicht mit einem GUI-Builder erstellt, weil dann nicht dynamisch Komponenten hinzugefügt werden könnten (Formulare mit fester Anzahl von Komponenten).
+Die Elemente des View sind großteils gleich geblieben. Sie wurden allerdings nicht mit einem GUI-Builder erstellt, da sonst nicht dynamisch Komponenten hinzugefügt werden könnten (Formulare mit fester Anzahl von Komponenten).
 
-Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachrichtigt. Nun wird das Beobachtermuster benutzt, um dem View Änderungen im Model mitzuteilen. In diesem Falle wird die Liste der Eigenschaften (ArrayList<ListItem>) neu aufgebaut.
+Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachrichtigt. Nun wird das Beobachtermuster benutzt, um der View Änderungen im Model mitzuteilen. In diesem Falle wird die Liste der Eigenschaften (ArrayList<ListItem>) neu aufgebaut.
 
 Neu hinzugekommen ist die Klasse \verb!ResultPre! \verb!senterWindow!, die die Swing-Klasse \verb!JFrame! erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine \verb!JTextPane! konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
 
