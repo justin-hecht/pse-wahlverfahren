@@ -1,53 +1,55 @@
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Unterschiede zu den im Pflichtenheft gestellten Kriterien}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Kannkriterien}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{Betrieb auf dem Betriebssytem MacOS}{section.2.1}% 4
-\BOOKMARK [0][-]{chapter.3}{\304nderungen am Entwurf}{}% 5
-\BOOKMARK [1][-]{section.3.1}{Package Highlevel}{chapter.3}% 6
-\BOOKMARK [2][-]{subsection.3.1.1}{CentralObjectProvider}{section.3.1}% 7
-\BOOKMARK [2][-]{subsection.3.1.2}{DisplaysStringsToUser}{section.3.1}% 8
-\BOOKMARK [2][-]{subsection.3.1.3}{start-/stopReacting}{section.3.1}% 9
-\BOOKMARK [2][-]{subsection.3.1.4}{ProjectSource}{section.3.1}% 10
-\BOOKMARK [2][-]{subsection.3.1.5}{isCorrect}{section.3.1}% 11
-\BOOKMARK [1][-]{section.3.2}{UserActions}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Package SaverLoader}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.3.1}{FileChooser}{section.3.3}% 14
-\BOOKMARK [1][-]{section.3.4}{Package DataTypes}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.5}{Package Codearea}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.5.1}{JTextPaneToolbox}{section.3.5}% 17
-\BOOKMARK [2][-]{subsection.3.5.2}{Errordisplayer}{section.3.5}% 18
-\BOOKMARK [2][-]{subsection.3.5.3}{SaveTextBeforeRemove}{section.3.5}% 19
-\BOOKMARK [2][-]{subsection.3.5.4}{TextLineNumber}{section.3.5}% 20
-\BOOKMARK [2][-]{subsection.3.5.5}{SquigglePainter}{section.3.5}% 21
-\BOOKMARK [2][-]{subsection.3.5.6}{Tabinserter}{section.3.5}% 22
-\BOOKMARK [2][-]{subsection.3.5.7}{LineBeginningTabsHandler}{section.3.5}% 23
-\BOOKMARK [2][-]{subsection.3.5.8}{UserActions}{section.3.5}% 24
-\BOOKMARK [2][-]{subsection.3.5.9}{NewlineInserter}{section.3.5}% 25
-\BOOKMARK [2][-]{subsection.3.5.10}{UserInsertToCode}{section.3.5}% 26
-\BOOKMARK [1][-]{section.3.6}{Package BooleanExpEditor}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.7}{Package CElectionDescriptionEditor}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.7.1}{ChangeElectionTypeUserAction}{section.3.7}% 29
-\BOOKMARK [2][-]{subsection.3.7.2}{Subpackage ElectionTemplates}{section.3.7}% 30
-\BOOKMARK [2][-]{subsection.3.7.3}{ErrorHandling}{section.3.7}% 31
-\BOOKMARK [1][-]{section.3.8}{Package PropertyChecker}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.8.1}{CBMCCodeGeneration}{section.3.8}% 33
-\BOOKMARK [2][-]{subsection.3.8.2}{PropertyChecker}{section.3.8}% 34
-\BOOKMARK [1][-]{section.3.9}{Package PropertyList}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.9.1}{Invarianten}{section.3.9}% 36
-\BOOKMARK [2][-]{subsection.3.9.2}{Subpackage Model}{section.3.9}% 37
-\BOOKMARK [2][-]{subsection.3.9.3}{Subpackage Controller}{section.3.9}% 38
-\BOOKMARK [2][-]{subsection.3.9.4}{Subpackage View}{section.3.9}% 39
-\BOOKMARK [2][-]{subsection.3.9.5}{Class ParameterEditor}{section.3.9}% 40
-\BOOKMARK [2][-]{subsection.3.9.6}{UserActions}{section.3.9}% 41
-\BOOKMARK [2][-]{subsection.3.9.7}{Handler}{section.3.9}% 42
-\BOOKMARK [2][-]{subsection.3.9.8}{AboutWindow}{section.3.9}% 43
-\BOOKMARK [1][-]{section.3.10}{Package Toolbox}{chapter.3}% 44
-\BOOKMARK [2][-]{subsection.3.10.1}{SortedIntegerList}{section.3.10}% 45
-\BOOKMARK [2][-]{subsection.3.10.2}{RepaintThread}{section.3.10}% 46
-\BOOKMARK [2][-]{subsection.3.10.3}{CCodeHelper}{section.3.10}% 47
-\BOOKMARK [2][-]{subsection.3.10.4}{ActionIdAndListener}{section.3.10}% 48
-\BOOKMARK [2][-]{subsection.3.10.5}{Tuple}{section.3.10}% 49
-\BOOKMARK [0][-]{chapter.4}{Zeitablauf Implementierungsphase}{}% 50
-\BOOKMARK [1][-]{section.4.1}{Geplanter Ablauf}{chapter.4}% 51
-\BOOKMARK [1][-]{section.4.2}{Tats\344chlicher Ablauf}{chapter.4}% 52
-\BOOKMARK [0][-]{chapter.5}{Statistiken}{}% 53
+\BOOKMARK [1][-]{section.2.1}{Sollkriterien}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Wahltemplate Gewichtete Wahl}{section.2.1}% 4
+\BOOKMARK [1][-]{section.2.2}{Kannkriterien}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.1}{Betrieb auf dem Betriebssytem MacOS}{section.2.2}% 6
+\BOOKMARK [0][-]{chapter.3}{\304nderungen am Entwurf}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Package Highlevel}{chapter.3}% 8
+\BOOKMARK [2][-]{subsection.3.1.1}{CentralObjectProvider}{section.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.1.2}{DisplaysStringsToUser}{section.3.1}% 10
+\BOOKMARK [2][-]{subsection.3.1.3}{start-/stopReacting}{section.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.1.4}{ProjectSource}{section.3.1}% 12
+\BOOKMARK [2][-]{subsection.3.1.5}{isCorrect}{section.3.1}% 13
+\BOOKMARK [1][-]{section.3.2}{UserActions}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Package SaverLoader}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.3.1}{FileChooser}{section.3.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Package DataTypes}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{Package Codearea}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.5.1}{JTextPaneToolbox}{section.3.5}% 19
+\BOOKMARK [2][-]{subsection.3.5.2}{Errordisplayer}{section.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.5.3}{SaveTextBeforeRemove}{section.3.5}% 21
+\BOOKMARK [2][-]{subsection.3.5.4}{TextLineNumber}{section.3.5}% 22
+\BOOKMARK [2][-]{subsection.3.5.5}{SquigglePainter}{section.3.5}% 23
+\BOOKMARK [2][-]{subsection.3.5.6}{Tabinserter}{section.3.5}% 24
+\BOOKMARK [2][-]{subsection.3.5.7}{LineBeginningTabsHandler}{section.3.5}% 25
+\BOOKMARK [2][-]{subsection.3.5.8}{UserActions}{section.3.5}% 26
+\BOOKMARK [2][-]{subsection.3.5.9}{NewlineInserter}{section.3.5}% 27
+\BOOKMARK [2][-]{subsection.3.5.10}{UserInsertToCode}{section.3.5}% 28
+\BOOKMARK [1][-]{section.3.6}{Package BooleanExpEditor}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.7}{Package CElectionDescriptionEditor}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.7.1}{ChangeElectionTypeUserAction}{section.3.7}% 31
+\BOOKMARK [2][-]{subsection.3.7.2}{Subpackage ElectionTemplates}{section.3.7}% 32
+\BOOKMARK [2][-]{subsection.3.7.3}{ErrorHandling}{section.3.7}% 33
+\BOOKMARK [1][-]{section.3.8}{Package PropertyChecker}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.8.1}{CBMCCodeGeneration}{section.3.8}% 35
+\BOOKMARK [2][-]{subsection.3.8.2}{PropertyChecker}{section.3.8}% 36
+\BOOKMARK [1][-]{section.3.9}{Package PropertyList}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.9.1}{Invarianten}{section.3.9}% 38
+\BOOKMARK [2][-]{subsection.3.9.2}{Subpackage Model}{section.3.9}% 39
+\BOOKMARK [2][-]{subsection.3.9.3}{Subpackage Controller}{section.3.9}% 40
+\BOOKMARK [2][-]{subsection.3.9.4}{Subpackage View}{section.3.9}% 41
+\BOOKMARK [2][-]{subsection.3.9.5}{Class ParameterEditor}{section.3.9}% 42
+\BOOKMARK [2][-]{subsection.3.9.6}{UserActions}{section.3.9}% 43
+\BOOKMARK [2][-]{subsection.3.9.7}{Handler}{section.3.9}% 44
+\BOOKMARK [2][-]{subsection.3.9.8}{AboutWindow}{section.3.9}% 45
+\BOOKMARK [1][-]{section.3.10}{Package Toolbox}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.10.1}{SortedIntegerList}{section.3.10}% 47
+\BOOKMARK [2][-]{subsection.3.10.2}{RepaintThread}{section.3.10}% 48
+\BOOKMARK [2][-]{subsection.3.10.3}{CCodeHelper}{section.3.10}% 49
+\BOOKMARK [2][-]{subsection.3.10.4}{ActionIdAndListener}{section.3.10}% 50
+\BOOKMARK [2][-]{subsection.3.10.5}{Tuple}{section.3.10}% 51
+\BOOKMARK [0][-]{chapter.4}{Zeitablauf Implementierungsphase}{}% 52
+\BOOKMARK [1][-]{section.4.1}{Geplanter Ablauf}{chapter.4}% 53
+\BOOKMARK [1][-]{section.4.2}{Tats\344chlicher Ablauf}{chapter.4}% 54
+\BOOKMARK [0][-]{chapter.5}{Statistiken}{}% 55
