@@ -148,13 +148,14 @@ Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compi
 \includegraphics[scale=0.5]{CErrorChecking.pdf}
 
 \section{Package PropertyChecker}
+\begin{itemize}
 \subsection{CBMCCodeGeneration}
-Die Klasse \verb!CBMCCodeGeneration! ist nicht mehr statisch. \\
+\item Die Klasse \verb!CBMCCodeGeneration! ist nicht mehr statisch. \\
 Sie wird in der Implementierung von der Klasse \verb!CBMCProcessFactory! instantiiert. \\
-So wird für jedes erzeugte C-Tempfile (Glossareintrag) eine neue Instanz erstellt. Das ist sinnvoll, da es genau von den Parametern abhängt. \\
-Jede Instanz der Klasse \verb!CBMCCodeGeneration! erstellt eine Instanz der Klasse \\\verb!CBMCCodeGenerationVisitor!. \\
-Diese besitzen zwei neue Methoden, die einstellen, ob er zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
-(Verändertes Klassendiagramm hier)
+Diese Änderung war sinnvoll, da die Generierung des Codes jeweils von den Datentypen \verb!ElectionDescription! und \verb!PostAndPrePropertiesDescription! abhängt.
+\item Jede Instanz der Klasse \verb!CBMCCodeGeneration! erstellt eine Instanz der Klasse \\\verb!CBMCCodeGenerationVisitor!. \\
+Diese besitzen zwei neue Methoden, die einstellen, ob der Visitor zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
+\end{itemize}
 \subsection{PropertyChecker}
 
 \begin{itemize}

@@ -40,12 +40,12 @@
 \contentsline {subsection}{\numberline {3.9.3}Subpackage Controller}{17}
 \contentsline {subsection}{\numberline {3.9.4}Subpackage View}{18}
 \contentsline {subsection}{\numberline {3.9.5}Class ParameterEditor}{18}
-\contentsline {subsection}{\numberline {3.9.6}UserActions}{18}
+\contentsline {subsection}{\numberline {3.9.6}UserActions}{19}
 \contentsline {subsection}{\numberline {3.9.7}Handlers}{19}
 \contentsline {subsection}{\numberline {3.9.8}AboutWindow}{19}
 \contentsline {section}{\numberline {3.10}Package Toolbox}{19}
 \contentsline {subsection}{\numberline {3.10.1}SortedIntegerList}{19}
-\contentsline {subsection}{\numberline {3.10.2}RepaintThread}{19}
+\contentsline {subsection}{\numberline {3.10.2}RepaintThread}{20}
 \contentsline {subsection}{\numberline {3.10.3}CCodeHelper}{20}
 \contentsline {subsection}{\numberline {3.10.4}ActionIdAndListener}{20}
 \contentsline {subsection}{\numberline {3.10.5}Tuple}{20}
