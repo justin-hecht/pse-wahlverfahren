@@ -42,15 +42,15 @@
 \contentsline {subsection}{\numberline {3.9.4}Subpackage View}{18}{subsection.3.9.4}
 \contentsline {subsection}{\numberline {3.9.5}Class ParameterEditor}{18}{subsection.3.9.5}
 \contentsline {subsection}{\numberline {3.9.6}UserActions}{18}{subsection.3.9.6}
-\contentsline {subsection}{\numberline {3.9.7}Handler}{19}{subsection.3.9.7}
+\contentsline {subsection}{\numberline {3.9.7}Handler}{18}{subsection.3.9.7}
 \contentsline {subsection}{\numberline {3.9.8}AboutWindow}{19}{subsection.3.9.8}
 \contentsline {section}{\numberline {3.10}Package Toolbox}{19}{section.3.10}
 \contentsline {subsection}{\numberline {3.10.1}SortedIntegerList}{19}{subsection.3.10.1}
 \contentsline {subsection}{\numberline {3.10.2}RepaintThread}{19}{subsection.3.10.2}
 \contentsline {subsection}{\numberline {3.10.3}CCodeHelper}{19}{subsection.3.10.3}
 \contentsline {subsection}{\numberline {3.10.4}ActionIdAndListener}{19}{subsection.3.10.4}
-\contentsline {subsection}{\numberline {3.10.5}Tuple}{20}{subsection.3.10.5}
-\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Tats\IeC {\"a}chlicher Ablauf}{22}{section.4.2}
-\contentsline {chapter}{\numberline {5}Statistiken}{24}{chapter.5}
+\contentsline {subsection}{\numberline {3.10.5}Tuple}{19}{subsection.3.10.5}
+\contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}Geplanter Ablauf}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Tats\IeC {\"a}chlicher Ablauf}{21}{section.4.2}
+\contentsline {chapter}{\numberline {5}Statistiken}{23}{chapter.5}
