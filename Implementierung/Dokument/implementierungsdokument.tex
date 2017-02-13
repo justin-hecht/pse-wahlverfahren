@@ -60,9 +60,10 @@ möglich sich diese Option selbst einzubauen. Dazu müsste die Funktionalität e
 Das Paket \verb!highlevel! bildet den Kern von BEAST. Es enthält die \verb!MainClass!, über die BEAST gestartet wird. Weiterhin enthält es Interfaces zu den anderen Paketen, wodurch diese Pakete unabhängiger von einander sind und damit leichter auszutauschen. Der \verb!CentralObjectProvider! generiert Instanzen dieser Interfaces und stellt sie dem \verb!BEASTCommunicator! bereit. \\
 
 \subsection{CentralObjectProvider}
-\verb!AbstractFactory! in \verb!highlevel! ist jetzt keine Abstrakte Fabrik mehr.\\ Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl \verb!ParameterSource!, als auch \verb!ProjectSource! und \verb!MainNotifier! implementiert). \\
+\verb!AbstractFactory! in \verb!highlevel! ist jetzt keine Abstrakte Fabrik mehr. Dieses Entwurfsmuster konnte nicht verwendet werden, da die zu erstellenden Objekte teilweise voneinander abhängig sind. Weiterhin gibt es Objekte, die mehrere Rollen einnehmen, d.h. sie implementieren unterschiedliche Interfaces (wie etwa der Parametereditor, der sowohl \verb!ParameterSource!, als auch \verb!ProjectSource! und \verb!MainNotifier! implementiert). \\
 Deshalb wurde sie durch das Interface \verb!CentralObjectProvider! und die Klasse\\ \verb!PSECentralObjectProvider!, die dieses implementiert, ersetzt. \verb!CentralObjectProvider! verwirklicht die ursprüngliche Funktion der Abstrakten Fabrik, unabhängig von konkreten Implementierungen zu sein. \\
 \verb!PSECentralObjectProvider! erzeugt die konkreten Objekte für unsere Implementierung der \verb!highlevel!-Interfaces und stellt diese dem \verb!BEASTCommunicator! zur Verfügung. Dieser muss weiterhin nur von den Interfaces wissen. \\
+\includegraphics[scale=0.5]{CentralObjectProvider.pdf}
 
 \subsection{DisplaysStringsToUser}
 Es wurde das Interface \verb!DisplaysStringsToUser! hinzugefügt. Es wird von allen Elementen, die dem Nutzer Text anzeigen, implementiert. Damit wird die Einbindung anderer Sprachen vereinfacht. \\
