@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{pdflscape}
+\usepackage{wrapfig}
 
 \begin{document}
 \title{Implementierungsdokument}
@@ -195,7 +196,13 @@ Das Paket \verb!PropertyList! hat sich im Unterpaket \verb!Controller! geändert
 
 Die Methoden für Controller und Model wurden außerdem in eigenen Interfaces beschrieben, sodass ein schneller Überblick über die Methoden gegeben ist.
 
+\subsection{Invarianten}
+Invarianten für das Package ist das Funktionieren des BooleanExpEditor. Eine Referenz des Editors wird gebraucht, um die Liste dynamisch zu erweitern und Eigenschaften in den Editor laden zu können.
+
+Weiter sind durch die Entscheidung, dass die Zählung für Kandidaten bei 1 beginnt, einige Stimmensummen im \verb!ResultPresenterWindow! nur richtig, falls dies eingehalten wird. Stimmt etwa ein Wähler für Kandidat 0, so kann seine Stimme in der Auszählung nicht berücksichtigt werden. Die Zählung für Kandidaten soll bei 1 beginnen, weil das Programm auch für Nicht-Informatiker sein soll.
+
 \subsection{Subpackage Model}
+\includegraphics[width=1.0\textwidth]{PropertyListModel.pdf}
 Die Klasse \verb!PropertyList! wurde zu \verb!PLModel! umbenannt. Sie hat keine Anbindung nach außerhalb des Pakets mehr. Das Interface \verb!PostAndPrePropertiesDescriptionSource! wird nun vom Controller implementiert.
 
 Die Klasse \verb!PropertyItem! hält nun Daten zum Ergebnis der Analyse (zusätzlich zu \verb!PropertiesDescription! und Teststatus).
@@ -203,6 +210,7 @@ Die Klasse \verb!PropertyItem! hält nun Daten zum Ergebnis der Analyse (zusätz
 Das Interface \verb!PLModelInterface! beschreibt alle Manipulationen der Eigenschaftenliste.
 
 \subsection{Subpackage Controller}
+\includegraphics[width=1.0\textwidth]{PropertyListController.pdf}
 Die zentrale Klasse des Controllers heißt \verb!PropertyList! und implementiert alle nötigen Interfaces nach außen. Das sind:
 \begin{itemize}
 	\item \verb!ResultPresenter! (im Entwurf nur vom View implementiert)
@@ -213,20 +221,19 @@ Die zentrale Klasse des Controllers heißt \verb!PropertyList! und implementiert
 \end{itemize}
 Die \verb!Action!- und \verb!ChangeListener! wurden aus dem Controller rausgezogen und direkt im View implementiert.
 
-Die Klassen, die \verb!ListChangeCommand! erweiterten (\verb!ChangeDescription!, \verb!ChangeDescriptionName!, \verb!AddStandardDescription!, \verb!AddNewDescription!, \verb!ChangeTestedStatus!, \verb!Redo!, \verb!Undo!), sind nur noch Methoden im Interface des Controllers (void changeName(PropertyItem prop, String newName); usw.). Das geschah, weil sie so kleine Änderungen an der \verb!PropertyList! bedeuten, dass sie nicht rückgängig gemacht werden müssen. Stattdessen kann der Nutzer neu erstellte Eigenschaften mit dem Klick auf den entsprechenden Button wieder löschen. Lediglich \verb!DeleteDescriptionAction! ist den Undo wert und wurde deshalb in einer eigenen Klasse gekapselt.
+Die Klassen, die \verb!ListChangeCommand! erweiterten (\verb!ChangeDescription!,  \verb!ChangeDesc! \verb!riptionName!, \verb!AddStandardDescription!, \verb!AddNewDescription!, \verb!ChangeTestedStatus!), sind nur noch Methoden im Interface des Controllers (void changeName(PropertyItem prop, String newName); usw.). Das geschah, weil sie so kleine Änderungen an der \verb!PropertyList! bedeuten, dass sie nicht rückgängig gemacht werden müssen. Stattdessen kann der Nutzer neu erstellte Eigenschaften mit dem Klick auf den entsprechenden Button wieder löschen. Lediglich \verb!DeleteDescriptionAction! ist den Undo wert und wurde deshalb in einer eigenen Klasse gekapselt.
 
 Der \verb!SaveBeforeChangeHandler! war im Entwurf noch nicht beschrieben.
 
 \subsection{Subpackage View}
+\begin{wrapfigure}{r}{0.4\textwidth}
+\includegraphics[width=0.4\textwidth]{PropertyListView.pdf}
+\end{wrapfigure}
 Die Elemente des View sind großteils gleich geblieben. Sie wurden allerdings nicht mit einem GUI-Builder erstellt, weil dann nicht dynamisch Komponenten hinzugefügt werden könnten (Formulare mit fester Anzahl von Komponenten).
 
 Im Entwurf war angedacht, dass das Model die View direkt von Änderungen benachrichtigt. Nun wird das Beobachtermuster benutzt, um dem View Änderungen im Model mitzuteilen. In diesem Falle wird die Liste der Eigenschaften (ArrayList<ListItem>) neu aufgebaut.
 
-Neu hinzugekommen ist die Klasse \verb!ResultPresenterWindow!, die die Swing-Klasse \verb!JFrame! erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine \verb!JTextPane! konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
-
-\section{Package Parametereditor}
-
-Das Paket \verb!parametereditor! umfasst die Klassen, die das Hauptfenster von BEAST (das Parametereditorfenster) aufbauen und die dortigen Eingaben des Nutzers verarbeiten. In diesem Fenster können Parameter für die Analyse des Wahlverfahrens (Anzahl von Wählern, Kandidaten und Stimmen, sowie maximale Anzahl von Prozessen und maximale Dauer der Analyse) angegeben werden. Außerdem können hier benutzerdefinierte Argumente für CBMC angegeben und die Analyse gestartet und gestoppt werden.
+Neu hinzugekommen ist die Klasse \verb!ResultPre! \verb!senterWindow!, die die Swing-Klasse \verb!JFrame! erweitert. Dadurch war es nicht möglich, sie als Kinder des Hauptfensters zu deklarieren. Aber durch die Entscheidung gegen eine \verb!JTextPane! konnte das Layout aus dem Pflichtenheft besser dargestellt werden.
 
 \subsection{Class ParameterEditor}
 Die Klasse \verb!ParameterEditor! implementiert jetzt nicht mehr \verb!BEASTCommunicator! aus \verb!highlevel!. Damit wird \verb!ParameterEditor! klar von der Kommunikation zwischen den einzelnen Teilen von BEAST getrennt. \\
