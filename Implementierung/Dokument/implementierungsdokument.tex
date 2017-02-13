@@ -60,16 +60,6 @@ Es wurde das Interface \verb!ProjectSource! hinzugefügt. Es wird von \verb!Para
 \subsection{isCorrect}
 Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Methode \verb!isCorrect! hinzugefügt. Damit kann vor Start einer Analyse überprüft werden, ob die bereitgestellten Daten frei von Fehlern sind, die die Analyse beeinträchtigen würden.
 
-
-\section{CodeGenerierung}
-
-Die Klasse \verb!CBMCCodeGeneration! ist nicht mehr statisch. \\
-Sie wird in der Implementierung von der Klasse \verb!CBMCProcessFactory! instantiiert. \\
-So wird für jedes erzeugte C-Tempfile (Glossareintrag) eine neue Instanz erstellt. Das ist sinnvoll, da es genau von den Parametern abhängt. \\
-Jede Instanz der Klasse \verb!CBMCCodeGeneration! erstellt eine Instanz der Klasse \\\verb!CBMCCodeGenerationVisitor!. \\
-Diese besitzen zwei neue Methoden, die einstellen, ob er zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
-(Verändertes Klassendiagramm hier)
-
 \section{UserActions}
 Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (\verb!FileChooser!, \verb!SaveBeforeChangeHandler!...).
 
@@ -146,8 +136,10 @@ Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da
 
 \section{Package CElectionDescriptionEditor}
 
-- Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt. \\
-- Das neue Paket \verb!ElectionTemplates! kam hinzu. Dieses enthält folgende Klassen:\\
+\subsection{ChangeElectionTypeUserAction}
+Diese Klasse und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt.
+\subsection{Subpackage ElectionTemplates}
+Das neue Paket \verb!ElectionTemplates! zum Erstellen von \verb!ElectionDescription!-Objekten kam hinzu. Dieses enthält folgende Klassen:
 \begin{itemize}
 \item \verb!ElectionTemplateHandler!: Gibt alle Election Input und Output Datentypen und deren ids aus.
 \item \verb!ElectionTemplateChooser!: Zeigt dem Benutzer einen Dialog, welcher es ermöglicht Input und Result eines neuen Wahlverfahrens zu wählen.
@@ -155,12 +147,18 @@ Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da
 \includegraphics[scale=0.5]{ElectionTemplates.pdf}\\
 
 \subsection{ErrorHandling}
-Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.
+Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.\\
 \includegraphics[scale=0.5]{CErrorChecking.pdf}
 
 \section{Package PropertyChecker}
-Beim \verb!PropertyChecker! hat sich folgendes im Vergleich zum Entwurf
-verändert:
+\subsection{CBMCCodeGeneration}
+Die Klasse \verb!CBMCCodeGeneration! ist nicht mehr statisch. \\
+Sie wird in der Implementierung von der Klasse \verb!CBMCProcessFactory! instantiiert. \\
+So wird für jedes erzeugte C-Tempfile (Glossareintrag) eine neue Instanz erstellt. Das ist sinnvoll, da es genau von den Parametern abhängt. \\
+Jede Instanz der Klasse \verb!CBMCCodeGeneration! erstellt eine Instanz der Klasse \\\verb!CBMCCodeGenerationVisitor!. \\
+Diese besitzen zwei neue Methoden, die einstellen, ob er zur Codegenerierung einer Vor- oder Nachbedingungen eines Wahlverfahrens verwendet wird.  \\
+(Verändertes Klassendiagramm hier)
+\subsection{PropertyChecker}
 
 \begin{itemize}
 \item Die Klasse \verb!CBMCResult! besitzt nun die Methode
@@ -181,9 +179,7 @@ erstellen kann. \newline Außerdem gibt es nun die Methode ``getMatchingResult(i
 amount)'', welche die gewünschte Anzahl an checkerspezifischen \verb!Result! Objekten
 zurückgibt, sodass die \verb!CheckerFactoryFactory! von diesen dann auf Wunsch so viele
 wie nötig erstellen kann.
-
 \end{itemize}
-
 
 \section{Package PropertyList}
 
@@ -252,12 +248,17 @@ Es wurden neue Handler hinzugefügt:
 Es wurde die Klasse \verb!AboutWindow! hinzugefügt, die dem Nutzer das Akronym BEAST erklären und die aktuelle Versionsnummer sowie das Build-Datum anzeigt.
 
 \section{Package Toolbox}
-Folgende Klassen kamen hinzu:\\
-- \verb!SortedIntegerList!: Eine einfache Wrapperklasse, welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von \verb!LockedLinesHandler! und \verb!TabInserter!.\\
-- \verb!RepaintThread!: Implementiert \verb!Runnable!. Bekommt einen \verb!JFrame! für welchen er 60 Mal pro Sekunde die repaint-Funktion aufruft. Dies ist benötigt, da die Frames auf Windows sonst nicht korrekt rendern, falls zuvor ein anderes Fenster vor ihnen war.\\
-- \verb!CCodeHelper!: Diese Klasse enthält Funktionalität um aus den internen Datentypen C Code zu erstellen. Sie wird sowohl von der Codegenerierung als auch dem C-Editor verwendet. \\
-- \verb!ActionIdAndListener!: Eine einfache Wrapper-Klasse welche Zugriff auf einen \verb!ActionListener! und die dazugehörige String-Id bietet.\\
-- \verb!Tuple!: Eine Klasse, welche zwei verschiedene Typen hält.
+Im Utility Package "Toolbox" kamen folgende klassen kamen hinzu:\\
+\subsection{SortedIntegerList}
+Eine einfache Wrapperklasse, welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von \verb!LockedLinesHandler! und \verb!TabInserter!.\\
+\subsection{RepaintThread}
+Implementiert \verb!Runnable!. Bekommt einen \verb!JFrame! für welchen er 60 Mal pro Sekunde die repaint-Funktion aufruft. Dies ist benötigt, da die Frames auf Windows sonst nicht korrekt rendern, falls zuvor ein anderes Fenster vor ihnen war.\\
+\subsection{CCodeHelper}
+Diese Klasse enthält Funktionalität um aus den internen Datentypen C Code zu erstellen. Sie wird sowohl von der Codegenerierung als auch dem C-Editor verwendet. \\
+\subsection{ActionIdAndListener}
+Eine einfache Wrapper-Klasse welche Zugriff auf einen \verb!ActionListener! und die dazugehörige String-Id bietet.\\
+\subsection{Tuple}
+Eine Klasse, welche zwei verschiedene Typen hält.
 
 \chapter{Zeitablauf Implementierungsphase}
 
