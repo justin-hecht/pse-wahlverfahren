@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  13 FEB 2017 07:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.23)  13 FEB 2017 07:25
 entering extended mode
 **./implementierungsdokument.tex
 (implementierungsdokument.tex
@@ -807,12 +807,6 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 42.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 42.
-
-Overfull \hbox (0.7953pt too wide) in paragraph at lines 43--46
-\OT1/cmr/m/n/10.95 Wahl lei-der nicht vom Be-nut-zer ein-ge-ge-ben wer-den, son
--dern muss im Quell-co-de ver[]andert
- []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 47.
 Package babel Info: Redefining german shorthand "|
@@ -1722,7 +1716,7 @@ rs/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssb
 x10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Users/Jonas/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on implementierungsdokument.pdf (25 pages, 445074 bytes).
+Output written on implementierungsdokument.pdf (25 pages, 445106 bytes).
 PDF statistics:
  525 PDF objects out of 1000 (max. 8388607)
  88 named destinations out of 1000 (max. 500000)
