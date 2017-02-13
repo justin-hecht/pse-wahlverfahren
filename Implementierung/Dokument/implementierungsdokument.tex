@@ -90,7 +90,7 @@ Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSav
 \includegraphics[scale=0.5]{SaverLoader.pdf}
 
 \subsection{FileChooser}
-Diese Klasse kümmert sich um das Laden und Speichern der abspeicherbaren \verb!datatypes!-Klassen. Sie besitzt eine SaverLoader Instanz mit der sie beim Aufrufen von \verb!loadObject! und \verb!saveObject! entsprechende Dateien generisch laden und Speichern kann.
+Diese Klasse kümmert sich um das Laden und Speichern der abspeicherbaren \verb!datatypes!-Klassen. Sie besitzt eine SaverLoader Instanz mit der sie beim Aufrufen von \verb!loadObject! und \verb!saveObject! entsprechende Dateien generisch laden und speichern kann.
 \\
 \includegraphics[scale=0.5]{FileChooser.pdf}
 
@@ -103,7 +103,7 @@ Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statisc
 \verb!Errordisplayer! ist nun abstrakt. Von den erbenden Klassen müssen Fehlermeldungen generiert werden.\\
 \includegraphics[scale=0.5]{Errordisplayer_update.pdf}\\
 \subsection{SaveTextBeforeRemove}
-DieKlasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane!, sobald Text daraus entfernt wird. Dies ist nötig, da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser wird jedoch benötigt, um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
+DieKlasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane!, sobald Text daraus entfernt wird. Dies ist nötig, da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser wird jedoch benötigt, um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch Hören auf Keyevents.\\
 \subsection{TextLineNumber}
 Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus\\ \url{https://tips4java.wordpress.com/2009/05/23/text-component-line-number/}\\ übernommen.\\
 \subsection{SquigglePainter}
