@@ -51,4 +51,5 @@
 \contentsline {subsection}{\numberline {3.10.5}Tuple}{20}{subsection.3.10.5}
 \contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Geplanter Ablauf}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Eigentlicher Ablauf}{21}{section.4.2}
+\contentsline {section}{\numberline {4.2}Tats\IeC {\"a}chlicher Ablauf}{22}{section.4.2}
+\contentsline {chapter}{\numberline {5}Statistiken}{24}{chapter.5}

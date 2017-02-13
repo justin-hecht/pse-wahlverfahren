@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage{pdflscape}
 \usepackage{wrapfig}
+\usepackage{adjustbox}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -270,14 +271,36 @@ Eine Klasse, welche zwei verschiedene Typen hält.
 \chapter{Zeitablauf Implementierungsphase}
 
 \section{Geplanter Ablauf}
+Hier das ursprüngliche GANTT-Diagramm aus dem Entwurfsdokument das die Zeitplanung von Tag 0 bis Tag 30 der Implementierungsphase darstellt.\\
+\includegraphics[angle=270,width=0.7\textwidth] {originalPlanung.png}
 
-\includegraphics[width=1.3\textwidth] {originalPlanung.jpg}
+\section{Tatsächlicher Ablauf}
+Im Großen und Ganzen wurde der ursprüngliche Plan bis auf kleinere Verzögerungen eingehalten. 
+\\Zu Anfang wurde die Vorbereitungsphase ein paar Tage verzögert abgeschlossen da die Zeit nicht reichte um die Antlr-Grammatik für die formalen Eigenschaften noch in der ersten Woche fertigzustellen. Dies geschah ein paar Tage später während die Muss- und Sollkriterienphase schon angelaufen war.\\
+In dieser Phase gab es auch Abweichungen zum ursprünglichen Plan. So waren z.B. grundlegende GUI-Funktionalitäten nach Woche 2 noch nicht implementiert da die Arbeitshaltung zweier Gruppenteilnehmer suboptimal war. Dies verzögerte die ganze Phase da Aufgaben übernommen werden mussten und führte schließlich zu einer Aufgabenumverteilung in Woche 3. Ziel dieser war es kurzfristig für den Rest der Implementierungsphase eine ausgeglichenere und zielführende Aufgabenverteilung zu schaffen damit die vorletzte Artefakt-Abgabe ende Woche 3 trotz bisheriger Schwierigkeiten erfolgreich erbracht werden konnte. Bis auf kleinere Bugs und noch nicht komplett fertig gestellte Laden und Speichern-Funktionalitäten erfolgt diese dann auch.\\
+Die letzte Woche bestand danach hauptsächlich aus Debuggen, dem Implementieren von Kann-Kriterien und dem Erstellen dieses Dokuments und wurde so auch erfolgreich abgeschlossen.\\
+Es folgt ein GANTT-Diagramm des tatsächlichen Zeitablauf.
 
-\section{Eigentlicher Ablauf}
-Der ursprüngliche Plan wurde hauptsächlich eingehalten. Ein paar Komplikationen bei den Paketen \verb!highlevel!, \verb!parametereditor! und \verb!propertylist! verzögerten die Fertigstellung einiger Meilensteine.
-
-(Genauere Beschreibung von Aufgabenumverteilung bzw. Ablaufänderung folgt)
-
-(GANTT Diagramm von tatsächlichem Ablauf folgt)
-
+\begin{figure}[ht]
+  \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
+      GANTT-Diagramm das den tatsächlichen Zeitablauf der Implementierungsphase von Tag 0 bis Tag 30 darstellt.}\end{minipage}},rotate=0,center}
+	\includegraphics[width=1.2\textwidth] {ActualPlanung.png}
+	\label{fig2}
+  \end{adjustbox}
+\end{figure}
+\chapter{Statistiken}
+\begin{figure}[ht]
+  \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
+      Graph der Git Commits und Differenz von Addtions und Deletions nach Personen aufgeteilt darstellt.}\end{minipage}},rotate=0,center}
+	\includegraphics[width=1.1\textwidth] {GitGraph.png}
+	\label{fig2}
+  \end{adjustbox}
+\end{figure}
+\begin{figure}[ht]
+  \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{%
+      Graph der die Java Source Code Lines und Comment Lines nach packages aufgeteilt darstellt.}\end{minipage}},rotate=270, center}
+	\includegraphics[width=1.2\textwidth] {LinesOfCodeGraph.png}
+	\label{fig2}
+  \end{adjustbox}
+\end{figure}
 \end{document}
