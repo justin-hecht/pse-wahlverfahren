@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {3.5.9}NewlineInserter}{12}{subsection.3.5.9}
 \contentsline {subsection}{\numberline {3.5.10}UserInsertToCode}{12}{subsection.3.5.10}
 \contentsline {section}{\numberline {3.6}Package BooleanExpEditor}{13}{section.3.6}
-\contentsline {section}{\numberline {3.7}Package CElectionDescriptionEditor}{14}{section.3.7}
+\contentsline {section}{\numberline {3.7}Package CElectionDescriptionEditor}{13}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}ChangeElectionTypeUserAction}{14}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Subpackage ElectionTemplates}{14}{subsection.3.7.2}
 \contentsline {subsection}{\numberline {3.7.3}ErrorHandling}{14}{subsection.3.7.3}

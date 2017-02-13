@@ -60,7 +60,7 @@ Deshalb wurde sie durch das Interface \verb!CentralObjectProvider! und die Klass
 Es wurde das Interface \verb!DisplaysStringsToUser! hinzugefügt. Es wird von allen Elementen, die dem Nutzer Text anzeigen, implementiert. Damit wird die Einbindung anderer Sprachen vereinfacht. \\
 
 \subsection{start-/stopReacting}
-Allen Interfaces zu Paketen mit GUI wurden die Methoden \verb!stopReacting! und \verb!resumeReacting! hinzugefügt. Diese verhindern, dass der Nutzer während einer laufenden Analyse Änderungen an dafür benötigten Daten vornimmt. \\
+Allen Interfaces zu Paketen mit GUI wurden die Methoden \verb!stopReacting! und \\ \verb!resumeReacting! hinzugefügt. Diese verhindern, dass der Nutzer während einer laufenden Analyse Änderungen an dafür benötigten Daten vornimmt. \\
 
 \subsection{ProjectSource}
 Es wurde das Interface \verb!ProjectSource! hinzugefügt. Es wird von \verb!ParameterEditor! implementiert. Damit wird es möglich, das Speichern und Laden von ganzen Projekten in zukünftigen Versionen leichter einem anderen Fenster als dem Parametereditor zu überlassen. \\
@@ -71,9 +71,9 @@ Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Metho
 Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (\verb!FileChooser!, \verb!SaveBeforeChangeHandler!...).
 
 \section{Package SaverLoader}
-\verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader!. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
+\verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader!. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden. \\
 Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
-Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von "$>$" durch "$>$$>"$ ersetzt, beziehungsweise dies mit \verb!createFromSaveString! rückgängig macht. Dies vehindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
+Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von "$>$"  durch "$>$$>"$ ersetzt, beziehungsweise dies mit \verb!createFromSaveString! rückgängig macht. Dies vehindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
 \includegraphics[scale=0.5]{SaverLoader.pdf}
 
 \subsection{FileChooser}
@@ -104,7 +104,7 @@ Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in de
 \verb!Tabinserter! wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
 \includegraphics[scale=0.5]{TabInserter.pdf}\\
 \subsection{LineBeginningTabsHandler}
-Interface \verb!LineBeginningTabsHandler! und Implementierung \verb!CurlyBracesLineBeginningTabHandler! wurden hinzugefügt. \verb!LineBeginningTabsHandler! berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. \verb!CurlyBracesLineBeginningTabHandler! errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am Ende der gegebenen Zeile\\
+Interface \verb!LineBeginningTabsHandler! und Implementierung \\ \verb!CurlyBracesLineBeginningTabHandler! wurden hinzugefügt.\\ \verb!LineBeginningTabsHandler! berechnet die benötigte Anzahl Tabs zu Beginn einer gegebenen Zeile. \verb!CurlyBracesLineBeginningTabHandler! errechnet dies anhand der Anzahl geöffneter curly-Braces in vorangehenden Zeilen minus die Anzahl schließender curly-Braces am Ende der gegebenen Zeile\\
 \subsection{UserActions}
 Es gibt nun spezielle \verb!UserActions! für Kopieren, Ausschneiden und Einfügen. Dies ist nötig um sicherzustellen, dass nicht editierbare Zeilen nicht durch diese Aktionen verändert werden.\\
 \subsection{NewlineInserter}
@@ -135,14 +135,12 @@ Entfernt wurden:
 Der \verb!BooleanExpEditor! besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist.
 \newline
 Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da so neu erstellte Eigenschaften in der Liste gespeichert werden können.
-\newline
-(Diagramm folgt)
-\newline
 
 \section{Package CElectionDescriptionEditor}
+Das Paket CElectionDescrptionEditor stellt die GUI bereit, mit der der Nutzer ein Wahlverfahren in C-Code eingeben kann. 
 
 \subsection{ChangeElectionTypeUserAction}
-Diese Klasse und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt.
+Diese Klasse und der entsprechende Menüpunkt "Wahlart ändern'' wurden entfernt.
 \subsection{Subpackage ElectionTemplates}
 Das neue Paket \verb!ElectionTemplates! zum Erstellen von \verb!ElectionDescription!-Objekten kam hinzu. Dieses enthält folgende Klassen:
 \begin{itemize}
@@ -152,7 +150,7 @@ Das neue Paket \verb!ElectionTemplates! zum Erstellen von \verb!ElectionDescript
 \includegraphics[scale=0.5]{ElectionTemplates.pdf}\\
 
 \subsection{ErrorHandling}
-Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.\\
+Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \\ \verb!SystemSpecificErrorChecker! statt.\\
 \includegraphics[scale=0.5]{CErrorChecking.pdf}
 
 \section{Package PropertyChecker}
