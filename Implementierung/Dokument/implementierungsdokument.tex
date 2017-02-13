@@ -29,9 +29,9 @@ Dieses Dokument beschreibt die Implementierungsphase einer Praxis der Softwareen
 Das implementierte Programm sollte folgende Module bereitstellen: 
 \begin{itemize}
 \item Eine Möglichkeit zur Beschreibung eines Wahlverfahrens in der Programmiersprache C. 
-\item Eine Möglichkeit zur Beschreibung von Eigenschaften, auf die das Wahlverfahren geprüft werden soll. Die Beschreibung erfolgt in einer von der Entwicklergruppe definierten Makrosprache (Glossareintrag).
+\item Eine Möglichkeit zur Beschreibung von Eigenschaften, auf die das Wahlverfahren geprüft werden soll. Die Beschreibung erfolgt in einer von der Entwicklergruppe definierten Makrosprache.
 \item Eine Möglichkeit zum Angeben der Parameter für welche das angegebenen Wahlverfahren analysiert werden soll (Anzahl Wähler, Anzahl Kandidaten, Anzahl Sitze). 
-\item Eine Möglichkeit, das beschriebene Wahlverfahren auf die eingegeben Eigenschaften zu überprüfen. Diese Überprüfung soll durch eine Schnittstelle mit CBMC (Glossareintrag) verwirklicht
+\item Eine Möglichkeit, das beschriebene Wahlverfahren auf die eingegeben Eigenschaften zu überprüfen. Diese Überprüfung soll durch eine Schnittstelle mit CBMC verwirklicht
 \item Eine Ausgabe des Ergebnisses der Analyse: Eine Erfolgsmeldung, für jede Eigenschaft, die erfüllt wurde, sowie eine Darstellung eines Gegenbeispieles, für jede nicht erfüllte Eigenschaft. 
 \end{itemize}
 
@@ -73,7 +73,7 @@ Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den
 \section{Package SaverLoader}
 \verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader! mit den dargestellten Methoden. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
 Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
-Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, beziehungsweise dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
+Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von "$>$" durch "$>$$>"$ ersetzt, beziehungsweise dies mit !\verb!createFromSaveString! rückgängig macht. Dies vehindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
 \includegraphics[scale=0.5]{SaverLoader.pdf}
 
 \subsection{FileChooser}
