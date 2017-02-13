@@ -71,30 +71,25 @@ Diese besitzen zwei neue Methoden, die einstellen, ob er zur Codegenerierung ein
 (Verändertes Klassendiagramm hier)
 
 \section{UserActions}
-Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (\verb!FileChooser!, \verb!SaveBeforeChangeHandler!...). Beispielhaft am \verb!BooleanExpEditor! gezeigt:
-\newline
+Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (\verb!FileChooser!, \verb!SaveBeforeChangeHandler!...).
 
-(Diagramm folgt)
-\newline
-
-\section{SaverLoader}
+\section{Package SaverLoader}
 \verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader! mit den dargestellten Methoden. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
 Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
 Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von ">" durch ">>" ersetzt, beziehungsweise dies mit !\verb!createFromSaveString! rückgängig macht. Dies verhindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
 \includegraphics[scale=0.5]{SaverLoader.pdf}
 
-\section{FileChooser}
+\subsection{FileChooser}
 Diese Klasse kümmert sich um das Laden und Speichern der speicherbaren Datentypen.
-\newline
-(Diagramm folgt)
-\newline
+\\
+\includegraphics[scale=0.5]{FileChooser.pdf}
 
-\section{DataTypes}
+\section{Package DataTypes}
 Die als Datei abspeicherbaren Datentypen implementieren nun alle das Interface \\ \verb!ChangeNameInterface!, das es dem \verb!FileChooser! ermöglicht das name-Attribut dieser Klassen polymorph zu verändern.\\
 \includegraphics[scale=0.5]{NameInterface.pdf}
 
 
-\section{Codearea}
+\section{Package Codearea}
 \subsection{JTextPaneToolbox}
 Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statische Methoden, welche oft benötigte, aber nicht zusammengehörige Funktionalität für \verb!JTextPane! liefern. Dazu gehört unter anderem das Umwandeln absoluter Positionen in Zeilennummern.\\
 \includegraphics[scale=0.5]{JTextPaneToolbox.pdf}\\
@@ -141,7 +136,7 @@ Entfernt wurden:
 
 \includegraphics[scale=0.45]{inputtocode_update.pdf}
 
-\section{BooleanExpEditor}
+\section{Package BooleanExpEditor}
 Der \verb!BooleanExpEditor! besitzt jetzt eine Referenz auf die \verb!CElectonDescriptionEditor!-Instanz, da dies zur Fehlerfindung durch den \verb!BooleanExpEditorVariableErrorFinder! nötig ist.
 \newline
 Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da so neu erstellte Eigenschaften in der Liste gespeichert werden können.
@@ -149,7 +144,7 @@ Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da
 (Diagramm folgt)
 \newline
 
-\section{CElectionDescriptionEditor}
+\section{Package CElectionDescriptionEditor}
 
 - Die \verb!ChangeElectionType! \verb!UserAction! und der entsprechende Menüpunkt "Wahlart ändern" wurden entfernt. \\
 - Das neue Paket \verb!ElectionTemplates! kam hinzu. Dieses enthält folgende Klassen:\\
@@ -163,7 +158,7 @@ Er bekommt vom Builder nun eine Referenz auf die \verb!PropertyList!-Instanz, da
 Die C-Fehlerfindung findet nun ausschließlich über Aufruf eines externen Compilers statt. Dieser Aufruf geschieht und das Parsen seiner Rückgabe findet in den Klassen \verb!DeepErrorChecker!, \verb!LinuxErrorChecker!, \verb!WindowsErrorChecker! und \verb!SystemSpecificErrorChecker! statt.
 \includegraphics[scale=0.5]{CErrorChecking.pdf}
 
-\section{PropertyChecker}
+\section{Package PropertyChecker}
 Beim \verb!PropertyChecker! hat sich folgendes im Vergleich zum Entwurf
 verändert:
 
@@ -190,7 +185,7 @@ wie nötig erstellen kann.
 \end{itemize}
 
 
-\section{PropertyList}
+\section{Package PropertyList}
 
 Das Paket \verb!PropertyList! hat sich im Unterpaket \verb!Controller! geändert. Durch die Anbindung an die \verb!highlevel!-Interfaces wurde es nötig, dass das Model der \verb!PropertyList! kein Einzelstück mehr ist. Der Controller benötigt deshalb eine eigene Referenz auf das Model, weil er nicht auf die einzelne Instanz zugreifen kann. Eine zentrale Controllerklasse übernimmt nun die Steuerung, anstatt wie vorgesehen einzelne Klassen.
 
@@ -256,7 +251,7 @@ Es wurden neue Handler hinzugefügt:
 \subsection{AboutWindow}
 Es wurde die Klasse \verb!AboutWindow! hinzugefügt, die dem Nutzer das Akronym BEAST erklären und die aktuelle Versionsnummer sowie das Build-Datum anzeigt.
 
-\section{Toolbox}
+\section{Package Toolbox}
 Folgende Klassen kamen hinzu:\\
 - \verb!SortedIntegerList!: Eine einfache Wrapperklasse, welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von \verb!LockedLinesHandler! und \verb!TabInserter!.\\
 - \verb!RepaintThread!: Implementiert \verb!Runnable!. Bekommt einen \verb!JFrame! für welchen er 60 Mal pro Sekunde die repaint-Funktion aufruft. Dies ist benötigt, da die Frames auf Windows sonst nicht korrekt rendern, falls zuvor ein anderes Fenster vor ihnen war.\\
