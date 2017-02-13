@@ -40,16 +40,16 @@
 \contentsline {subsection}{\numberline {3.9.2}Subpackage Model}{16}{subsection.3.9.2}
 \contentsline {subsection}{\numberline {3.9.3}Subpackage Controller}{17}{subsection.3.9.3}
 \contentsline {subsection}{\numberline {3.9.4}Subpackage View}{19}{subsection.3.9.4}
-\contentsline {subsection}{\numberline {3.9.5}Class ParameterEditor}{19}{subsection.3.9.5}
-\contentsline {subsection}{\numberline {3.9.6}UserActions}{19}{subsection.3.9.6}
-\contentsline {subsection}{\numberline {3.9.7}Handler}{19}{subsection.3.9.7}
-\contentsline {subsection}{\numberline {3.9.8}AboutWindow}{20}{subsection.3.9.8}
-\contentsline {section}{\numberline {3.10}Package Toolbox}{20}{section.3.10}
-\contentsline {subsection}{\numberline {3.10.1}SortedIntegerList}{20}{subsection.3.10.1}
-\contentsline {subsection}{\numberline {3.10.2}RepaintThread}{20}{subsection.3.10.2}
-\contentsline {subsection}{\numberline {3.10.3}CCodeHelper}{20}{subsection.3.10.3}
-\contentsline {subsection}{\numberline {3.10.4}ActionIdAndListener}{20}{subsection.3.10.4}
-\contentsline {subsection}{\numberline {3.10.5}Tuple}{20}{subsection.3.10.5}
+\contentsline {section}{\numberline {3.10}Package ParameterEditor}{19}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}UserActions}{19}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Handler}{19}{subsection.3.10.2}
+\contentsline {subsection}{\numberline {3.10.3}AboutWindow}{20}{subsection.3.10.3}
+\contentsline {section}{\numberline {3.11}Package Toolbox}{20}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}SortedIntegerList}{20}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}RepaintThread}{20}{subsection.3.11.2}
+\contentsline {subsection}{\numberline {3.11.3}CCodeHelper}{20}{subsection.3.11.3}
+\contentsline {subsection}{\numberline {3.11.4}ActionIdAndListener}{20}{subsection.3.11.4}
+\contentsline {subsection}{\numberline {3.11.5}Tuple}{20}{subsection.3.11.5}
 \contentsline {chapter}{\numberline {4}Zeitablauf Implementierungsphase}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Geplanter Ablauf}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}Tats\IeC {\"a}chlicher Ablauf}{21}{section.4.2}
