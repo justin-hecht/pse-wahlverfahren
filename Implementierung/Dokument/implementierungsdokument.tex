@@ -71,7 +71,7 @@ Interfaces zu Paketen, die Daten für die Analyse bereitstellen, wurde die Metho
 Alle \verb!UserActions! der vier GUIs haben jetzt nur noch einen Verweis auf den ihnen zugehörigen Controller, und holen sich von diesem mit Gettern die von ihnen gebrauchten Klassen (\verb!FileChooser!, \verb!SaveBeforeChangeHandler!...).
 
 \section{Package SaverLoader}
-\verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader! mit den dargestellten Methoden. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
+\verb!PostAndPrePropertiesDescriptionSaverLoader!, \verb!ElectionDescriptionSaverLoader!, \verb!ElectionCheckParameterSaverLoader! und \verb!ProjectSaverLoader! implementieren nun das Interface \verb!SaverLoader!. Dies ermöglicht es der Klasse \verb!FileChooser!, polymorph gegebene DatenTypen abzuspeichern und gegebene Dateien zu laden.
 Alle anderen \verb!SaverLoader!-Klassen haben nur statische Methoden.
 Zudem gibt es noch eine \verb!StringSaverLoader! Klasse, die mit \verb!createSaveString! aus allen vom Nutzer editierbaren Strings alle Vorkommen von "$>$" durch "$>$$>"$ ersetzt, beziehungsweise dies mit \verb!createFromSaveString! rückgängig macht. Dies vehindert die Erstellung von nicht ladbaren Dateien trotz valider Nutzer-Eingaben.\\
 \includegraphics[scale=0.5]{SaverLoader.pdf}
@@ -96,12 +96,10 @@ Klasse \verb!JTextPaneToolbox! wurde hinzugefügt. Diese enthält einige statisc
 \subsection{SaveTextBeforeRemove}
 DieKlasse \verb!SaveTextBeforeRemove! wurde hinzugefügt. Diese speichert den Text einer \verb!JTextPane!, sobald Text daraus entfernt wird. Dies ist nötig, da das \verb!RemovedUpdate! des Styleddocuments keinen Zugriff auf den entfernten Text gewährt. Dieser wird jedoch benötigt, um Aktionen rückgängig zu machen. Implementiert wird die Funktionalität durch hören auf Keyevents.\\
 \subsection{TextLineNumber}
-Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus \\https://tips4java.wordpress.com/2009/05/23/text-component-line-number/ übernommen.\\
+Klasse \verb!TextLineNumber! wurde hinzugefügt, welche die Zeilennummer anzeigt. Diese Klasse wurde direkt aus\\ \url{https://tips4java.wordpress.com/2009/05/23/text-component-line-number/}\\ übernommen.\\
 \subsection{SquigglePainter}
-Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in der \verb!JTextPane! gezackt. Dies wird verwendet, um Fehler im Code anzuzeigen. Übernommen von 
-https://tips4java.wordpress.com/2008/10/28/rectangle-painter/\\
-\subsection{JTextPaneToolbox}
-
+Klasse \verb!SquigglePainter! wurde hinzugefügt. Diese unterstreicht Text in der \verb!JTextPane! gezackt. Dies wird verwendet, um Fehler im Code anzuzeigen. Übernommen von\\
+\url{https://tips4java.wordpress.com/2008/10/28/rectangle-painter/}\\
 \subsection{Tabinserter}
 \verb!Tabinserter! wurde hinzugefügt. Dieser fügt Tabs in Form von Leerzeichen ein.\\
 \includegraphics[scale=0.5]{TabInserter.pdf}\\
@@ -277,8 +275,8 @@ Hier das ursprüngliche GANTT-Diagramm aus dem Entwurfsdokument das die Zeitplan
 \section{Tatsächlicher Ablauf}
 Im Großen und Ganzen wurde der ursprüngliche Plan bis auf kleinere Verzögerungen eingehalten. 
 \\Zu Anfang wurde die Vorbereitungsphase ein paar Tage verzögert abgeschlossen da die Zeit nicht reichte um die Antlr-Grammatik für die formalen Eigenschaften noch in der ersten Woche fertigzustellen. Dies geschah ein paar Tage später während die Muss- und Sollkriterienphase schon angelaufen war.\\
-In dieser Phase gab es auch Abweichungen zum ursprünglichen Plan. So waren z.B. grundlegende GUI-Funktionalitäten nach Woche 2 noch nicht implementiert da die Arbeitshaltung zweier Gruppenteilnehmer suboptimal war. Dies verzögerte die ganze Phase da Aufgaben übernommen werden mussten und führte schließlich zu einer Aufgabenumverteilung in Woche 3. Ziel dieser war es kurzfristig für den Rest der Implementierungsphase eine ausgeglichenere und zielführende Aufgabenverteilung zu schaffen damit die vorletzte Artefakt-Abgabe ende Woche 3 trotz bisheriger Schwierigkeiten erfolgreich erbracht werden konnte. Bis auf kleinere Bugs und noch nicht komplett fertig gestellte Laden und Speichern-Funktionalitäten erfolgt diese dann auch.\\
-Die letzte Woche bestand danach hauptsächlich aus Debuggen, dem Implementieren von Kann-Kriterien und dem Erstellen dieses Dokuments und wurde so auch erfolgreich abgeschlossen.\\
+In dieser Phase gab es auch Abweichungen zum ursprünglichen Plan. So waren z.B. grundlegende GUI-Funktionalitäten nach Woche 2 noch nicht implementiert, da die Arbeitshaltung zweier Gruppenteilnehmer suboptimal war. Dies verzögerte die ganze Phase und führte schließlich zu einer Aufgabenumverteilung in Woche 3. Ziel dieser war es kurzfristig für den Rest der Implementierungsphase eine ausgeglichenere und zielführende Aufgabenverteilung zu schaffen, damit die vorletzte Artefakt-Abgabe am Ende der Woche 3 - trotz bisheriger Schwierigkeiten - erfolgreich erbracht werden konnte. Bis auf kleinere Bugs, und noch nicht komplett fertig gestellte Laden und Speichern-Funktionalitäten, erfolgt diese dann auch.\\
+Die letzte Woche bestand danach hauptsächlich aus Debuggen, dem Implementieren von Kann-Kriterien und dem Erstellen dieses Dokuments.\\
 Es folgt ein GANTT-Diagramm des tatsächlichen Zeitablauf.
 
 \begin{figure}[ht]
