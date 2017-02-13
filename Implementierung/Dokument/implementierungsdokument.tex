@@ -246,7 +246,7 @@ Es wurden neue \verb!UserActions! hinzugefügt:
 \item \verb!ShowHideBooleanExpEditor!, \verb!ShowHideCElectionEditor! und \verb!ShowHidePropertyList!, um die anderen GUI-Fenster vom Parametereditor aus öffnen und schließen zu können.
 \end{itemize}
 
-\subsection{Handlers}
+\subsection{Handler}
 Es wurden neue Handler hinzugefügt:
 \begin{itemize}
 \item \verb!ArgumentHandler!, um die benutzerdefinierten Argumente für CBMC zu verarbeiten.
@@ -257,13 +257,13 @@ Es wurden neue Handler hinzugefügt:
 Es wurde die Klasse \verb!AboutWindow! hinzugefügt, die dem Nutzer das Akronym BEAST erklären und die aktuelle Versionsnummer sowie das Build-Datum anzeigt.
 
 \section{Package Toolbox}
-Im Utility Package "Toolbox" kamen folgende klassen kamen hinzu:\\
+Das Package Toolbox beinhaltet Hilfsklassen, die einzelne spezifische Aufgaben übernehmen, die keinem anderen Package klar zuteilbar ist.
 \subsection{SortedIntegerList}
 Eine einfache Wrapperklasse, welche eine stets sortierte Liste von Integern enthält. Diese wird verwendet von \verb!LockedLinesHandler! und \verb!TabInserter!.\\
 \subsection{RepaintThread}
 Implementiert \verb!Runnable!. Bekommt einen \verb!JFrame! für welchen er 60 Mal pro Sekunde die repaint-Funktion aufruft. Dies ist benötigt, da die Frames auf Windows sonst nicht korrekt rendern, falls zuvor ein anderes Fenster vor ihnen war.\\
 \subsection{CCodeHelper}
-Diese Klasse enthält Funktionalität um aus den internen Datentypen C Code zu erstellen. Sie wird sowohl von der Codegenerierung als auch dem C-Editor verwendet. \\
+Diese Klasse enthält Funktionalität, um aus den internen Datentypen C Code zu erstellen. Sie wird sowohl von der Codegenerierung als auch dem C-Editor verwendet. \\
 \subsection{ActionIdAndListener}
 Eine einfache Wrapper-Klasse welche Zugriff auf einen \verb!ActionListener! und die dazugehörige String-Id bietet.\\
 \subsection{Tuple}
