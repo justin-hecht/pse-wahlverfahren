@@ -1,0 +1,19 @@
+<postAndPrePropsName>
+Anonymity
+</postAndPrePropsName>
+<pre>
+FOR_ALL_VOTERS(i) : ((v!=i && i != w ) ==>> VOTES1(i) == VOTES2(i)) ;
+VOTES1(v) == c && VOTES1(w) == d;
+VOTES2(v) == d && VOTES2(w) == c;
+
+</pre>
+<post>
+ELECT1 == ELECT2;
+</post>
+<varlist>
+symbolic_variable: id: v type: VOTER;
+symbolic_variable: id: w type: VOTER;
+symbolic_variable: id: c type: CANDIDATE;
+symbolic_variable: id: d type: CANDIDATE;
+
+</varlist>
