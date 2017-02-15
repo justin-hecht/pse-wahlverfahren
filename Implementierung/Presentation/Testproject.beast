@@ -55,7 +55,7 @@ New PropertyList
 Eigenschaft 0
 </postAndPrePropsName>
 <pre>
-FOR_ALL_VOTERS(v) : VOTES1(v) == VOTES2(v);
+FOR_ALL_VOTERS(v) : VOTES1(v) == s;
 </pre>
 <post>
 FOR_ALL_CANDIDATES(c) : (VOTE_SUM_FOR_CANDIDATE1(c) == VOTE_SUM_FOR_CANDIDATE2(c) );
@@ -67,7 +67,7 @@ symbolic_variable: id: s type: SEAT;
 
 </postAndPreProps>
 <testStatus>
-true
+false
 </testStatus>
 
 </propertyItem>
