@@ -58,7 +58,7 @@ Eigenschaft 0
 FOR_ALL_VOTERS(v) : VOTES1(v) == s;
 </pre>
 <post>
-FOR_ALL_CANDIDATES(c) : (VOTE_SUM_FOR_CANDIDATE1(c) == VOTE_SUM_FOR_CANDIDATE2(c) );
+FOR_ALL_CANDIDATES(c) : (VOTE_SUM_FOR_CANDIDATE1(c) != VOTE_SUM_FOR_CANDIDATE2(c) );
 </post>
 <varlist>
 symbolic_variable: id: s type: SEAT;
